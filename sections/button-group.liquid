@@ -1,0 +1,100 @@
+<!-- sections/button-group.liquid [aa] -->
+
+<ul class="px-5 py-5 gap-2 flex items-center justify-center flex-wrap {{ section.settings.section_classes }}">
+  {% for block in section.blocks %}
+    <li class="">
+      {%
+        render 'ct-button',
+        link_text: block.settings.link_text,
+        link_url: block.settings.link_url,
+        button_style: block.settings.button_style,
+        class: block.settings.link_classes
+      %}
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% schema %}
+{
+  "name": "Button Group",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_classes",
+      "label": "Additional Classes for the Section"
+    }
+  ],
+  "blocks": [
+      {
+          "name": "Button",
+          "type": "button",
+          "settings": [
+            {
+              "type": "header",
+              "content": "Button Settings"
+            },
+            {
+              "type": "select",
+              "id": "button_style",
+              "label": "Button Style",
+              "default": "btn btn-secondary",
+              "options": [
+                {
+                  "label": "Button Primary",
+                  "value": "btn btn-primary"
+                },
+                {
+                  "label": "Button Secondary",
+                  "value": "btn btn-secondary"
+                },
+                {
+                  "label": "Button Tertiary",
+                  "value": "btn btn-tertiary"
+                },
+                {
+                  "label": "Button White",
+                  "value": "btn btn-white"
+                },
+                {
+                  "label": "Button Outline",
+                  "value": "btn btn-outline"
+                },
+                {
+                  "label": "Camel Underline",
+                  "value": "camel-underline"
+                },
+                {
+                  "label": "Blue Underline",
+                  "value": "blue-underline"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "link_text",
+              "label": "Link Text",
+              "default": "Click me!"
+            },
+            {
+              "type": "url",
+              "id": "link_url",
+              "label": "Link URL",
+              "default": "/collections/all"
+            },
+            {
+              "type": "text",
+              "id": "link_classes",
+              "label": "Additional Classes for the Button/Link"
+            }
+          ]
+      }
+  ],
+  "presets": [
+    {
+      "category": "grid",
+      "name": "Button Group"
+    }
+  ]
+}
+{% endschema %}

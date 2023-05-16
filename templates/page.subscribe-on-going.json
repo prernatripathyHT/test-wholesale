@@ -1,0 +1,122 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Mask_Group_164cd8bb-a401-4557-a258-e71ab634c304.png",
+        "show_sunburst": true,
+        "sunburst_color": "#eba9a0",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "title": "<p>Our Subscriptions<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>Fresh-Roasted Coffee. On Repeat. Never run out of coffee again. A coffee subscription is the easiest way to enjoy fresh, delicious coffee delivered to your door.<\/p>"
+      }
+    },
+    "1650405477abf91a55": {
+      "type": "index--icon-banner",
+      "blocks": {
+        "9d087892-8499-4b66-8cc1-c1cfcf675025": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_4.png",
+            "text": "Free Shipping",
+            "paragraph": ""
+          }
+        },
+        "4cbc3200-5363-4491-adf7-ea005515d2b0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_4.png",
+            "text": "Save 10%",
+            "paragraph": ""
+          }
+        },
+        "3e8946eb-de4b-41ff-9f95-90796a5449b0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_4.png",
+            "text": "Exclusive  Access",
+            "paragraph": ""
+          }
+        },
+        "d3ee3dbb-e466-4e83-953d-401c52561e97": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_4.png",
+            "text": "Flexible Deliveries",
+            "paragraph": ""
+          }
+        },
+        "e5be7f3e-ec03-4335-beb6-9b9ba1f508fe": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_4.png",
+            "text": "Cancel  Anytime",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "9d087892-8499-4b66-8cc1-c1cfcf675025",
+        "4cbc3200-5363-4491-adf7-ea005515d2b0",
+        "3e8946eb-de4b-41ff-9f95-90796a5449b0",
+        "d3ee3dbb-e466-4e83-953d-401c52561e97",
+        "e5be7f3e-ec03-4335-beb6-9b9ba1f508fe"
+      ],
+      "settings": {
+        "bg_color": "#b76887",
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "font": "font-couch",
+        "text_color": "text-white",
+        "text_classes": ""
+      }
+    },
+    "165040598427aa851f": {
+      "type": "collection-grid",
+      "settings": {
+        "alt_collection": "subscriptions",
+        "title": "",
+        "show_hover_image": false,
+        "show_atc": false,
+        "show_filters": false,
+        "feature_image_index": 9,
+        "grid_limit": 12
+      }
+    },
+    "1650406049108c61e4": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_image": "shopify:\/\/shop_images\/Coffee_in_hands2_1.png",
+        "title": "<p>Not sure which coffee is right for you?<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "mb-5",
+        "button_style": "btn btn-tertiary",
+        "link_text": "Take our quiz",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1650405477abf91a55",
+    "165040598427aa851f",
+    "1650406049108c61e4"
+  ]
+}

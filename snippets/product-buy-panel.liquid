@@ -1,0 +1,18 @@
+<!-- snippets/product-buy-panel [aa] -->
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="flex flex-col justify-start">
+
+  {% render 'product-breadcrumbs', product: product %}
+
+  <div class="product--buy-panel">
+    {% render 'product-form', product: product %}
+  </div>
+
+  {% render 'product-accordion', product: product %}
+
+  {% render 'product-testimonial', product: product %}
+
+  {% comment %} {% render 'product-icons', product: product %} {% endcomment %}
+</div>

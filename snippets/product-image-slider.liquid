@@ -1,0 +1,59 @@
+<!-- snippets/product-image-slider [aa] -->
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+{% capture slick_settings %}
+  {
+    "dots": true,
+    "arrows": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "nextArrow": ".{{ section.id }}.js-product-images .js-next",
+    "prevArrow": ".{{ section.id }}.js-product-images .js-prev"
+  }
+{% endcapture %}
+
+<div class="product--image-container js-product-images {{ section.id }}"
+     {% render 'background-color', product: product %}>
+
+  {% render 'slick-arrows',
+      left_class: 'top-1/2 -translate-y-1/2 left-5',
+      right_class: 'top-1/2 -translate-y-1/2 right-5' %}
+
+  {% render 'product-card-badge', product: product %}
+  {% render 'product-attribute-list', product: product %}
+
+  <ul class="js-slick js-product-image-slider product--image-slider max-w-full" data-slick='{{ slick_settings | strip }}'>
+    {%- for image in product.images -%}
+      
+      {% assign image_classes = 'h-full w-full object-cover' %}
+      {% assign variant_id = '' %}
+
+      {%- if image.attached_to_variant? -%}
+        {% assign variant_id = image.variants[0].id %}
+      {%- endif -%}
+
+      {% assign normalized_alt = image.alt | downcase %}
+      {% assign is_bag_image = false %}
+      {% if normalized_alt contains bag or image.src contains 'bag' %}
+        {% assign is_bag_image = true %}
+      {% endif %}
+
+      {%- if product.type == "Coffee" and is_bag_image -%}
+        {% assign image_classes = 'h-full w-9/12 mx-auto object-contain' %}
+      {%- endif -%}
+
+      <li class="js-image-slide w-full product--image-slide flex items-center justify-center relative"
+          data-variant="{{ variant_id }}">
+        {%
+          render 'responsive-image',
+          src: image.src,
+          alt: alt_text,
+          class: image_classes
+        %}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

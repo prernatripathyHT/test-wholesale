@@ -1,0 +1,392 @@
+<!-- sections/page-banner -->
+
+{%- if section.settings.show_gradient -%}
+  {% assign rgb = section.settings.bg_color | color_to_rgb %}
+  {% capture background_color %}radial-gradient({{ rgb }} 25%, rgba(255,255,255,1) 75%){% endcapture %}
+{%- else -%}
+  {% capture background_color %}
+    {{ section.settings.bg_color }}{% endcapture %}
+{%- endif -%}
+
+{%- comment %}
+  font-varies
+{%- endcomment %}
+
+<section
+  id="{{ section.settings.title | strip_html | handleize }}"
+  class="flex flex-col lg:flex-row gap-8 xl:gap-16 items-center 
+        {% if section.settings.image != blank or section.settings.image_right != blank %}
+          px-8 py-10 xl:px-24 xl:py-14
+        {% else %}
+          px-5 pt-5 pb-3 lg:px-12
+        {% endif %}
+        relative {{ section.settings.wrapper_classes }}"
+  style="background: {{ background_color }};"
+>
+  <!-- image + absolute sunburst -->
+  {%- if section.settings.image != blank -%}
+    <div class="relative ml-0 mr-auto lg:mx-auto w-60 lg:w-80">
+      {% if section.settings.show_sunburst %}
+        <div class="animate absolute -top-4 -left-12 h-52 w-52 animate-fadeInLeft">
+          {% render 'shape', shape: 'sunburst', fill: section.settings.sunburst_color %}
+        </div>
+      {% endif %}
+
+      {% render 'responsive-image',
+        src: section.settings.image.src,
+        alt: section.settings.image.alt,
+        class: 'w-60 lg:w-80 relative'
+      %}
+    </div>
+  {%- endif -%}
+
+  
+
+  <!-- text content -->
+  <div class="mx-auto w-full max-w-full py-2 xl:w-10/12">
+    {%- if section.settings.use_squiggles -%}
+      {% assign classes = section.settings.title_classes | append: ' text-decorate-squiggles' %}
+    {%- else -%}
+      {% assign classes = section.settings.title_classes %}
+    {%- endif -%}
+
+    {% render 'ct-heading',
+      title: section.settings.title,
+      tag: section.settings.tag,
+      text_size_mobile: section.settings.text_size_mobile,
+      text_size_desktop: section.settings.text_size_desktop,
+      text_color: section.settings.text_color,
+      font: section.settings.font,
+      alignment: section.settings.alignment,
+      weight: section.settings.weight,
+      class: classes
+    %}
+
+    {% unless section.settings.content == blank %}
+      <div class="text-xl font-tenso leading-relaxed animate animate-fadeInUp mt-2.5 {{ section.settings.alignment }}">
+        {{ section.settings.content }}
+      </div>
+    {% endunless %}
+
+    {%- if section.settings.testimonial_author != blank -%}
+      <div class="mt-5 flex items-center">
+        {%- if section.settings.author_image != blank -%}
+          {% render 'responsive-image',
+            src: section.settings.author_image.src,
+            alt: section.settings.testimonial_author,
+            class: 'w-12 h-12 rounded-full object-cover mr-6',
+            crop: true
+          %}
+        {%- endif -%}
+
+        <p class="text-left uppercase tracking-wider font-freight-sans">{{ section.settings.testimonial_author }}</p>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- image + absolute sunburst -->
+  {%- if section.settings.image_right != blank -%}
+    <div class="hidden lg:block relative mx-auto w-60 lg:w-80">
+      {% render 'responsive-image',
+        src: section.settings.image_right.src,
+        alt: section.settings.image_right.alt,
+        class: 'w-60 lg:w-80 relative'
+      %}
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Page Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Theming Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner Image (Left)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Banner Image (Right)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sunburst",
+      "label": "Show Sunburst",
+      "default": true,
+      "info": "Show sunburst behind image"
+    },
+    {
+      "type": "color",
+      "id": "sunburst_color",
+      "label": "Sunburst Color",
+      "default": "#4FA0D7"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gradient",
+      "label": "Use background gradient",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "info": "If 'Use background gradient' is checked above, this field will create a gradient from white to the selected color.",
+      "default": "#EFEBE1"
+    },
+    {
+      "type": "text",
+      "id": "wrapper_classes",
+      "label": "Additional classes for the banner"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_squiggles",
+      "label": "Show Squiggles for text decoration",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Section Paragraph Content"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_author",
+      "label": "Testimonial Author"
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "Testimonial Author Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Banner"
+    }
+  ]
+}
+{% endschema %}

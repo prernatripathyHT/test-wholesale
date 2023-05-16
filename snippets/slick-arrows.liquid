@@ -1,0 +1,44 @@
+<!-- snippets/slick-arrows [aa] -->
+
+{%- comment %}
+	Standard Slick arrows.
+
+  Variables:
+   - class: additional classes to apply to both arrows.
+   - left_class
+   - right_class
+{% endcomment -%}
+
+{%- if left_class == blank -%}
+  {% assign left_class = 'top-auto bottom-0 right-1/2' %}
+{%- endif -%}
+
+{%- if right_class == blank -%}
+  {% assign right_class = 'top-auto bottom-0 left-1/2' %}
+{%- endif -%}
+
+<button type="button"
+        class="js-prev slick-prev
+               absolute
+               z-10 h-fit p-2
+               rounded-full
+               transition-all
+               animate animate-fadeInUp
+               {{ class }} {{ left_class }}"
+        data-delay="200">
+    <span class="sr-only">Previous Testimonial</span>
+    {% render 'icon', icon: 'arrow-left', class: "w-10 h-8" %}
+</button>
+
+<button type="button"
+        class="js-next slick-next
+               absolute
+               z-10 h-fit p-2
+               rounded-full
+               transition-all
+               animate animate-fadeInUp
+               {{ class }} {{ right_class }}"
+        data-delay="200">
+    <span class="sr-only">Next Testimonial</span>
+    {% render 'icon', icon: 'arrow-right', class: "w-10 h-8" %}
+</button>

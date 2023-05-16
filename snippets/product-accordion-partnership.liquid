@@ -1,0 +1,116 @@
+{%- comment %}
+	Custom Fields Accordion. Contains fields from admin groups:
+    - partnership
+
+    partnership_partner
+    partnership_length
+    partnership_seeds_projects
+    partnership_location
+{% endcomment -%}
+
+{% assign cf = product.metafields.custom_fields %}
+
+{%- if cf.partnership_partner != blank
+    or cf.partnership_length != blank
+    or cf.partnership_seeds_projects != blank
+    or cf.partnership_location != blank -%}
+  <!-- snippets/product-accordion-partnership [aa] -->
+
+  {%- if cf.partnership_partner != blank -%}
+    <div class="py-5 px-5 lg:px-12 text-center border-b border border-black">
+      {%- comment %}
+        <p class="uppercase tracking-wide font-freight-sans">Partner</p>
+      {% endcomment -%}
+      <h3 class="font-couch text-2xl mt-3">{{ cf.partnership_partner }}</h3>
+    </div>
+  {% endif %}
+
+  {%- comment %}
+    Partnership year chart
+  {% endcomment -%}
+  {%- if cf.partnership_length != blank -%}
+    <div class="py-5 px-5 text-center  border-b border-black">
+      <p class="uppercase tracking-wide font-freight-sans">Length of Partnership</p>
+
+
+      {% assign ccc_founding_year = 1995 %}
+      {% assign current_year = "now" | date: "%Y" | times: 1 %}
+      {% assign partnership_starting_year = cf.partnership_length %}
+      {% assign length_of_partnership = current_year | minus: partnership_starting_year %}
+
+      {% assign number_of_points = current_year | minus: ccc_founding_year %}
+      {% assign active_point_start_year = number_of_points | minus: length_of_partnership %}
+
+      {% assign starting_year_divider = 100 | times: length_of_partnership | divided_by: number_of_points %}
+      {% assign starting_year_percentage = 100 | minus: starting_year_divider %}
+
+      <div class="relative py-6">
+        <div class="h-[2px] w-full absolute top-1/2 -translate-y-1/2 left-0 bg-black"></div>
+
+        <div class="flex items-center justify-evenly absolute top-1/2 -translate-y-1/2 w-full left-0">
+          {%- for year in (0..number_of_points) -%}
+            {%- if year == 0 -%}
+              <div class="bg-beige h-[10px] w-[10px] md:w-4 md:h-4 mx-px md:mx-1 rounded-full border border-black"></div>
+            {%- elsif year > active_point_start_year -%}
+              <div class="bg-yellow h-[10px] w-[10px] md:w-4 md:h-4 mx-px md:mx-1 rounded-full border border-black"></div>
+            {%- else -%}
+              <div class="bg-transparent h-[10px] w-[10px] md:w-4 md:h-4 mx-px md:mx-1"></div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        <div class="flex justify-between mt-12 relative">
+          <span class="font-tenso tracking-wide">{{ ccc_founding_year }}</span>
+
+          <span class="font-tenso tracking-wide absolute"
+                {%- if starting_year_percentage > 90 -%}
+                  style="left: 90%;"
+                {%- elsif starting_year_percentage < 10 -%}
+                  style="left: 10%;"
+                {%- else -%}
+                  style="left:{{ starting_year_percentage }}%;"
+                {%- endif -%}
+                >
+            {{ partnership_starting_year }}
+          </span>
+          <span class="font-tenso tracking-wide">{{ current_year }}</span>
+        </div>
+      </div>
+
+      <p class="font-tenso">{{ length_of_partnership }} years</p>
+    </div>
+  {% endif %}
+
+
+  {%- comment %}
+  	Seeds projects
+  {% endcomment -%}
+  {%- if cf.partnership_seeds_projects != blank -%}
+    <div class="py-5 px-5 text-center border-b border-black">
+      <p class="uppercase tracking-wide font-freight-sans">Seeds Project</p>
+
+      {%- for seed_link in cf.partnership_seeds_projects -%}
+        <p class="text-center tracking-wider my-2">{{ seed_link["partnership_seeds_projects"] }}</p>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- comment %}
+  	Map Image
+  {% endcomment -%}
+  {%- if cf.partnership_location != blank -%}
+    <div class="py-5 px-5 lg:px-12">
+      <p class="uppercase tracking-wide font-freight-sans text-center mb-3">Location</p>
+
+      <div class="flex items-center justify-center">
+        {%
+          render 'responsive-image-cf',
+          src: cf.partnership_location,
+          alt: "",
+          class: "w-full lg:w-4/5 mx-auto"
+        %}
+      </div>
+    </div>
+  {%- endif -%}
+
+{% endif %}

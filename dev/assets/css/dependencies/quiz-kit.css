@@ -1,0 +1,56 @@
+#quiz-kit-content #quiz-kit-container button:not(.image-size-large):not(.image-size-medium):not(#quiz-kit-question-next-button):not(#quiz-kit-question-prev-button) {
+  @apply btn btn-secondary;
+  @apply !py-3 !px-5 !font-semibold !rounded-full !text-center !w-max !relative !text-base !uppercase !tracking-wider;
+  @apply !bg-blue !text-white !border-transparent !flex items-center !mx-auto;
+  @apply !font-freight-sans;
+}
+
+#quiz-kit-content #quiz-kit-container button:not(.image-size-large):not(.image-size-medium):not(#quiz-kit-question-next-button):not(#quiz-kit-question-prev-button):hover,
+#quiz-kit-content #quiz-kit-container button:not(.image-size-large):not(.image-size-medium):not(#quiz-kit-question-next-button):not(#quiz-kit-question-prev-button):focus,
+#quiz-kit-content #quiz-kit-container button:not(.image-size-large):not(.image-size-medium):not(#quiz-kit-question-next-button):not(#quiz-kit-question-prev-button):focus-within,
+#quiz-kit-content #quiz-kit-container button:not(.image-size-large):not(.image-size-medium):not(#quiz-kit-question-next-button):not(#quiz-kit-question-prev-button):focus-visible,
+#quiz-kit-content #quiz-kit-container button:not(.image-size-large):not(.image-size-medium):not(#quiz-kit-question-next-button):not(#quiz-kit-question-prev-button):active {
+  @apply !bg-white !text-blue !border-blue;
+}
+
+#quiz-kit-content #quiz-kit-container h1,
+#quiz-kit-content #quiz-kit-container #quiz-kit-intro-title {
+  @apply !font-couch;
+}
+
+#quiz-kit-content #quiz-kit-container svg {
+  @apply mx-auto;
+}
+
+#quiz-kit-content #quiz-kit-container button h1 {
+  @apply !font-freight-sans;
+}
+
+#quiz-kit-question-navigation button {
+  @apply flex items-center;
+}
+
+#quiz-kit-content #quiz-kit-container h2,
+#quiz-kit-content #quiz-kit-container h3,
+#quiz-kit-content #quiz-kit-container h4,
+#quiz-kit-content #quiz-kit-container h5,
+#quiz-kit-content #quiz-kit-container h6,
+#quiz-kit-content #quiz-kit-container p,
+#quiz-kit-content #quiz-kit-container a,
+#quiz-kit-content #quiz-kit-container div,
+#quiz-kit-content #quiz-kit-container span {
+  @apply !font-freight-sans;
+}
+
+#quiz-kit-content [data-quiz-kit-watermark] {
+  @apply hidden;
+}
+
+#quiz-kit-success-popup.popup-visible {
+  @apply !hidden;
+}
+
+
+#quiz-kit-container [id^=quiz-kit-results-grid] p {
+  -webkit-line-clamp: initial!important;
+}

@@ -1,0 +1,22 @@
+@layer utilities {
+    .tooltip {
+        &::after {
+            content: attr(data-tooltip);
+
+            position: absolute;
+            z-index: 10;
+            bottom: calc(100% + rem(12)); 
+            left: 50%;
+
+            font-size: theme('fontSize.2xl');
+            white-space: nowrap;
+
+            padding: theme('spacing[2.5]');
+
+            background-color: theme('colors.black');
+            color: theme('colors.white');
+
+            pointer-events: none;
+        }
+    }
+}

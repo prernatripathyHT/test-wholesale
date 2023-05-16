@@ -1,0 +1,51 @@
+<!-- sections/index--featured-collection [aa] -->
+
+<section class="border-b border-black">
+  <ul class="grid grid-cols-1 md:grid-cols-2 w-screen">
+    {%- for block in section.blocks -%}
+      {%- unless collection and block.settings.collection.id == collection.id -%}
+        {% render 'collection-item', block: block %}
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection ",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Collection Settings"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Featured Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Collection Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Collection Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

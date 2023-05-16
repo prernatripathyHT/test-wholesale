@@ -1,0 +1,59 @@
+<!-- snippets/article-content -->
+{% assign slider_images = article.metafields.custom_fields.slider_images %}
+{%- if slider_images != blank -%}
+  {% capture slick_settings %}
+    {
+      "dots": true,
+      "arrows": false,
+      "infinite": true,
+      "speed": 300,
+      "slidesToShow": 1,
+      "slidesToScroll": 1
+    }
+  {% endcapture %}
+
+{%- endif -%}
+
+<article class="grid {% if article.image != blank %} lg:grid-cols-2 {% endif %} relative border border-black">
+
+  {%- if article.image -%}
+    <ul class="h-full product--image-container {% if slider_images != blank %} js-slick {% endif %}"
+        {% if slider_images != blank %}
+          data-slick='{{ slick_settings | strip }}'
+        {% endif %}>
+      <li class="w-full product--image-slide flex items-center justify-start relative">
+        {%
+          render 'responsive-image',
+          src: article.image.src,
+          alt: article.image.alt,
+          class: "h-full w-full object-cover"
+        %}
+      </li>
+
+      {% if slider_images != blank %}
+        {%- for item in slider_images -%}
+          <li class="w-full product--image-slide flex items-center justify-start relative">
+            {%
+              render 'responsive-image-cf',
+              src: item["slider_images"],
+              alt: item["slider_images"].alt,
+              class: "h-full w-full object-cover"
+            %}
+          </li>
+        {%- endfor -%}
+      {% endif %}
+    </ul>
+  {%- endif -%}
+
+  <div class="product--buy-panel border-t border-black lg:border-t-0
+              {% if article.metafields.custom_fields.project_year != blank %}flex flex-col justify-center{% endif %}">
+    
+    <div class="rte article-prose">
+      {{ article.content }}
+    </div>
+
+    {% render 'article-content-extra', article: article %}
+
+  </div>
+
+</article>

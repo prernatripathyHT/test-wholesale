@@ -1,0 +1,25 @@
+@layer utilities {
+    .text-stroke {
+        --clr-stroke: theme('colors.black');
+
+        color: transparent;
+        -webkit-text-stroke: rem(1.5) var(--clr-stroke);
+    }
+
+    .text-stroke-white {
+        @apply text-stroke;
+        --clr-stroke: theme('colors.white');
+    }
+
+    .text-stroke-camel {
+        @apply text-stroke;
+        --clr-stroke: theme('colors.camel');
+    }
+
+    .text-stroke-outline {
+      @apply text-stroke;
+      color: theme('colors.white');
+      text-shadow: 1px 3px theme('colors.black');
+    }
+
+}

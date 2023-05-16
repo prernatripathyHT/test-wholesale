@@ -1,0 +1,70 @@
+<!-- sections/related-products [aa] -->
+
+<div id="{{ collection.title | handleize }}"
+     class="collection-grid--container w-full js-recommended-products"
+     data-limit="3"
+     data-mobile-limit="4"
+     data-product-id="{{ product.id }}">
+
+  {%- if section.settings.title != blank -%}
+    <div class="border-t border-black py-6">
+      <h3 class="text-center text-2xl font-couch">{{ section.settings.title }}</h3>
+    </div>
+  {%- endif -%}
+
+  {%- if recommendations.products_count > 0 -%}
+    <ul class="grid grid-cols-2 xl:grid-cols-3">
+      {% for product in recommendations.products limit: section.settings.grid_limit %}
+        {% render 'product-card', product: product, show_hover_image: section.settings.show_hover_image %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Related Products",
+  "templates": ["product"],
+  "class": "inline",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "We Suggest..."
+    },
+    {
+      "type": "header",
+      "content": "Product Card Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hover_image",
+      "label": "Show secondary hover images",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_atc",
+      "label": "Enable add to cart",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "grid_limit",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "label": "Grid Limit",
+      "info": "Number of products to show",
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Related Products"
+    }
+  ]
+}
+{% endschema %}

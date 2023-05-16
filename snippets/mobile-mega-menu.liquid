@@ -1,0 +1,85 @@
+<!-- snippets/mobile-mega-menu [aa] -->
+
+{%- if level == 1 -%}
+  {% assign link_label = "mobile--menu-link--main" %}
+  {% assign link_handle = "mobile--main" %}
+  {% assign link_title = "" %}
+{% else %}
+  {% capture link_label %}mobile--menu-{{ parent.title | handleize }}{% endcapture %}
+  {% capture link_handle %}mobile--{{ parent.title | handleize }}{% endcapture %}
+  {% assign link_title = parent.title %}
+{% endif %}
+
+<div role="region"
+     aria-labelledby="{{ link_label }}"
+     class="js-mobile-mega-menu mobile-mega-menu invisible flex flex-col justify-between"
+     data-link="{{ link_handle }}">
+
+ <div class="relative">
+   {%- comment %}
+   <div class="absolute top-4 right-4">
+     <button class="btn-transparent h-8 w-8 p-2 js-mobile-mega-close text-white" data-link="{{ link_handle }}">
+       <span class="sr-only">Close Mega Menu {% if parent != blank %}{{ parent.title }}{% endif %}</span>
+       {% render 'icon', icon: 'close', class: "w-3" %}
+     </button>
+   </div>
+   {% endcomment -%}
+
+    <ul class="flex flex-col js-expandable-group">
+      {% for link in links %}
+        {% assign sublink_size = link.links | size %}
+        {% assign level = level | plus: 1 %}
+
+        {%- if sublink_size > 0  -%}
+          {% assign link_id = "mobile-menu-" | append: link.title | handleize %}
+
+          {%
+            render 'expandable-menu',
+            link: link.title,
+            label: link.title,
+            id: link_id,
+            active: false,
+            sublinks: link.links
+          %}
+        {%- else -%}
+          <li class="{% unless forloop.first %} border-t border-white {% endunless %} flex items-center text-base tracking-wider text-left w-full px-5 lg:px-12 py-5">
+            <a id="menu-link--{{ link.id }}"
+              href="{{ link.url }}"
+              class="text-base uppercase text-white"
+            >
+              {{ link.title }}
+            </a>
+          </li>
+        {%- endif -%}
+      {% endfor %}
+
+      
+
+      <li class="flex items-center text-base tracking-wider text-left w-full px-5 lg:px-12 py-5">
+        <form class="w-full" action="{{ routes.search_url }}" method="post">
+          <div class="border border-white flex items-center px-5 py-2.5 w-full">
+            <label for="mobile-mega-menu-search">
+              <span class="sr-only">Search our store</span>
+              {% render 'icon', icon: 'search', class: "text-white " %}
+            </label>
+
+            <input id="mobile-mega-menu-search"
+                   type="text"
+                   name="q"
+                   value=""
+                   placeholder="search"
+                   class="bg-transparent text-white border-0 block ml-2.5 w-full">
+
+           <button type="submit" name="search" class="btn-transparent p-2 text-white">
+             <span class="sr-only">Submit Search</span>
+             {% render 'icon', icon: 'arrow-right', class: "w-6 h-6" %}
+           </button>
+          </div>
+
+
+        </form>
+      </li>
+
+    </ul>
+ </div>
+</div>

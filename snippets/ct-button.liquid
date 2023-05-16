@@ -1,0 +1,27 @@
+<!-- snippets/ct-button -->
+{%- comment %}
+	Customize Theme Button / Link
+  Variables
+  - link_text: [Text] Text inside the link
+  - link_url: [Url] href
+  - button_style: [Enum] one of primary, secondary, etc.
+  - class: extra classes for the link
+  - new_tab: t/f
+{% endcomment -%}
+
+{% if link_text != blank and link_url != blank %}
+  <span class="animate animate-fadeInUp">
+    <a href="{{ link_url }}"
+       class="{{ button_style }} {{ class }}"
+       {% if new_tab %} target="_blank" {% endif %}>
+
+      {{ link_text }}
+      
+      {% unless icon == blank %}
+        {% render 'icon',
+          icon: icon,
+          class: icon_class %}
+      {% endunless %}
+    </a>
+  </span>
+{% endif %}

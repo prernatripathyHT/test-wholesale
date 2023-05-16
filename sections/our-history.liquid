@@ -1,0 +1,138 @@
+<!-- sections/our-history.liquid [ja] -->
+
+
+{% assign events = section.blocks | where: 'type', 'event' %}
+
+<section class="pt-24 pb-28 overflow-hidden">
+  {% for event in events %}
+
+    <div id="timeline-{{ event.settings.title | handleize }}" 
+         class="event px-5 sm:px-12 lg:p-0 lg:grid-cols-[280px_min(40vw,488px)_1fr] 
+                hidden activated:grid 
+                animate animate-fadeIn
+                {% if forloop.first %} activated {% endif%}">
+      <div class="lg:ml-12 ">
+        <p class="lg:mb-6">{{ event.settings.title }}</p>
+
+        <div class="w-full h-px bg-black hidden lg:block"></div>
+
+        <p class="font-tenso text-stroke-black text-8xl break-all lg:ml-auto mr-9 lg:w-1/2">{{ event.settings.date }}</p>
+      </div>
+
+      {% unless event.settings.img == blank %}
+        <div class="lg:max-w-[488px] border border-black mt-5 sm:mt-12 relative">
+          {% render 'responsive-image'
+           , src: event.settings.img,
+           alt: event.settings.img.alt %}
+
+          {% comment %} {% render 'icon'
+          , icon: 'starburst',
+          class: 'text-yellow absolute top-0 right-0 translate-x-[43%] translate-y-[-37%] -z-10' %} {% endcomment %}
+        </div>
+      {% endunless %}
+
+      {% unless event.settings.description == blank %}
+        <div class="lg:-mt-px pt-9 lg:pr-24 lg:pl-12 lg:border-t border-black lg:row-start-[none] col-span-end font-tenso font-light tracking-wide">
+          {{ event.settings.description | newline_to_br }}
+        </div>
+      {% endunless %}
+    </div>
+
+  {% endfor %}
+
+  <div class="timeline__wrapper mt-16 mx-5 sm:mx-12 overflow-scroll xl:overflow-auto">
+    <ul class="timeline mx-auto w-max px-9 py-12 flex gap-6 relative">
+      <div class="w-full h-px bg-black absolute top-1/2 left-0 -z-10"></div>
+
+      {% assign first_event = events | first %}
+      {% assign last_event = events | last %}
+
+      {% for i in (first_event.settings.date..last_event.settings.date) %}
+
+        {% assign timeline_date = i | append: '' %}
+        {% assign timeline_event = blank %}
+
+        {% for event in events %}
+
+          {% unless event.settings.date == timeline_date %}
+            {% continue %}
+          {% endunless %}
+
+          {% assign timeline_event = event %}
+
+        {% endfor %}
+
+        {% if timeline_event == blank %}
+          <li class="w-px h-7 bg-black">
+            <span class="sr-only">{{ i }}</span>
+          </li>
+        {% else %}
+          {% assign event_handle = timeline_event.settings.title | handleize %}
+
+          <li class="relative leading-[0]">
+            {% assign mod = forloop.index | modulo: 2 %}
+            {% capture label_position %}
+              {% if mod == 0 %}
+                -bottom-8 translate-y-1/2
+              {% else %}
+                -top-8 -translate-y-1/2
+              {% endif %}
+            {% endcapture %}
+
+            <label class="absolute left-1/2 -translate-x-1/2 {{ label_position }}" for="{{ event_handle }}">
+              {{ timeline_event.settings.date }}
+            </label>
+
+            <button
+              id="#{{ event_handle }}"
+              data-deactivate="timeline-buttons"
+              data-toggle="#timeline-{{ timeline_event.settings.title | handleize }}"
+              class="w-7 h-7 rounded-full border border-black bg-white activated:bg-yellow {% if forloop.first %} activated {% endif %}"></button>
+          </li>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Timeline",
+    "class": "section-our-history",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Event",
+        "type": "event",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Event Title"
+          }, {
+            "type": "text",
+            "id": "date",
+            "label": "Year of event",
+            "placeholder": "1995"
+          }, {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          }, {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "16521253738cbc3254": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Contact<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>We may be able to answer your question immediatly on our <a href=\"\/pages\/help-faq\" title=\"Help & FAQ\">FAQ page<\/a>. If not, drop us a line below. <\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "16473646277620471c": {
+      "type": "contact-us-section",
+      "settings": {
+        "feat_img": "shopify:\/\/shop_images\/shortwave-2334-2.jpg",
+        "form_title": "",
+        "subtext": "Our Support team is available Monday-Friday 8 a.m.- 4:30 p.m. ET",
+        "contact_topics": "Question about my retail or subscription order\nQuestion about my business Order\nQuestion about my grocery purchase\nQuestion about a PR request\nQuestion about classes\nGeneral (all other questions)"
+      }
+    }
+  },
+  "order": [
+    "16521253738cbc3254",
+    "16473646277620471c"
+  ]
+}

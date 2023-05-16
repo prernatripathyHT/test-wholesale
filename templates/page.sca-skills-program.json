@@ -1,0 +1,221 @@
+{
+  "sections": {
+    "165039091246226f73": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "title": "<p>SCA Coffee Skills Program<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "<p>The Coffee Skills Program consists of five different modules and one introductory course. The five specialist modules are Barista Skills, Brewing, Green Coffee, Roasting and Sensory Skills. These are offered at three different course levels. Introduction To Coffee is a popular, standalone course that familiarizes participants with specialty coffee and the broad topics that can be explored within the specialist modules. <\/p><p><br\/><\/p><p>In addition to the certificate earned by successfully completing a course, learners can also achieve the SCA Coffee Skills Diploma. Each CSP course has a level-based point value. Once a learner has achieved 100 points within the CSP program, they are eligible to apply for the SCA Coffee Skills Diploma.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "165101356234c4328d": {
+      "type": "image-plus-text",
+      "blocks": {
+        "e8e5f5dc-7e02-415b-b39b-4b1587554967": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cherry_sorting_2.png"
+          }
+        },
+        "cf4b34ec-83c7-4916-ae5a-a0d5ca0903cd": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Intro to Coffee",
+            "description": "<p>The Introduction to Coffee course is ideal for anyone who is new to specialty coffee. It charts coffee’s journey from its origins in Ethiopia to the major commodity that it is today. This course gives a general overview of the specialty coffee supply chain and explores topics such as history and cultivation, variables that affect coffee quality, basics of sensory analysis, fundamentals of roasting, factors of coffee freshness, and principles of brewing. In addition, learners will discuss the importance of water quality, cleanliness and maintenance. This interactive course also includes a cupping, an industry-specific process for evaluating coffee through a sensory experience. There is an online written exam administered upon the completion of the course.<\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "Browse Classes",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "uppercase tracking-wide font-freight-sans ",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "e8e5f5dc-7e02-415b-b39b-4b1587554967",
+        "cf4b34ec-83c7-4916-ae5a-a0d5ca0903cd"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651013569dce7384c": {
+      "type": "image-plus-text",
+      "blocks": {
+        "f798ec6c-7b62-422a-a6d2-ad49f62a3b94": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Barista Skills",
+            "description": "<p>Barista Skills teaches the essentials practical skills needed behind the espresso bar such as how to set your grinder, make espresso, foam and texture milk for cappuccinos, and create latte art as well as an exploration of health and safety issues, customer service protocols, and basic business practices.<\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "Browse Classes",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "uppercase tracking-wide font-freight-sans",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "9102f57c-07b1-4cdc-a804-6cb191caa645": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Espresso_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "f798ec6c-7b62-422a-a6d2-ad49f62a3b94",
+        "9102f57c-07b1-4cdc-a804-6cb191caa645"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165101357677761c84": {
+      "type": "image-plus-text",
+      "blocks": {
+        "269e9127-f90c-4072-b04f-abb21f7db029": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Miami_crop_25_1_1.png"
+          }
+        },
+        "59eff87b-366a-4f49-a166-7db3c633a933": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Brewing - Coming Soon",
+            "description": "<p>The Brewing courses cover numerous brewing coffee methods as well as the brewing variables that affect quality. Hands on learning is emphasized with a focus on grind profiles, brewing methods, coffee strength measurements, and coffee extraction charting.<\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "269e9127-f90c-4072-b04f-abb21f7db029",
+        "59eff87b-366a-4f49-a166-7db3c633a933"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651013580ec0e812e": {
+      "type": "image-plus-text",
+      "blocks": {
+        "3751d933-6988-4d17-965b-ec51d8399b54": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Sensory Skills - Coming Soon",
+            "description": "<p>Sensory Skills courses cover concepts and skills relevant to the evaluation of coffee and related products. The content of these interactive courses includes sensory science, industry-specific protocols, common sensory attributes of coffee, physiological sensory training, implementation of sensory programs, consumer testing design, application in business, and more.<\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "7e354a36-017d-40fe-a282-6509e3c0b575": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cupping_Emeryville_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "3751d933-6988-4d17-965b-ec51d8399b54",
+        "7e354a36-017d-40fe-a282-6509e3c0b575"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16510141010ef8fd72": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "title": "<p>Subscribe now to unlock SE classes<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "mb-5",
+        "button_style": "camel-underline",
+        "link_text": "Check out our Classes",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": "text-lg uppercase"
+      }
+    }
+  },
+  "order": [
+    "165039091246226f73",
+    "165101356234c4328d",
+    "1651013569dce7384c",
+    "165101357677761c84",
+    "1651013580ec0e812e",
+    "16510141010ef8fd72"
+  ]
+}

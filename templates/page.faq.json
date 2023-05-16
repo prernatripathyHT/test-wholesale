@@ -1,0 +1,750 @@
+{
+  "sections": {
+    "165039091246226f73": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>FAQ<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "16472989575779fd1a": {
+      "type": "faq-group",
+      "blocks": {
+        "1f3b5636-3a3a-4a3d-b39c-18cea1d9dd3b": {
+          "type": "faq",
+          "settings": {
+            "question": "How does your order and shipping schedule work?",
+            "answer": "<ul><li>Our roasting facility operates Monday-Friday (excluding select <a href=\"https:\/\/counterculturecoffee.com\/about-us\/help-faq#holidays\">holidays<\/a>).<\/li><li>All coffee orders are freshly roasted-to-order, meaning we roast and ship out on the same day.<\/li><li>If your order is submitted<strong> before<\/strong> <strong>4:00 p.m. ET<\/strong>, it will be roasted and shipped the next business day.<\/li><li>If your order is submitted <strong>after 4:00 p.m. ET<\/strong>, it will be roasted and shipped two business days later.<\/li><\/ul><p>For example, if you place an order on Monday at 10:00 a.m., your coffee will roast and ship on Tuesday. Or, if you place an order on Monday at 6:00 p.m., then your coffee will roast and ship on Wednesday. Or, if you place an order on Friday, it will roast and ship on Monday. You get the point 🙂<\/p>",
+            "label": ""
+          }
+        },
+        "c6a4dd08-a65e-4c14-a756-0e85fc648199": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I adjust my order after it has been placed?",
+            "answer": "<ul><li>We can’t adjust or cancel an order after it has been placed.<\/li><li>Please triple-check your address, order, quantity, and billing details.<\/li><\/ul><p>That said, if there is an issue, please contact our Customer Experience team at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a> as soon as possible, and we will help to resolve the issue.<\/p>",
+            "label": ""
+          }
+        },
+        "0b465978-e1c1-43f5-9802-a3b9ca363fe0": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I schedule a future order?",
+            "answer": "<ul><li>Our apologies, we cannot offer order scheduling for standard orders. <\/li><li>However, if you’re interested in scheduling future coffee orders on a recurring basis, I recommend checking out our <a href=\"https:\/\/counterculturecoffee.com\/subscriptions\">Ongoing Subscriptions<\/a> offering. Our Ongoing subscription gives the flexibility to schedule orders to any date in the future after the first order is processed.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "f91d593e-84f4-4acf-a542-c5a15d2609e7": {
+          "type": "faq",
+          "settings": {
+            "question": "What types of coffee do you offer?",
+            "answer": "<ul><li><strong>Year-Round coffees<\/strong> – can be both blends or single-origins that are available on our menu all year round. Year-rounds are possible because we rotate the individual coffee components throughout the year, always using coffees that have been freshly harvested. Our pursuit with this offering is to provide a consistent flavor profile through each season, while the individual coffee components change.<\/li><li><strong>Single-Origin coffees<\/strong>– are coffees that are sourced from a specific place. They are from all over the globe and are seasonally featured on our website. They are geographically from a particular site, such as a single farm, washing station, community, or co-op.<\/li><li><strong>Limited-Release and Quarterly-Release<\/strong> <strong>coffees<\/strong> might be either blends or Single-Origins that are temporarily available. On some occasions, these coffees will return annually, but they are often one-time offerings.<\/li><li><strong>Decaf<\/strong>– If you’re a decaf drinker, you’ve come to the right place; please check out our year-round Slow Motion Decaf found <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/collection-slow-motion-decaf\">here<\/a>. We also often have delicious Single-Origin decaf coffees available seasonally.<\/li><li><strong>Single-Serve- is <\/strong>our portable coffee product. It is made using freshly-ground coffee packaged into a biodegradable individual serving size pouch and then sealed in an oxygen-free packet to maximize freshness. <\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "4fb7fe28-4479-4370-a4d0-7228cc4b5c8d": {
+          "type": "faq",
+          "settings": {
+            "question": "What is the roast level of your coffees?",
+            "answer": "<ul><li>Almost all of our coffees would be considered light or medium roast, except for <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/collection-forty-six\">Forty Six<\/a>, <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/collection-big-trouble\">Big Trouble<\/a>, <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/collection-gradient\">Gradient<\/a>, and <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/collection-slow-motion-decaf\">Slow Motion<\/a>. <\/li><li>Every product page has a section devoted to the roast level that shows the Agtron number for each coffee. <\/li><li>The Agtron reflectometer bounces ultraviolet light off a sample of coffee and back to a sensor to analyze the color of ground or whole bean coffee, then outputs a number representing the degree of roast. The lower the number, the darker the roast. For example, our darkest roasts have an Agtron score of 48, medium roasts between 58–65, and light roasts anywhere above 70.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "b002e3b6-ffa0-424c-b723-86c5ccf1f9d2": {
+          "type": "faq",
+          "settings": {
+            "question": "Can you pre-grind coffee for my order?",
+            "answer": "<ul><li>We ship whole bean coffees because it helps maintain freshness, and we believe great coffees are at their best when brewed within 30 minutes of grinding. Also, we want the grind size to fit your brew method and flavor preference perfectly, and once you grind, there’s no going back.<\/li><li>Our only ground product is <a href=\"https:\/\/counterculturecoffee.com\/single-serve\">Single-Serve.<\/a><\/li><li>Please note, there are many great price-sensitive home grinders on the market; if you’re looking for a recommendation, please contact our CX team at retail@counterculturecoffee.com or visit our friends at <a href=\"https:\/\/baratza.com\/\">Baratza<\/a>.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "735ca5ad-139e-4e87-86c3-b1a87992a654": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer gift certificates?",
+            "answer": "<p>Not at this time, but stay tuned. It’s in the works. That said, we do offer <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/gift-subscriptions\">Gift Subscriptions<\/a>.<\/p>",
+            "label": ""
+          }
+        },
+        "916a39f1-426c-48ab-81ae-bb618e81a03c": {
+          "type": "faq",
+          "settings": {
+            "question": "Is your coffee organic?",
+            "answer": "<ul><li>We offer both organic and conventional offerings. For clarity on where to find organic only products, please check out our <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/organic\">Organic menu items<\/a>.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "9b5c126a-31c4-4761-b048-b66d12845ffb": {
+          "type": "faq",
+          "settings": {
+            "question": "Is your coffee Kosher?",
+            "answer": "<p>Yes! All coffee shipped from both roasting facilities is Kosher-certified by KSA.<\/p>",
+            "label": ""
+          }
+        },
+        "949d36b2-bac8-4dab-a6e3-074bffb52ba9": {
+          "type": "faq",
+          "settings": {
+            "question": "Is your coffee nut free and gluten free?",
+            "answer": "<p>Yes! Our coffee is naturally nut-free and gluten-free, and we do not process any other food products in our roasting facilities.<\/p>",
+            "label": ""
+          }
+        },
+        "528676b3-9f3b-43b7-a4f3-47d883741f6a": {
+          "type": "faq",
+          "settings": {
+            "question": "Is your coffee Certified Bird-Friendly?",
+            "answer": "<ul><li>We do not currently carry certified bird-friendly offerings, but many of the coffees we offer are grown in diverse shade habitats.<\/li><li>Fun fact, Fred Houk, our co-founder, was a bird-enthusiast, and CCC offered one of the first bird-friendly coffees on the market back in 1997— Sanctuary. This coffee and programming paved the way for our sustainability department. While we still appreciate Bird-Friendly efforts, we have shifted our sustainability focus from certification-centered to transparency-centered. For more info on our farm relationships and social and environmental sustainability projects, please check out our transparency report found here: <a href=\"https:\/\/counterculturecoffee.com\/wp-content\/uploads\/2019\/08\/CCC_2019TR-3.pdf\">Transparency Report<\/a><\/li><\/ul>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "1f3b5636-3a3a-4a3d-b39c-18cea1d9dd3b",
+        "c6a4dd08-a65e-4c14-a756-0e85fc648199",
+        "0b465978-e1c1-43f5-9802-a3b9ca363fe0",
+        "f91d593e-84f4-4acf-a542-c5a15d2609e7",
+        "4fb7fe28-4479-4370-a4d0-7228cc4b5c8d",
+        "b002e3b6-ffa0-424c-b723-86c5ccf1f9d2",
+        "735ca5ad-139e-4e87-86c3-b1a87992a654",
+        "916a39f1-426c-48ab-81ae-bb618e81a03c",
+        "9b5c126a-31c4-4761-b048-b66d12845ffb",
+        "949d36b2-bac8-4dab-a6e3-074bffb52ba9",
+        "528676b3-9f3b-43b7-a4f3-47d883741f6a"
+      ],
+      "settings": {
+        "header": "Shop",
+        "active": true
+      }
+    },
+    "16472989604ef7d283": {
+      "type": "faq-group",
+      "blocks": {
+        "95ac9599-f19b-4533-9c79-582e85d052b0": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I create a coffee Subscription?",
+            "answer": "<ul><li>Visit our subscription page <a href=\"https:\/\/counterculturecoffee.com\/subscriptions\">here<\/a> and select the coffee, frequency, quantity, then add to your cart and check out as usual.<\/li><li>Your first subscription order will ship out the next business day (if placed before 4:00 p.m. ET), and all the following orders will ship on your set schedule.<\/li><li>Please note, we can not postpone the first order, but all following orders can be adjusted through your customer subscription dashboard. <\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "d2891850-1f97-4aad-ad48-bfaa3080aec8": {
+          "type": "faq",
+          "settings": {
+            "question": "What coffee is included in the subscription?",
+            "answer": "<ul><li>You can either choose from our <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/year-round\">Year-Round<\/a> blends or a rotating variety of roaster-curated <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/single-origin\">Single-Origin<\/a> coffees.<\/li><li>For the complete subscription coffee list, check out our subscription menu <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/subscriptions\">here<\/a><\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "d25174de-203e-4c9d-af7b-5edf4c972192": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I subscribe to any coffee on your menu?",
+            "answer": "<ul><li>While we would love to accommodate this request, it is impossible due to seasonality and coffee availability. For subscriptions, we want to guarantee in advance that the coffee is available to be fulfilled in your recurring order, and we can only provide this guarantee on our Year-Round blends. <\/li><li>If you’re a coffee nerd like us and looking for a variety, we recommend our Roaster curated Single-Origin Subscription.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "9cee77ac-dfea-4252-a977-948d266428e0": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "question": "What is an On-going subscription?",
+            "answer": "<ul><li>An On-going subscription is the most convenient way to enjoy freshly roasted Counter Culture Coffee. With this subscription, we send a coffee of your choice at your chosen frequency and quantity. This type of subscription indefinitely continues until you cancel your subscription.<\/li><li>For this type of subscription, the frequency option is once a week, or every two weeks, or every three weeks, or every four weeks.<\/li><li>Each subscription order receives 10% off the retail price and free standard shipping via UPS SurePost. You always have complete control over your Coffee Subscription orders, and we send an email reminder before it ships. You can change your delivery frequency, next order date, or quantity anytime by visiting ‘My Subscriptions’ located within the ‘My Account’ section. <\/li><li>If you decide to adjust your subscription, please provide a 24 hour lead time before your renewal date.<\/li><li>If you request a change through our Customer Experience team, please provide 72 hours notice.<\/li><li>Another exciting perk to subscribing is our subscriber exclusive virtual tastings. In these live virtual tastings, our Education team guides subscribers through brewing tips and shares further info about the included subscription coffees.<\/li><\/ul><p>Please note, recurring subscriptions are not able to be shipped to Canada at this time. We apologize for any inconvenience.<\/p>",
+            "label": ""
+          }
+        },
+        "fefc72fc-53a4-4f77-ac75-e94e602ec405": {
+          "type": "faq",
+          "settings": {
+            "question": "What is a Gift subscription?",
+            "answer": "<ul><li>A <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/gift-subscriptions\">gift subscription<\/a> is similar to an on-going subscription but exclusively ships once a month and has a set expiration date. <\/li><li>You can purchase a 3-Month, 6-Month, or 12-Month plan.<\/li><li>This subscription is designed to be easy to share and manage. The subscription order ships out on the next business day after the purchase and the same day once a month for the subscription plan duration.<\/li><li>The subscription is billed per order and cannot be paid in full at the first purchase. <\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "a7fb2489-a056-410b-9aef-a2c289b0f446": {
+          "type": "faq",
+          "settings": {
+            "question": "When do the subscriptions ship?",
+            "answer": "<ul><li>The subscription orders ship out on the next business day after the purchase.<\/li><li>For ongoing subscriptions, the sequential orders renew on the selected cadence from the day of the first purchase.<\/li><li>For gift subscriptions, the orders renew once a month from the day of the first purchase.<\/li><li>All subscription orders auto-renew in the early hours on your selected scheduled date, and then it takes one day to process the new order to be freshly roasted and shipped the following business day.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "15bb4c8d-f03b-4f96-b435-e3a2c7e8d4fe": {
+          "type": "faq",
+          "settings": {
+            "question": "What is a Single-Origin subscription?",
+            "answer": "<ul><li>The Single-Origin subscription program is curated by our Coffee Department and provides a rotation of different Washed, and Natural processed Single-Origin coffees from all over the world. The program highlights our producer partnerships and gives subscribers a thorough sampling of our diverse and vast seasonal coffee menu.<\/li><li>The Single-Origin package can come in a <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/subscriptions\/single-origin-subscription\">two-bag variety<\/a> pack or a <a href=\"https:\/\/counterculturecoffee.com\/shop\/coffee\/single-origin-subscription-one-bag\">single bag<\/a>.<\/li><li>The rotation changes every four weeks on a fixed schedule. Please note, with this timeline; you may receive repeated offerings if your subscription cadence is less than every four weeks.<\/li><li>This type of subscription is not customizable due to coffee availability but is guided by our Coffee Department based on seasonality.<\/li><li>If you opt for a two-bag Single-Origin subscription, you will regularly receive an exclusive limited-time coffee.<\/li><li>Please subscribe to our Newsletter (located at the bottom of our website) for info on our monthly featured Single-Origin subscription coffees.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "df29089f-7919-4526-bbcb-2196373f2d7e": {
+          "type": "faq",
+          "settings": {
+            "question": "What will happen after I create a Coffee Subscription?",
+            "answer": "<ul><li>After you join the Counter Culture Coffee subscription program, you will receive an email confirming your subscription. This email will include a link to access ‘My Counter Culture Coffee Subscriptions’ where you can manage your future orders, coffee subscription items, and coffee subscription account information. <\/li><li>We will place your coffee subscription orders automatically according to your selected frequency, and you will only be billed on the day the order is shipped. <\/li><li>Before each coffee subscription order, we will send you an email reminder. You will also receive email notifications regarding other important information about your coffee subscription account, such as cancellation of your subscription or confirmation when an order is placed successfully.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "f5479929-9f28-4942-aa57-6f2b9a5b4a9f": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I change my subscription coffee after purchase?",
+            "answer": "<p>Once an order is processed and shipped, we cannot change the coffee, but with a 72-hour notice from the subscription renewal date, we can exchange your subscription coffee per request by emailing retail@counterculturecoffee.com.<\/p>",
+            "label": ""
+          }
+        },
+        "87de174d-813f-4c7c-a560-ff898a8afa09": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I add other coffees or products to my subscription?",
+            "answer": "<ul><li>Our system does not allow you to add other coffees or products to your existing subscription order.<\/li><li>However, we can add subscription eligible coffees (from this list <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/subscriptions\">Subscription Coffees<\/a>) per request by emailing retail@counterculturecoffee.com.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "61573c10-5f8f-440f-a8c3-a5d7f2d0ae54": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I have multiple subscriptions and credit cards in my CCC account?",
+            "answer": "<p>You can order as many different subscriptions with as many separate addresses and credit cards as you want. Just note, please make sure your billing and shipping addresses are correct.<\/p>",
+            "label": ""
+          }
+        },
+        "f7daec33-eecc-4e06-aeb0-f49de4b67fd6": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I pause my subscription?",
+            "answer": "<p>Yes, per request by emailing<a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>.<\/p>",
+            "label": ""
+          }
+        },
+        "a1d4aec3-f084-4a7e-b0e2-cd41da245429": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I cancel my subscription?",
+            "answer": "<p>Yes, by selecting ‘My subscriptions’ in the customer dashboard and scroll down to ‘Cancel Subscription’ (above customer details) and select ‘Save Details,’ once this is complete you will see that the subscription’s ‘Status’ changes to ‘Canceled’.<\/p>",
+            "label": ""
+          }
+        },
+        "e9ae13ce-d4c4-4788-9540-55d4847a6e0e": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I adjust my subscription?",
+            "answer": "<p>Yes, after your initial order, you can increase the quantity, change the cadence, and schedule the next renewal order to any day in the future right from your customer account. <\/p>",
+            "label": ""
+          }
+        },
+        "150ebc79-7e8e-474d-a77c-a1e2078b6d44": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I ship an order right away, or skip an order, or quickly update payment?",
+            "answer": "<p>To make this happen, select ‘My Subscriptions,’ choose the subscription you want to change and select ‘Ship Now,’ or ‘Skip now,’ or ‘Change Payment’ button available in the ‘My Subscriptions’ features.<\/p>",
+            "label": ""
+          }
+        },
+        "92fbd785-b34b-4ad1-bcd7-65d187b81c4e": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I reschedule my next subscription order?",
+            "answer": "<p>Yes, from your customer account select ‘My Subscriptions,’ choose the subscription you want to change, locate ‘Change Next Shipping Date’ click on the order date button (listed year-month-day), a calendar will pop-up, select the new date and ‘save’.<\/p>",
+            "label": ""
+          }
+        },
+        "9e689311-fd76-4ae3-bad5-57abd9fecbbe": {
+          "type": "faq",
+          "settings": {
+            "question": "When does my subscription charge?",
+            "answer": "<ul><li>Your subscription is billed per order at the time the order is created.<\/li><li>There is no membership fee to participate and no cancellation fee to end shipments.<\/li><li>Sorry, we cannot preprocess order payments for future coffee orders due to our order fulfillment system.<\/li><\/ul>",
+            "label": ""
+          }
+        },
+        "c9ff8107-1a32-465c-af2c-55436279f17b": {
+          "type": "faq",
+          "settings": {
+            "question": "If I want to change my subscription, how much advance notice do I have to give?",
+            "answer": "<ul><li>If your change involves submitting a request through our Customer Experience office at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>, please give our team 72 hours to process the request and follow up with a confirmation.<\/li><li>If your change is made within your customer dashboard, please complete the change 24-hours before your new order is processed.<\/li><\/ul>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "95ac9599-f19b-4533-9c79-582e85d052b0",
+        "d2891850-1f97-4aad-ad48-bfaa3080aec8",
+        "d25174de-203e-4c9d-af7b-5edf4c972192",
+        "9cee77ac-dfea-4252-a977-948d266428e0",
+        "fefc72fc-53a4-4f77-ac75-e94e602ec405",
+        "a7fb2489-a056-410b-9aef-a2c289b0f446",
+        "15bb4c8d-f03b-4f96-b435-e3a2c7e8d4fe",
+        "df29089f-7919-4526-bbcb-2196373f2d7e",
+        "f5479929-9f28-4942-aa57-6f2b9a5b4a9f",
+        "87de174d-813f-4c7c-a560-ff898a8afa09",
+        "61573c10-5f8f-440f-a8c3-a5d7f2d0ae54",
+        "f7daec33-eecc-4e06-aeb0-f49de4b67fd6",
+        "a1d4aec3-f084-4a7e-b0e2-cd41da245429",
+        "e9ae13ce-d4c4-4788-9540-55d4847a6e0e",
+        "150ebc79-7e8e-474d-a77c-a1e2078b6d44",
+        "92fbd785-b34b-4ad1-bcd7-65d187b81c4e",
+        "9e689311-fd76-4ae3-bad5-57abd9fecbbe",
+        "c9ff8107-1a32-465c-af2c-55436279f17b"
+      ],
+      "settings": {
+        "header": "Subscriptions",
+        "active": false
+      }
+    },
+    "16503909152a65d0ab": {
+      "type": "faq-group",
+      "blocks": {
+        "e52e9e4c-1ef9-49fd-a87b-f023c260ebae": {
+          "type": "faq",
+          "settings": {
+            "question": "What payments do you accept?",
+            "answer": "<p>We currently accept Visa, Mastercard, American Express, Discover, Goole Pay, and PayPal. <\/p><p><\/p><p>Because of our site’s card validation requirements, internationally-issued credit and bank cards, excluding those issued in Canada, are not accepted. Please email <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>for help resolving a payment issue.<\/p>",
+            "label": ""
+          }
+        },
+        "2bab7d82-60e6-4ec2-8247-5e74bb5ae7c8": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I update the payment on subscriptions?",
+            "answer": "<p>Log into your customer account and select ‘My subscriptions,’ locate the subscription you want to change, select ‘Change Payment’, select the new payment if saved on file or select ‘use a new card’ and type in the new card and finish by selecting ‘Change Payment Method’. <\/p>",
+            "label": ""
+          }
+        },
+        "5397ec55-d364-4185-a719-e27244d1ce10": {
+          "type": "faq",
+          "settings": {
+            "question": "What do I do if a charge is incorrect?",
+            "answer": "<p>Contact our Customer Experience team at<a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>.<\/p>",
+            "label": ""
+          }
+        },
+        "bbb0100c-1672-4373-a7d5-20ca44e06480": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>We do not accept returns on coffee due to its perishable nature. However, if you have any issues with your coffee or errors in your order, please contact us at <a href=\"mailto:retail@counterculturecoffee.com\" target=\"_blank\" title=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a> within four weeks of receiving your order, and we will find a solution.<\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "e52e9e4c-1ef9-49fd-a87b-f023c260ebae",
+        "2bab7d82-60e6-4ec2-8247-5e74bb5ae7c8",
+        "5397ec55-d364-4185-a719-e27244d1ce10",
+        "bbb0100c-1672-4373-a7d5-20ca44e06480"
+      ],
+      "settings": {
+        "header": "Payment\/Billing",
+        "active": false
+      }
+    },
+    "1653662647f626174f": {
+      "type": "faq-group",
+      "blocks": {
+        "0c37c8ad-71db-4bee-aece-88b00e17015b": {
+          "type": "faq",
+          "settings": {
+            "question": "Where is my coffee roasted and shipped from?",
+            "answer": "<p>All Retail orders are roasted and shipped from our headquarters and NC Roastery at:<\/p><p>812 Mallard Ave, Durham, NC  <\/p><p><\/p><p>We also have a CA Roastery that fulfills Grocery and Wholesale Orders on the West Coast at :<\/p><p>1329 64th St, Emeryville, CA <\/p>",
+            "label": ""
+          }
+        },
+        "5ccb5c47-10bb-4cd4-a6da-cc97155ef2f7": {
+          "type": "faq",
+          "settings": {
+            "question": "Where will you ship orders?",
+            "answer": "<p>We ship coffees and wares throughout the United States and Canada via UPS.<\/p><p><\/p><p>Shipping to Canada will assess brokerage fees at the recipient’s expense and incur additional charges.<\/p>",
+            "label": ""
+          }
+        },
+        "653065b8-3f4b-4575-b50d-cb74c03f5f89": {
+          "type": "faq",
+          "settings": {
+            "question": "What carriers can I use?",
+            "answer": "<p>You have the option of choosing form the following UPS methods: SurePost, Ground, 2nd-Day Air, or Next Day Air.<\/p><p><\/p><p>All options will be made available during check out.<\/p><p><\/p><p>All PO Box and Military addresses will ship via <a href=\"https:\/\/www.ups.com\/us\/en\/help-center\/tracking-support\/sp-definition.page\" target=\"_blank\">UPS SurePost<\/a>.<\/p>",
+            "label": ""
+          }
+        },
+        "5f734f2e-10f4-414c-b154-12782682173d": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "question": "What is the shipping cost on Standard orders?",
+            "answer": "<p>We are currently offering free UPS SurePost shipping on subscriptions and all single orders $30 and over.<\/p><p><br\/>UPS shipping varies depending on weight and selected transit speed. The cost will be calculated by UPS directly at checkout.<\/p>",
+            "label": ""
+          }
+        },
+        "3e484378-0498-439c-ba66-1c995b46e178": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your shipping schedule?",
+            "answer": "<p>We roast and ship orders Monday-Friday but are closed on major holidays. <\/p>",
+            "label": ""
+          }
+        },
+        "60320f62-b582-4d2d-9765-eba401d5972a": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does it take to get my package?",
+            "answer": "<p>We currently offer shipping through UPS with these estimated transit times:<br\/><br\/><strong>UPS SurePost<\/strong> – with an estimated transit time of 1-9 business days.<br\/><br\/><strong>UPS Ground<\/strong> – with an estimated transit time of 1-8 business days.<br\/><br\/><strong>UPS 2-Day-Select<\/strong> – with an estimated transit time of two business days from pick up.<br\/><br\/><strong>UPS Next-Day-Air<\/strong> – with an estimated transit time of one business day from pick up.<br\/><br\/>For SurePost and Ground orders shipping from our North Carolina Roastery, you can expect deliveries within one week if you’re on the Eastern side of the country and within two weeks if you’re on the country’s western side. If your order doesn’t arrive within this range, please contact our Customer Experience team at retail@counterculturecoffee.com<\/p><p><br\/>For Alaska, Hawaii, Puerto Rico, American Samoa, Guam, Northern Mariana Islands, and the U.S. Virgin Islands, <strong>please allow three full weeks<\/strong>.<br\/>That said, as soon as your order has been fulfilled, you should receive a follow-up email with tracking information. This tracking will provide a more precise transit time.<br\/><\/p>",
+            "label": ""
+          }
+        },
+        "23c65211-c44e-4d09-91b5-7b717cb8082d": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Not at this time, but please stay tuned, as we hope to in the near future!<\/p>",
+            "label": ""
+          }
+        },
+        "6fee9014-7e7c-437d-9c09-400cfab7534f": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your shipping schedule during federal holidays?",
+            "answer": "<p>We follow the same holiday schedule as USPS and will not ship on the days that USPS and UPS are closed. Please note, shipping will not occur on the following days:<\/p><p>New Year’s Day <\/p><p>Martin Luther King Day <\/p><p>President’s Day <\/p><p>Memorial Day <\/p><p>Independence Day <\/p><p>Labor Day <\/p><p>Columbus Day <\/p><p>Veterans Day <\/p><p>Thanksgiving <\/p><p>Day after Thanksgiving<\/p><p>Christmas Day <\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "0c37c8ad-71db-4bee-aece-88b00e17015b",
+        "5ccb5c47-10bb-4cd4-a6da-cc97155ef2f7",
+        "653065b8-3f4b-4575-b50d-cb74c03f5f89",
+        "5f734f2e-10f4-414c-b154-12782682173d",
+        "3e484378-0498-439c-ba66-1c995b46e178",
+        "60320f62-b582-4d2d-9765-eba401d5972a",
+        "23c65211-c44e-4d09-91b5-7b717cb8082d",
+        "6fee9014-7e7c-437d-9c09-400cfab7534f"
+      ],
+      "settings": {
+        "header": "Shipping",
+        "active": false
+      }
+    },
+    "165366319200c7affa": {
+      "type": "faq-group",
+      "blocks": {
+        "65b8a228-2247-48c2-9c36-10d2f66ab31e": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I fix a wrong address?",
+            "answer": "<p>If your order has shipped, please contact our Customer Experience team at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>.<\/p><p><\/p><p>If your order hasn’t been created because it is generated from a recurring subscription, you can update your address via the ‘My Subscription’ page in your customer account, from there locate the subscription you want to change, retype in the new address and select “Save.” <\/p>",
+            "label": ""
+          }
+        },
+        "4c8d8938-3908-4b8d-9bfa-987c9ffab3b2": {
+          "type": "faq",
+          "settings": {
+            "question": "What do I do if my order is incorrect?",
+            "answer": "<p>If you receive an incorrect order, please check your order receipt and contact our Customer Experience team at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a> within four weeks of delivery. We will implement an immediate fix to ensure that the correct order is shipped to you as soon as possible.<\/p>",
+            "label": ""
+          }
+        },
+        "136a2b68-34e6-4953-86f8-4de2bfab5537": {
+          "type": "faq",
+          "settings": {
+            "question": "What do I do if my order is damaged, lost, or mis-delivered?",
+            "answer": "<p>Please contact us at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>. If your order is damaged please include a photo, and we will file a claim with the carrier and issue a replacement order.<\/p>",
+            "label": ""
+          }
+        },
+        "a41ec154-c7b7-4f4a-a1e3-b60a3ad7ccd8": {
+          "type": "faq",
+          "settings": {
+            "question": "What do I do if my order is returning to your facility?",
+            "answer": "<p>Please contact us at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>, and we will work toward a resolution.<\/p>",
+            "label": ""
+          }
+        },
+        "ee7c57d9-573c-4bed-85e0-49f611563012": {
+          "type": "faq",
+          "settings": {
+            "question": "What do I do if my coffee tastes off?",
+            "answer": "<p>We want to make sure you’re happy with your coffee purchase, and if something isn’t tasting right, please contact us at retail@counterculturecoffee.com and we will work towards a solution. <\/p><p><br\/>We also would love to know the roast date, coffee, purchase information, and description of your taste experience. Sometimes changing the grind, water, recipe, and brewing process will help, but we would love to hear from you in either case.<br\/><\/p>",
+            "label": ""
+          }
+        },
+        "5db32a75-9bba-4213-937e-df956e813ddd": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I purchased at a coffee shop\/grocery store\/restaurant?",
+            "answer": "<p>If you are unhappy with a coffee purchased somewhere other than our website, we ask that you contact the original vendor for a return or exchange. If no resolution is achieved, please contact us, and we will do our best to accommodate.<\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "65b8a228-2247-48c2-9c36-10d2f66ab31e",
+        "4c8d8938-3908-4b8d-9bfa-987c9ffab3b2",
+        "136a2b68-34e6-4953-86f8-4de2bfab5537",
+        "a41ec154-c7b7-4f4a-a1e3-b60a3ad7ccd8",
+        "ee7c57d9-573c-4bed-85e0-49f611563012",
+        "5db32a75-9bba-4213-937e-df956e813ddd"
+      ],
+      "settings": {
+        "header": "Order Issues",
+        "active": false
+      }
+    },
+    "1653663513c963d3c2": {
+      "type": "faq-group",
+      "blocks": {
+        "69650d24-5191-4375-820b-28f715bfa729": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your packaging material?",
+            "answer": "<p>Our Year-Round and Single Origin coffees are packaged in bags made of a material called Biotrē. We currently use Biotrē 1.0, which has two layers. The first layer is primarily wood chips, and it will break down into healthy compost. The second layer, which keeps our coffee fresh, is not suitable for a composting environment because it takes a bit longer to break down. Additionally, the valve, tin tie, and roast date stickers are not compostable or recyclable. More information about this packaging can be found below.<br\/><\/p><p>Our Limited-Release coffees come in a box that is recyclable and is made from recycled content. The clear bag inside should be disposed of in the landfill.<br\/><\/p><p>We are currently testing Biotrē 3.0, which will be 100% plant-based and 100% compostable, including the valve. We hope to be able to offer this to consumers soon!<\/p>",
+            "label": ""
+          }
+        },
+        "23fdc6ed-dd8f-40ae-940e-2b38659afb52": {
+          "type": "faq",
+          "settings": {
+            "question": "What’s up with the Fres-co packaging?",
+            "answer": "<p>For our newest Year-Round blend, Gradient, we are working with a new packaging manufacturer, Fres-co. Fres-co produces and manufactures bags domestically and so the shipping distance and time it takes to get to us is dramatically reduced. We will soon be taking a closer look at our packaging options to align with a more sustainable long-term partner. You can read about Fresc-co’s sustainability policy <a href=\"https:\/\/www.fresco.com\/sustainability-policy\/\">here<\/a>.<\/p>",
+            "label": ""
+          }
+        },
+        "c6b72481-8e66-492d-a9f1-c9235b46fdd1": {
+          "type": "faq",
+          "settings": {
+            "question": "What is Biotrē packaging?",
+            "answer": "<p>Biotrē 1.0 is made from 60% (by weight) renewable wood pulp. The wood pulp portion is biodegradable. Third-party testing per ASTM tests D-6868 and D-6400 confirmed that nearly all of the wood pulp portion will disintegrate into healthy compost over 84 days in a backyard, home composting environment. Internal studies in moist, managed home compost have shown a degradation time of 90 days.<\/p><p><br\/>The remaining 40% (by weight) of the bag is Polyethylene (PE) made from petroleum-based sources.<br\/><\/p><p>Biotrē 1.0 is not compatible with industrial or municipal composting. It is best disposed of by placing it in a privately managed compost pile where the 40% PE layer, the one-way degassing valve, the tin tie, and any stickers can be removed manually and disposed of in the regular trash.<br\/><\/p><p>Although 60% (by weight) of our bags will break down into healthy compost, we cannot label them as compostable because they do not meet the definition of “compostable” under California law. Consumers trying to be conscious should remove the valve, tin tie, stickers, and compost in their backyard. There will be plastic left after 84 days, which should be thrown away.<br\/><\/p><p>We have chosen this packaging because we think it provides environmental benefits without sacrificing our coffee’s freshness and quality. However, we acknowledge that 60% is not 100%, and we will continue to look for packaging that meets our quality standards and can be disposed of in a more environmentally friendly way. If you would like more info on Biotrē please visit: Biotrē bags<\/p>",
+            "label": ""
+          }
+        },
+        "bb8e1545-1b0b-4395-bf73-375cf1c9ffd6": {
+          "type": "faq",
+          "settings": {
+            "question": "Why are your coffees in different types of packaging?",
+            "answer": "<p>Due to the impact of COVID-19 on our packaging supply chain, we are currently using a mix of packaging to fulfill our commitments within our varied partnerships.<\/p>",
+            "label": ""
+          }
+        },
+        "3c07dea0-1028-42ad-82c8-9586a71948ae": {
+          "type": "faq",
+          "settings": {
+            "question": "Is your coffee packaging recyclable?",
+            "answer": "<p>The shipping boxes and Limited-Release boxes can be recycled.<br\/><\/p><p>The bags are not recyclable but instead are designed to break down very quickly in regular waste.<\/p>",
+            "label": ""
+          }
+        },
+        "c6e59439-3c5d-43be-9709-f0315a65bf65": {
+          "type": "faq",
+          "settings": {
+            "question": "Can your coffee bags be composted?",
+            "answer": "<p>While 60% (by weight) of our Biotrē bags will break down into healthy compost, we cannot label them as compostable because they do not meet the definition of “compostable” under California law. That said, the bags will break down quickly in regular waste.<\/p>",
+            "label": ""
+          }
+        },
+        "3b00e100-e901-4f44-9cb6-57402450cdaf": {
+          "type": "faq",
+          "settings": {
+            "question": "What bag sizes do you have available for whole bean coffee?",
+            "answer": "<p>All year-round blends are availble in 12 oz, 24 oz, and 5 lbs bags. Most others, inlcuding single-origin and limited release coffees are available only in 12 oz. bags. <\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "69650d24-5191-4375-820b-28f715bfa729",
+        "23fdc6ed-dd8f-40ae-940e-2b38659afb52",
+        "c6b72481-8e66-492d-a9f1-c9235b46fdd1",
+        "bb8e1545-1b0b-4395-bf73-375cf1c9ffd6",
+        "3c07dea0-1028-42ad-82c8-9586a71948ae",
+        "c6e59439-3c5d-43be-9709-f0315a65bf65",
+        "3b00e100-e901-4f44-9cb6-57402450cdaf"
+      ],
+      "settings": {
+        "header": "Packaging",
+        "active": false
+      }
+    },
+    "1653663903bfd9d077": {
+      "type": "faq-group",
+      "blocks": {
+        "c86d1a16-6deb-4b14-979e-3f0dab978d8f": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I find out info about Tastings at Ten?",
+            "answer": "<p>While we didn’t know it then, we hosted our last Tasting at Ten event on March 6, 2020. A 25-year-old tradition changed, along with the rest of the world.<br\/><\/p><p>We are eager to reactivate our spaces and welcome you back to the newest iteration of Friday tastings with Shift Drink™<br\/>Sign up and learn more about Shift Drink™ here.<br\/><\/p><p>Please check out our Education information here.<\/p>",
+            "label": ""
+          }
+        },
+        "8b5ebdc2-765e-41aa-99f3-8b722d39947e": {
+          "type": "faq",
+          "settings": {
+            "question": "What is Shift Drink™?",
+            "answer": "<p>Shift Drink™ is a monthly pop-up coffee shop that aims to bring our people together over coffee while supporting local non-profit organizations from each of the communities we are a part of. This event will take place on the last Friday of each month. Register to join us at a Training Center near you for a Shift Drink™️!<\/p><p><br\/>Sign up and learn more about Shift Drink™ here.<br\/><\/p>",
+            "label": ""
+          }
+        },
+        "283302de-6d64-4b33-9866-b25d3ec75763": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I buy coffee for an event I’m organizing?",
+            "answer": "<p>We love events and appreciate your interest and wanting to include Counter Culture Coffee. Please contact our customer experience team at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>, and give us the details about your event and we’re happy to chat about coffee ordering options.<\/p>",
+            "label": ""
+          }
+        },
+        "89a30ab9-4c2f-49d6-a3d3-8c8caead469a": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer private tastings?",
+            "answer": "<p>On a case by case basis, we do, but it will depend on space and staff availability. Please email us at <a href=\"mailto:retail@counterculturecoffee.com\">retail@counterculturecoffee.com<\/a>, and we would love to chat about options. <\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "c86d1a16-6deb-4b14-979e-3f0dab978d8f",
+        "8b5ebdc2-765e-41aa-99f3-8b722d39947e",
+        "283302de-6d64-4b33-9866-b25d3ec75763",
+        "89a30ab9-4c2f-49d6-a3d3-8c8caead469a"
+      ],
+      "settings": {
+        "header": "Events",
+        "active": false
+      }
+    },
+    "1653664073d815fbbb": {
+      "type": "faq-group",
+      "blocks": {
+        "4480f4ce-6b9f-49ca-a70c-3e0ed1c4b67d": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I become a wholesale partner?",
+            "answer": "<p>We’re so glad you’re interested in becoming a wholesale partner, the first step is to please fill out this form<a href=\"https:\/\/counterculturecoffee.com\/wholesale\/wholesale-inquiry\">Wholesale Inquiry<\/a>, and our regional teams will reach out shortly.<\/p>",
+            "label": ""
+          }
+        },
+        "59f885b0-ca87-45b4-a24e-4cc11c7931e1": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I buy your coffee in bulk?",
+            "answer": "<p>Yes, we recently made certain coffees availble in 5 lb bags! <\/p><p><\/p><p>If you’re interested in becoming a wholesale partner, the first step is to please fill out this form <a href=\"https:\/\/counterculturecoffee.com\/wholesale\/wholesale-inquiry\">Wholesale Inquiry<\/a>, and our regional teams will reach out ASAP.<\/p>",
+            "label": ""
+          }
+        },
+        "f18099ce-457d-4158-a583-b86d14fd1af2": {
+          "type": "faq",
+          "settings": {
+            "question": "What time is the wholesale order cut-off?",
+            "answer": "<p>Orders placed before 4 p.m. ET will roast and ship out the following business day. <\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "4480f4ce-6b9f-49ca-a70c-3e0ed1c4b67d",
+        "59f885b0-ca87-45b4-a24e-4cc11c7931e1",
+        "f18099ce-457d-4158-a583-b86d14fd1af2"
+      ],
+      "settings": {
+        "header": "Wholesale",
+        "active": false
+      }
+    },
+    "16536642488224637e": {
+      "type": "faq-group",
+      "blocks": {
+        "349855e4-89bb-4b1d-98fd-c8c3d1f0d2d9": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you give discounts?",
+            "answer": "<p>We don’t offer standing discount programs, but we frequently have promotions; for more info and to catch the next one, please sign up for our newsletter at the bottom of our website.<\/p>",
+            "label": ""
+          }
+        },
+        "635aa879-111a-4e52-bb49-dd3f2af96efb": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you give away burlap coffee bags?",
+            "answer": "<p>Yes, if you’re local to our Durham, NC roastery, and can stop by our facility Monday through Friday from 9:00 a.m.-4:00 p.m., you’re very welcome to pick up free burlap bags. Feel free to contact us at retail@counterculturecoffee.com to confirm availability.<\/p>",
+            "label": ""
+          }
+        },
+        "67705f46-f7b9-4bdd-9db3-bf34595aa297": {
+          "type": "faq",
+          "settings": {
+            "question": "How have you adapted to COVID-19?",
+            "answer": "<p><strong>Public Events Temporarily Canceled:<\/strong> The health and safety of our Counter Culture employees and guests is our highest priority. Due to the novel Coronavirus (COVID-19) ‘s continued spread, we’ve decided to temporarily suspend all public Tasting @ Ten events and monthly Catalog Cuppings until further notice.<\/p><p><\/p><p><strong>Virtual Coffee Experiences:<\/strong> We certainly miss having you in our Training Centers for weekly tastings. Want to stay in the loop on virtual events? Add your email to our newsletter<a href=\"https:\/\/counterculturecoffee.com\/\">here<\/a>(bottom right).<\/p><p><\/p><p><strong>Maintaining the Integrity of our Product:<\/strong> As a manufacturer, we continue to follow strict food and safety guidelines and follow OSHA and FDA guidance regarding COVID-19. We have ensured the integrity of our coffee, bagging, production spaces, and our equipment and supplies.We will continue to introduce any additional safety measures as needed to uphold the integrity of our product. We are consistently monitoring and taking all CDC recommendations regarding necessary precautions for our Training Centers, Roasteries, and production staff.<\/p><p><\/p><p><strong>Shipping You Fresh Coffee: <\/strong>All of our coffee is freshly roasted to order. Once your order has been placed, you will receive a confirmation email. Please allow up to 2-business days for your order to process. Your order will roast\/ship the next business day after it has been processed. When your order ships, you will receive a separate email with tracking information.Due to circumstances surrounding the COVID-19 outbreak, you may experience delays in both processing and shipping. We are doing all we can to ensure that freshly roasted coffee will be delivered to you! Thank you for your patience.<\/p>",
+            "label": ""
+          }
+        },
+        "4eab912a-c8bf-42f3-a440-39ff1dd5b969": {
+          "type": "faq",
+          "settings": {
+            "question": "Are there career opportunities with your company?",
+            "answer": "<p>Yes, to join our team of passionate, dynamic, diverse, coffee-driven people, please check out our job postings here <a href=\"https:\/\/counterculturecoffee.com\/about-us\/careers\">CCC Careers<\/a>.<\/p>",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "349855e4-89bb-4b1d-98fd-c8c3d1f0d2d9",
+        "635aa879-111a-4e52-bb49-dd3f2af96efb",
+        "67705f46-f7b9-4bdd-9db3-bf34595aa297",
+        "4eab912a-c8bf-42f3-a440-39ff1dd5b969"
+      ],
+      "settings": {
+        "header": "Community",
+        "active": false
+      }
+    },
+    "1650391041f39e44cd": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-black",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/MO4A8777.jpg",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Still have questions? <\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "",
+        "button_style": "btn btn-secondary",
+        "link_text": "Contact us",
+        "link_url": "shopify:\/\/pages\/contact-us",
+        "link_classes": "uppercase"
+      }
+    }
+  },
+  "order": [
+    "165039091246226f73",
+    "16472989575779fd1a",
+    "16472989604ef7d283",
+    "16503909152a65d0ab",
+    "1653662647f626174f",
+    "165366319200c7affa",
+    "1653663513c963d3c2",
+    "1653663903bfd9d077",
+    "1653664073d815fbbb",
+    "16536642488224637e",
+    "1650391041f39e44cd"
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/brewschool.png",
+        "show_sunburst": true,
+        "sunburst_color": "#af87b8",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Basics of Brewing<\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Preparing and enjoying a great cup of coffee is a pleasure—a simple task with rich rewards. Brewing coffee is like cooking with fresh produce: start with the best, freshest ingredients, take care to do it well, and you will create something astonishingly delicious.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "1650476180565e4951": {
+      "type": "number-text-grid",
+      "blocks": {
+        "20e3799c-30c9-4487-838c-9e23d4afadb8": {
+          "type": "text_block",
+          "settings": {
+            "title": "Keep it fresh.",
+            "text": "Use recently roasted coffee, ground immediately before brewing."
+          }
+        },
+        "d7c72e42-141d-44fe-9dbd-1fe34833553d": {
+          "type": "text_block",
+          "settings": {
+            "title": "Not too hot!",
+            "text": "Brew with water heated to between 195º to 205º Fahrenheit."
+          }
+        },
+        "bd0afeb1-bb27-4c3c-8c01-43f2a02a81ea": {
+          "type": "text_block",
+          "settings": {
+            "title": "Perfect Ratio.",
+            "text": "Use one part coffee to 15–18 parts water. If you’re adjusting the ratio for the first time, start in the middle of this range and adjust to taste."
+          }
+        },
+        "f292d332-80eb-49c2-8119-f42c5097c826": {
+          "type": "text_block",
+          "settings": {
+            "title": "Storage is Key",
+            "text": "Keep whole-bean coffee in an airtight container, out of direct sunlight, and away from heat and moisture."
+          }
+        }
+      },
+      "block_order": [
+        "20e3799c-30c9-4487-838c-9e23d4afadb8",
+        "d7c72e42-141d-44fe-9dbd-1fe34833553d",
+        "bd0afeb1-bb27-4c3c-8c01-43f2a02a81ea",
+        "f292d332-80eb-49c2-8119-f42c5097c826"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(179, 158, 125, 1), rgba(169, 145, 103, 0.65) 100%)",
+        "title": "<p>Golden Rules<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "mb-5"
+      }
+    },
+    "1650478232ae92147c": {
+      "type": "index--icon-grid",
+      "blocks": {
+        "a2c9f33e-62db-49bd-ace8-0929164bb3e4": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grindsize1-2.jpg",
+            "text": "Extra Fine"
+          }
+        },
+        "64b77239-4526-4f2b-a6e4-6021058f8fe8": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grindsize2-2.jpg",
+            "text": "Fine"
+          }
+        },
+        "715bbca5-50f3-4f27-a5a4-fca902b1f5c9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grindsize3-2.jpg",
+            "text": "Medium"
+          }
+        },
+        "3a27c257-aabe-4050-9339-bd9e5cb0796a": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grindsize4-2.jpg",
+            "text": "Medium Coarse"
+          }
+        },
+        "d0b60833-1ee7-4a7c-8d6f-ed07bcb8791a": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grindsize5-2.jpg",
+            "text": "Coarse"
+          }
+        },
+        "cec907df-e2e0-4053-bd5c-b7693b37a7cc": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grindsize6_supercoarse_2.jpg",
+            "text": "Extra Coarse"
+          }
+        }
+      },
+      "block_order": [
+        "a2c9f33e-62db-49bd-ace8-0929164bb3e4",
+        "64b77239-4526-4f2b-a6e4-6021058f8fe8",
+        "715bbca5-50f3-4f27-a5a4-fca902b1f5c9",
+        "3a27c257-aabe-4050-9339-bd9e5cb0796a",
+        "d0b60833-1ee7-4a7c-8d6f-ed07bcb8791a",
+        "cec907df-e2e0-4053-bd5c-b7693b37a7cc"
+      ],
+      "settings": {
+        "title": "<p>Grind Size<\/p>",
+        "paragraph": "When your brew tastes off, start troubleshooting by adjusting the grind size. Different brewing devices require different particle sizes based on their geometric shape and the flow of water, and slight adjustments to your recipe can necessitate a change in the grind. Generally, brew methods with shorter contact times, like espresso or AeroPress, require a finer grind size; longer, slower brew methods, like French press, work best with a coarser grind.",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "button_style": "btn btn-secondary",
+        "link_text": "Watch Our Grind Size Video",
+        "link_url": "https:\/\/vimeo.com\/205404642",
+        "link_classes": ""
+      }
+    },
+    "1650569191dff6748e": {
+      "type": "icon-link-list",
+      "blocks": {
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#34beae",
+            "title": "Kalita Wave",
+            "url": "shopify:\/\/pages\/quick-easy-pour-over",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_Katilawave_edit_3b5909d6-fe11-45a8-af60-02b599654d1a.png"
+          }
+        },
+        "12975029-480c-4426-99d1-d57a838c0d7a": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fdbf69",
+            "title": "French Press",
+            "url": "shopify:\/\/pages\/quick-easy-french-press",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_frenchpress_edit.png"
+          }
+        },
+        "31387098-a5a6-4866-a474-9e6a1e519b44": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fbc7b2",
+            "title": "Chemex",
+            "url": "shopify:\/\/pages\/quick-easy-chemex",
+            "icon_image": "shopify:\/\/shop_images\/Frame-2.png"
+          }
+        },
+        "6615e4f1-b15e-4812-b99c-0d145030f03d": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#ff5c1b",
+            "title": "Hario V60",
+            "url": "shopify:\/\/pages\/quick-easy-v60",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Live-Stroke-Individual_Hario_V60_6a8093a7-629c-4cf5-b3c2-7832668228fb.png"
+          }
+        },
+        "87edf125-aa68-4420-9046-377a206cda67": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#3a8dde",
+            "title": "AeroPress",
+            "url": "shopify:\/\/pages\/quick-easy-aeropress",
+            "icon_image": "shopify:\/\/shop_images\/icon-aeropress_d01b8bfa-bee9-4027-9ffc-2f5381b96486.png"
+          }
+        }
+      },
+      "block_order": [
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb",
+        "12975029-480c-4426-99d1-d57a838c0d7a",
+        "31387098-a5a6-4866-a474-9e6a1e519b44",
+        "6615e4f1-b15e-4812-b99c-0d145030f03d",
+        "87edf125-aa68-4420-9046-377a206cda67"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(239, 235, 225, 1) 16%, rgba(255, 255, 255, 1) 100%)",
+        "mobile_layout": "slider",
+        "title": "<p>Brew Guides<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165047537506771462": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/MO4A0857-Edit2.jpg",
+        "use_squiggles": false,
+        "number": "",
+        "content": "<p>From latte art to extraction theory, our team of <br\/>Educators can elevate your coffee-making.<\/p><p><\/p>",
+        "title": "<p><strong>Learn to Brew from the Best Baristas<\/strong><\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "button_style": "btn btn-tertiary",
+        "link_text": "Check out our classes",
+        "link_url": "shopify:\/\/pages\/classes",
+        "link_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1650476180565e4951",
+    "1650478232ae92147c",
+    "1650569191dff6748e",
+    "165047537506771462"
+  ]
+}

@@ -1,0 +1,25 @@
+<!-- snippets/cart-notes [aa] -->
+
+<div class="px-5 py-5">
+  <div class="custom-checkbox mb-2.5">
+    <div class="checkbox-wrapper">
+      <input id="toggle-cart-note"
+             type="checkbox"
+             name="toggle-note"
+             {% if cart.note != blank %}checked{% endif %}
+             class="sr-only js-cart-note-toggle">
+    </div>
+
+    <label for="toggle-cart-note" class="flex gap-4 items-center" tabindex="0">
+      Add gift message
+      {% render 'icon', icon: 'note' %}
+    </label>
+  </div>
+  <div class="js-cart-note-container" {% if cart.note == blank %} style="display: none;" {% endif %}>
+    <textarea name="note"
+              rows="4"
+              cols="80"
+              class="border border-black js-cart-note-textarea resize-none"
+              placeholder="add your note">{{ cart.note | strip }}</textarea>
+  </div>
+</div>

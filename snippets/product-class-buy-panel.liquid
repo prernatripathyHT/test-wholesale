@@ -1,0 +1,15 @@
+<!-- snippets/product-class-buy-panel [aa] -->
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="flex flex-col justify-center">
+  <div class="product--buy-panel">
+    {% render 'product-class', product: product %}
+  </div>
+
+  {% render 'class-recommended-product',
+       product: product %}
+
+  {% render 'class-instructor',
+       product: product %}
+</div>

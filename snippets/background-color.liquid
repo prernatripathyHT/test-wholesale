@@ -1,0 +1,3 @@
+{% assign bg_color = product.metafields.main.background_color %}
+
+{% if bg_color != blank %}style="background: {{bg_color}};"{% endif %}

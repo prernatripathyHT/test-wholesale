@@ -1,0 +1,38 @@
+<!-- snippets/cart-empty [aa] -->
+
+{% assign button_blocks = section.blocks | where: "type", "empty_button" %}
+
+<div class="slide-cart--empty 
+          bg-beige cart-page:bg-transparent 
+            h-full py-12 px-4
+            flex flex-col justify-between">
+
+  <div>
+    {% unless settings['cart_empty_title'] == blank %}
+      {% if template.name == 'cart' %}
+        <h2 class="my-2 py-0 text-center text-xl md:text-2xl font-couch">{{ settings['cart_empty_title'] }}</h2>
+      {% else %}
+        <h4 class="my-2 py-0 text-center text-xl font-couch">{{ settings['cart_empty_title'] }}</h4>
+      {% endif %}
+    {% endunless %}
+
+    {% unless button_blocks.size == 0 %}
+      <ul class="list-none mt-5 mb-0 flex flex-col justify-center">
+        {%- for block in button_blocks -%}
+
+            <li class="pb-2">
+              <a  href="{{ block.settings.url }}"
+                  class="w-full btn btn-secondary max-w-sm block mx-auto">
+                  {{ block.settings.text }}
+              </a>
+            </li>
+
+        {%- endfor -%}
+      </ul>
+    {% endunless %}
+  </div>
+
+  {% unless settings['cart_empty_text'] == blank %}
+    <p class="text-center mb-0 font-tenso text-sm">{{ settings['cart_empty_text'] }}</p>
+  {% endunless %}
+</div>

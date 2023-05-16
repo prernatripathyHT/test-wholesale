@@ -1,0 +1,84 @@
+<!-- sections/collection-grid [aa] -->
+
+{%- if section.settings.alt_collection != blank -%}
+  {% assign collection = section.settings.alt_collection %}
+{%- endif -%}
+
+{%- if section.settings.show_filters -%}
+  {% render 'collection-filters', collection: collection %}
+{%- endif -%}
+
+{% render 'collection-grid-list', collection: collection %}
+
+{% schema %}
+{
+  "name": "Collection Grid",
+  "templates": ["collection", "page"],
+  "class": "relative",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "alt_collection",
+      "label": "Collection Override",
+      "info": "Leave empty to use default collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Collection Heading"
+    },
+    {
+      "type": "header",
+      "content": "Product Card Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hover_image",
+      "label": "Show secondary hover images",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_atc",
+      "label": "Enable add to cart",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filters",
+      "label": "Enable collection filters",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_image",
+      "label": "Feature Image",
+      "info": "Breaks the product grid at specified index"
+    },
+    {
+      "type": "range",
+      "id": "feature_image_index",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "label": "Image Index",
+      "default": 9
+    },
+    {
+      "type": "range",
+      "id": "grid_limit",
+      "min": 3,
+      "max": 30,
+      "step": 1,
+      "label": "Grid Limit",
+      "info": "Number of products to show",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Grid"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,20 @@
+<!-- snippets/cart-header [aa] -->
+
+
+{% assign cart_count = cart.item_count %}
+
+<div class="js-slide-cart--header pt-4 cart-page:pt-6 px-4 pb-6 border-b border-black cart-page:border-0">
+  <div class="flex items-center justify-center mb-4">
+
+    <h1 class="font-couch text-3xl md:text-4xl text-blue">Cart</h1>
+  </div>
+
+  {% render 'cart-shipping-indicator' %}
+
+  {% if cart.item_count > 0 %}
+    <a  href="/collections"
+        class="block mt-5 mx-auto text-base underline uppercase w-max">
+        Continue Shopping
+    </a>
+  {% endif %}
+</div>

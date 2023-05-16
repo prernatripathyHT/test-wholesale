@@ -1,0 +1,207 @@
+{
+  "sections": {
+    "1651012733a225ab0d": {
+      "type": "main-blog",
+      "settings": {
+        "title_image": "shopify:\/\/shop_images\/the_extract_logo.png",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "filter_menu": "blog-filter-menu"
+      }
+    },
+    "165039091246226f73": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Speciality Coffee Glossary<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>Welcome to Counter Culture's Specialty Coffee Glossary! At heart, CCC is about education: demystifying coffee, brewing, and sourcing in a frank, compassionate, nuanced way. A glossary is education in its purest form. This is a living, breathing resource that we'll constantly be updating.<\/p><p><\/p><p>Want to suggest a glossary term? <a href=\"mailto:glossary@counterculturecoffee.com\" title=\"mailto:glossary@counterculturecoffee.com\">Email us.<\/a><\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "16472989575779fd1a": {
+      "type": "faq-group",
+      "blocks": {
+        "556c6dc1-8199-46b3-86ab-e0993a4bbfc8": {
+          "type": "faq",
+          "settings": {
+            "question": "Roast",
+            "answer": "<p>Medium french press id that, seasonal con panna dark roast id that acerbic. As so, macchiato crema, trifecta as trifecta percolator coffee barista. Galão, cortado con panna, plunger pot in organic a in cappuccino plunger pot extraction.<\/p>",
+            "label": "Roast"
+          }
+        },
+        "04f4e7b2-2103-4030-973b-e6c2fa06f300": {
+          "type": "faq",
+          "settings": {
+            "question": "Single-Origin",
+            "answer": "<p>Medium french press id that, seasonal con panna dark roast id that acerbic. As so, macchiato crema, trifecta as trifecta percolator coffee barista. Galão, cortado con panna, plunger pot in organic a in cappuccino plunger pot extraction.<\/p>",
+            "label": "Single-Origin"
+          }
+        }
+      },
+      "block_order": [
+        "556c6dc1-8199-46b3-86ab-e0993a4bbfc8",
+        "04f4e7b2-2103-4030-973b-e6c2fa06f300"
+      ],
+      "settings": {
+        "header": "Coffee",
+        "active": true
+      }
+    },
+    "16472989604ef7d283": {
+      "type": "faq-group",
+      "blocks": {
+        "d21ebaf9-ceea-4562-9eed-5950e7762d5f": {
+          "type": "faq",
+          "settings": {
+            "question": "Varieties",
+            "answer": "<p>Medium french press id that, seasonal con panna dark roast id that acerbic. As so, macchiato crema, trifecta as trifecta percolator coffee barista. Galão, cortado con panna, plunger pot in organic a in cappuccino plunger pot extraction.<\/p>",
+            "label": "Varieties"
+          }
+        },
+        "9a1f8865-b895-4ee2-8a5d-ef7fd56727b3": {
+          "type": "faq",
+          "settings": {
+            "question": "Varieties 2",
+            "answer": "<p>Medium french press id that, seasonal con panna dark roast id that acerbic. As so, macchiato crema, trifecta as trifecta percolator coffee barista. Galão, cortado con panna, plunger pot in organic a in cappuccino plunger pot extraction.<\/p>",
+            "label": "Varieties 2"
+          }
+        }
+      },
+      "block_order": [
+        "d21ebaf9-ceea-4562-9eed-5950e7762d5f",
+        "9a1f8865-b895-4ee2-8a5d-ef7fd56727b3"
+      ],
+      "settings": {
+        "header": "Varieties",
+        "active": true
+      }
+    },
+    "1651012876c560f8fb": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": false,
+        "bg_color": "#ffffff",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Seasonality<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "<p>Medium french press id that, seasonal con panna dark roast id that acerbic. As so, macchiato crema, trifecta as trifecta percolator coffee barista. Galão, cortado con panna, plunger pot in organic a in cappuccino plunger pot extraction.Strong, that decaffeinated organic bar  mug strong fair trade. Café au lait cinnamon, mazagran espresso crema barista redeye. Brewed filter spoon aftertaste as a cinnamon that kopi-luwak <br\/>plunger pot extraction.Strong, that decaffeinated organic bar  mug strong fair trade. Café au lait cinnamon, mazagran espresso crema barista redeye. Brewed filter spoon aftertaste as a cinnamon that kopi-luwak <\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "1651012187986573ce": {
+      "type": "image-plus-text",
+      "blocks": {
+        "d96e4a16-515b-488b-aac2-0ddc5d7d9a22": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Roasting & Harvesting",
+            "description": "<p>Countries with two harvests per year can be in two different stages during the same month. For example, Colombia in November can be beginning to harvest their <em>Mitaca<\/em> harvest (mid-year), while we begin to roast their first harvest.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "7fe94957-f5e2-42d4-a377-be1596f74beb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Puente_series_hero4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "d96e4a16-515b-488b-aac2-0ddc5d7d9a22",
+        "7fe94957-f5e2-42d4-a377-be1596f74beb"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16510125935a0f107c": {
+      "type": "newsletter",
+      "blocks": {
+        "16510125939f910506-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want the latest news delivered to  your inbox?"
+          }
+        },
+        "16510125939f910506-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "16510125939f910506-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>By entering your email, you are agreeing to our terms and conditions and fully understand our privacy policy.<br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16510125939f910506-0",
+        "16510125939f910506-2",
+        "16510125939f910506-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "background_color": "#ea7360"
+      }
+    }
+  },
+  "order": [
+    "1651012733a225ab0d",
+    "165039091246226f73",
+    "16472989575779fd1a",
+    "16472989604ef7d283",
+    "1651012876c560f8fb",
+    "1651012187986573ce",
+    "16510125935a0f107c"
+  ]
+}

@@ -1,0 +1,63 @@
+<!-- snippets/expandable-faq [aa/ja] -->
+
+
+{%- comment %} Reusable FAQ snippet. Single FAQ Answer + question only.
+  variables:
+  - id [Int]
+  - label [text]
+  - question [text]
+  - answer [Richtext]
+  - active [Boolean]
+  - theme_style: [Enum] Blue/Black
+{% endcomment -%}
+
+{%- if theme_style == 'blue' -%}
+  {% assign wrapper_styles = "border border-black" %}
+  {% assign inner_styles = "border-b border-black px-7 py-3" %}
+
+  {% capture button_styles %}
+    js-expandable-toggle faq--expandable-toggle btn-transparent
+    flex justify-between items-center w-full
+    text-lg text-left text-black font-freight font-medium tracking-wider leading-tight
+    {% if active %}active{% endif %}
+  {% endcapture %}
+{%- elsif theme_style == 'black' -%}
+  {% assign wrapper_styles = "border-t border-black" %}
+  {% assign inner_styles = "" %}
+
+  {% capture button_styles %}
+    js-expandable-toggle faq--expandable-toggle faq--expandable-toggle-black btn-transparent
+    flex justify-between items-center uppercase
+    text-base tracking-wider text-left w-full
+    font-freight-sans
+    px-5 lg:px-12 py-5
+    {% if active %}active{% endif %}
+  {% endcapture %}
+{%- endif -%}
+
+<div class="{{ wrapper_styles }}">
+    <dt class="{{ inner_styles }}">
+        <button type="button"
+                aria-label="{{ label }}"
+                aria-controls="{{ id }}"
+                data-toggle="{{ id }}"
+                class="{{ button_styles }}">
+            {{ question }}
+
+            <span class="h-8 w-8 p-2 flex items-center justify-center">
+                <span class="icon-plus {% if active %}hidden{% endif %}">+</span>
+                <span class="icon-minus {% unless active %}hidden{% endunless %}">-</span>
+            </span>
+        </button>
+    </dt>
+
+    <dd id="{{ id }}"
+        {% unless active %}style="display: none;"{% endunless %}
+        aria-expanded="{% if active %}true{% else %}false{% endif %}"
+        class="
+            js-expandable-content font-tenso
+            {% if theme_style == 'blue' %} rte px-7 py-8  text-lg {% endif %}
+            {% if active %}active{% endif %}">
+        {{ answer }}
+    </dd>
+</div>

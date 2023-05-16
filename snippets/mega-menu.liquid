@@ -1,0 +1,22 @@
+<!-- snippets/mega-menu [aa] -->
+
+<div role="region"
+     aria-labelledby="menu-link--{{ link.title | handleize }}"
+     class="js-mega-menu hidden absolute top-full left-0 w-screen p-16 bg-beige"
+     data-link="{{ link.title | handleize }}">
+  <ul class="flex justify-center">
+    {%- for block in section.blocks -%}
+      {%- if link.title == block.settings.association -%}
+        {% if block.type == "mega_menu_link" %}
+
+          {% render 'mega-menu-link', block: block %}
+
+        {% elsif block.type == "mega_menu_list" %}
+
+          {% render 'mega-menu-list', block: block %}
+
+        {% endif %}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>

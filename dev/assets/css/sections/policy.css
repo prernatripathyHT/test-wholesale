@@ -1,0 +1,96 @@
+/* Styles specific to the policy pages */
+
+.prose-policy {
+    counter-reset: primary-ordered;
+
+    & > div {
+        counter-reset: secondary-ordered;
+    }
+
+    & ol > li {
+      @apply list-none;
+    }
+
+    & h2, & h4 {
+      @apply relative font-couch text-2xl flex items-center gap-4;
+    }
+
+    & h4 span.number {
+      font-size: rem(100);
+      font-family: theme('fontFamily.tenso');
+      font-weight: normal;
+      line-height: .75;
+      display: block;
+
+
+      @apply mb-2.5;
+      @apply text-stroke-camel;
+
+      @screen md {
+        position: absolute;
+        right: calc(100% + var(--padding));
+        font-size: rem(80);
+        --padding: rem(15);
+      }
+
+      @screen xl {
+        font-size: rem(137);
+      }
+    }
+
+    & ol > li > h2::before {
+        --padding: rem(20);
+
+        content: counter(primary-ordered);
+        counter-increment: primary-ordered;
+
+        font-size: rem(100);
+        font-family: theme('fontFamily.tenso');
+        font-weight: normal;
+        line-height: .75;
+        display: block;
+
+        position: relative;
+
+        @apply mb-2.5;
+        @apply text-stroke-camel;
+
+        @screen md {
+          position: absolute;
+          right: calc(100% + var(--padding));
+          font-size: rem(80);
+          --padding: rem(15);
+        }
+
+        @screen xl {
+          font-size: rem(137);
+        }
+    }
+
+    & ol > li > h3::before {
+        --padding: rem(20);
+
+        content: counter(secondary-ordered, lower-alpha) ". ";
+        counter-increment: secondary-ordered;
+    }
+}
+
+/* TODO - organize */
+.prose ul,
+ul.prose {
+    padding: 0;
+
+    & li {
+        list-style: none;
+        position: relative;
+        padding-left: theme('spacing.5');
+
+        &::before {
+            content: "+";
+
+            position: absolute;
+            left: 0;
+
+        }
+    }
+}

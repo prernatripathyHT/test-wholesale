@@ -1,0 +1,64 @@
+<!-- snippets/newsletter-form -->
+{%- comment %}
+  Customize Theme Section.
+	Variables:
+    - image [Image Obj]: Curvy Text Image.
+    - text: [string]: Newsletter Text Description
+    - input_class
+    - label_class
+    - btn_class
+    - container_class
+{% endcomment -%}
+
+<div class="w-full">
+  {% if title != blank %}
+    <h3 class="font-couch text-white text-center xl:text-left mb-2.5">{{ title }}</h3>
+  {% endif %}
+
+  {%- if text != blank -%}
+    <p class="text-sm white-text mb-5 leading-relaxed tracking-wider font-tenso text-center xl:text-left">{{ text }}</p>
+  {%- endif -%}
+
+  {% if klaviyo_id != blank %}
+    <div id="klaviyo-footer" class="klaviyo--form--footer">
+      <div class="klaviyo-form-{{ klaviyo_id }}"></div>
+    </div>
+  {% else %}
+
+    {% form 'customer', class: 'newsletter-form w-full' %}
+
+      {%- unless form.posted_successfully?  -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+
+        <div class="w-full">
+
+          <div class="{{ container_class }}">
+
+            {% render 'floating-label',
+                id: '',
+                input_type: 'text',
+                input_name: 'contact[email]',
+                input_val: form.email,
+                placeholder: 'me@email.com',
+                input_class: input_class,
+                label: 'Email',
+                label_class: label_class %}
+
+            <button type="submit" class="btn {{ btn_class }}" name="commit" id="Subscribe" aria-label="Submit Newsletter Signup">Subscribe</button>
+          </div>
+        </div>
+
+        {%- if form.errors -%}
+          <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
+            {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+          </small>
+        {%- endif -%}
+
+      {%- endunless -%}
+
+      {%- if form.posted_successfully? -%}
+        <h3 class="newsletter-form__message newsletter-form__message--success form__message font-tenso text-lg " id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>Congrats! You're signed up.</h3>
+      {%- endif -%}
+    {% endform %}
+  {% endif %}
+</div>

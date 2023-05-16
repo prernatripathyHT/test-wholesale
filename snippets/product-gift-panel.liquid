@@ -1,0 +1,9 @@
+<!-- snippets/product-gift-panel [aa] -->
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="flex flex-col justify-start">
+  <div class="product--buy-panel">
+    {% render 'product-gift-form', product: product %}
+  </div>
+</div>

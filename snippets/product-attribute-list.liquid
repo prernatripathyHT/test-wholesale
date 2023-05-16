@@ -1,0 +1,38 @@
+<!-- snippets/product-attribute-list -->
+
+{%- comment %}
+	Metafield definition: Product Attributes
+
+  Variables:
+  - product: [Product Object]
+
+  attribute_list: [Enum] Decaf, Kosher, Organic
+  [AA] Removed Kosher from the list.
+{% endcomment -%}
+
+{% assign attribute_options = "Decaf, Organic" | split: ", " %}
+
+{% assign attr_list = product.metafields.main.attribute_list | remove: "[" | remove: "]" %}
+
+{%- if product.metafields.main.attribute_list != blank -%}
+  <div class="absolute w-8 lg:w-12 grid gap-2 lg:gap-3 bottom-3 lg:bottom-12 left-3 lg:left-5 z-10">
+    {%- for attribute in attribute_options -%}
+      <div class="w-8 h-8 lg:w-12 lg:h-12">
+
+        {%- if attr_list contains attribute -%}
+          {% assign attr_downcased = attribute | downcase %}
+          
+          <button type="button"
+                  class="btn-transparent cursor-pointer relative group h-full w-full text-sm lg:text-base flex items-center justify-center text-blue">
+              
+              {% render 'icon', icon: attr_downcased, class: 'w-full h-full' %}
+
+            <div class="hidden group-hover:block group-focus:block absolute z-10 mb-2 top-1/2 -translate-y-1/2 left-full translate-x-4 bg-black text-white p-2 text-sm min-w-[8rem] text-center">
+              {{ attribute }}
+            </div>
+          </button>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

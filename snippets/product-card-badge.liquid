@@ -1,0 +1,20 @@
+<!-- snippets/product-card-badge -->
+{%- comment %}
+	Varibles:
+  - product: [Product Object]
+
+  Metafields are preset choices: new, featured-coffee, limited-release, single-origin, subscribe
+
+  todo: Sale badge?
+{% endcomment -%}
+
+{% assign badge_text = product.metafields.main.product_card_badge %}
+
+{%- if badge_text != blank -%}
+  <div class="w-12 h-12 absolute top-3 right-3
+              md:w-16 md:h-16 lg:w-24 lg:h-24
+              lg:top-6 lg:right-6 z-10">
+
+    {% render 'badge', badge: badge_text %}
+  </div>
+{%- endif -%}

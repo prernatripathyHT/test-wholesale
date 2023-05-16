@@ -1,0 +1,107 @@
+<!-- sections/account-addresses -->
+
+
+<div class="account--main lg:w-10/12 mx-auto px-5 py-12" data-customer-addresses>
+
+  <div class="flex items-center justify-between flex-col md:flex-row mb-5 js-hide-on-toggle mb-5">
+    <div class="flex items-center flex-col md:flex-row mb-2.5 md:mb-0">
+
+      <h2 class="text-2xl font-couch mb-2.5 md:mb-0">Addresses</h2>
+
+      <a href="/account"
+         class="btn-transparent btn-with-icon flex items-center md:ml-10 transition-all hover:text-blue text-lg"
+         data-section-nav="account-account"
+         data-section-nav--href="/account"
+         data-section-nav--wrapper=".js-account-nav-target">
+        <span class="mr-2">back to account details</span>
+        {% render 'icon', icon: 'arrow-right' %}
+      </a>
+    </div>
+
+    <button
+        type="button"
+        aria-controls="AddAddress"
+        class="btn btn-secondary btn-small js-add-edit-btn"
+        data-target="#AddAddress"
+      >
+        Add New Address
+    </button>
+  </div>
+
+  <div>
+
+
+
+  <div id="AddAddress" class="js-new-address hidden" data-address>
+    {% render 'address-form' %}
+  </div>
+
+  {% paginate customer.addresses by 5 %}
+    {%- if customer.addresses.size > 0 -%}
+      {%- for address in customer.addresses -%}
+        <div id="EditAddress_{{ address.id }}" class="js-edit-address hidden" data-address="{{ address.id }}" data-address>
+          {% render 'address-form', address: address %}
+        </div>
+      {% endfor %}
+
+
+     <table role="table" class="addresses w-full js-hide-on-toggle">
+       <caption class="sr-only">Addresses</caption>
+
+       <thead role="rowgroup" class="border-b border-black block pb-3">
+         <tr role="row" class="grid grid-cols-5 gap-2 uppercase font-bold">
+           <th id="ColumnName" scope="col" role="columnheader" class="col-span-4 md:col-span-2 text-left">Address</th>
+           <th id="ColumnActions" scope="col" role="columnheader" class="col-span-2 hidden md:block">Actions</th>
+           <th id="ColumnDefault" scope="col" role="columnheader">Default</th>
+         </tr>
+       </thead>
+
+       <tbody role="rowgroup" class="block">
+         {%- for address in customer.addresses -%}
+           <tr role="row" class="py-5 grid grid-cols-5 gap-2 text-left border-b border-black" data-id="{{ address.id }}">
+             <td headers="RowAddress ColumnLine" role="cell" data-label="Line" class="col-span-4 md:col-span-2 md:col-start-1 md:row-start-1">
+               {{ address | format_address }}
+             </td>
+
+             <td headers="RowAddress ColumnActions" role="cell" data-label="Actions" class="row-start-2 md:row-start-1 col-span-2 md:col-span-1 md:col-start-3">
+               <button type="button"
+                       name="button"
+                       class="btn btn-secondary btn-small w-full js-add-edit-btn"
+                       data-target="#EditAddress_{{ address.id }}"
+                       aria-controls="EditAddress_{{ address.id }}"
+                       data-address-id="{{ address.id }}">
+                 Edit
+               </button>
+             </td>
+
+             <td headers="RowAddress ColumnAction2" role="cell" data-label="Action2" class="text-center row-start-2 md:row-start-1 col-span-2 md:col-span-1 md:col-start-4">
+               <button type="button"
+                       name="button"
+                       class="btn btn-secondary btn-small w-full js-delete-address"
+                       data-target="{{ address.url }}"
+                       data-address="{{ address.id }}">
+                  Delete
+               </button>
+             </td>
+
+             <td headers="RowAddress ColumnDefault" role="cell" data-label="Default" class="md:row-start-1">
+               {% if address.id == customer.default_address.id %}
+                 <span class="p-1 md:p-1.5 w-6 md:w-8 h-6 md:h-8 mx-auto rounded-full border-2 border-black flex items-center justify-center">
+                   <span class="rounded-full w-4 h-4 bg-yellow"></span>
+                 </span>
+               {%- else -%}
+                 <span class="p-1 md:p-1.5 w-6 md:w-8 h-6 md:h-8 mx-auto rounded-full border-2 border-black flex items-center justify-center">
+                 </span>
+               {% endif %}
+             </td>
+           </tr>
+         {%- endfor -%}
+       </tbody>
+     </table>
+    {%- else -%}
+      <p>You don't have any addresses on file.</p>
+    {%- endif -%}
+
+  {% endpaginate %}
+  </div>
+</div>

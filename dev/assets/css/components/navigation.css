@@ -1,0 +1,9 @@
+
+.desktop--submenu {
+  display: none;
+}
+
+.submenu--trigger:hover .desktop--submenu,
+.submenu--trigger:focus-within .desktop--submenu {
+  display: block;
+}

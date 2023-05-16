@@ -1,0 +1,48 @@
+<!-- snippets/article-card [aa] -->
+
+{%- comment %}
+	article [Article object]
+  grid_span: [Int] 1 or 2. Col / Rows to span on Desktop
+
+  md:col-span-1 md:col-span-2 md:row-span-1 md:row-span-2
+{% endcomment -%}
+
+<li class="article-card js-slide-inner md:col-span-{{ grid_span }} md:row-span-{{ grid_span }} animate animate-fadeIn group">
+  <a href="{{ article.url }}" class="block w-full">
+    {%- if article.image != blank -%}
+      <div class="w-full flex relative animate animate-fadeIn border-b border-black">
+        {% capture image_class %}w-full h-auto {% unless grid_span == 2 %} h-[50vw] xl:h-[25vw] {% endunless %} object-cover transition-all duration-300{% endcapture %}
+        {%
+          render 'responsive-image',
+          src: article.image,
+          alt: article.title,
+          crop: true,
+          class: image_class
+        %}
+      </div>
+    {%- endif -%}
+
+    <div class="pt-8 pb-16 px-8 animate animate-fadeInUp">
+      {%- if article.metafields.custom_fields.project_farmproducer != blank -%}
+        <p class="text-sm md:text-base uppercase tracking-wider font-freight-sans">{{ article.metafields.custom_fields.project_farmproducer }}</p>
+      {%- else -%}
+        <p class="text-sm md:text-base uppercase tracking-wider font-freight-sans">{{ article.tags | first }}</p>
+      {%- endif -%}
+
+      <h3 class="text-lg md:text-xl font-couch transition-all group-hover:text-blue">{{ article.title }}</h3>
+
+      {%- if article.metafields.custom_fields.project_year != blank -%}
+        <p class="font-tenso">{{ article.metafields.custom_fields.project_year }}</p>
+      {%- else -%}
+        <p class="font-tenso">{{ article.created_at | date: "%B %d, %Y" }}</p>
+      {%- endif -%}
+    </div>
+
+    <span class="absolute bottom-8 right-8 text-blue transition-all duration-1000 group-hover:translate-x-4">
+      {% render 'icon',
+         icon: 'eyeballs',
+         class: "" %}
+    </span>
+
+  </a>
+</li>

@@ -1,0 +1,329 @@
+<!-- sections/blog-grid -->
+
+<section
+  {% if section.id contains 'primary-blog-grid' %}
+    id="primary-blog-grid"
+  {% endif %}
+  class="js-collection-list">
+
+  {%- if section.settings.title != blank -%}
+    <div class="py-5 px-5 border-b border-black">
+      {%
+        render 'ct-heading',
+        title: section.settings.title,
+        tag: section.settings.tag,
+        text_size_mobile: section.settings.text_size_mobile,
+        text_size_desktop: section.settings.text_size_desktop,
+        text_color: section.settings.text_color,
+        font: section.settings.font,
+        alignment: section.settings.alignment,
+        weight: section.settings.weight,
+        class: section.settings.title_classes
+      %}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.paginate_after_limit == true -%}
+    <div class="js-pagination-target">
+      {% paginate blog.articles by section.settings.grid_limit %}
+        <ul class="w-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 list-none">
+          {% for article in blog.articles offset: section.settings.grid_offset %}
+            {% assign grid_span = 1 %}
+
+            {%- if section.settings.show_featured_article and forloop.index == section.settings.feature_position -%}
+              {% assign grid_span = 2 %}
+            {%- endif -%}
+
+            {% render 'article-card',
+               article: article,
+               grid_span: grid_span %}
+          {% endfor %}
+        </ul>
+
+        {% render 'custom-pagination',
+            paginate: paginate,
+            target: "blog-grid" %}
+      </div>
+    {% endpaginate %}
+  {%- else -%}
+    <ul class="w-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 list-none">
+      {% for article in blog.articles offset: section.settings.grid_offset limit: section.settings.grid_limit %}
+        {% assign grid_span = 1 %}
+
+        {%- if section.settings.show_featured_article and forloop.index == section.settings.feature_position -%}
+          {% assign grid_span = 2 %}
+        {%- endif -%}
+
+        {% render 'article-card',
+           article: article,
+           grid_span: grid_span %}
+
+      {% endfor %}
+    </ul>
+  {%- endif -%}
+</section>
+
+
+{% schema %}
+{
+  "name": "Blog Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag_filter",
+      "label": "Filter Blog on Tag"
+    },
+    {
+      "type": "number",
+      "id": "feature_position",
+      "label": "Featured Article Position",
+      "default": 1
+    },
+    {
+      "id": "grid_limit",
+      "type": "number",
+      "label": "Grid Limit",
+      "default": 13
+    },
+    {
+      "type": "checkbox",
+      "id": "show_featured_article",
+      "label": "Show Featured Article",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "paginate_after_limit",
+      "label": "Paginate After Grid Limit",
+      "default": true
+    },
+    {
+      "id": "grid_offset",
+      "type": "number",
+      "label": "Grid Offset",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Grid"
+    }
+  ]
+}
+{% endschema %}

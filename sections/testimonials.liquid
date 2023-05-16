@@ -1,0 +1,167 @@
+<!-- sections/testimonials [ja] -->
+
+
+{% capture slick_settings %}
+  {
+    "dots": true,
+    "arrows": false,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "adaptiveHeight": true,
+    "appendDots": ".js-dots-container",
+    "responsive": [
+      {
+        "breakpoint": 767,
+        "settings": {
+          "arrows": true,
+          "dots": false,
+          "nextArrow": ".js-testimonials-wrapper .js-next",
+          "prevArrow": ".js-testimonials-wrapper .js-prev"
+        }
+      }
+    ]
+  }
+{% endcapture %}
+
+<section class="js-testimonials-wrapper relative"
+         >
+    {% render 'slick-arrows', class: "hidden md:block" %}
+
+    <ul class="js-slick w-full mx-auto"
+        data-slick='{{ slick_settings | strip }}'>
+        {%- for block in section.blocks -%}
+        
+        {% assign testimonial = block.settings %}
+
+            <li>
+              <div class="pt-10 pb-28 px-5 md:px-12 lg:px-20" 
+                    style="background: {{ testimonial.background_color }};">
+
+                <h3 class="font-tenso font-light {{ testimonial.content_size }} my-6 text-center animate animate-fadeInUp">
+                    “{{ testimonial.content }}”
+                </h3>
+
+                <p class="font-tenso font-light italic {{ testimonial.author_size }} text-center animate animate-fadeInUp">
+                    - {{ testimonial.author }}
+                </p>
+              </div>
+            </li>
+
+        {%- endfor -%}
+    </ul>
+
+    <div class="js-dots-container h-8 absolute w-full left-0 bottom-8"></div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#FDBF69"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "select",
+          "id": "content_size",
+          "label": "Content Text Size",
+          "default": "text-2xl",
+          "options": [
+            {
+              "label": "6XL",
+              "value": "text-6xl"
+            },
+            {
+              "label": "5XL",
+              "value": "text-5xl"
+            },
+            {
+              "label": "4XL",
+              "value": "text-4xl"
+            },
+            {
+              "label": "3XL",
+              "value": "text-3xl"
+            },
+            {
+              "label": "2XL",
+              "value": "text-2xl"
+            },
+            {
+              "label": "XL",
+              "value": "text-xl"
+            },
+            {
+              "label": "LG",
+              "value": "text-lg"
+            }
+          ]
+        },
+        {   
+          "type": "select",
+          "id": "author_size",
+          "label": "Author Text Size",
+          "default": "text-xl",
+          "options": [
+            {
+              "label": "6XL",
+              "value": "text-6xl"
+            },
+            {
+              "label": "5XL",
+              "value": "text-5xl"
+            },
+            {
+              "label": "4XL",
+              "value": "text-4xl"
+            },
+            {
+              "label": "3XL",
+              "value": "text-3xl"
+            },
+            {
+              "label": "2XL",
+              "value": "text-2xl"
+            },
+            {
+              "label": "XL",
+              "value": "text-xl"
+            },
+            {
+              "label": "LG",
+              "value": "text-lg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}

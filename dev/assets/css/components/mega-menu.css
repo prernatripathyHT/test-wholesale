@@ -1,0 +1,23 @@
+.mobile-mega-menu {
+  transition: transform 300ms ease;
+  transform: translateY(-100%);
+  z-index: -1;
+  top: calc(4.75rem + 1px);
+  left: -1px;
+  width: calc(100% + 2px);
+  @apply absolute h-auto bg-blue border border-white;
+}
+
+.mobile-mega-menu.active {
+  @apply visible;
+  transform: translateY(0);
+}
+
+
+#mobile--menu-link--main.active .icon-menu  {
+  @apply hidden;
+}
+
+#mobile--menu-link--main.active .icon-close  {
+  @apply block;
+}

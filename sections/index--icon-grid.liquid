@@ -1,0 +1,385 @@
+<!-- sections/index--icon-grid [aa] -->
+
+<section class="{{ section.settings.background_color }} pt-12 relative">
+  <div class="">
+    {%
+      render 'ct-heading',
+      title: section.settings.title,
+      tag: section.settings.tag,
+      text_size_mobile: section.settings.text_size_mobile,
+      text_size_desktop: section.settings.text_size_desktop,
+      text_color: section.settings.text_color,
+      font: section.settings.font,
+      alignment: section.settings.alignment,
+      weight: section.settings.weight,
+      class: section.settings.title_classes
+    %}
+  </div>
+
+  <div class="border border-black px-5 lg:px-12 py-5 lg:py-12">
+
+    {%- if section.settings.paragraph != blank -%}
+      <p class="font-tenso text-center text-lg tracking-wider w-full md:full lg:w-10/12 mx-auto animate animate-fadeInUp">{{ section.settings.paragraph }}</p>
+    {%- endif -%}
+    {%- comment %}
+      md:grid-cols-3
+      md:grid-cols-4
+      md:grid-cols-5
+      md:grid-cols-6
+    {% endcomment -%}
+
+
+    <ul class="grid grid-cols-2 md:grid-cols-{{ section.blocks | size }} gap-8 md:gap-5 xl:gap-12 w-full 2xl:w-11/12 mx-auto mt-8 mb-16">
+
+      {%- for block in section.blocks -%}
+
+        {% assign delay = 300 | times: forloop.index %}
+
+        <li class="animate animate-fadeInUp flex flex-col h-full justify-between"
+            data-mobile-delay="0"
+            data-delay="{{ delay }}">
+
+          {%- if block.settings.text != blank -%}
+            <p class="text-black tracking-wide uppercase text-lg text-left mb-2.5">{{ block.settings.text }}</p>
+          {%- endif -%}
+
+          <div class="h-32 w-32 xl:h-40 xl:w-40 px-4 py-4 flex justify-center items-center border border-black">
+            {%- if block.settings.image != blank -%}
+              {%
+                render 'responsive-image',
+                src: block.settings.image,
+                alt: block.settings.image.alt,
+                class: "w-full h-full mx-auto"
+              %}
+            {%- endif -%}
+          </div>
+        </li>
+
+      {%- endfor -%}
+    </ul>
+
+    {%- if section.settings.link_text != blank -%}
+      <div class="flex justify-center">
+        {%
+          render 'ct-button',
+          link_text: section.settings.link_text,
+          link_url: section.settings.link_url,
+          button_style: section.settings.button_style,
+          class: section.settings.link_classes
+        %}
+      </div>
+    {%- endif -%}
+  </div>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Icon Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Section Paragraph"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "default": "btn btn-secondary",
+      "options": [
+        {
+          "label": "Button Primary",
+          "value": "btn btn-primary"
+        },
+        {
+          "label": "Button Secondary",
+          "value": "btn btn-secondary"
+        },
+        {
+          "label": "Button Tertiary",
+          "value": "btn btn-tertiary"
+        },
+        {
+          "label": "Button White",
+          "value": "btn btn-white"
+        },
+        {
+          "label": "Button Outline",
+          "value": "btn btn-outline"
+        },
+        {
+          "label": "Camel Underline",
+          "value": "camel-underline"
+        },
+        {
+          "label": "Blue Underline",
+          "value": "blue-underline"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Click me!"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "link_classes",
+      "label": "Additional Classes for the Button/Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon + Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Icon Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Icon Grid"
+    }
+  ]
+}
+{% endschema %}

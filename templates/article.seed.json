@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+      }
+    },
+    "1651092208f04ea0c8": {
+      "type": "article-next-prev",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651092208f04ea0c8"
+  ]
+}

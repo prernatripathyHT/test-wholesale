@@ -1,0 +1,238 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "02781444-064e-4189-9f20-c223647ae522": {
+      "type": "hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/fieldtripbanner_blank.jpg",
+        "background_color": "",
+        "video_url": "",
+        "video_placement": "lg:justify-start",
+        "pre_header": "",
+        "subheader": "Specialty coffee isn’t just about altitude or varieties—it’s the result of an entire value chain’s focus on standards and excellence.  ",
+        "title": "<p>Take a Field Trip with Us<\/p>",
+        "text_size_mobile": "text-5xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "button_style": "btn btn-secondary",
+        "link_text": "SHOP FIELD TRIP",
+        "link_url": "shopify:\/\/products\/field-trip",
+        "link_classes": "",
+        "content_width": "w-full",
+        "justify_content_lg": "lg:justify-center",
+        "justify_content_md": "md:justify-center",
+        "justify_content_sm": "justify-center",
+        "align_items_lg": "lg:items-center",
+        "align_items_md": "md:items-center",
+        "align_items_sm": "items-center",
+        "text_align_lg": "lg:text-center",
+        "text_align_md": "md:text-center",
+        "text_align_sm": "text-center"
+      }
+    },
+    "08789d13-2c5f-4f12-9a5b-94e5b5c688e7": {
+      "type": "content-columns",
+      "settings": {
+      }
+    },
+    "41e3b176-36ad-447e-bfc5-a2057b206ed2": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": true,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Visualizing the Value Chain<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "<p><\/p><p><\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "52865e74-13e2-4be8-b958-3aeef6e8c14c": {
+      "type": "richtext",
+      "blocks": {
+        "1b3b1711-bd3a-484b-9b38-91406062f1a5": {
+          "type": "text_content",
+          "settings": {
+            "content": "Specialty coffee is a coordinated effort amongst many people spread across the globe. The unifying thread between us all is a unique expertise and a desire to make coffee special. ",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "b2eaf9ee-e632-4865-bd85-fff805a15b68": {
+          "type": "text_content",
+          "settings": {
+            "content": "In 2021, Counter Culture set out to visualize our value chain. We wanted to illustrate the complexity of the process and the many, varied participants. We also sought to debunk the narrative that sustainable coffee means cutting out the “middlemen.” Great coffee comes from the combined efforts of many talented and hardworking people throughout the value chain.",
+            "classes": "text-left text-xl mb-5"
+          }
+        }
+      },
+      "block_order": [
+        "1b3b1711-bd3a-484b-9b38-91406062f1a5",
+        "b2eaf9ee-e632-4865-bd85-fff805a15b68"
+      ],
+      "settings": {
+        "classes": ""
+      }
+    },
+    "e2005a40-3df1-413d-9d74-8bbcc2d68f17": {
+      "type": "cta-banner-with-image",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/value-chain.png",
+        "use_squiggles": false,
+        "content": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "7e252e61-3fcb-4964-a63f-dcb24294dd3c": {
+      "type": "richtext",
+      "blocks": {
+        "ca2953c9-7aee-41e8-a076-dc3af729acfd": {
+          "type": "text_content",
+          "settings": {
+            "content": "In the graphic, the circles represent the main actors in our value stream. The dotted lines indicate potential paths for the product’s movement, while solid lines are more common tracks. The icons surrounding the circles describe specialized activities occurring at each step. We depicted these actions as happening either “always” or “sometimes” at each stage to reflect different methods of production.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "7847dbe9-9e10-490c-bed2-e9e7ba9fb068": {
+          "type": "text_content",
+          "settings": {
+            "content": "Every coffee has a unique story and this graphic is meant to help illustrate that story. Our value stream map is not a static description, but rather a jumping-off point to trace a coffee’s journey from farm to consumer. It also demonstrates how quality coffee is the result of an entire value stream’s focus on standards and excellence.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "5a07e8f2-0206-44e5-83c4-213db86d92d4": {
+          "type": "text_content",
+          "settings": {
+            "content": "Download a printable version below. Available for non-commercial and educational use only. Copyright Counter Culture Coffee 2023.",
+            "classes": "text-left text-xl mb-5"
+          }
+        }
+      },
+      "block_order": [
+        "ca2953c9-7aee-41e8-a076-dc3af729acfd",
+        "7847dbe9-9e10-490c-bed2-e9e7ba9fb068",
+        "5a07e8f2-0206-44e5-83c4-213db86d92d4"
+      ],
+      "settings": {
+        "classes": ""
+      }
+    },
+    "ebeeab5a-bdec-4b29-ae1e-081593966cbf": {
+      "type": "button-group",
+      "blocks": {
+        "62bf7d90-1173-448a-8027-f28965a8a74e": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "8.5\"x11\" PDF",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/4283\/7837\/files\/CCC_Value_Stream_print_8.5x11.pdf?v=1674490193",
+            "link_classes": ""
+          }
+        },
+        "aaca71ae-16b0-4505-b9b2-5afeb58a422f": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "11\"x14\" PDF",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/4283\/7837\/files\/CCC_Value_Stream_print_11x14.pdf?v=1674490193",
+            "link_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "62bf7d90-1173-448a-8027-f28965a8a74e",
+        "aaca71ae-16b0-4505-b9b2-5afeb58a422f"
+      ],
+      "settings": {
+        "section_classes": ""
+      }
+    },
+    "ce9f778a-d7af-4680-b7e6-0c9e824c1e5b": {
+      "type": "image-plus-text",
+      "blocks": {
+        "c7e6235f-8389-4d55-925e-ad6be5c750ea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MO4A8929-Edit.jpg"
+          }
+        },
+        "b0af0b8f-cead-4798-9c13-84b83a34c9df": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Looking for the best way to brew up your coffee?",
+            "font": "font-gopher",
+            "description": "<p>The beauty of Field Trip is you can’t go wrong, no matter the brew method. Loyal to your French Press? We got you. More of an Aeropress-and-out-the-door type? We have that too. However you’re brewing, we can help you get there.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Brew Guides",
+            "link_url": "shopify:\/\/pages\/brewing-guides",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "c7e6235f-8389-4d55-925e-ad6be5c750ea",
+        "b0af0b8f-cead-4798-9c13-84b83a34c9df"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "<p>Brew Field Trip With Us<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "02781444-064e-4189-9f20-c223647ae522",
+    "08789d13-2c5f-4f12-9a5b-94e5b5c688e7",
+    "41e3b176-36ad-447e-bfc5-a2057b206ed2",
+    "52865e74-13e2-4be8-b958-3aeef6e8c14c",
+    "e2005a40-3df1-413d-9d74-8bbcc2d68f17",
+    "7e252e61-3fcb-4964-a63f-dcb24294dd3c",
+    "ebeeab5a-bdec-4b29-ae1e-081593966cbf",
+    "ce9f778a-d7af-4680-b7e6-0c9e824c1e5b"
+  ]
+}

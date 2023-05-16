@@ -1,0 +1,13 @@
+<!-- snippets/product-card [aa] -->
+
+<li class="product-card relative border border-black">
+
+  {% render 'product-card-badge', product: product %}
+
+  <a href="{{ product.url | within: collection }}" 
+     class="js-product-card flex flex-col justify-between h-full">
+    {% render 'product-card-images', product: product %}
+    {% render 'product-card-content', product: product %}
+  </a>
+
+</li>

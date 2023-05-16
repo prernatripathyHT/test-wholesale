@@ -1,0 +1,19 @@
+@layer components {
+
+  .filter--trigger-btn {
+    @apply flex items-center py-1 px-3 rounded-2xl tracking-wider;
+  }
+
+  .filter--trigger-btn.active .icon-plus {
+    display: none;
+  }
+
+  .filter--trigger-btn.active .icon-minus {
+    display: block;
+  }
+
+  .filter--trigger-btn.active {
+    @apply bg-yellow;
+  }
+
+}

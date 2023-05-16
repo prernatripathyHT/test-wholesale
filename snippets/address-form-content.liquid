@@ -1,0 +1,145 @@
+<!-- snippets/address-form-content -->
+
+<div class="flex items-center flex-col gap-5 md:flex-row mb-5">
+
+  {% render 'floating-label',
+      id: 'AddressFirstName_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[first_name]',
+      input_val: form.first_name,
+      placeholder: 'First Name',
+      input_class: '',
+      label: 'First Name',
+      label_class: '' %}
+
+  {% render 'floating-label',
+      id: 'AddressLastName_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[last_name]',
+      input_val: form.last_name,
+      placeholder: 'Last Name',
+      input_class: '',
+      label: 'Last Name',
+      label_class: '' %}
+
+  {% render 'floating-label',
+      id: 'AddressCompany_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[company]',
+      input_val: form.company,
+      placeholder: 'Company',
+      input_class: '',
+      label: 'Company',
+      label_class: '' %}
+</div>
+
+<div class="flex items-center flex-col md:flex-row mb-5 gap-5">
+
+  {% render 'floating-label',
+      id: 'AddressAddress1_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[address1]',
+      input_val: form.address1,
+      placeholder: 'Address 1',
+      input_class: '',
+      label: 'Address 1',
+      label_class: '' %}
+
+  {% render 'floating-label',
+      id: 'AddressAddress2_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[address2]',
+      input_val: form.address2,
+      placeholder: 'Address 2',
+      input_class: '',
+      label: 'Address 2',
+      label_class: '' %}
+</div>
+
+<div class="flex items-center flex-col md:flex-row mb-5 gap-5">
+
+  {% render 'floating-label',
+      id: 'AddressCity_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[city]',
+      input_val: form.city,
+      placeholder: 'City',
+      input_class: '',
+      label: 'City',
+      label_class: '' %}
+
+  <div id="AddressProvinceContainer_{{ form.id }}"
+       style="display:none;"
+       class="dropdown-wrapper w-full">
+    <select
+       id="AddressProvince_{{ form.id }}"
+       name="address[province]"
+       data-default="{{ form.province }}"
+       autocomplete="address-level1"
+       class="
+           dropdown
+           px-4
+           py-5
+           border
+           border-black
+           w-full
+           appearance-none"
+     >
+     </select>
+   </div>
+
+  <div class="dropdown-wrapper w-full">
+    <select
+      id="AddressCountry_{{ form.id }}"
+      name="address[country]"
+      data-address-country-select
+      data-default="{{ form.country }}"
+      data-form-id="{{ form.id }}"
+      autocomplete="country"
+      class="
+          dropdown
+          px-4
+          py-5
+          border
+          border-black
+          w-full
+          appearance-none"
+    >
+      {{ all_country_option_tags }}
+    </select>
+  </div>
+</div>
+
+<div class="flex items-center flex-col md:flex-row mb-5 gap-5">
+
+  {% render 'floating-label',
+      id: 'AddressZip_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[zip]',
+      input_val: form.zip,
+      placeholder: 'Zip',
+      input_class: '',
+      label: 'Zip',
+      label_class: '' %}
+
+  {% render 'floating-label',
+      id: 'AddressPhone_{{ form.id }}',
+      input_type: 'text',
+      input_name: 'address[phone]',
+      input_val: form.phone,
+      placeholder: 'Phone',
+      input_class: '',
+      label: 'Phone',
+      label_class: '' %}
+</div>
+
+<div class="flex justify-between">
+ <div>
+   {%- unless address.id == customer.default_address.id -%}
+     {{ form.set_as_default_checkbox }}
+     <label for="address_default_address_{{ form.id }}">Set default</label>
+   {%- endunless -%}
+ </div>
+
+ <button type="submit" class="btn btn-secondary w-3/5 md:w-1/3">Save</button>
+</div>

@@ -1,0 +1,196 @@
+<!-- snippets/cart-page-item [ja] -->
+
+
+{% assign product = item.product %}
+{% assign variant = item.variant %}
+
+{% assign type = product.type %}
+{% assign price = item.final_price %}
+
+{%- comment %}If the variant is on sale{% endcomment -%}
+{%- if price < variant.compare_at_price and variant.compare_at_price != 0 -%}
+    {% assign compare_at_price = variant.compare_at_price %}
+{%- elsif item.original_price > price -%}
+    {% assign compare_at_price = item.original_price %}
+{%- endif -%}
+
+{% assign is_subscription = false %}
+{% assign can_subscribe = false %}
+
+{%- if variant.selling_plan_allocations != blank -%}
+  {% assign can_subscribe = true %}
+{%- endif -%}
+
+{%- if item.selling_plan_allocation != blank -%}
+  {% assign is_subscription = true %}
+
+  {% assign compare_at_price = variant.price %}
+{%- endif -%}
+
+<li data-key="{{ item.key }}" class="border border-blue">
+    <div class="slide-cart--item grid grid-flow-col grid-cols-none gap-2.5">
+        <div class="slide-cart--item-image flex w-max">
+            <div class="bg-blue items-center p-2 md:p-5 !pr-0 hidden xs:flex">
+                <p class="font-tenso text-4xl xs:text-6xl md:text-7xl lg:text-9xl text-stroke-white">
+                    {%- unless index >= 10 -%}0{%- endunless -%}
+                    {{ index }}
+                </p>
+            </div>
+
+            <div class="xs:img-gradient xs:-ml-px flex items-center py-5">
+                {% capture image_classes %}h-20 xs:h-24 md:h-40 lg:h-60 w-auto object-cover{% endcapture %}
+                {% render 'responsive-image',
+                    src: item.image,
+                    alt: item.product.title,
+                    class: image_classes %}
+            </div>
+        </div>
+
+        <div class="p-4 md:p-9 pl-0 relative flex flex-col justify-center">
+            <div class="flex items-center justify-between mb-1">
+
+                <!-- Product Title -->
+                <a href="{{ item.product.url }}">
+                    <h3 class="text-base md:text-2xl lg:text-3xl mb-0 font-couch">{{ item.product.title }}</h3>
+                </a>
+
+                <div class="md:absolute right-9 top-9">
+                    {%- if compare_at_price and compare_at_price > price -%}
+                        <span class="text-base line-through mr-3">{{ compare_at_price | money }}</span>
+                    {%- endif -%}
+
+                    <span class="font-tenso md:text-2xl">{{ price | money }}</span>
+                </div>
+            </div>
+
+            <!-- Variant title -->
+            <div>
+                {% unless product.has_only_default_variant %}
+                    {% assign variant_titles = variant.title | split: " / " %}
+                    {%- for title in variant_titles -%}
+
+                        <p class="text-xs mb-0">{{ title | strip }}</p>
+
+                    {%- endfor -%}
+                {% endunless %}
+            </div>
+
+            <!-- Item Attributes -->
+            <div class="">
+                {%- for property in item.properties -%}
+                    {% assign property_starts_with = property.first | slice: 0, 1 %}
+
+                    {% unless property_starts_with == "_" or
+                                property.first contains 'shipping_interval' or
+                                property.first == 'subscription_id' %}
+                        <p class="text-sm mb-1">
+                            <span class="mr-1">{{ property.first }}: </span>
+                            <span>{{ property.last }}</span>
+                        </p>
+                    {% endunless %}
+                {%- endfor -%}
+            </div>
+
+            {%- if can_subscribe -%}
+              {%- if variant.requires_selling_plan -%}
+                <p class="text-sm">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+              {% else %}
+                <div class="flex flex-col gap-1 mb-2 w-full py-3">
+                  <div class="custom-checkbox w-full">
+                    <div class="checkbox-wrapper">
+                      <input id="delivery--subscribe--{{ item.key }}"
+                             type="radio"
+                             name="delivery_option--{{ item.key }}"
+                             value="subscribe"
+                             class="js-cart-item-delivery"
+                             data-key="{{item.key}}"
+                             data-quantity="{{ item.quantity }}"
+                             data-default-plan="{{ variant.selling_plan_allocations[1].selling_plan.id }}"
+                             {% if is_subscription %}checked{% endif %} />
+                    </div>
+                    <label for="delivery--subscribe--{{ item.key }}">subscribe + save</label>
+                  </div>
+
+                  <div class="custom-checkbox w-full">
+                    <div class="checkbox-wrapper">
+                      <input id="delivery--one-time--{{ item.key }}"
+                             type="radio"
+                             name="delivery_option--{{ item.key }}"
+                             value="one-time"
+                             class="js-cart-item-delivery"
+                             data-key="{{item.key}}"
+                             data-quantity="{{ item.quantity }}"
+                             {% unless is_subscription %}checked{% endunless %} />
+                    </div>
+                    <label for="delivery--one-time--{{ item.key }}">one-time purchase</label>
+                  </div>
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+
+            <!-- bottom row: qty, compare at, price -->
+            <div class="flex items-center mt-2.5 gap-5">
+                {% render 'quantity-box',
+                    input_class: "js-item-quantity",
+                    name: "quantity",
+                    quantity: item.quantity,
+                    title: item.title,
+                    key: item.key,
+                    min: 0 %}
+
+                <!-- Subscription / upgrade to subscription -->
+                {%- if is_subscription -%}
+                  <div class="js-selling-plan-group relative z-10">
+
+                    {% capture option_id %}selling-plan--{{ item.key }}{% endcapture %}
+
+                    <label for="{{ option_id }}" class="sr-only">{{ option.name }}</label>
+                    <select id="{{ option_id }}"
+                            class="hidden js-hidden-item-select"
+                            name="selling_plan--{{ item.key }}"
+                            data-name="selling_plan"
+                            data-quantity="{{ item.quantity }}"
+                            data-key="{{ item.key }}"
+                          >
+                      {% for allocation in variant.selling_plan_allocations %}
+                        {% assign delivery_name = allocation.selling_plan.name | remove: "Delivery every" | strip %}
+
+                        <option value="{{ allocation.selling_plan.id | escape }}"
+                                {% if item.selling_plan_allocation.selling_plan.name == allocation.selling_plan.name %}selected="selected"{% endif %}>
+                          {{ delivery_name }}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+
+                    {% assign selling_plan_options_size = variant.selling_plan_allocations | size %}
+                    {% assign selected_option_name = item.selling_plan_allocation.selling_plan.name | remove: "Delivery" | strip | downcase %}
+
+                    {%- unless selling_plan_options_size == 1 -%}
+                      {%
+                        render 'custom-selling-plan-select',
+                        trigger: option_id,
+                        option_name: "delivered",
+                        selected_value: selected_option_name,
+                        option_values: variant.selling_plan_allocations,
+                        product: product,
+                        product_form_id: item.key,
+                        hide_label: true
+                      %}
+                    {%- endunless -%}
+                  </div>
+                {%- endif -%}
+
+                <!-- Remove button -->
+                <button type="button"
+                        name="button"
+                        class="js-cart--remove-item btn-transparent ml-2"
+                        data-key="{{ item.key }}"
+                        data-connected-keys='{{ connected_kit_keys }}'>
+                <span class="sr-only">Remove {{ item.product_title }} from cart</span>
+                {% render 'icon', icon: 'remove' %}
+                </button>
+            </div>
+        </div>
+
+    </div>
+</li>

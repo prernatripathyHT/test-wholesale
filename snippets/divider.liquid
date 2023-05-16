@@ -1,0 +1,79 @@
+<!-- snippets/divider [aa] -->
+{%- comment %}
+	Variables:
+   - divider: name of the divider to render
+   - color: background-color of divider element if applicable
+{% endcomment -%}
+
+{%- case divider -%}
+  {%- when 'line-sm' -%}
+    <div class="mx-auto w-14 h-1">
+      <span class="block w-0 animate-w-full animate {% if color != blank %}bg-{{ color }} {% else %} bg-beige {% endif %} h-full" data-delay="400"></span>
+    </div>
+
+  {%- when 'line' -%}
+    <div class="mx-auto w-full h-px">
+      <span class="block w-0 animate-w-full animate {% if color != blank %}bg-{{ color }} {% else %} bg-beige {% endif %} h-full" data-delay="400"></span>
+    </div>
+
+  {%- when 'triangles' -%}
+    <svg class="{{ class }}" width="23px" height="267px" viewBox="0 0 23 267" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Camel-Triangles" transform="translate(1.000000, 2.000000)" stroke="#A99167">
+                <g id="Polygon-11">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 37.732620)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 75.465240)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 113.197860)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 150.930480)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 188.663100)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 226.395720)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+            </g>
+        </g>
+    </svg>
+
+  {%- when 'horizontal-triangles' -%}
+    <svg class="{{ class }}" width="266px" height="23px" viewBox="0 0 266 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Camel-Triangles" transform="translate(133.250351, 11.564170) rotate(-270.000000) translate(-133.250351, -11.564170) translate(123.000000, -120.000000)" stroke="#A99167">
+                <g id="Polygon-11">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 37.732620)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 75.465240)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 113.197860)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 150.930480)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 188.663100)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+                <g id="Polygon-11" transform="translate(0.000000, 226.395720)">
+                    <polygon id="Path" points="2e-06 1.77635684e-15 20.500702 18.36632 3.33066907e-16 36.73262"></polygon>
+                </g>
+            </g>
+        </g>
+    </svg>
+
+  {%- else -%}
+  {{ divider }} can't be found!
+{%- endcase -%}

@@ -1,0 +1,45 @@
+<!-- sections/article-next-prev -->
+
+<ul class="mb-12 grid grid-cols-2 border border-black">
+
+  {%- if blog.previous_article -%}
+    <li>
+      <a href="{{ blog.previous_article }}"
+         class="px-2.5 py-2.5 md:px-5 md:py-5 w-full
+                text-blue uppercase text-sm md:text-base
+                flex items-center gap-2 md:gap-4
+                tracking-wider group transition-all hover:text-black">
+        {% render 'icon', icon: 'arrow-left', class: "w-6 transition-all group-hover:-translate-x-2" %}
+        <span>Previous Project</span>
+      </a>
+    </li>
+  {%- else -%}
+    <span></span>
+  {%- endif -%}
+  {%- if blog.next_article -%}
+    <li>
+      <a href="{{ blog.next_article }}"
+         class="px-2.5 py-2.5 md:px-5 md:py-5 w-full
+                text-blue text-right uppercase text-sm md:text-base
+                flex justify-end items-center gap-2 md:gap-4
+                tracking-wider group transition-all hover:text-black">
+        <span>Next Project</span>
+        {% render 'icon', icon: 'arrow-right', class: "w-6 transition-all group-hover:translate-x-2" %}
+      </a>
+    </li>
+  {%- endif -%}
+</ul>
+
+{% schema %}
+{
+  "name": "Article Next / Previous",
+  "settings": [
+
+  ],
+  "presets": [
+    {
+      "name": "Article Next / Previous"
+    }
+  ]
+}
+{% endschema %}

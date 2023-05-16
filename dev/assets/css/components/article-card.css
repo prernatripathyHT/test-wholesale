@@ -1,0 +1,14 @@
+.main-blog--link.active {
+  @apply font-semibold underline;
+}
+
+.article-card {
+  @apply flex flex-col
+         justify-between items-center relative
+         transition-all duration-300
+         border border-black;
+}
+
+.text-overflow-break {
+  overflow-wrap: break-word;
+}

@@ -1,0 +1,31 @@
+<!-- snippets/desktop-menu -->
+
+{%- comment %}
+	Variables:
+  - linklist: [Object] passed down from section.settings
+  - justify: [String/Enum] One of: justify-start or justify-end
+{% endcomment -%}
+
+<ul class="list-none flex items-center {{ justify }} w-full gap-8">
+  {% for link in linklist.links %}
+    {% assign has_submenu = false %}
+    {% assign link_children_size = link.links | size %}
+    {%- if link_children_size > 0 -%}
+      {% assign has_submenu = true %}
+    {%- endif -%}
+
+    <li class="flex items-center p-4 relative {% if has_submenu %} submenu--trigger {% endif %}"
+        data-link="desktop--{{ link.title | handleize }}">
+      <a id="menu-link--{{ link.title | handleize }}"
+        href="{{ link.url }}"
+        class="font-semibold text-white hover:text-yellow transition-colors text-center uppercase tracking-widest font-freight-sans leading-none"
+      >
+        {{ link.title }}
+      </a>
+
+      {%- if has_submenu -%}
+        {% render 'desktop-submenu', parent: link, links: link.links %}
+      {%- endif -%}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,76 @@
+<!-- sections/content-columns.liquid [ja] -->
+
+
+<ul class="bg-black gap-px border border-black grid grid-cols-1 md:grid-cols-3">
+    {% for block in section.blocks %}
+
+        <li class="p-[10%] bg-white flex flex-col items-center justify-center">
+            {% unless block.settings.img == blank %}
+                {% include 'responsive-image', 
+                    src: block.settings.img,
+                    alt: block.settings.img.alt,
+                    class: 'w-24 rounded-full mb-10 mx-auto' %}
+            {% endunless %}
+
+            {% unless block.settings.title == blank %}
+                <h3 class="{{ block.settings.title_class | default: 'font-tenso text-lg text-center' }}">
+                    {{ block.settings.title }}
+                </h3>
+            {% endunless %}
+
+            {% unless block.settings.desc == blank %}
+                <p class="{{ block.settings.desc_class | default: 'font-tenso text-lg text-center' }}">
+                    {{ block.settings.desc }}
+                </p>
+            {% endunless %}
+        </li>
+        
+    {% endfor %}
+</ul>
+
+
+{% schema %}
+{
+    "name": "Content Columns",
+    "class": "section-content-columns",
+    "blocks": [
+        {
+            "name": "Grid Item",
+            "type": "grid_item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Icon"
+                },
+                {
+                    "type": "richtext",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "title_class",
+                    "label": "Additional Classes for Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "desc",
+                    "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "desc_class",
+                    "label": "Additional Classes for Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "grid",
+            "name": "Content Columns"
+        }
+    ]
+}
+{% endschema %}

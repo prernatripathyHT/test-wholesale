@@ -1,0 +1,130 @@
+<!-- sections/people-grid -->
+
+
+<ul class="grid md:grid-cols-3" style="background-color: {{ section.settings.bg_color }};">
+    {% for block in section.blocks %}
+
+        <li class="border border-black flex flex-col">
+            {% unless block.settings.img == blank %}
+                {% render 'responsive-image', 
+                    src: block.settings.img,
+                    alt: block.settings.img.alt %}
+            {% endunless %}
+
+            <div class="p-11 md:px-[17%] pb-8 h-full">
+                <div class="w-fit m-auto flex flex-col h-full">
+                    <h3 class="font-couch text-xl lg:text-2xl">{{ block.settings.title }}</h3>
+    
+                    <dl class="font-tenso lg:text-lg tracking-wider mt-3 mb-5">
+                        {% unless block.settings.job_title == blank %}
+                            <div class="flex">
+                                <dt class="font-bold">Title:</dt>
+                                <dd>&nbsp;{{ block.settings.job_title }}</dd>
+                            </div>
+                        {% endunless %}
+    
+                        {% unless block.settings.pronouns == blank %}
+                            <div class="flex">
+                                <dt class="font-bold">Pronouns:</dt>
+                                <dd>&nbsp;{{ block.settings.pronouns }}</dd>
+                            </div>
+                        {% endunless %}
+    
+                        {% unless block.settings.drinking == blank %}
+                            <div class="flex">
+                                <dt class="font-bold">Currently Drinking:</dt>
+                                <dd>&nbsp;<a class="underline" href="{{ block.settings.drinking.url }}">{{ block.settings.drinking.title }}</a></dd>
+                            </div>
+                        {% endunless %}
+                    </dl>
+    
+                    <a  class="flex items-center gap-2.5 font-tenso lg:text-lg tracking-wider mt-auto" 
+                        href="{{ block.settings.link_url }}">
+                        {% render 'responsive-image', 
+                            src: block.settings.link_icon, 
+                            alt: block.settings.link_icon.alt,
+                            class: 'w-9' %}
+    
+                        {{ block.settings.link_label }}
+                    </a>
+                </div>
+            </div>
+        </li>
+        
+    {% endfor %}
+</ul>
+
+
+{% schema %}
+{
+    "name": "People Grid",
+    "class": "section-people-grid",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Person",
+            "type": "person",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Name"
+                },
+                {
+                    "type": "text",
+                    "id": "job_title",
+                    "label": "Title",
+                    "placeholder": "Coffee Educator"
+                },
+                {
+                    "type": "text",
+                    "id": "pronouns",
+                    "label": "Pronouns",
+                    "placeholder": "he/him/his"
+                },
+                {
+                    "type": "product",
+                    "id": "drinking",
+                    "label": "Currently Drinking"
+                },
+                {
+                    "type": "header",
+                    "content": "External Link"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "link_icon",
+                    "label": "Icon"
+                },
+                {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "URL"
+                },
+                {
+                    "type": "text",
+                    "id": "link_label",
+                    "label": "Label"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "grid",
+            "name": "People Grid"
+        }
+    ]
+}
+{% endschema %}

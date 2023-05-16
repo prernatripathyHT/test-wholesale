@@ -1,0 +1,60 @@
+<!-- snippets/blog-filter-options -->
+
+{% assign tag_option_groups = 'Origin, Year' | split: ', ' %}
+
+{%- if blog.tags -%}
+  <ul data-target="filters"
+      data-filter-url="/tagged/"
+      data-section="sections=blog-grid"
+      class="js-filter-container flex flex-col lg:flex-row lg:gap-3 px-3 border-t border-b border-black w-screen absolute top-full left-0 bg-white z-10"
+      style="display: none;">
+    {% for item in tag_option_groups %}
+      <li class="py-3">
+        <button type="button"
+                name="button"
+                data-target="{{ item }}"
+                class="btn-transparent filter--trigger-btn flex items-center py-1 px-3 text-base js-trigger-filter-container">
+          <span class="sr-only">Toggle {{ item }} Options</span>
+
+          <span class="mr-2">{{ item }}</span>
+
+          {% render 'icon', icon: 'plus', class: "w-2 js-plus" %}
+          {% render 'icon', icon: 'minus', class: "w-2 hidden js-minus" %}
+        </button>
+
+        <ul data-target="{{ item }}"
+            class="my-3 -mx-3 lg:mx-0 lg:my-0 flex flex flex-col lg:flex-row gap-3 p-3 border-b border-t border-black w-screen relative lg:absolute lg:top-full lg:left-0 bg-white z-10 js-filter-container"
+            style="display: none;">
+          {% for tag in blog.tags %}
+            {% assign tag_is_number = false %}
+
+            {%- if tag contains '20' -%}
+              {% assign tag_is_number = true %}
+            {%- endif -%}
+
+            {%- if item == 'Year' and tag_is_number -%}
+              <li class="relative">
+                <a href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+                   data-value='{{ tag | handleize }}'
+                   class="btn-transparent filter--trigger-btn text-base flex items-center py-1 px-3 js-collection-filter-option w-fit">
+                  <span class="sr-only">Filter by {{ tag }}</span>
+                  {{ tag }}
+                </a>
+              </li>
+            {%- elsif item != 'Year' and tag_is_number == false -%}
+              <li class="relative">
+                <a href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+                   data-value='{{ tag | handleize }}'
+                   class="btn-transparent filter--trigger-btn text-base flex items-center py-1 px-3 js-collection-filter-option w-fit">
+                  <span class="sr-only">Filter by {{ tag }}</span>
+                  {{ tag }}
+                </a>
+              </li>
+            {%- endif -%}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+
+{%- endif -%}

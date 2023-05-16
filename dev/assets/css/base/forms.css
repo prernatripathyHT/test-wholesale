@@ -1,0 +1,99 @@
+@layer base {
+  :focus-visible {
+    outline-color: theme('colors.blue');
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+
+  textarea {
+    @apply border border-white py-3 px-4 bg-transparent w-full;
+    resize: none;
+  }
+
+  .newsletter--input::placeholder {
+    @apply text-black;
+  }
+
+  .custom-radio-swatch input[type=radio],
+  .custom-radio-swatch input[type=checkbox] {
+    @apply sr-only;
+  }
+
+  .custom-radio-swatch label {
+    min-width: 6rem;
+    @apply border border-black text-black text-center block cursor-pointer rounded-full py-3 px-4 text-base leading-none transition-all;
+  }
+
+  .custom-radio-with-image label {
+    @apply rounded-2xl;
+  }
+
+  .custom-radio-swatch input[type=radio]:focus + label,
+  .custom-radio-swatch input[type=checkbox]:focus + label {
+    @apply ring-2 ring-blue/30;
+  }
+
+  .custom-radio-swatch input[type=radio]:focus + label,
+  .custom-radio-swatch input[type=radio]:hover + label,
+  .custom-radio-swatch input[type=radio]:checked + label,
+  .custom-radio-swatch input[type=checkbox]:focus + label,
+  .custom-radio-swatch input[type=checkbox]:hover + label,
+  .custom-radio-swatch input[type=checkbox]:checked + label {
+    @apply bg-yellow;
+  }
+
+  .custom-radio-swatch input[type=radio]:checked + label,
+  .custom-radio-swatch input[type=checkbox]:checked + label {
+    @apply font-semibold;
+  }
+
+  .custom-checkbox {
+    @apply flex items-center;
+
+    & .checkbox-wrapper {
+      @apply border border-black flex items-center justify-center rounded-full mr-2 lg:mr-5;
+      width: rem(20);
+      height: rem(20);
+    }
+
+    & input[type=radio],
+    & input[type=checkbox] {
+        border-color: theme('colors.white');
+        border-radius: theme('borderRadius.full');
+        border-width: rem(4);
+        box-shadow: 0 0 0 rem(1) theme('colors.black');
+        transition: background-color theme('transitionDuration.DEFAULT') theme('transitionTimingFunction.DEFAULT');
+
+        width: rem(18);
+        height: rem(18);
+
+        position: relative;
+        cursor: pointer;
+        vertical-align: -4px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: white;
+
+        &:checked {
+          background-color: theme('colors.yellow');
+        }
+
+        &::after { content: none; }
+    }
+
+    & label {
+      @apply tracking-wider text-sm md:text-base cursor-pointer;
+    }
+  }
+
+}

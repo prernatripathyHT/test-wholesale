@@ -1,0 +1,98 @@
+<!-- sections/cart [ja] -->
+
+
+<section    class="js-cart--container cart--page px-4 sm:px-11 lg:px-20 pb-10 md:pb-20"
+            data-section-id="{{ section.id }}">
+    <div class="js-cart--inner h-full flex flex-col">
+        {%- if cart.item_count > 0 -%}
+            {%- comment %}
+            Cart Header, Items, Apps, Upsell, Footer
+            ----------------
+            {% endcomment -%}
+
+            {% assign cart_count = cart.item_count %}
+
+            {% render 'cart-page-header' %}
+
+            {%- unless settings.cart_psa == blank -%}
+                <div class="slide-cart--psa flex px-1 py-1">
+                    {{ settings.cart_psa }}
+                </div>
+            {%- endunless -%}
+
+            <!-- Cart Items -->
+            <div class="h-full slide-cart--item-container">
+                <ul class="js-slide-cart--items unlist my-0 h-full flex flex-col gap-y-10">
+                    {%- for item in cart.items -%}
+
+                        {% render 'cart-page-item',
+                            item: item,
+                            index: forloop.index %}
+
+                    {%- endfor -%}
+
+                    {%- if settings.enable_cart_upsell -%}
+                        {% render 'cart-upsell' %}
+                    {%- endif -%}
+                </ul>
+            </div>
+
+            <div>
+                {%- if settings.enable_cart_notes -%}
+                    <div class="js-slide-cart--notes">
+                        {% render 'cart-notes' %}
+                    </div>
+                {%- endif -%}
+
+                {% render 'cart-footer' %}
+            </div>
+        {%- else -%}
+            {%- comment %}
+            Empty Cart State: Header, Empty
+            ----------------
+            {% endcomment -%}
+
+            {% render 'cart-header' %}
+            {% render 'cart-empty', section: section %}
+
+        {%- endif -%}
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Cart",
+    "class": "section-cart",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "Global settings can be found in Theme Settings > Cart"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "empty_button",
+            "name": "Empty State: Button",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "Empty State Button",
+                    "info": "Displays a button link"
+                },
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Button Text"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Button URL"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

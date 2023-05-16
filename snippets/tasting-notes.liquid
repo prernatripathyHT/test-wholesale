@@ -1,0 +1,17 @@
+<!-- snippets/tasting-notes -->
+{% assign tasting_notes = product.metafields.main.tasting_notes %}
+
+{%- if tasting_notes != blank -%}
+  <div class="flex items-center gap-2 mt-2 mb-4">
+    <p class="italic font-tenso font-regular text-xs md:text-base xl:text-xl {{ class }}">{{ tasting_notes }}</p>
+
+    {%- if show_label -%}
+      <button type="button"
+              class="btn-transparent cursor-pointer relative group">
+        {% render 'icon' icon: 'question' %}
+
+        {% render 'flavor-wheel-popover' %}
+      </button>
+    {%- endif -%}
+  </div>
+{%- endif -%}

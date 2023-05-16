@@ -1,0 +1,90 @@
+<!-- snippets/contact-form -->
+
+<div class="border border-black px-5 md:px-14 pt-14 pb-20">
+    {%- unless title == blank -%}
+        <h2 class="font-couch text-black text-xl sm:text-2xl lg:text-3xl animate animate-fadeInUp">
+            {{ title }}
+        </h2>
+    {%- endunless -%}
+
+    {%- unless subtext == blank -%}
+        <p  class="font-tenso mt-6 mb-7 animate animate-fadeInUp"
+            data-delay="200">
+            {{ subtext }}
+        </p>
+    {%- endunless -%}
+
+    {% form 'contact' %}
+        {%- if form.errors -%}
+            <div class="mb-2.5">
+                {{ form.errors | default_errors }}
+            </div>
+        {%- endif -%}
+
+        <div    class="flex flex-col gap-5 animate animate-fadeInUp" 
+                data-delay="400">
+            {% unless contact_topics == blank %}
+                {% assign topics = contact_topics | newline_to_br | split: '<br />' %}
+
+                {% render 'dropdown', 
+                    label: 'Select a Topic',
+                    options: topics %}
+            {% endunless %}
+              
+            {% render 'floating-label', 
+                id: 'contact-first-name',
+                input_name: 'contact[first_name]',
+                input_val: form.first_name,
+                input_class: 'border-black',
+                placeholder: 'Cool',
+                label: '*First Name',
+                label_class: 'text-black' %}
+
+            {% render 'floating-label', 
+                id: 'contact-last-name',
+                input_name: 'contact[last_name]',
+                input_val: form.last_name,
+                input_class: 'border-black',
+                placeholder: 'Person',
+                label: '*Last Name',
+                label_class: 'text-black' %}
+
+            {% render 'floating-label', 
+                id: 'contact-email',
+                input_name: 'contact[email]',
+                input_type: 'email',
+                input_val: form.email,
+                input_class: 'border-black',
+                placeholder: 'you@example.com',
+                label: '*Email',
+                label_class: 'text-black' %}
+
+            {% render 'floating-label', 
+                id: 'contact-phone',
+                input_name: 'contact[phone]',
+                input_type: 'phone',
+                input_val: form.phone,
+                input_class: 'border-black',
+                placeholder: '123-456-9999',
+                label: 'Phone (xxx-xxx-xxxx)',
+                label_class: 'text-black' %}
+
+            {% render 'floating-label', 
+                id: 'contact-body',
+                input_name: 'contact[body]',
+                input_type: 'textarea',
+                input_class: 'border-black',
+                placeholder: "I'm reaching out to you because...",
+                label: "*What's up?",
+                label_class: 'text-black' %}
+
+            <div    class="flex justify-end w-full animate animate-fadeInUp md:animate-slideInRight">
+                <button type="submit" 
+                        name="send" 
+                        class="btn btn-secondary w-full md:w-auto">
+                    Submit
+                </button>
+            </div>
+        </div>
+    {% endform %}
+</div>

@@ -1,0 +1,20 @@
+<!-- snippets/social-blocks -->
+{%- comment %}
+  variables:
+  - blocks: filtered section.blocks
+{% endcomment -%}
+
+{%- for block in blocks -%}
+  {%- if block.settings.url != blank -%}
+    <li class="animate animate-fadeIn ml-2 {% unless forloop.last %} mr-2 {% endunless %}">
+      <a href="{{ block.settings.url }}">
+        {%
+          render 'responsive-image',
+          src: block.settings.image.src,
+          alt: block.settings.image.alt,
+          class: "w-6",
+        %}
+      </a>
+    </li>
+  {%- endif -%}
+{%- endfor -%}

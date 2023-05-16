@@ -1,0 +1,69 @@
+<!-- sections/icon-list-columns [ja] -->
+
+
+<div class="grid md:grid-cols-2">
+    {% for block in section.blocks %}
+
+        <div class="border border-black py-4 px-[9%] flex flex-col justify-center items-start">
+            <div class="flex gap-5 mb-4 items-center">
+                {% render 'responsive-image',
+                    src: block.settings.icon,
+                    alt: block.settings.icon.alt,
+                    class: 'h-14 w-auto' %}
+
+                <h3 class="font-couch text-xl lg:text-2xl">
+                  {{ block.settings.title }}
+                </h3>
+            </div>
+
+            {% assign list = block.settings.list | newline_to_br | split: '<br />' %}
+            <ul class="prose">
+                {% for item in list %}
+
+                    <li class="font-tenso tracking-wider leading-7">{{ item }}</li>
+
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% endfor %}
+</div>
+
+
+{% schema %}
+{
+    "name": "Icon List Columns",
+    "class": "sections-icon-list-columns",
+    "max_blocks": 2,
+    "blocks": [
+        {
+            "name": "Column",
+            "type": "columns",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading"
+                },
+                {
+                    "type": "textarea",
+                    "id": "list",
+                    "label": "List",
+                    "info": "Separate list items with a new line"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "grid",
+            "name": "Icon List Columns"
+        }
+    ]
+}
+{% endschema %}

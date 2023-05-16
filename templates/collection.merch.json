@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-grid",
+      "settings": {
+        "alt_collection": "",
+        "title": "",
+        "show_hover_image": false,
+        "show_atc": true,
+        "show_filters": true,
+        "feature_image_index": 6,
+        "grid_limit": 12
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

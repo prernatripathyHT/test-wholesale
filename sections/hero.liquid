@@ -1,0 +1,714 @@
+<!-- sections/hero.liquid -->
+
+{%- comment %}
+	text-stroke text-stroke-outline md:w-4/5 md:w-3/5 md:w-1/2 md:w-1/3 md:w-1/4
+{% endcomment -%}
+
+{% capture justify_content %}{{ section.settings.justify_content_sm }} {{ section.settings.justify_content_md }} {{ section.settings.justify_content_lg }}{% endcapture %}
+{% assign align_items = section.settings.align_items_sm | append: ' ' | append: section.settings.align_items_md | append: ' ' | append: section.settings.align_items_lg %}
+{% assign text_align = section.settings.text_align_sm | append: ' ' | append: section.settings.text_align_md | append: ' ' | append: section.settings.text_align_lg %}
+
+{% capture image_classes %}
+  {%- unless section.settings.s_image == blank -%}
+    hidden md:block
+  {%- endunless -%}
+{% endcapture %}
+
+{% capture s_image_classes %}
+  block md:hidden
+{% endcapture %}
+
+<section class="grid"
+         style="background: {{ section.settings.background_color }};">
+
+  {%- unless section.settings.video_url == blank -%}
+   <div class="col-start-1 row-start-1 h-full w-full lg:w-10/12 mx-auto px-5 py-12 lg:py-24 flex lg:items-center {{ section.settings.video_placement }}">
+     <div class="w-4/5 md:w-2/5 lg:w-1/3 overflow-hidden">
+       <video class="min-h-[20rem] w-full object-cover rounded-tl-[10rem] rounded-tr-[10rem]"
+              src="{{ section.settings.video_url }}"
+              autoplay muted playsinline loop></video>
+     </div>
+   </div>
+  {%- endunless -%}
+
+  <div class="col-start-1 row-start-1 h-full relative z-1">
+    {%- unless section.settings.image == blank -%}
+      {% assign image_aspect = section.settings.image.aspect_ratio %}
+
+      <div class="{{ image_classes }}"
+           style="min-height: calc(100vw / {{ image_aspect }});">
+        {% render 'responsive-image',
+           src: section.settings.image.src,
+           alt: section.settings.image.alt,
+           class: "h-full w-full object-cover" %}
+      </div>
+    {%- endunless -%}
+
+    {%- unless section.settings.s_image == blank -%}
+      {% assign image_aspect_s = section.settings.s_image.aspect_ratio %}
+
+      <div class="{{ s_image_classes }}"
+           style="min-height: calc(100vw / {{ image_aspect_s }});">
+        {% render 'responsive-image',
+           src: section.settings.s_image.src,
+           alt: section.settings.s_image.alt,
+           class: "h-full w-full object-cover" %}
+       </div>
+    {%- endunless -%}
+  </div>
+
+  <div class="h-full w-full lg:w-10/12 mx-auto px-5 py-12 lg:py-24 col-start-1 row-start-1 flex flex-col {{ justify_content }} {{ align_items }} relative z-10">
+    <div class="{{ text_align }} md:{{ section.settings.content_width }}">
+      {% unless section.settings.pre_header == blank %}
+        <p class="text-lg uppercase text-black animate animate-fadeInUp mb-1">{{ section.settings.pre_header }}</p>
+      {% endunless %}
+
+      {%- unless section.settings.title == blank -%}
+        {%
+          render 'ct-heading',
+          title: section.settings.title,
+          tag: section.settings.tag,
+          text_size_mobile: section.settings.text_size_mobile,
+          text_size_desktop: section.settings.text_size_desktop,
+          text_color: section.settings.text_color,
+          font: section.settings.font,
+          alignment: section.settings.alignment,
+          weight: section.settings.weight,
+          class: section.settings.title_classes
+        %}
+      {%- endunless -%}
+
+      {% unless section.settings.subheader == blank %}
+        <div class="animate animate-fadeInUp font-regular mb-8 text-xl {{ section.settings.text_color }}">
+          {{ section.settings.subheader }}
+        </div>
+      {% endunless %}
+
+      {%
+        render 'ct-button',
+        link_text: section.settings.link_text,
+        link_url: section.settings.link_url,
+        button_style: section.settings.button_style,
+        class: section.settings.link_classes
+      %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+{% schema %}
+{
+  "name": "Hero",
+  "class": "section-hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "s_image",
+      "label": "Mobile: Background Image"
+    },
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "Section Background Color"
+    },
+    {
+      "type": "header",
+      "content": "Video settings"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Shopify CDN File Upload link"
+    },
+    {
+      "type": "select",
+      "id": "video_placement",
+      "label": "Video Horizontal Placement (Desktop)",
+      "default": "lg:justify-start",
+      "options": [
+        {
+          "label": "Left",
+          "value": "lg:justify-start"
+        },
+        {
+          "label": "Center",
+          "value": "lg:justify-center"
+        },
+        {
+          "label": "Right",
+          "value": "lg:justify-end"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Text settings"
+    },
+    {
+      "type": "text",
+      "id": "pre_header",
+      "label": "Pre-Header Text"
+    },
+    {
+      "type": "text",
+      "id": "subheader",
+      "label": "Subheader Text",
+      "default": "Subheader text"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "default": "btn btn-secondary",
+      "options": [
+        {
+          "label": "Button Primary",
+          "value": "btn btn-primary"
+        },
+        {
+          "label": "Button Secondary",
+          "value": "btn btn-secondary"
+        },
+        {
+          "label": "Button Tertiary",
+          "value": "btn btn-tertiary"
+        },
+        {
+          "label": "Button White",
+          "value": "btn btn-white"
+        },
+        {
+          "label": "Button Outline",
+          "value": "btn btn-outline"
+        },
+        {
+          "label": "Camel Underline",
+          "value": "camel-underline"
+        },
+        {
+          "label": "Blue Underline",
+          "value": "blue-underline"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Click me!"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "link_classes",
+      "label": "Additional Classes for the Button/Link"
+    },
+    {
+      "type": "header",
+      "content": "Content Width"
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "Desktop Content Width",
+      "default": "w-full",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "Full"
+        },
+        {
+          "value": "w-4/5",
+          "label": "80%"
+        },
+        {
+          "value": "w-3/5",
+          "label": "60%"
+        },
+        {
+          "value": "w-1/2",
+          "label": "50%"
+        },
+        {
+          "value": "w-1/3",
+          "label": "33.33%"
+        },
+        {
+          "value": "w-1/4",
+          "label": "25%"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Y Position"
+    },
+    {
+      "type": "select",
+      "id": "justify_content_lg",
+      "label": "Desktop",
+      "default": "lg:justify-center",
+      "options": [
+        {
+          "value": "lg:justify-start",
+          "label": "Top"
+        },
+        {
+          "value": "lg:justify-center",
+          "label": "Center"
+        },
+        {
+          "value": "lg:justify-end",
+          "label": "Bottom"
+        },
+        {
+          "value": "lg:justify-evenly",
+          "label": "Space Evenly"
+        },
+        {
+          "value": "lg:justify-around",
+          "label": "Space Around"
+        },
+        {
+          "value": "lg:justify-between",
+          "label": "Space Between"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "justify_content_md",
+      "label": "Tablet",
+      "default": "md:justify-center",
+      "options": [
+        {
+          "value": "md:justify-start",
+          "label": "Top"
+        },
+        {
+          "value": "md:justify-center",
+          "label": "Center"
+        },
+        {
+          "value": "md:justify-end",
+          "label": "Bottom"
+        },
+        {
+          "value": "md:justify-evenly",
+          "label": "Space Evenly"
+        },
+        {
+          "value": "md:justify-around",
+          "label": "Space Around"
+        },
+        {
+          "value": "md:justify-between",
+          "label": "Space Between"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "justify_content_sm",
+      "label": "Mobile",
+      "default": "justify-center",
+      "options": [
+        {
+          "value": "justify-start",
+          "label": "Top"
+        },
+        {
+          "value": "justify-center",
+          "label": "Center"
+        },
+        {
+          "value": "justify-end",
+          "label": "Bottom"
+        },
+        {
+          "value": "justify-evenly",
+          "label": "Space Evenly"
+        },
+        {
+          "value": "justify-around",
+          "label": "Space Around"
+        },
+        {
+          "value": "justify-between",
+          "label": "Space Between"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "X Position"
+    },
+    {
+      "type": "select",
+      "id": "align_items_lg",
+      "label": "Desktop",
+      "default": "lg:items-center",
+      "options": [
+        {
+          "value": "lg:items-start",
+          "label": "Left"
+        },
+        {
+          "value": "lg:items-center",
+          "label": "Center"
+        },
+        {
+          "value": "lg:items-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align_items_md",
+      "label": "Tablet",
+      "default": "md:items-center",
+      "options": [
+        {
+          "value": "md:items-start",
+          "label": "Left"
+        },
+        {
+          "value": "md:items-center",
+          "label": "Center"
+        },
+        {
+          "value": "md:items-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align_items_sm",
+      "label": "Mobile",
+      "default": "items-center",
+      "options": [
+        {
+          "value": "items-start",
+          "label": "Left"
+        },
+        {
+          "value": "items-center",
+          "label": "Center"
+        },
+        {
+          "value": "items-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Text Alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_align_lg",
+      "label": "Desktop",
+      "default": "lg:text-left",
+      "options": [
+        {
+          "value": "lg:text-left",
+          "label": "Left"
+        },
+        {
+          "value": "lg:text-center",
+          "label": "Center"
+        },
+        {
+          "value": "lg:text-right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align_md",
+      "label": "Tablet",
+      "default": "md:text-left",
+      "options": [
+        {
+          "value": "md:text-left",
+          "label": "Left"
+        },
+        {
+          "value": "md:text-center",
+          "label": "Center"
+        },
+        {
+          "value": "md:text-right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_align_sm",
+      "label": "Mobile",
+      "default": "text-left",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

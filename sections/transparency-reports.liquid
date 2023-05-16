@@ -1,0 +1,134 @@
+<!-- sections/transparency-reports [ja] -->
+
+
+<section class="border border-black h-[600px] max-w-full overflow-auto px-20">
+    <ul class="flex justify-center gap-16 px-14 py-24 relative w-fit mx-auto">
+        <div class="w-full h-px bg-blue absolute top-1/2 left-0 -z-10"></div>
+
+        {% for block in section.blocks %}
+
+            {% assign mod = forloop.index0 | modulo: 2 %}
+
+            {% capture label_pos %}
+                {% if mod == 0 %}
+                    -top-3 -translate-y-full
+                {% else %}
+                    -bottom-3 translate-y-full
+                {% endif %}
+            {% endcapture %}
+    
+            <li class="relative group">
+                <span class="absolute left-1/2 -translate-x-1/2 {{ label_pos }}">{{ block.settings.title }}</span>
+
+                <button class="w-7 h-7 bg-white border border-black rounded-full group-focus-within:bg-yellow hover:bg-yellow">
+                    <span class="sr-only">Toggle options for viewing the {{ block.settings.title }} transparency report</span>
+                </button>
+
+                <!-- top-full translate-y-8 / bottom-full -translate-y-8 -->
+                <div    id="transparency-report--{{ forloop.index }}" 
+                        class="hidden absolute z-10 left-1/2 -translate-x-1/2 w-64 top-[calc(100%_+_1.25rem)] translate-y-8 group-focus-within:block group-focus-within:animate-fadeIn"
+                        data-testtest-popup>
+                    {% render 'responsive-image', 
+                        src: block.settings.thumbnail,
+                        alt: block.settings.thumbnail.alt,
+                        class: 'aspect-square object-cover' %}
+
+                    {% capture btn_class %}
+                        w-full mt-5 {{ block.settings.link_classes }}
+                    {% endcapture %}
+
+                    {% render 'ct-button',
+                        link_text: block.settings.link_text,
+                        link_url: block.settings.link_url,
+                        button_style: block.settings.button_style,
+                        class: btn_class,
+                        new_tab: true %}
+                </div>
+            </li>
+            
+        {% endfor %}
+    </ul>
+</section>
+
+
+{% schema %}
+{
+    "name": "Reports",
+    "class": "section-transparency-reports",
+    "blocks": [
+        {
+            "name": "Report",
+            "type": "report",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "thumbnail",
+                    "label": "Thumbnail"
+                },
+                {
+                    "type": "header",
+                    "content": "Button Settings"
+                },
+                {
+                    "type": "select",
+                    "id": "button_style",
+                    "label": "Button Style",
+                    "default": "btn btn-secondary",
+                    "options": [
+                        {
+                            "label": "Button Primary",
+                            "value": "btn btn-primary"
+                        },
+                        {
+                            "label": "Button Secondary",
+                            "value": "btn btn-secondary"
+                        },
+                        {
+                            "label": "Button Tertiary",
+                            "value": "btn btn-tertiary"
+                        },
+                        {
+                            "label": "Button White",
+                            "value": "btn btn-white"
+                        },
+                        {
+                            "label": "Button Outline",
+                            "value": "btn btn-outline"
+                        },
+                        {
+                            "label": "Camel Underline",
+                            "value": "camel-underline"
+                        },
+                        {
+                            "label": "Blue Underline",
+                            "value": "blue-underline"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Link Text",
+                    "default": "Click me!"
+                },
+                {
+                    "type": "url",
+                    "id": "link_url",
+                    "label": "Link URL",
+                    "default": "/collections/all"
+                },
+                {
+                    "type": "text",
+                    "id": "link_classes",
+                    "label": "Additional Classes for the Button/Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

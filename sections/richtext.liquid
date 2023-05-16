@@ -1,0 +1,342 @@
+<!-- sections/richtext.liquid -->
+
+
+<div class="px-[7%] py-8 text-center {{ section.settings.classes }}">
+  {% for block in section.blocks %}
+
+    {% case block.type %}
+      {% when 'heading' %}
+      {% render 'ct-heading'
+       , title: block.settings.title,
+       tag: block.settings.tag,
+       text_size_mobile: block.settings.text_size_mobile,
+       text_size_desktop: block.settings.text_size_desktop,
+       text_color: block.settings.text_color,
+       font: block.settings.font,
+       alignment: block.settings.alignment,
+       weight: block.settings.weight,
+       class: 'mb-4' %}
+
+      {% when 'text_content' %}
+      <div class="max-w-none prose font-tenso {{ block.settings.classes | default: 'mb-14' }}">
+        {{ block.settings.content }}
+      </div>
+
+      {% when 'button' %}
+      {% render 'ct-button'
+       , link_text: block.settings.link_text,
+       link_url: block.settings.link_url,
+       button_style: block.settings.button_style,
+       class: block.settings.classes %}
+
+      {% when 'image' %}
+      {% render 'responsive-image'
+       , src: block.settings.img,
+       alt: block.settings.img.alt,
+       class: block.settings.classes %}
+
+    {% endcase %}
+
+  {% endfor %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Richtext",
+    "settings": [
+      {
+        "type": "text",
+        "id": "classes",
+        "label": "Additional classes for wrapper"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Heading",
+        "type": "heading",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Section Text"
+          },
+          {
+            "type": "select",
+            "id": "text_size_mobile",
+            "label": "Text Size: Mobile",
+            "default": "text-6xl",
+            "options": [
+              {
+                "label": "6XL",
+                "value": "text-6xl"
+              },
+              {
+                "label": "5XL",
+                "value": "text-5xl"
+              },
+              {
+                "label": "4XL",
+                "value": "text-4xl"
+              },
+              {
+                "label": "3XL",
+                "value": "text-3xl"
+              }, {
+                "label": "2XL",
+                "value": "text-2xl"
+              }, {
+                "label": "XL",
+                "value": "text-xl"
+              }, {
+                "label": "LG",
+                "value": "text-lg"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "text_size_desktop",
+            "label": "Text Size: Desktop",
+            "default": "lg:text-6xl",
+            "options": [
+              {
+                "label": "6XL",
+                "value": "lg:text-6xl"
+              },
+              {
+                "label": "5XL",
+                "value": "lg:text-5xl"
+              },
+              {
+                "label": "4XL",
+                "value": "lg:text-4xl"
+              },
+              {
+                "label": "3XL",
+                "value": "lg:text-3xl"
+              }, {
+                "label": "2XL",
+                "value": "lg:text-2xl"
+              }, {
+                "label": "XL",
+                "value": "lg:text-xl"
+              }, {
+                "label": "LG",
+                "value": "lg:text-lg"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "tag",
+            "label": "Heading Tag",
+            "default": "h1",
+            "options": [
+              {
+                "label": "H1",
+                "value": "h1"
+              },
+              {
+                "label": "H2",
+                "value": "h2"
+              },
+              {
+                "label": "H3",
+                "value": "h3"
+              },
+              {
+                "label": "H4",
+                "value": "h4"
+              }, {
+                "label": "H5",
+                "value": "h5"
+              }, {
+                "label": "H6",
+                "value": "h6"
+              }
+            ]
+          }, {
+            "type": "select",
+            "id": "font",
+            "label": "Title Font Family",
+            "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+            "default": "font-freight-sans",
+            "options": [
+              {
+                "label": "Freight Sans",
+                "value": "font-freight-sans"
+              }, 
+              {
+                "label": "Couch",
+                "value": "font-couch"
+              }, 
+              {
+                "label": "Tenso",
+                "value": "font-tenso"
+              },
+              {
+                "label": "Gopher",
+                "value": "font-gopher"
+              }
+            ]
+          }, {
+            "type": "select",
+            "id": "weight",
+            "label": "Title Font Weight",
+            "info": "Font Weight Selector",
+            "default": "font-regular",
+            "options": [
+              {
+                "label": "Light",
+                "value": "font-light"
+              },
+              {
+                "label": "Regular",
+                "value": "font-regular"
+              },
+              {
+                "label": "Semibold",
+                "value": "font-semibold"
+              },
+              {
+                "label": "Bold",
+                "value": "font-bold"
+              }, {
+                "label": "Black",
+                "value": "font-black"
+              }
+            ]
+          }, {
+            "type": "select",
+            "id": "alignment",
+            "label": "Title Text Alignment",
+            "default": "text-center",
+            "options": [
+              {
+                "label": "Left",
+                "value": "text-left"
+              }, {
+                "label": "Center",
+                "value": "text-center"
+              }, {
+                "label": "Right",
+                "value": "text-right"
+              }
+            ]
+          }, {
+            "type": "select",
+            "id": "text_color",
+            "label": "Title Text Color",
+            "default": "text-black",
+            "options": [
+              {
+                "label": "Black",
+                "value": "text-black"
+              }, {
+                "label": "Blue",
+                "value": "text-blue"
+              }, {
+                "label": "White",
+                "value": "text-white"
+              }, {
+                "label": "Camel",
+                "value": "text-camel"
+              }
+            ]
+          }, {
+            "type": "text",
+            "id": "classes",
+            "label": "Additional Classes for the Title"
+          }
+        ]
+      }, {
+        "name": "Text Content",
+        "type": "text_content",
+        "settings": [
+          {
+            "type": "html",
+            "id": "content",
+            "label": "Content"
+          }, {
+            "type": "text",
+            "id": "classes",
+            "label": "Additional Classes"
+          }
+        ]
+      }, {
+        "name": "Button",
+        "type": "button",
+        "settings": [
+          {
+            "type": "select",
+            "id": "button_style",
+            "label": "Button Style",
+            "default": "btn btn-secondary",
+            "options": [
+              {
+                "label": "Button Primary",
+                "value": "btn btn-primary"
+              },
+              {
+                "label": "Button Secondary",
+                "value": "btn btn-secondary"
+              },
+              {
+                "label": "Button Tertiary",
+                "value": "btn btn-tertiary"
+              },
+              {
+                "label": "Button White",
+                "value": "btn btn-white"
+              }, {
+                "label": "Button Outline",
+                "value": "btn btn-outline"
+              }, {
+                "label": "Camel Underline",
+                "value": "camel-underline"
+              }, {
+                "label": "Blue Underline",
+                "value": "blue-underline"
+              }
+            ]
+          }, {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text",
+            "default": "Click me!"
+          }, {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link URL",
+            "default": "/collections/all"
+          }, {
+            "type": "text",
+            "id": "classes",
+            "label": "Additional Classes for the Button/Link"
+          }
+        ]
+      }, {
+        "name": "Image",
+        "type": "image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "classes",
+            "label": "Additional Classes"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "content",
+        "name": "Richtext"
+      }
+    ]
+  }
+{% endschema %}

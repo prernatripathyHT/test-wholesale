@@ -1,0 +1,68 @@
+<!-- snippets/custom-select-option-list -->
+
+{%- comment %}
+	{%
+    render 'custom-select-option-list',
+    trigger: "ID",
+    label: "label",
+    selected_value: "selected_value",
+    options: []
+  %}
+{% endcomment -%}
+
+<label for="{{ trigger }}" class="sr-only">{{ option.name }}</label>
+<select id="{{ trigger }}"
+        class="hidden js-hidden-option-select"
+        name="options[{{ label | escape }}]"
+        data-name="{{ label | escape }}"
+      >
+  {%- for value in options -%}
+    <option value="{{ value | escape }}" {% if selected_value == value %}selected="selected"{% endif %}>
+      {{ value }}
+    </option>
+  {%- endfor -%}
+</select>
+
+<div class="relative js-custom-select-container max-w-full">
+  <button id="{{ trigger }}-btn"
+          type="button"
+          data-trigger="select-{{ trigger }}"
+          name="trigger-select"
+          class="js-custom-select-trigger custom-select--trigger
+                 flex justify-between items-center
+                 bg-transparent rounded-full border border-black
+                 p-4">
+    <div class="mr-12 flex">
+      <span class="opacity-60 text-black mr-3 lowercase">{{ label }}</span>
+      <span class="js-select-trigger-text
+                   text-red text-left text-ellipsis whitespace-nowrap overflow-hidden block">{{ selected_value }}</span>
+    </div>
+    <div>
+      {% render 'icon', icon: 'expand', class: "text-black" %}
+    </div>
+  </button>
+
+  <ul class="js-custom-select-options custom-select--options
+             absolute hidden z-10 w-full
+             flex flex-col items-start justify-center
+             bg-white rounded-2xl list-none my-3 border border-black rounded-2xl"
+      role="region"
+      data-trigger="select-{{ trigger }}"
+      aria-labelledby="{{ trigger }}-btn">
+    {%- for value in options -%}
+      <li class="w-full">
+        <button type="button"
+                name="{{ trigger }}"
+                data-target="{{ trigger }}"
+                data-option="{{ label }}"
+                data-value="{{ value }}"
+                class="js-option-select custom-select--option text-red
+                       py-3 px-4 w-full text-lg text-left leading-none
+                       {% if selected_value == value %} active {% endif %}">
+          {{ value }}
+        </button>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+</div>

@@ -1,0 +1,113 @@
+{
+  "sections": {
+    "1653427865894c9ffb": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Brew_School_Banner.png",
+        "show_sunburst": true,
+        "sunburst_color": "#4FA0D7",
+        "show_gradient": true,
+        "bg_color": "#EFEBE1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Our Coffee<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "<p>At Counter Culture Coffee, we are lifelong students of coffee. The more we learn, the more we are driven to share our discoveries with customers, supply chain partners, and industry peers.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "16534276375b537918": {
+      "type": "index--featured-collection",
+      "blocks": {
+        "8908fa2f-ce1c-48a2-8e78-d72ce0c582b2": {
+          "type": "collection",
+          "settings": {
+            "collection": "coffee",
+            "title": "Our Coffee",
+            "text": "Always freshly roasted"
+          }
+        },
+        "ea3d6eee-8472-4170-874f-8370cff381da": {
+          "type": "collection",
+          "settings": {
+            "collection": "subscriptions",
+            "title": "Subscriptions",
+            "text": "Get your coffee delivered to your door"
+          }
+        }
+      },
+      "block_order": [
+        "8908fa2f-ce1c-48a2-8e78-d72ce0c582b2",
+        "ea3d6eee-8472-4170-874f-8370cff381da"
+      ],
+      "settings": {}
+    },
+    "1653427980d299be84": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "#4FA0D7",
+        "show_gradient": false,
+        "bg_color": "#ffffff",
+        "wrapper_classes": "border-b border-black",
+        "use_squiggles": false,
+        "title": "<p>Other Collections<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {}
+    },
+    "1653427984a5a8ab09": {
+      "type": "index--featured-collection",
+      "blocks": {
+        "3f303eca-6939-4ded-be82-98307cf4909f": {
+          "type": "collection",
+          "settings": {
+            "collection": "merchandise",
+            "title": "Merch",
+            "text": "CCC mugs, hats, shirts & posters"
+          }
+        },
+        "d88670a8-42da-4d32-a474-c8d20eb69bbe": {
+          "type": "collection",
+          "settings": {
+            "collection": "classes",
+            "title": "Classes",
+            "text": "In-person and virtual events"
+          }
+        }
+      },
+      "block_order": [
+        "3f303eca-6939-4ded-be82-98307cf4909f",
+        "d88670a8-42da-4d32-a474-c8d20eb69bbe"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "1653427865894c9ffb",
+    "16534276375b537918",
+    "1653427980d299be84",
+    "main",
+    "1653427984a5a8ab09"
+  ]
+}

@@ -1,0 +1,57 @@
+<!-- sections/account-account -->
+
+<div>
+  <div class="py-5 px-5">
+    <h1 class="text-center font-couch text-2xl">My Account</h1>
+  </div>
+
+  <ul class="grid gap-6 w-full px-5 lg:w-8/12 lg:px-0 mx-auto py-12">
+    <li>
+      <p class="font-gopher font-bold text-xl mb-2.5">Email</p>
+      <p>{{ customer.email }}</p>
+    </li>
+
+    <li class="row-span-3">
+      <p class="font-gopher font-bold text-xl mb-2.5">Primary Address</p>
+      {{ customer.default_address | format_address }}
+      <a href="/account/addresses"
+         data-section-nav="account-addresses"
+         data-section-nav--href="/account/addresses"
+         data-section-nav--wrapper=".js-account-nav-target"
+         class="blue-underline mt-2.5">Manage Addresses</a>
+    </li>
+
+    <li>
+      <p class="font-gopher font-bold text-xl mb-2.5">Password</p>
+      <p>xxxxxxxxx</p>
+
+      {%- comment %}
+        <a href="/account"
+           class="blue-underline mt-2.5"
+           data-section-nav="account-reset-password"
+           data-section-nav--href="/account"
+           data-section-nav--wrapper=".js-account-nav-target">
+          Change Password
+        </a>
+      {% endcomment -%}
+
+      {% comment %} 
+      {% form 'recover_customer_password' %}
+        <input type="email" class="hidden" name="customer[email]" value="{{ customer.email }}">
+        <button type="submit"
+                name="forgot"
+                class="text-blue underline mt-2.5">
+            Change Password
+        </button>
+      {% endform %} 
+      {% endcomment %}
+    </li>
+
+    {%- unless customer.phone == blank -%}
+      <li>
+        <p class="font-gopher font-bold text-xl mb-2.5">Phone</p>
+        <p>{{ customer.phone }}</p>
+      </li>
+    {%- endunless -%}
+  </ul>
+</div>

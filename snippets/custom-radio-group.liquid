@@ -1,0 +1,32 @@
+<!-- snippets/custom-radio-group -->
+{%- comment %}
+  {% render 'custom-radio-group'
+     input_type: ""
+     name: "",
+     header: "",
+     options: [],
+     label: "" %}
+{% endcomment -%}
+
+<fieldset class="">
+  <legend class="uppercase text-sm tracking-wider animate animate-fadeInUp">{{ header }}</legend>
+
+  <ul class="flex flex-wrap gap-2 item-center list-none my-3 animate animate-fadeInUp">
+    {%- for option in options -%}
+      {% capture input_id %}{{ header | handleize }}--{{ option | handleize }}{% endcapture %}
+      <li class="custom-radio-swatch">
+        <input id="{{ input_id }}"
+               type="{{ input_type | default: 'radio' }}"
+               name="{{ name }}"
+               value="{{ option }}"
+               data-option="{{ option }}"
+               data-value="{{ option }}"
+               {% if forloop.first and input_type == 'radio' %} checked {% endif %}>
+
+        <label for="{{ input_id }}" class="">
+          {{ option }}
+        </label>
+      </li>
+    {%- endfor -%}
+  </ul>
+</fieldset>

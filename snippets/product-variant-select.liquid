@@ -1,0 +1,36 @@
+<!-- snippets/variant-select -->
+
+{%- for option in product.options_with_values -%}
+  {% capture option_id %}option-{{ option.name | handleize }}{{ product.id }}{% endcapture %}
+
+  <label for="{{ option_id }}" class="sr-only">{{ option.name }}</label>
+  <select id="{{ option_id }}"
+          class="hidden js-hidden-option-select"
+          name="options[{{ option.name | escape }}]"
+          data-name="{{ option.name | escape }}"
+          form="{{ product_form_id }}"
+        >
+    {%- for value in option.values -%}
+      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+        {{ value }}
+      </option>
+    {%- endfor -%}
+  </select>
+
+  {%- unless product.has_only_default_variant -%}
+    {%- if option.name == 'Location' -%}
+      {%
+        render 'custom-select',
+        trigger: option_id,
+        option: option
+      %}
+    {%- else  -%}
+      {%
+        render 'custom-swatches',
+        trigger: option_id,
+        option: option
+      %}
+    {%- endif -%}
+
+  {%- endunless -%}
+{%- endfor -%}

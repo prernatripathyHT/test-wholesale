@@ -1,0 +1,100 @@
+<!-- sections/faq-group [aa/ja] -->
+
+
+{%- comment %}
+	 Group of Expandable FAQs
+   - Customize theme for FAQ blocks and header group
+{% endcomment -%}
+
+{% assign id = "faq-group--" | append: section.id %}
+
+<div class="px-5 mx-auto my-10 max-w-6xl">
+    {% if section.settings.header != blank %}
+        <button type="button"
+                name="button"
+                class="js-expandable-toggle faq--expandable-group-toggle
+                    w-full text-left text-lg md:text-2xl font-couch
+                    flex justify-between items-center pl-3
+                    {% if section.settings.active %} active {% endif %}"
+                aria-controls="{{ id }}"
+                data-toggle="{{ id }}">
+            {{ section.settings.header }}
+
+            <span class="text-xs flex items-center justify-center">
+                <span class="icon-plus {% if section.settings.active %}hidden{% endif %}">+</span>
+                <span class="icon-minus {% unless section.settings.active %}hidden{% endunless %}">-</span>
+            </span>
+        </button>
+    {% endif %}
+
+    <dl id="{{ id }}"
+        class="js-expandable-content js-expandable-group flex flex-col gap-6 animate animate-fadeIn"
+        {% unless section.settings.active %}style="display: none;"{% endunless %}>
+        {%- for block in section.blocks -%}
+
+            {% render 'expandable-faq',
+                question: block.settings.question,
+                answer: block.settings.answer,
+                label: block.settings.label,
+                id: block.id,
+                forloop: forloop,
+                active: false,
+                theme_style: "blue" %}
+
+        {%- endfor -%}
+    </dl>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ Group",
+  "class": "shopify-section--faq-group",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text settings"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header Text",
+      "default": "Header"
+    },
+    {
+      "type": "checkbox",
+      "id": "active",
+      "label": "Open by default",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Expandable FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "FAQ Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "FAQ Answer"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "FAQ Accessibility Label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Group"
+    }
+  ]
+}
+{% endschema %}

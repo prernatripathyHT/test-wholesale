@@ -1,0 +1,79 @@
+<!-- sections/transparency-report-dropdown.liquid -->
+
+{% assign ss = section.settings %}
+
+<div class="py-8 px-5 lg:px-12 relative z-20">
+  {% unless ss.paragraph == blank %}
+    <p class="mb-5 text-center font-tenso text-2xl font-light">{{ ss.paragraph }}</p>
+  {% endunless %}
+
+  {% unless ss.dropdown_links == blank %}
+    <div class="relative z-10 flex w-full items-center justify-center">
+      <button
+        class="flex items-center gap-2.5 rounded-full border border-black py-3 pl-8 pr-20 group"
+        data-toggle="#report-dropdown"
+      >
+        {% render 'icon', icon: 'chevron', class: 'transition-all group-activated group-activated:rotate-180' %}
+        <span class="text-lg ">Year</span>
+      </button>
+
+      <div
+        id="report-dropdown"
+        class="absolute top-[calc(100%_+_1.25rem)] left-1/2 z-20 hidden w-64 -translate-x-1/2 rounded-2xl bg-white py-5 activated:block"
+      >
+        <ul class="max-h-72 overflow-scroll">
+          {% for link in ss.dropdown_links.links %}
+            <li class="group w-full">
+              <a
+                href="{{ link.url }}"
+                target="_blank"
+                class="block w-full px-10 py-2.5 font-tenso text-lg transition-colors hover:bg-[#E9E7E1] group-hover:bg-[#E9E7E1] group-focus-within:bg-[#E9E7E1]"
+              >
+                {{- link.title -}}
+              </a>
+
+              {% if link.links.size > 0 %}
+                <ul>
+                  {%- for sublink in link.links -%}
+                    <li class="group-hover hidden group-hover:block group-focus-within:block">
+                      <a
+                        href="{{ sublink.url }}"
+                        target="_blank"
+                        class="block w-full py-2.5 pl-14 pr-10 font-tenso text-lg transition-colors hover:bg-yellow"
+                      >
+                        {{- sublink.title -}}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endunless %}
+</div>
+
+{% schema %}
+{
+  "name": "Transparency Dropdown",
+  "settings": [
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Section Paragraph"
+    },
+    {
+      "type": "link_list",
+      "id": "dropdown_links",
+      "label": "Dropdown Linklist"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Transparency Dropdown"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,19 @@
+/* boilerplate css goes here  */
+
+@font-face {
+  font-family: 'couch';
+  src: url("{{ 'Couch-Regular.ttf' | asset_url }}")  format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'caveat';
+  src: url("{{ 'Caveat-Regular.ttf' | file_url }}")  format("truetype");
+  font-weight: 400;
+}
+
+:root {
+  --img-starburst: url({{ 'starburst-yellow.png' | file_img_url }});
+  --img-chevron: url({{ 'icon-chevron.png' | file_img_url }});
+  --img-squiggle-static: url({{ 'decoration-squiggle-2.svg' | file_url }});
+}

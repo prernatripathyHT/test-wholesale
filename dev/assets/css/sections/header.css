@@ -1,0 +1,12 @@
+@layer components {
+  .desktop-nav-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    @apply w-full hidden md:inline-grid
+  }
+
+  .mobile-nav-container {
+
+    @apply w-full inline-grid md:hidden grid-cols-2
+  }
+}

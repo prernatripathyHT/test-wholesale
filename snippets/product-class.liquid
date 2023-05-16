@@ -1,0 +1,56 @@
+<!-- snippets/product-class -->
+
+{% assign product_form_id = "product-card--" | append: product.id %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+
+{%
+  form 'product',
+  product,
+  id: product_form_id,
+  class: 'js-product-form relative',
+  data-type: 'add-to-cart-form'
+%}
+
+  <input type="hidden" name="id" value="{{ current_variant.id }}">
+
+  {% render 'origin-locale', product: product, class: "animate-fadeInUp animate" %}
+
+  <div class="flex flex-col md:flex-row gap-2 justify-between items-start animate-fadeInUp animate">
+    <h1 class="font-couch text-3xl mb-2">{{ product.title }}</h1>
+
+    {% render 'product-price', variant: current_variant %}
+  </div>
+
+  {% render 'product-variant-select', product: product, product_form_id: product_form_id, class: "animate-fadeInUp animate" %}
+
+  {%- if product.metafields.classes.event_link != blank -%}
+    <div class="flex justify-start w-full animate animate-fadeInUp">
+      {%- for variant in product.variants -%}
+        {%- unless variant.metafields.class.event_link == blank -%}
+          <a href="{{ variant.metafields.class.event_link }}"
+             target="_blank"
+             ref="noreferrer"
+             data-variant="{{ variant.id }}"
+             class="btn btn-secondary hidden js-class-register-btn">
+             Register
+          </a>
+        {%- endunless -%}
+      {%- endfor -%}
+
+      <a href="{{ product.metafields.classes.event_link }}"
+         target="_blank"
+         ref="noreferrer"
+         data-variant=""
+         class="btn btn-secondary js-class-register-btn">
+         Register
+      </a>
+    </div>
+  {%- endif -%}
+
+  <div class="rte text-base my-12 font-tenso tracking-wider animate animate-fadeInUp">{{ product.description }}</div>
+
+  <script type="application/json" class="js-product-script">
+    {{ product | json }}
+  </script>
+{% endform %}

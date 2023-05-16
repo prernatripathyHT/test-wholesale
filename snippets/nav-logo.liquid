@@ -1,0 +1,25 @@
+<!-- snippets/nav-logo -->
+
+{%- comment %}
+	Variables:
+  - header_icon: [Image Obj] passed from section.settings obj
+{% endcomment -%}
+
+<a href="/" class="w-1/3 flex justify-center items-center js-main-logo">
+  <span class="block w-32 mx-auto">
+    <span class="sr-only">Counter Culture Coffee Homepage</span>
+
+    {%- if header_icon != blank -%}
+      <img
+        src="{{ header_icon | img_url: 'medium' }}"
+        alt="{{ header_icon.alt }}"
+        width="{{ header_icon.width }}"
+        height="{{ header_icon.height }}"
+      >
+    {%- else -%}
+      {% render 'icon',
+        icon: 'logo',
+        class: 'text-white' %}
+    {%- endif -%}
+  </span>
+</a>

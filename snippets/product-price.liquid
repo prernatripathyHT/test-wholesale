@@ -1,0 +1,26 @@
+<!-- snippets/product-price -->
+{%- comment %}
+	Variables:
+  - variant [Variant Object]
+{% endcomment -%}
+
+{% assign price = variant.price %}
+{% assign compare_price = variant.compare_price %}
+{% if compare_price and compare_price > price %}
+  {% assign show_compare_at = true %}
+{% else %}
+  {% assign show_compare_at = false %}
+{% endif %}
+
+<div class="flex justify-start">
+  <p class="text-lg xl:text-2xl mr-2 line-through font-tenso js-compare-price opacity-50"
+     {% unless show_compare_at %}style="display:none;"{% endunless %}>
+    {{ compare_price | money_without_trailing_zeros }}
+  </p>
+
+  {%- if price == 0 -%}
+    <p class="text-lg xl:text-2xl font-tenso js-price">Free!</p>
+  {%- else -%}
+    <p class="text-lg xl:text-2xl font-tenso js-price">{{ price | money_without_trailing_zeros }}</p>
+  {%- endif -%}
+</div>

@@ -1,0 +1,54 @@
+<!-- snippets/collection-filter-options -->
+
+{%- if collection.metafields.custom_fields.collection_filter_options -%}
+  <ul data-target="filters"
+      class="js-filter-container flex items-start justify-between px-3 border-t border-b border-black w-screen absolute top-full left-0 bg-white z-10"
+      style="display: none;">
+
+    <div class="flex flex-col lg:flex-row lg:gap-3">
+      {% for item in collection.metafields.custom_fields.collection_filter_options %}
+        <li class="py-3">
+
+          <button type="button"
+                  name="button"
+                  data-target="{{ item.filter_option_title }}"
+                  class="btn-transparent filter--trigger-btn flex items-center py-1 px-3 text-base js-trigger-filter-container">
+            <span class="sr-only">Toggle {{ item.filter_option_title }} Options</span>
+
+            <span class="mr-2">{{ item.filter_option_title }}</span>
+
+            {% render 'icon', icon: 'plus', class: "w-2 js-plus" %}
+            {% render 'icon', icon: 'minus', class: "w-2 hidden js-minus" %}
+          </button>
+
+          <ul data-target="{{ item.filter_option_title }}"
+              class="my-3 -mx-3 lg:mx-0 lg:my-0 flex flex-col lg:flex-row gap-3 p-3 border-b border-t border-black w-screen relative lg:absolute lg:top-full lg:left-0 bg-white z-10 js-filter-container"
+              style="display: none;">
+            {% for repeater_item in item["options"] %}
+              <li class="relative">
+                <button type="button"
+                        name="button"
+                        data-key="{{ item.filter_option_title | handleize }}"
+                        data-value='{{ repeater_item["options"] }}'
+                        class="btn-transparent filter--trigger-btn text-base flex items-center py-1 px-3 js-collection-filter-option">
+                  <span class="sr-only">Filter by{{ repeater_item["options"] }}</span>
+                  {{ repeater_item["options"] }}
+                </button>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </div>
+
+    <button type="button"
+            name="button"
+            data-target="filters"
+            class="btn-transparent hidden lg:block js-trigger-filter-close px-3 py-4">
+            
+      <span class="sr-only">Close Collection Filter Options</span>
+      {% render 'icon', icon: 'close', class: "w-2" %}
+    </button>
+  </ul>
+
+{%- endif -%}

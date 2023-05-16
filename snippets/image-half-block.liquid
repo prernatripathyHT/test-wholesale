@@ -1,0 +1,23 @@
+<!-- snippets/image-half-block -->
+
+{%- comment %}
+	Customize Theme Image Block
+  --------------------------
+  - block: [Block] object with settings
+    - image: [Image] Object
+{% endcomment -%}
+
+<!-- order-1, order-2 -->
+
+{%- if block.settings.image != blank -%}
+  <div class="h-full relative border border-black order-{{ mobile_order }} md:order-none">
+    <div class="w-full h-full half-block-image flex items-center justify-start relative">
+      {%
+        render 'responsive-image',
+        src: block.settings.image.src,
+        alt: block.settings.image.alt,
+        class: "h-full w-full object-cover"
+      %}
+    </div>
+  </div>
+{%- endif -%}

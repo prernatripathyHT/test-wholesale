@@ -1,0 +1,622 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/aeropress_936cd391-28d0-4933-9478-fe59dba3b6e2.png",
+        "show_sunburst": true,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>AeroPress<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>Aeropress is my go-to brew method for camping. It's a compact setup with minimal waste, so it's easy to pack out with you. My partner and I brought ours for a week-long camping adventure in Iceland and were able to enjoy consistently delicious coffee every morning of our trip.<\/p>",
+        "testimonial_author": "Amanda, Creative director",
+        "author_image": "shopify:\/\/shop_images\/Screen_Shot_2023-01-20_at_10.18.01_AM.png"
+      }
+    },
+    "16504847174bd7270f": {
+      "type": "image-plus-text",
+      "blocks": {
+        "6288cedd-98f0-41da-896f-de34333dcb30": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Gather your supplies",
+            "description": "<p>We use a 1:11 coffee-to-water ratio; our recipe makes one, 16 oz cup of coffee. <\/p>",
+            "list_html": "<ul>\n<li>18 grams of fresh-roasted, whole-bean coffee<\/li>\n<li>200 grams of filtered hot water (200 F)<\/li>\n<li>AeroPress kit<\/li>\n<li>Gram scale<\/li>\n<li>Grinder (we recommend burr grinders)<\/li>\n<li>Kettle<\/li>\n<li>Timer<\/li>\n<li>Coffee mug<\/li>\n<\/ul>",
+            "button_style": "blue-underline",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "Grind Size",
+            "icon_info": "",
+            "icon_image": "shopify:\/\/shop_images\/grindsize2-2.jpg"
+          }
+        },
+        "f07bef26-2879-4897-ada9-b7c8f1048fe5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4B9B6373-Edit_656d8934-073f-4820-be25-441aed8b673b.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "6288cedd-98f0-41da-896f-de34333dcb30",
+        "f07bef26-2879-4897-ada9-b7c8f1048fe5"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1650489183b5937c5d": {
+      "type": "image-plus-text",
+      "blocks": {
+        "4794faf3-0aad-48e5-a88a-13414a281012": {
+          "type": "text",
+          "settings": {
+            "number": "01",
+            "title": "Rinse Filter",
+            "description": "<p>Place filter in cap of AeroPress and rinse with hot water, do not screw onto brew chamber yet.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "2fd6a08b-55f5-4cee-8bb0-ec4b0295947b": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116648?h=e3a438f0e7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "4794faf3-0aad-48e5-a88a-13414a281012",
+        "2fd6a08b-55f5-4cee-8bb0-ec4b0295947b"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16504894443622b74b": {
+      "type": "image-plus-text",
+      "blocks": {
+        "2806ea76-01ab-4b6d-a0bc-275b5439dac5": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116661?h=c493ab0fb2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "05afcd2b-84b6-418a-b9e2-6fe4023e9b7b": {
+          "type": "text",
+          "settings": {
+            "number": "02",
+            "title": "Grind Coffee",
+            "description": "<p>Weigh 18 grams of coffee and grind on medium-fine setting, slightly finer than a pour-over.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "2806ea76-01ab-4b6d-a0bc-275b5439dac5",
+        "05afcd2b-84b6-418a-b9e2-6fe4023e9b7b"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16504951228ada87da": {
+      "type": "image-plus-text",
+      "blocks": {
+        "c18f80c3-6ee1-4a53-969b-5098339f061c": {
+          "type": "text",
+          "settings": {
+            "number": "03",
+            "title": "Prep Brewer",
+            "description": "<p>With AeroPress upside down, insert plunger ~1 cm into brewing chamber, creating a tight seal.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "91c50841-24d8-4c1b-bef0-b699e5fd25e6": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752125823?h=6a4fb7f7c0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "c18f80c3-6ee1-4a53-969b-5098339f061c",
+        "91c50841-24d8-4c1b-bef0-b699e5fd25e6"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1650495188921b91f5": {
+      "type": "image-plus-text",
+      "blocks": {
+        "7ec2e3e7-1df5-4cf9-99b4-4f0f4afa4c30": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116681?h=eb4192eb12&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "c3c2be69-4d04-44f1-9b7e-b4495f488e71": {
+          "type": "text",
+          "settings": {
+            "number": "04",
+            "title": "Add Grounds",
+            "description": "<p>Add coffee to brew chamber through funnel and shake to level grounds.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "7ec2e3e7-1df5-4cf9-99b4-4f0f4afa4c30",
+        "c3c2be69-4d04-44f1-9b7e-b4495f488e71"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1650495235843fddac": {
+      "type": "image-plus-text",
+      "blocks": {
+        "c09ec48f-c547-4499-9f0f-9d3467b9de1c": {
+          "type": "text",
+          "settings": {
+            "number": "05",
+            "title": "Brew Coffee",
+            "description": "<p>Start timer and add 200g water.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "9ede5251-15c3-4cef-8e28-777bdab67787": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116697?h=0e2f5701d7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "c09ec48f-c547-4499-9f0f-9d3467b9de1c",
+        "9ede5251-15c3-4cef-8e28-777bdab67787"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1663704478735a0023": {
+      "type": "image-plus-text",
+      "blocks": {
+        "396550d6-6b8e-4a50-a22c-ad9962e5c4e7": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116705?h=deb0acbe16&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "e5be398d-b0d4-4a27-a6b7-217807789463": {
+          "type": "text",
+          "settings": {
+            "number": "06",
+            "title": "Saturate Grounds",
+            "description": "<p>Stir with the paddle to saturate all coffee grounds and screw filter cap onto brewing chamber.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "396550d6-6b8e-4a50-a22c-ad9962e5c4e7",
+        "e5be398d-b0d4-4a27-a6b7-217807789463"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1663704775d8075672": {
+      "type": "image-plus-text",
+      "blocks": {
+        "9a714f85-a64a-421f-b4bd-fed431aed6b4": {
+          "type": "text",
+          "settings": {
+            "number": "07",
+            "title": "Steep Grounds",
+            "description": "<p>Steep until 1:30.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "9a523859-7c3c-4728-af7a-315038a644b8": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116716?h=63a437beb4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "9a714f85-a64a-421f-b4bd-fed431aed6b4",
+        "9a523859-7c3c-4728-af7a-315038a644b8"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "166370532911dfbba7": {
+      "type": "image-plus-text",
+      "blocks": {
+        "924b2817-3f86-4f4d-af6f-1718f82a9e60": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116728?h=d26eef3e46&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "72900169-c8a8-466f-8ada-afe12229f0c4": {
+          "type": "text",
+          "settings": {
+            "number": "08",
+            "title": "Flip + Press",
+            "description": "<p>Carefully flip AeroPress onto mug and gently press plunger for ~15 seconds, stopping when you hear it “hiss.\"<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "924b2817-3f86-4f4d-af6f-1718f82a9e60",
+        "72900169-c8a8-466f-8ada-afe12229f0c4"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "166370547557b0d61d": {
+      "type": "image-plus-text",
+      "blocks": {
+        "aa4f383e-0eb5-4def-b937-2201c8b26f2c": {
+          "type": "text",
+          "settings": {
+            "number": "09",
+            "title": "Enjoy!",
+            "description": "",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "54905f33-2960-4892-b028-dbedaed197d9": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/752116746?h=48a77d70a3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "aa4f383e-0eb5-4def-b937-2201c8b26f2c",
+        "54905f33-2960-4892-b028-dbedaed197d9"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165049562929d14393": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Serve and enjoy! 🤗 <\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "button_style": "btn btn-secondary",
+        "link_text": "",
+        "link_url": "",
+        "link_classes": ""
+      }
+    },
+    "1650495672ba353b7d": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Want to learn how to brew like a pro?<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "mb-5",
+        "button_style": "camel-underline",
+        "link_text": "Check out our classes",
+        "link_url": "shopify:\/\/pages\/classes",
+        "link_classes": ""
+      }
+    },
+    "1650576426f752cf89": {
+      "type": "icon-link-list",
+      "blocks": {
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#34beae",
+            "title": "Kalita Wave",
+            "url": "shopify:\/\/pages\/quick-easy-pour-over",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_Katilawave_edit_3b5909d6-fe11-45a8-af60-02b599654d1a.png"
+          }
+        },
+        "6615e4f1-b15e-4812-b99c-0d145030f03d": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fdbf69",
+            "title": "French Press",
+            "url": "shopify:\/\/pages\/quick-easy-french-press",
+            "icon_image": "shopify:\/\/shop_images\/Frame.png"
+          }
+        },
+        "12975029-480c-4426-99d1-d57a838c0d7a": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fbc7b2",
+            "title": "Chemex",
+            "url": "shopify:\/\/pages\/quick-easy-chemex",
+            "icon_image": "shopify:\/\/shop_images\/Frame-2.png"
+          }
+        },
+        "31387098-a5a6-4866-a474-9e6a1e519b44": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#ff5c1b",
+            "title": "Hario V60",
+            "url": "shopify:\/\/pages\/quick-easy-v60",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Live-Stroke-Individual_Hario_V60_6a8093a7-629c-4cf5-b3c2-7832668228fb.png"
+          }
+        },
+        "87edf125-aa68-4420-9046-377a206cda67": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#3a8dde",
+            "title": "AeroPress",
+            "url": "shopify:\/\/pages\/quick-easy-aeropress",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_aeropress_edit_5a44b975-35ca-47ad-a3d2-b29343251d2e.png"
+          }
+        }
+      },
+      "block_order": [
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb",
+        "6615e4f1-b15e-4812-b99c-0d145030f03d",
+        "12975029-480c-4426-99d1-d57a838c0d7a",
+        "31387098-a5a6-4866-a474-9e6a1e519b44",
+        "87edf125-aa68-4420-9046-377a206cda67"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(239, 235, 225, 1), rgba(255, 255, 255, 1) 100%)",
+        "mobile_layout": "dropdown",
+        "title": "<p>Brew Methods<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16504847174bd7270f",
+    "1650489183b5937c5d",
+    "16504894443622b74b",
+    "16504951228ada87da",
+    "1650495188921b91f5",
+    "1650495235843fddac",
+    "1663704478735a0023",
+    "1663704775d8075672",
+    "166370532911dfbba7",
+    "166370547557b0d61d",
+    "165049562929d14393",
+    "1650495672ba353b7d",
+    "1650576426f752cf89"
+  ]
+}

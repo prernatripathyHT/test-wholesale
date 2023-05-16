@@ -1,0 +1,19 @@
+<!-- snippets/collection-grid-list -->
+
+<div id="{{ collection.title | handleize }}" class="js-collection-list collection-grid--container w-full">
+  {%- if section.settings.title != blank -%}
+    <div class="py-6 border-t border-b border-black">
+      <h2 class="font-regular font-couch text-3xl md:text-3xl text-center">{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+
+  <ul class="grid grid-cols-2 xl:grid-cols-3">
+    {% for product in collection.products limit: section.settings.grid_limit %}
+      {% render 'product-card', product: product, show_hover_image: section.settings.show_hover_image %}
+
+      {% if section.settings.feature_image != blank and forloop.index == section.settings.feature_image_index %}
+        {% render 'grid-image-divider', image: section.settings.feature_image %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

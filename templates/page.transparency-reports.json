@@ -1,0 +1,1295 @@
+{
+  "sections": {
+    "16509957948bad1e61": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/cherries_76fcb0ee-fb65-4f19-8dd4-37a8252e204e.png",
+        "show_sunburst": true,
+        "sunburst_color": "#f69b73",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Transparent from Seed to Cup. <\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-white",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Since 2009, our annual Transparency Reports have served as a blueprint for our green coffee purchasing practices and a response to chronically low prices in the coffee industry. We believe paying more for green coffee invests in the long-term viability of specialty coffee and every partner in our value chain. <\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "c8bae89f-0071-4be9-94a6-66e0f103efe6": {
+      "type": "banner-slider",
+      "blocks": {
+        "7b90fd05-7b94-4712-99fd-4dacac888249": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_82_0d9a7ea7-75d2-47d9-8b27-399788be8c3c.png",
+            "image_classes": "w-full lg:w-full",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p>People<\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<ul><li>Employed 116 people<\/li><li>Paid out $68,508.81 in  Green Fund, Pushing Potential, and CSA benefits<\/li><li>Rolled out stock options to all full-time employees<\/li><\/ul>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "da4b56ff-224c-409a-b0b2-d8544260a65e": {
+          "type": "banner",
+          "settings": {
+            "image_right": "shopify:\/\/shop_images\/TR-carbon-e1649870227529.png",
+            "image_classes": "w-full lg:w-full",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p>Planet<\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<ul><li>Had a carbon footprint of 725.25 tonnes CO2e <\/li><li>Diverted 18,020 pounds of LDPE (low-density polyethylene) plastic from landfills<\/li><li>Donated 8,160 pounds of coffee<\/li><li>Installed 196 clean cookstoves in Honduras through our partnership with <a href=\"https:\/\/treeswaterpeople.org\/\">Trees, Water & People<\/a><\/li><\/ul>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "cb51186c-93f8-4d1d-abb8-430c18c98231": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TR-coffee-e1649870874408.png",
+            "image_classes": "w-full lg:w-full",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p>Product<\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<ul><li>Purchased 3,951,707 pounds of green coffee, 71% from suppliers we’ve worked with for over 5 years<\/li><li>Scored our coffees an average of 86.5 points<\/li><li>Paid $3.10 per pound weighted average FOB price <\/li><li>Awarded $42,170 to fund 10 <a href=\"https:\/\/counter-culture-coffee-retail.myshopify.com\/blogs\/seeds-program\" title=\"https:\/\/counter-culture-coffee-retail.myshopify.com\/blogs\/seeds-program\">Seeds projects<\/a><\/li><\/ul>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "8fd8f7f4-6806-4483-8133-91580d617dc2": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TR-edu-e1649871289545.png",
+            "image_classes": "w-full lg:w-full",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p>Education & Tech<\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h2",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<ul><li>Trained 3,273 <a href=\"https:\/\/www.eventbrite.com\/cc\/sca-coffee-skills-program-127469\">professional development<\/a> students and 1,017 <a href=\"https:\/\/www.eventbrite.com\/o\/calibrated-18076492859\">Coffee at Home <\/a>students for a total of 3,777 hours training students.<\/li><li>We made 1019 service calls, 820 preventative maintenance visits, and made 162 installs in 253 new locations. <\/li><\/ul>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "7b90fd05-7b94-4712-99fd-4dacac888249",
+        "da4b56ff-224c-409a-b0b2-d8544260a65e",
+        "cb51186c-93f8-4d1d-abb8-430c18c98231",
+        "8fd8f7f4-6806-4483-8133-91580d617dc2"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "title": "<p>2021 Highlights<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "4d0417b2-b7b8-4f8e-b002-03fcae127843": {
+      "type": "cta-banner-with-image",
+      "blocks": {
+        "4f47bd28-db63-4e90-ba12-a3a10e358b9b": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "In English",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/4283\/7837\/files\/CCC_Transparency_Report_2021_EN.pdf?v=1651509916",
+            "link_classes": ""
+          }
+        },
+        "69611020-91a7-4323-9c4e-05445e78da31": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "En Español",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/4283\/7837\/files\/CCC_TR_2021_ES.pdf?v=1673985291",
+            "link_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "4f47bd28-db63-4e90-ba12-a3a10e358b9b",
+        "69611020-91a7-4323-9c4e-05445e78da31"
+      ],
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/Transparecny_Report_Bg.png",
+        "s_image": "shopify:\/\/shop_images\/transparency_report_BG_mobile.png",
+        "use_squiggles": false,
+        "content_image": "shopify:\/\/shop_images\/TR.png",
+        "content": "",
+        "title": "<p>Read the Full 2021 Report!<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h3",
+        "font": "font-gopher",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "lg:text-left"
+      }
+    },
+    "648febf7-3b26-4b54-ad8b-f9e466b6517d": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border-t border-b border-black",
+        "use_squiggles": false,
+        "title": "<p>Past Reports<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "6632f519-c36d-4b22-9968-1f7844ae03ed": {
+      "type": "transparency-report-dropdown",
+      "settings": {
+        "paragraph": "Explore our archive of reports dating back to 2009.",
+        "dropdown_links": "transparency-reports"
+      }
+    },
+    "1651509129180b8793": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border-b border-t border-black",
+        "use_squiggles": false,
+        "title": "<p>Purchasing Data<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "545f98ff-04db-4468-b53f-9e4711c39544": {
+      "type": "partner-country-select",
+      "blocks": {
+        "78d896d3-3130-4566-ad81-fa2c94aef580": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cenapro.jpg",
+            "title": "CENAPROC",
+            "location": "Bolivia",
+            "partner_since": "2004",
+            "fob_price": "$3.92",
+            "price_range": "$3.50-$4.80",
+            "pounds_purchased": "41,734",
+            "quality_score": "85.5-88",
+            "product_list": [
+              "12-oz-forty-six"
+            ],
+            "country": "Bolivia"
+          }
+        },
+        "4318e0fe-7847-44f3-9451-501fe923d4e6": {
+          "type": "partner_option",
+          "disabled": true,
+          "settings": {
+            "title": "CENAPROC",
+            "location": "Bolivia",
+            "partner_since": "2004",
+            "fob_price": "$3.92",
+            "price_range": "$3.50-$4.80",
+            "pounds_purchased": "41,734",
+            "quality_score": "85.5-88",
+            "product_list": [
+              "12-oz-forty-six"
+            ],
+            "country": "Bolivia"
+          }
+        },
+        "d51bf47b-7a0d-417e-a7a5-c9c53b084d52": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vicopex.jpg",
+            "title": "VICOPEX",
+            "location": "Bolivia",
+            "partner_since": "2015",
+            "fob_price": "$4.80",
+            "price_range": "$4.80",
+            "pounds_purchased": "616",
+            "quality_score": "88",
+            "product_list": [
+
+            ],
+            "country": "Bolivia"
+          }
+        },
+        "c325c867-eae0-4cfd-acfa-2c00b9b47666": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kazoza.jpg",
+            "title": "Kazoza N'Ikawa",
+            "location": "Burundi",
+            "partner_since": "2012",
+            "fob_price": "$3.40",
+            "price_range": "$3.25-$3.50",
+            "pounds_purchased": "13,228",
+            "quality_score": "88.5-89",
+            "product_list": [
+              "mpemba",
+              "mpemba-processing-set",
+              "mpemba-natural-sundried"
+            ],
+            "country": "Burundi"
+          }
+        },
+        "1223e08a-f6b6-45c5-b515-d8ff733b4e91": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Cafedihuila",
+            "location": "Colombia",
+            "partner_since": "2019",
+            "fob_price": "$2.95",
+            "price_range": "$2.95",
+            "pounds_purchased": "42,350",
+            "quality_score": "85.5-86.5",
+            "product_list": [
+              "12-oz-gradient"
+            ],
+            "country": "Colombia"
+          }
+        },
+        "451767f1-1f21-4e85-be06-306f07ca6585": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CRS_Borderlands.png",
+            "title": "CRS Borderlands",
+            "location": "Colombia",
+            "partner_since": "2013",
+            "fob_price": "$3.11",
+            "price_range": "$2.88-$8.00",
+            "pounds_purchased": "290,521",
+            "quality_score": "85-87.5",
+            "product_list": [
+              "big-trouble",
+              "12-oz-hologram",
+              "12-oz-gradient",
+              "urcunina"
+            ],
+            "country": "Colombia"
+          }
+        },
+        "09b81935-2b30-4c3f-8e92-5351c517696b": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Organica.jpg",
+            "title": "Organica",
+            "location": "Colombia",
+            "partner_since": "2007",
+            "fob_price": "$3.59",
+            "price_range": "$3.10-$8.30",
+            "pounds_purchased": "119,504",
+            "quality_score": "85-88.5",
+            "product_list": [
+              "12-oz-gradient",
+              "12-oz-la-golondrina"
+            ],
+            "country": "Colombia"
+          }
+        },
+        "d1b21bab-b5b3-43e6-a77d-455665acecb1": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Tierradentro",
+            "location": "Colombia",
+            "partner_since": "2020",
+            "fob_price": "$3.00",
+            "price_range": "$2.93-$3.75",
+            "pounds_purchased": "38,500",
+            "quality_score": "85-88",
+            "product_list": [
+              "12-oz-gradient",
+              "fast-forward-12oz-bag"
+            ],
+            "country": "Colombia"
+          }
+        },
+        "0ac3b482-e520-4c2e-bafc-1e1ca42ecb70": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Toldopamba.jpg",
+            "title": "Toldopamba",
+            "location": "Colombia",
+            "partner_since": "2016",
+            "fob_price": "$3.13",
+            "price_range": "$2.96-$5.00",
+            "pounds_purchased": "123,046",
+            "quality_score": "85-89",
+            "product_list": [
+              "12-oz-hologram",
+              "field-trip",
+              "santafe"
+            ],
+            "country": "Colombia"
+          }
+        },
+        "4d33b08e-c63a-409d-98b2-720a1b2a3da5": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MuunganoCooperative.png",
+            "title": "Muungano Cooperative",
+            "location": "Democratic Republic of the Congo",
+            "partner_since": "2017",
+            "fob_price": "$4.20",
+            "price_range": "$3.96-$4.68",
+            "pounds_purchased": "9,921",
+            "quality_score": "88.5",
+            "product_list": [
+              "field-trip"
+            ],
+            "country": "Democratic Republic of Congo"
+          }
+        },
+        "0abfe4e5-83d1-4546-a385-91ab287e9165": {
+          "type": "partner_option",
+          "settings": {
+            "title": "ACRIM",
+            "location": "Ecuador",
+            "partner_since": "2017",
+            "fob_price": "$3.78",
+            "price_range": "$3.53-$3.88",
+            "pounds_purchased": "15,180",
+            "quality_score": "85.5-86.5",
+            "product_list": [
+              "12-oz-hologram"
+            ],
+            "country": "Ecuador"
+          }
+        },
+        "8b98bf27-aa8b-422e-815b-9c31e6e88073": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Capamaco Trading",
+            "location": "Ecuador",
+            "partner_since": "2018",
+            "fob_price": "$5.82",
+            "price_range": "$3.70-$9.00",
+            "pounds_purchased": "5,500",
+            "quality_score": "86-91",
+            "product_list": [
+              "field-trip"
+            ],
+            "country": "Ecuador"
+          }
+        },
+        "af158a3c-0f45-466b-9ab1-62af3737f5e2": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/eladio.jpg",
+            "title": "Eladio Chamba",
+            "location": "Ecuador",
+            "partner_since": "2016",
+            "fob_price": "$4.90",
+            "price_range": "$4.90",
+            "pounds_purchased": "1,518",
+            "quality_score": "87.5",
+            "product_list": [
+
+            ],
+            "country": "Ecuador"
+          }
+        },
+        "0692e926-5c0f-4e3b-8779-02754c6f0edc": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aida.jpg",
+            "title": "Aida Batlle Farms",
+            "location": "El Salvador",
+            "partner_since": "2004",
+            "fob_price": "",
+            "price_range": "",
+            "pounds_purchased": "5,624",
+            "quality_score": "86-88",
+            "product_list": [
+
+            ],
+            "country": "El Salvador"
+          }
+        },
+        "31cd6983-c2da-4140-a70a-6336826665f5": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Cooperativa Cuzcachapa",
+            "location": "El Salvador",
+            "partner_since": "2011",
+            "fob_price": "$3.28",
+            "price_range": "$3.15-$4.00",
+            "pounds_purchased": "29,601",
+            "quality_score": "86-88",
+            "product_list": [
+              "fast-forward-12oz-bag"
+            ],
+            "country": "El Salvador"
+          }
+        },
+        "6d947dfb-60eb-4a3f-a6e7-7d68755523b8": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dam2.png",
+            "title": "Dambi Uddo Agro Industries",
+            "location": "Ethiopia",
+            "partner_since": "2019",
+            "fob_price": "$3.80",
+            "price_range": "$3.80",
+            "pounds_purchased": "26,456",
+            "quality_score": "91",
+            "product_list": [
+              "12-oz-hologram"
+            ],
+            "country": "Ethiopia"
+          }
+        },
+        "dac44e16-3e0f-4fc3-9a65-1931fbf0c2ef": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guji.jpg",
+            "title": "Guji Highlands PLC",
+            "location": "Ethiopia",
+            "partner_since": "2018",
+            "fob_price": "$3.50",
+            "price_range": "$3.50",
+            "pounds_purchased": "126,989",
+            "quality_score": "90-91",
+            "product_list": [
+              "apollo",
+              "12-oz-forty-six"
+            ],
+            "country": "Ethiopia"
+          }
+        },
+        "41cfa133-10e7-48cb-88aa-062d881a4ffe": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jabanto.jpg",
+            "title": "Jabanto",
+            "location": "Ethiopia",
+            "partner_since": "2018",
+            "fob_price": "$3.75",
+            "price_range": "$3.65-$4.20",
+            "pounds_purchased": "248,686",
+            "quality_score": "89-91.5",
+            "product_list": [
+              "apollo",
+              "12-oz-hologram",
+              "12-oz-forty-six"
+            ],
+            "country": "Ethiopia"
+          }
+        },
+        "53fa32e8-4ba0-4aa8-b9e7-bfb0b26a70d6": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Kata Meduga",
+            "location": "Ethiopia",
+            "partner_since": "2019",
+            "fob_price": "$3.30",
+            "price_range": "$3.30",
+            "pounds_purchased": "42,330",
+            "quality_score": "89.5",
+            "product_list": [
+              "12-oz-forty-six",
+              "apollo"
+            ],
+            "country": "Ethiopia"
+          }
+        },
+        "18274c2c-1bff-4f08-807a-4df9bcc04cf3": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Welichu.png",
+            "title": "Welichu Wachu",
+            "location": "Ethiopia",
+            "partner_since": "2019",
+            "fob_price": "$3.76",
+            "price_range": "$3.70-$3.80",
+            "pounds_purchased": "42,330",
+            "quality_score": "89-90.5",
+            "product_list": [
+              "apollo",
+              "12-oz-hologram"
+            ],
+            "country": "Ethiopia"
+          }
+        },
+        "5032a8f2-1a97-40e1-ab88-0251203444f7": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/idido.jpg",
+            "title": "Yirgacheffee Coffee Farmers Cooperative Union",
+            "location": "Ethiopia",
+            "partner_since": "2010",
+            "fob_price": "$3.37",
+            "price_range": "$3.20-$3.55",
+            "pounds_purchased": "126,989",
+            "quality_score": "87.5-92",
+            "product_list": [
+              "apollo",
+              "12-oz-hologram",
+              "12-oz-forty-six"
+            ],
+            "country": "Ethiopia"
+          }
+        },
+        "83ff8f57-d23a-497d-87c2-b0e7a5ef64ee": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Codech.png",
+            "title": "CODECH",
+            "location": "Guatemala",
+            "partner_since": "2010",
+            "fob_price": "$2.84",
+            "price_range": "$2.80-$3.17",
+            "pounds_purchased": "205,282",
+            "quality_score": "86-87.5",
+            "product_list": [
+              "12-oz-hologram",
+              "fast-forward-12oz-bag",
+              "12-oz-slow-motion"
+            ],
+            "country": "Guatemala"
+          }
+        },
+        "dad00b75-8ce3-4e83-a796-9e32ae8b6596": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Cooperativa Agricola Internal San Pedrana",
+            "location": "Guatemala",
+            "partner_since": "2019",
+            "fob_price": "$2.20",
+            "price_range": "$2.20",
+            "pounds_purchased": "30,424",
+            "quality_score": "86",
+            "product_list": [
+              "big-trouble"
+            ],
+            "country": "Guatemala"
+          }
+        },
+        "eaf43957-c7be-41da-9e66-cbe4361373fb": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FincaNuevaArmenia.jpg",
+            "title": "Finca Nueva Armenia",
+            "location": "Guatemala",
+            "partner_since": "2003",
+            "fob_price": "$3.02",
+            "price_range": "$2.90-$3.25",
+            "pounds_purchased": "161,095",
+            "quality_score": "84.5-87",
+            "product_list": [
+              "big-trouble",
+              "fast-forward-12oz-bag"
+            ],
+            "country": "Guatemala"
+          }
+        },
+        "ad3d0820-cf3a-4d8b-814a-30b5620213dc": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lavoz.jpg",
+            "title": "La Voz que Clama en el Desierto",
+            "location": "Guatemala",
+            "partner_since": "2012",
+            "fob_price": "$2.58",
+            "price_range": "$2.58",
+            "pounds_purchased": "41,833",
+            "quality_score": "85.5",
+            "product_list": [
+              "12-oz-slow-motion"
+            ],
+            "country": "Guatemala"
+          }
+        },
+        "7bf49d2f-1ebc-4bb4-b2ce-1c0a945bac7b": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ManosCampesinas.png",
+            "title": "Manos Campesinas",
+            "location": "Guatemala",
+            "partner_since": "2013",
+            "fob_price": "$3.10",
+            "price_range": "$2.85-$8.00",
+            "pounds_purchased": "418,521",
+            "quality_score": "85.5-91",
+            "product_list": [
+              "big-trouble",
+              "12-oz-hologram",
+              "fast-forward-12oz-bag",
+              "12-oz-forty-six"
+            ],
+            "country": "Guatemala"
+          }
+        },
+        "0d95cd44-ef4f-4015-90f3-934fed9d087f": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/puente.png",
+            "title": "Finca El Puente",
+            "location": "Honduras",
+            "partner_since": "2005",
+            "fob_price": "$3.06",
+            "price_range": "$2.85-$18.00",
+            "pounds_purchased": "157,243",
+            "quality_score": "85-89",
+            "product_list": [
+              "big-trouble",
+              "12-oz-hologram"
+            ],
+            "country": "Honduras"
+          }
+        },
+        "4c1b4b3d-da32-42c9-99fc-a427192d44f0": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pashapa.png",
+            "title": "Finca Pashapa",
+            "location": "Honduras",
+            "partner_since": "2002",
+            "fob_price": "$3.47",
+            "price_range": "$3.25-$4.00",
+            "pounds_purchased": "12,170",
+            "quality_score": "85.5-87",
+            "product_list": [
+
+            ],
+            "country": "Honduras"
+          }
+        },
+        "7b77b005-e54c-4f72-8859-ec23b1b0fe83": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kamavindi.png",
+            "title": "Kamavindi Estates",
+            "location": "Kenya",
+            "partner_since": "2015",
+            "fob_price": "$5.73",
+            "price_range": "$5.73",
+            "pounds_purchased": "4,092",
+            "quality_score": "91",
+            "product_list": [
+
+            ],
+            "country": "Kenya"
+          }
+        },
+        "66c6eb6c-c77a-42eb-b74c-9897f068e4d5": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kushikamana.png",
+            "title": "Kushikamana",
+            "location": "Kenya",
+            "partner_since": "2015",
+            "fob_price": "$5.21",
+            "price_range": "$3.80-$6.20",
+            "pounds_purchased": "32,274",
+            "quality_score": "88.5-90.5",
+            "product_list": [
+              "12-oz-hologram"
+            ],
+            "country": "Kenya"
+          }
+        },
+        "3f3ac1a7-2da2-435b-8d9c-2cefd5f4b4fa": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cafeco.png",
+            "title": "Cafeco",
+            "location": "Mexico",
+            "partner_since": "2020",
+            "fob_price": "$2.53",
+            "price_range": "$2.50-$2.75",
+            "pounds_purchased": "40,920",
+            "quality_score": "86",
+            "product_list": [
+              "12-oz-forty-six"
+            ],
+            "country": "Mexico"
+          }
+        },
+        "8f00e929-6650-4e6d-b025-7943e88d16f6": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Mayan Harvest",
+            "location": "Mexico",
+            "partner_since": "2018",
+            "fob_price": "$2.55",
+            "price_range": "$2.55",
+            "pounds_purchased": "38,030",
+            "quality_score": "85.5-86",
+            "product_list": [
+              "big-trouble"
+            ],
+            "country": "Mexico"
+          }
+        },
+        "4dd9518d-7e14-4c73-a7f4-78626e382451": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/redfox.png",
+            "title": "Red Fox Mexico",
+            "location": "Mexico",
+            "partner_since": "2019",
+            "fob_price": "$2.58",
+            "price_range": "$2.45-$2.86",
+            "pounds_purchased": "42,441",
+            "quality_score": "85-86",
+            "product_list": [
+              "big-trouble"
+            ],
+            "country": "Mexico"
+          }
+        },
+        "c80fe00a-8734-4d3b-8779-3a20613bced8": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CincodeJunio.png",
+            "title": "Cinco de Junio",
+            "location": "Nicaragua",
+            "partner_since": "2009",
+            "fob_price": "$2.59",
+            "price_range": "$2.50-$2.90",
+            "pounds_purchased": "101,920",
+            "quality_score": "85-87",
+            "product_list": [
+              "big-trouble",
+              "fast-forward-12oz-bag"
+            ],
+            "country": "Nicaragua"
+          }
+        },
+        "96b742cc-5500-4ce8-b37e-79d643f6686c": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FincaAurora.png",
+            "title": "Finca Aurora",
+            "location": "Nicaragua",
+            "partner_since": "2017",
+            "fob_price": "$2.48",
+            "price_range": "$2.40-$6.56",
+            "pounds_purchased": "78,646",
+            "quality_score": "85-88.5",
+            "product_list": [
+              "big-trouble"
+            ],
+            "country": "Nicaragua"
+          }
+        },
+        "cf552754-c4e2-4730-87c4-4e13bc56c0d8": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Victoria.png",
+            "title": "Finca La Victoria",
+            "location": "Nicaragua",
+            "partner_since": "2017",
+            "fob_price": "$2.85",
+            "price_range": "$2.85",
+            "pounds_purchased": "44,875",
+            "quality_score": "85.5-87.5",
+            "product_list": [
+              "big-trouble"
+            ],
+            "country": "Nicaragua"
+          }
+        },
+        "c59bd262-bd61-4bbf-87d6-bf7362bb371b": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Finca Nuguo",
+            "location": "Panama",
+            "partner_since": "2015",
+            "fob_price": "$36.36",
+            "price_range": "$36.36",
+            "pounds_purchased": "103",
+            "quality_score": "92.5-94",
+            "product_list": [
+
+            ],
+            "country": "Panama"
+          }
+        },
+        "6ddcb415-25ef-4fd2-a83e-ee73aad4892b": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Colbran.png",
+            "title": "Colbran Estates",
+            "location": "Papua New Guinea",
+            "partner_since": "2010",
+            "fob_price": "$3.50",
+            "price_range": "$3.45-$3.70",
+            "pounds_purchased": "42,240",
+            "quality_score": "86.5-87.5",
+            "product_list": [
+              "big-trouble",
+              "baroida"
+            ],
+            "country": "Papua New Guinea"
+          }
+        },
+        "1166315f-0c9e-4ebc-8191-1c11405d8ec3": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Incahuasi.png",
+            "title": "CAC Valle de Incahuasi",
+            "location": "Peru",
+            "partner_since": "2016",
+            "fob_price": "$2.66",
+            "price_range": "$2.50-$10.00",
+            "pounds_purchased": "317,170",
+            "quality_score": "85.5-89.5",
+            "product_list": [
+              "big-trouble",
+              "12-oz-hologram",
+              "fast-forward-12oz-bag",
+              "12-oz-forty-six"
+            ],
+            "country": "Peru"
+          }
+        },
+        "1067997b-2824-4b0f-aac8-398a5736345e": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Caravela Peru",
+            "location": "Peru",
+            "partner_since": "2018",
+            "fob_price": "$2.70",
+            "price_range": "$2.70",
+            "pounds_purchased": "38,030",
+            "quality_score": "85.5",
+            "product_list": [
+              "12-oz-forty-six"
+            ],
+            "country": "Peru"
+          }
+        },
+        "c2b5d332-06a9-4052-b7fe-062ac1e93dd5": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cenfrocafe.png",
+            "title": "CENFROCAFE",
+            "location": "Peru",
+            "partner_since": "2007",
+            "fob_price": "$2.98",
+            "price_range": "$2.90-$4.50",
+            "pounds_purchased": "209,165",
+            "quality_score": "85.5-87.5",
+            "product_list": [
+              "fast-forward-12oz-bag",
+              "12-oz-forty-six",
+              "big-trouble",
+              "12-oz-slow-motion"
+            ],
+            "country": "Peru"
+          }
+        },
+        "e4430953-2887-4d47-94b2-f65e9bf01dcf": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/huadquina.png",
+            "title": "Huadquiña",
+            "location": "Peru",
+            "partner_since": "2016",
+            "fob_price": "$2.65",
+            "price_range": "$2.65",
+            "pounds_purchased": "12,778",
+            "quality_score": "84",
+            "product_list": [
+              "big-trouble"
+            ],
+            "country": "Peru"
+          }
+        },
+        "44170acf-3ce8-4b42-bdea-0b7ce835b992": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Origincoffee.png",
+            "title": "Origin Coffee Lab",
+            "location": "Peru",
+            "partner_since": "2018",
+            "fob_price": "$2.91",
+            "price_range": "$2.80-$6.21",
+            "pounds_purchased": "209,831",
+            "quality_score": "86-89",
+            "product_list": [
+              "fast-forward-12oz-bag",
+              "12-oz-forty-six",
+              "12-oz-slow-motion"
+            ],
+            "country": "Peru"
+          }
+        },
+        "dd63a4d7-ff44-44e2-bc1f-63b4f89da898": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Bufcoffee",
+            "location": "Rwanda",
+            "partner_since": "2006",
+            "fob_price": "$3.48",
+            "price_range": "$3.40-$3.65",
+            "pounds_purchased": "13,228",
+            "quality_score": "87.5-88",
+            "product_list": [
+
+            ],
+            "country": "Rwanda"
+          }
+        },
+        "cd884202-1524-4f07-a23c-2d130638159a": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ikawa_House.png",
+            "title": "Ikawa House",
+            "location": "Rwanda",
+            "partner_since": "2020",
+            "fob_price": "$3.20",
+            "price_range": "$3.20",
+            "pounds_purchased": "5,291",
+            "quality_score": "87",
+            "product_list": [
+
+            ],
+            "country": "Rwanda"
+          }
+        },
+        "041a09ea-f907-4d5d-b8ed-abc447192811": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Roots Origin",
+            "location": "Rwanda",
+            "partner_since": "2018",
+            "fob_price": "$3.40",
+            "price_range": "$3.40",
+            "pounds_purchased": "5,291",
+            "quality_score": "87.5",
+            "product_list": [
+
+            ],
+            "country": "Rwanda"
+          }
+        },
+        "434b8476-2d74-4f6a-a88d-03b34d43b50c": {
+          "type": "partner_option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kawacom_749b8136-1151-440e-85aa-0d3044917e7c.png",
+            "title": "Kawacom",
+            "location": "Uganda",
+            "partner_since": "2014",
+            "fob_price": "$2.73",
+            "price_range": "$2.40-$3.00",
+            "pounds_purchased": "103,138",
+            "quality_score": "85-87",
+            "product_list": [
+              "fast-forward-12oz-bag",
+              "12-oz-forty-six",
+              "12-oz-hologram"
+            ],
+            "country": "Uganda"
+          }
+        },
+        "1e002bce-890b-44ab-b41e-77d221a9145e": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Mountain Harvest",
+            "location": "Uganda",
+            "partner_since": "2018",
+            "fob_price": "$2.90",
+            "price_range": "$2.75-$3.50",
+            "pounds_purchased": "39,684",
+            "quality_score": "85.5-86.5",
+            "product_list": [
+              "fast-forward-12oz-bag",
+              "12-oz-forty-six"
+            ],
+            "country": "Uganda"
+          }
+        },
+        "1c78e4e6-4345-41a7-9f15-c99d9a1fe3e5": {
+          "type": "partner_option",
+          "settings": {
+            "title": "Mokha Story",
+            "location": "Yemen",
+            "partner_since": "2018",
+            "fob_price": "$34.00",
+            "price_range": "$34.00",
+            "pounds_purchased": "108",
+            "quality_score": "89.5",
+            "product_list": [
+
+            ],
+            "country": "Yemen"
+          }
+        }
+      },
+      "block_order": [
+        "78d896d3-3130-4566-ad81-fa2c94aef580",
+        "4318e0fe-7847-44f3-9451-501fe923d4e6",
+        "d51bf47b-7a0d-417e-a7a5-c9c53b084d52",
+        "c325c867-eae0-4cfd-acfa-2c00b9b47666",
+        "1223e08a-f6b6-45c5-b515-d8ff733b4e91",
+        "451767f1-1f21-4e85-be06-306f07ca6585",
+        "09b81935-2b30-4c3f-8e92-5351c517696b",
+        "d1b21bab-b5b3-43e6-a77d-455665acecb1",
+        "0ac3b482-e520-4c2e-bafc-1e1ca42ecb70",
+        "4d33b08e-c63a-409d-98b2-720a1b2a3da5",
+        "0abfe4e5-83d1-4546-a385-91ab287e9165",
+        "8b98bf27-aa8b-422e-815b-9c31e6e88073",
+        "af158a3c-0f45-466b-9ab1-62af3737f5e2",
+        "0692e926-5c0f-4e3b-8779-02754c6f0edc",
+        "31cd6983-c2da-4140-a70a-6336826665f5",
+        "6d947dfb-60eb-4a3f-a6e7-7d68755523b8",
+        "dac44e16-3e0f-4fc3-9a65-1931fbf0c2ef",
+        "41cfa133-10e7-48cb-88aa-062d881a4ffe",
+        "53fa32e8-4ba0-4aa8-b9e7-bfb0b26a70d6",
+        "18274c2c-1bff-4f08-807a-4df9bcc04cf3",
+        "5032a8f2-1a97-40e1-ab88-0251203444f7",
+        "83ff8f57-d23a-497d-87c2-b0e7a5ef64ee",
+        "dad00b75-8ce3-4e83-a796-9e32ae8b6596",
+        "eaf43957-c7be-41da-9e66-cbe4361373fb",
+        "ad3d0820-cf3a-4d8b-814a-30b5620213dc",
+        "7bf49d2f-1ebc-4bb4-b2ce-1c0a945bac7b",
+        "0d95cd44-ef4f-4015-90f3-934fed9d087f",
+        "4c1b4b3d-da32-42c9-99fc-a427192d44f0",
+        "7b77b005-e54c-4f72-8859-ec23b1b0fe83",
+        "66c6eb6c-c77a-42eb-b74c-9897f068e4d5",
+        "3f3ac1a7-2da2-435b-8d9c-2cefd5f4b4fa",
+        "8f00e929-6650-4e6d-b025-7943e88d16f6",
+        "4dd9518d-7e14-4c73-a7f4-78626e382451",
+        "c80fe00a-8734-4d3b-8779-3a20613bced8",
+        "96b742cc-5500-4ce8-b37e-79d643f6686c",
+        "cf552754-c4e2-4730-87c4-4e13bc56c0d8",
+        "c59bd262-bd61-4bbf-87d6-bf7362bb371b",
+        "6ddcb415-25ef-4fd2-a83e-ee73aad4892b",
+        "1166315f-0c9e-4ebc-8191-1c11405d8ec3",
+        "1067997b-2824-4b0f-aac8-398a5736345e",
+        "c2b5d332-06a9-4052-b7fe-062ac1e93dd5",
+        "e4430953-2887-4d47-94b2-f65e9bf01dcf",
+        "44170acf-3ce8-4b42-bdea-0b7ce835b992",
+        "dd63a4d7-ff44-44e2-bc1f-63b4f89da898",
+        "cd884202-1524-4f07-a23c-2d130638159a",
+        "041a09ea-f907-4d5d-b8ed-abc447192811",
+        "434b8476-2d74-4f6a-a88d-03b34d43b50c",
+        "1e002bce-890b-44ab-b41e-77d221a9145e",
+        "1c78e4e6-4345-41a7-9f15-c99d9a1fe3e5"
+      ],
+      "settings": {
+        "paragraph": "On top of the information available in our Transparency Report, we publish data about every coffee we buy. The data combines all contracts from the same organization in a given year to provide a concise snapshot of our purchasing footprint.",
+        "partner_image": "shopify:\/\/shop_images\/image_7.png",
+        "partner_title": "Adenech Gemede Jabanto Collective",
+        "map_image": "shopify:\/\/shop_images\/map_1.png"
+      }
+    },
+    "transparency-reports": {
+      "type": "transparency-reports",
+      "disabled": true,
+      "blocks": {
+        "2c97c757-5823-4d29-99d8-e68561c02260": {
+          "type": "report",
+          "settings": {
+            "title": "2012",
+            "thumbnail": "shopify:\/\/shop_images\/2012.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "de025a61-35e1-45d3-97ef-2a83c2f645fd": {
+          "type": "report",
+          "settings": {
+            "title": "2013",
+            "thumbnail": "shopify:\/\/shop_images\/2013.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "5455c380-e2ec-436b-87fb-16a6361c47a6": {
+          "type": "report",
+          "settings": {
+            "title": "2014",
+            "thumbnail": "shopify:\/\/shop_images\/2014.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "ff3d9839-b152-45c8-a347-ecf13f0e7c35": {
+          "type": "report",
+          "settings": {
+            "title": "2015",
+            "thumbnail": "shopify:\/\/shop_images\/2015.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "b772ed58-1d89-4722-80e0-fdb6542ed83d": {
+          "type": "report",
+          "settings": {
+            "title": "2016",
+            "thumbnail": "shopify:\/\/shop_images\/2016.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "7fb3882d-1c43-44de-be6d-67906c28f4b0": {
+          "type": "report",
+          "settings": {
+            "title": "2017",
+            "thumbnail": "shopify:\/\/shop_images\/2017.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "44cabcb9-7043-4423-848a-5be3bd36bf12": {
+          "type": "report",
+          "settings": {
+            "title": "2018",
+            "thumbnail": "shopify:\/\/shop_images\/2018.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "1888f78d-abca-485f-84b7-c339b564c72f": {
+          "type": "report",
+          "settings": {
+            "title": "2019",
+            "thumbnail": "shopify:\/\/shop_images\/2019.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "1f939b2f-4b84-401e-abb9-7ddc3f53347b": {
+          "type": "report",
+          "settings": {
+            "title": "2020",
+            "thumbnail": "shopify:\/\/shop_images\/2020.webp",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "343ec7e2-9e75-442a-b68e-cb14d9bb6cd9": {
+          "type": "report",
+          "settings": {
+            "title": "2021",
+            "button_style": "btn btn-secondary",
+            "link_text": "Read in English",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0249\/4283\/7837\/files\/CCC_Transparency_Report_2021_EN.pdf?v=1651509916",
+            "link_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "2c97c757-5823-4d29-99d8-e68561c02260",
+        "de025a61-35e1-45d3-97ef-2a83c2f645fd",
+        "5455c380-e2ec-436b-87fb-16a6361c47a6",
+        "ff3d9839-b152-45c8-a347-ecf13f0e7c35",
+        "b772ed58-1d89-4722-80e0-fdb6542ed83d",
+        "7fb3882d-1c43-44de-be6d-67906c28f4b0",
+        "44cabcb9-7043-4423-848a-5be3bd36bf12",
+        "1888f78d-abca-485f-84b7-c339b564c72f",
+        "1f939b2f-4b84-401e-abb9-7ddc3f53347b",
+        "343ec7e2-9e75-442a-b68e-cb14d9bb6cd9"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "16509957948bad1e61",
+    "c8bae89f-0071-4be9-94a6-66e0f103efe6",
+    "4d0417b2-b7b8-4f8e-b002-03fcae127843",
+    "648febf7-3b26-4b54-ad8b-f9e466b6517d",
+    "6632f519-c36d-4b22-9968-1f7844ae03ed",
+    "1651509129180b8793",
+    "545f98ff-04db-4468-b53f-9e4711c39544",
+    "transparency-reports"
+  ]
+}

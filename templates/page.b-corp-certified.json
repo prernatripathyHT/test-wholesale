@@ -1,0 +1,210 @@
+{
+  "sections": {
+    "16509957948bad1e61": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>We're B Corp Certified!<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>After 25 years in business, 11 years of transparency reporting, and an extensive two-year application process, Counter Culture received B Corporation certification in 2020. B Lab, like us, believes that business can be used as a force for good, and their B Corp certification requires high performance standards when assessing a company’s impact. Through our new organizational structure, we are working to raise our score–currently 80.3–before the next assessment period in 2023.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "165099768899c2fb24": {
+      "type": "image-plus-text",
+      "blocks": {
+        "f9718923-02eb-431d-a4c3-b0078b27e5ba": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Miami_crop_25_1_1.png"
+          }
+        },
+        "7d315689-337d-42a1-a25e-d3d9dd9ad3f5": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "What is a B Corp?",
+            "title_image": "shopify:\/\/shop_images\/Ellipse_19.png",
+            "description": "<p>B Corp Certification is a designation that a business is meeting high standards of verified performance, accountability, and transparency on factors from employee benefits and charitable giving to supply chain practices and input materials. In order to achieve certification, a company must: 1) Demonstrate high social and environmental performance by achieving a B Impact Assessment score of 80 or above and passing our risk review. 2) Make a legal commitment by changing their corporate governance structure to be accountable to all stakeholders, not just shareholders, and achieve benefit corporation status if available in their jurisdiction. 3) Exhibit transparency by allowing information about their performance measured against B Lab’s standards to be publicly available on their B Corp profile on B Lab’s website. <\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "Read more",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "uppercase flex items-center text-xl font-medium tracking-wider mr-auto",
+            "btn_icon_name": "eyeballs",
+            "btn_icon_class": "ml-5",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "f9718923-02eb-431d-a4c3-b0078b27e5ba",
+        "7d315689-337d-42a1-a25e-d3d9dd9ad3f5"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165116595781726b78": {
+      "type": "testimonials",
+      "blocks": {
+        "0e702538-0761-480f-a6df-af821a7c4cb5": {
+          "type": "testimonial",
+          "settings": {
+            "title": "",
+            "content": "Counter Culture Coffee has been focused on providing exceptional coffee experiences since we were founded in 1995. Joining the legion of B Corps will help the team push ourselves in so many areas and get better every year.”",
+            "author": "Brett Smith, president + founder"
+          }
+        }
+      },
+      "block_order": [
+        "0e702538-0761-480f-a6df-af821a7c4cb5"
+      ],
+      "settings": {
+      }
+    },
+    "1651001083dfbb052f": {
+      "type": "image-plus-text",
+      "blocks": {
+        "8eddb8df-f7ed-43ce-86ca-5dba4b28a794": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Why We Did It",
+            "title_image": "shopify:\/\/shop_images\/Ellipse_19.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "19c1fa2e-297d-4f12-9573-c46b511b1528": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2021-08-26_at_3.13_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "8eddb8df-f7ed-43ce-86ca-5dba4b28a794",
+        "19c1fa2e-297d-4f12-9573-c46b511b1528"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16517892238e55dd8e": {
+      "type": "number-text-columns",
+      "settings": {
+        "number": "80.3",
+        "title": "Our Score",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <\/p>"
+      }
+    },
+    "16511662661a235a68": {
+      "type": "image-plus-text",
+      "blocks": {
+        "fb3c932e-f0ae-4ca6-8a05-35ef0f97c353": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Community",
+            "title_image": "shopify:\/\/shop_images\/Ellipse_19.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "c1b94b29-a275-42d3-b854-193678abb0a9": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Customers",
+            "title_image": "shopify:\/\/shop_images\/Ellipse_19.png",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "fb3c932e-f0ae-4ca6-8a05-35ef0f97c353",
+        "c1b94b29-a275-42d3-b854-193678abb0a9"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "<p>Works in Progress from Our B Teams<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "16509957948bad1e61",
+    "165099768899c2fb24",
+    "165116595781726b78",
+    "1651001083dfbb052f",
+    "16517892238e55dd8e",
+    "16511662661a235a68"
+  ]
+}

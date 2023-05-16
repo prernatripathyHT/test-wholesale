@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "1651516824f6e25382": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Brew_School_Banner.png",
+        "show_sunburst": true,
+        "sunburst_color": "#4FA0D7",
+        "show_gradient": true,
+        "bg_color": "#EFEBE1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Search Our Site<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>Looking for something in particular? Can't remember a specific coffee's name? <\/p><p><\/p><p>Try searching <strong>Colombia<\/strong> or <strong>Ethiopia<\/strong> to see coffee from those regions.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "main": {
+      "type": "predictive-search",
+      "settings": {
+        "show_products": true,
+        "show_articles": true,
+        "show_pages": true,
+        "additional_classes": ""
+      }
+    }
+  },
+  "order": [
+    "1651516824f6e25382",
+    "main"
+  ]
+}

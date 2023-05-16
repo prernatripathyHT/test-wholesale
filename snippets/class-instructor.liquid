@@ -1,0 +1,72 @@
+<!-- snippets/class-instructor.liquid -->
+
+<section class="js-instructor-panel bg-beige hidden">
+  <div class="px-5 py-5 border border-black">
+    <h3 class="font-couch text-xl lg:text-2xl text-center">Meet your Educator</h3>
+  </div>
+  {%- for variant in product.variants -%}
+
+    {% assign variant_cf = variant.metafields.custom_fields %}
+
+    {%- unless variant_cf.instructor_name == blank -%}
+      <div class="js-instructor-content hidden
+                  border-r border-l border-b border-black
+                  items-center grid md:grid-cols-3 gap-4
+                  px-5 lg:px-12 py-5"
+           data-variant="{{ variant.id }}">
+
+         {%- unless variant_cf.instructor_image == blank -%}
+           <div class="md:col-span-1 relative animate animate-fadeIn">
+             <div class="w-52 h-52 absolute -top-5 -right-8 -z-1">
+               {%
+                 render 'shape',
+                 shape: 'sunburst',
+                 fill: "#FDBF69"
+               %}
+             </div>
+
+             {% render 'responsive-image-cf',
+                 src: variant_cf.instructor_image,
+                 alt: variant_cf.instructor_image,
+                 class: "w-60 md:w-full mx-auto relative z-1" %}
+           </div>
+         {%- endunless -%}
+
+        <div class="md:col-span-2 relative z-1 animate animate-fadeInUp">
+          {%- unless variant_cf.instructor_title == blank -%}
+            <p class="uppercase tracking-wider font-freight-sans text-sm mb-2.5">{{ variant_cf.instructor_title }}</p>
+          {%- endunless -%}
+          {%- unless variant_cf.instructor_name == blank -%}
+            <h3 class="font-couch text-xl mb-2.5">{{ variant_cf.instructor_name }}</h3>
+          {%- endunless -%}
+
+          <dl class="font-tenso tracking-wider">
+            {%- unless variant_cf.instructor_pronouns == blank -%}
+              <div class="flex gap-1">
+                <dt class="font-semibold">Pronouns:</dt>
+                <dd>{{ variant_cf.instructor_pronouns }}</dd>
+              </div>
+            {%- endunless -%}
+            {%- unless variant_cf.instructor_email == blank -%}
+              <div class="flex gap-1">
+                <dt class="font-semibold">Email:</dt>
+                <dd class="text-blue hover:underline">{{ variant_cf.instructor_email }}</dd>
+              </div>
+            {%- endunless -%}
+            {%- unless variant_cf.instructor_coffee == blank -%}
+              {% assign coffee_product = all_products[variant_cf.instructor_coffee] %}
+              <div class="flex gap-1">
+                <dt class="font-semibold">Currently Drinking:</dt>
+                <dd class="text-blue  hover:underline"><a href="{{ coffee_product.url }}">{{ coffee_product.title }}</a></dd>
+              </div>
+            {%- endunless -%}
+          </dl>
+        </div>
+      </div>
+    {%- endunless -%}
+
+
+
+
+  {%- endfor -%}
+</section>

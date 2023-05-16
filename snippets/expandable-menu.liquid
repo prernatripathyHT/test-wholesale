@@ -1,0 +1,45 @@
+<!-- snippets/expandable-menu [aa] -->
+
+{%- comment %}
+	Reusable FAQ snippet. Single FAQ Answer + question only.
+  variables:
+  - id [Int]
+  - label [text]
+  - link [text]
+  - sublinks [Richtext]
+  - active [Boolean]
+{% endcomment -%}
+
+<li class="border-t border-white bg-blue">
+  <dt class="">
+    <button type="button"
+            aria-label="{{ label }}"
+            aria-controls="{{ id }}"
+            data-toggle="{{ id }}"
+            class="js-expandable-toggle menu--expandable-toggle btn-transparent
+                   flex justify-between items-center uppercase
+                   text-base tracking-wider text-left w-full
+                   px-5 lg:px-12 py-5 text-white
+                   {% if active %}active{% endif %}">
+      {{ link }}
+
+      <span class="h-8 w-8 p-2 flex items-center justify-center">
+        {% render 'icon', icon: 'chevron', class: plus_class %}
+      </span>
+    </button>
+  </dt>
+  <dd id="{{ id }}"
+      class="js-expandable-content text-base {% if active %}active{% endif %}"
+      {% unless active %}style="display: none;"{% endunless %}
+      aria-expanded="{% if active %}true{% else %}false{% endif %}">
+
+      {%- for sublink in sublinks -%}
+        <li class="border-t border-white bg-bluebell">
+          <a href="{{ sublink.url }}"
+             class="text-white uppercase block text-base tracking-wider text-left w-full px-5 lg:px-12 py-5 text-white">
+            {{ sublink.title }}
+          </a>
+        </li>
+      {%- endfor -%}
+  </dd>
+</li>

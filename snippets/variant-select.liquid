@@ -1,0 +1,32 @@
+<!-- snippets/variant-select -->
+
+{%- unless product.has_only_default_variant -%}
+  {%- for option in product.options_with_values -%}
+    {% capture option_id %}option-{{ option.name | handleize }}{{ product.id }}{% endcapture %}
+
+    <label for="{{ option_id }}" class="sr-only">{{ option.name }}</label>
+    <select id="{{ option_id }}"
+            class="hidden js-hidden-option-select"
+            name="options[{{ option.name | escape }}]"
+            data-name="{{ option.name | escape }}"
+            data-form="{{ product_form_id }}"
+          >
+      {%- for value in option.values -%}
+        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+          {{ value }}
+        </option>
+      {%- endfor -%}
+    </select>
+
+    {%- if option.name == "Size" -%}
+      {%
+        render 'custom-swatches',
+        trigger: option_id,
+        option: option,
+        product: product,
+        product_form_id: product_form_id
+      %}
+    {%- endif -%}
+    
+  {%- endfor -%}
+{%- endunless -%}

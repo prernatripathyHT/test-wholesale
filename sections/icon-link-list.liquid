@@ -1,0 +1,389 @@
+<!-- sections/icon-link-list -->
+
+{%- comment %}
+	Customize Theme Blocks: Icon, BG Sunburst Color, Link URL, Link Text
+{% endcomment -%}
+
+{% assign section_id = section.settings.title | strip_html | handleize %}
+
+{% capture slick_settings %}
+  {
+    "dots": true,
+    "arrows": false,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "centerMode": true,
+    "centerPadding": "100px",
+    "appendDots": "#{{ section_id }} .js-slick-dots",
+    "responsive": [
+      {
+        "breakpoint": 539,
+        "settings": {
+          "slidesToShow": 3,
+          "centerPadding": "80px"
+        }
+      },
+      {
+        "breakpoint": 1279,
+        "settings": {
+          "slidesToShow": 5,
+          "dots": false,
+          "centerPadding": "60px"
+        }
+      }
+    ]
+  }
+{% endcapture %}
+
+{% assign mobile_classes = '' %}
+
+{%- if section.settings.mobile_layout == 'dropdown' -%}
+  {% assign mobile_classes = 'hidden md:block' %}
+
+  {% capture accordion_content %}
+    <ul class="px-0 py-10 w-full flex justify-center js-slick"
+        style="background: {{section.settings.background}};"
+        data-slick='{{ slick_settings | strip }}'>
+      {%- for block in section.blocks -%}
+        {% render 'icon-link', block: block %}
+      {%- endfor -%}
+    </ul>
+  {% endcapture %}
+
+  <section class="md:hidden border border-black">
+    <dl class="animate animate-fadeIn js-expandable-group">
+      {%
+        render 'expandable-faq',
+        question: section.settings.title,
+        answer: accordion_content,
+        label: section.settings.title,
+        id: "icon-link-menu",
+        active: false,
+        theme_style: "black"
+      %}
+    </dl>
+  </section>
+
+{%- endif -%}
+
+<section id="{{ section_id }}" class="{{ mobile_classes }} border border-black">
+  {%- if section.settings.title != blank -%}
+    <div class="border-b border-black py-6">
+      {%
+        render 'ct-heading',
+        title: section.settings.title,
+        tag: section.settings.tag,
+        text_size_mobile: section.settings.text_size_mobile,
+        text_size_desktop: section.settings.text_size_desktop,
+        text_color: section.settings.text_color,
+        font: section.settings.font,
+        alignment: section.settings.alignment,
+        weight: section.settings.weight,
+        class: section.settings.title_classes
+      %}
+    </div>
+  {%- endif -%}
+
+  <div style="background: {{section.settings.background}};">
+    <ul class="px-0 py-10 flex justify-center js-slick"
+        
+        data-slick='{{ slick_settings | strip }}'>
+      {%- for block in section.blocks -%}
+        {% render 'icon-link', block: block %}
+      {%- endfor -%}
+    </ul>
+
+    {% if section.blocks.size > 1 %}
+      <div class="js-slick-dots pb-10 xl:hidden"></div>
+    {% endif %}
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Icon Link List",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color_background",
+      "id": "background",
+      "label": "Section Background",
+      "default": "radial-gradient(#ffffff, #efebe1)"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile + Tablet Layout",
+      "default": "slider",
+      "options": [
+        {
+          "label": "Dropdown with options",
+          "value": "dropdown"
+        },
+        {
+          "label": "Slider",
+          "value": "slider"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_link",
+      "name": "Icon Link",
+      "settings": [
+        {
+          "type": "color",
+          "id": "sunburst_color",
+          "label": "Sunburst Color",
+          "default": "#8D93D9"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Link Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Link List"
+    }
+  ]
+}
+{% endschema %}

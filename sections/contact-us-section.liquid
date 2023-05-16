@@ -1,0 +1,64 @@
+<!-- sections/contact-us-section [ja] -->
+
+
+<section class="grid md:grid-cols-2">
+    {% unless section.settings.feat_img == blank %}
+        {% render 'responsive-image', 
+            src: section.settings.feat_img,
+            alt: section.settings.feat_img.alt %}
+    {% endunless %}
+
+    {% render 'contact-form', 
+        title: section.settings.form_title,
+        subtext: section.settings.subtext,
+        contact_topics: section.settings.contact_topics %}
+</section>
+
+
+{% schema %}
+{
+    "name": "Contact Us",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "feat_img",
+            "label": "Featured Image",
+            "info": "Don't forget to add alt text!"
+        },
+        {
+            "type": "text",
+            "id": "form_title",
+            "label": "Form Title"
+        },
+        {
+            "type": "textarea",
+            "id": "subtext",
+            "label": "Text"
+        },
+        {
+            "type": "textarea",
+            "id": "contact_topics",
+            "label": "Contact Topics",
+            "info": "Enter each topic on a new line"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Contact Topic",
+            "type": "contact_topic",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Topic"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact Us"
+        }
+    ]
+}
+{% endschema %}

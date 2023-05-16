@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "1651012733a225ab0d": {
+      "type": "main-blog",
+      "settings": {
+        "title": "<p>The Extract:<br\/>Counter Culture Coffee's Blog<\/p>",
+        "text_size_mobile": "text-5xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "text-stroke-outline",
+        "filter_menu": "blog-filter-menu"
+      }
+    },
+    "165039091246226f73": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border-l border-r border-black",
+        "use_squiggles": false,
+        "title": "<p>Seeds Program<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>Each year, we collect $0.01 from each pound of coffee we sell throughout the year to fund our Seeds program. Seeds offers financial grants to producers and producer organizations we work with to implement sustainability projects they identify as beneficial. By directing Iridescent funds into Seeds, we will be able to support more projects and increase the resilience of coffee farmers and their communities. To date, we’ve allocated over $280,000 to Seeds projects.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "16515192521992cbb0": {
+      "type": "button-group",
+      "blocks": {
+        "8e5b9a7c-5829-4ee0-a388-4079766227a5": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "Apply Here",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        },
+        "c996a7ab-8a5a-4c9e-bab0-cedb172f1163": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "Aplica Ya",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "8e5b9a7c-5829-4ee0-a388-4079766227a5",
+        "c996a7ab-8a5a-4c9e-bab0-cedb172f1163"
+      ],
+      "settings": {
+        "section_classes": "border-l border-r border-b border-black"
+      }
+    },
+    "blog-filters": {
+      "type": "blog-filters",
+      "settings": {
+      }
+    },
+    "165109105398054f0b": {
+      "type": "blog-grid",
+      "settings": {
+        "tag_filter": "",
+        "feature_position": 0,
+        "grid_limit": 12,
+        "show_featured_article": true,
+        "paginate_after_limit": true,
+        "grid_offset": 0,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "1651012733a225ab0d",
+    "165039091246226f73",
+    "16515192521992cbb0",
+    "blog-filters",
+    "165109105398054f0b"
+  ]
+}

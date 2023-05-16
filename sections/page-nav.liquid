@@ -1,0 +1,46 @@
+<!-- sections/page-nav [ja] -->
+
+
+<ul class="sticky top-[76px] flex flex-wrap gap-5 justify-center p-2.5 border border-black bg-white z-20">
+    {% for block in section.blocks %}
+
+        <li>
+            <a class="uppercase tracking-wider  font-freight-sans" href="{{ block.settings.url }}">
+                {{ block.settings.title }}
+            </a>
+        </li>
+        
+    {% endfor %}
+</ul>
+
+
+{% schema %}
+{
+    "name": "Page Nav",
+    "class": "section-page-nav contents",
+    "blocks": [
+        {
+            "name": "Nav Link",
+            "type": "nav_link",
+           "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Link Title"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Link URL"
+                }
+           ]
+        }
+    ],
+   "presets": [
+        {
+            "category": "navigation",
+            "name": "Page Nav"
+        }
+   ]
+}
+{% endschema %}

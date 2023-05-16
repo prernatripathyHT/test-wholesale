@@ -1,0 +1,29 @@
+<!-- snippets/featured-product-testimonial -->
+
+{%- comment %}
+  Customize Theme Testimonial
+  --------------------------------
+  testimonial_text
+  testimonial_author
+  author_image
+{% endcomment -%}
+
+{%- if section.settings.testimonial_text != blank -%}
+  <div class="py-8">
+    <p class="text-base font-tenso tracking-wider text-left mb-5">{{ section.settings.testimonial_text }}</p>
+
+    <div class="flex items-center">
+      {%- if section.settings.author_image != blank -%}
+        {%
+          render 'responsive-image',
+          src: section.settings.author_image.src,
+          alt: section.settings.testimonial_author,
+          class: "w-12 h-12 rounded-full object-cover mr-6",
+          crop: true
+        %}
+      {%- endif -%}
+
+      <p class="uppercase tracking-wider font-freight-sans text-left">{{ section.settings.testimonial_author }}</p>
+    </div>
+  </div>
+{%- endif -%}

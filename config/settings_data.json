@@ -1,0 +1,182 @@
+{
+  "current": {
+    "favicon": "shopify:\/\/shop_images\/CCC_Favicon.png",
+    "free_shipping_threshold": 30,
+    "cart_psa": "",
+    "enable_cart_notes": false,
+    "cart_empty_text": "",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "display_announcement": true,
+          "enable_marquee": false,
+          "title": "Upcoming closures:  May 29, July 4",
+          "background_color": "#8d93d9",
+          "text_color": "#ffffff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "header_left_links": "main-menu-left-new",
+          "header_right_links": "main-menu-right-new",
+          "mobile_menu_links": "main-mobile-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "fd0c16d5-7d43-4887-9d09-a592f0f01870": {
+            "type": "social",
+            "disabled": true,
+            "settings": {
+              "url": "https:\/\/www.instagram.com\/counterculturecoffee\/?hl=en"
+            }
+          },
+          "e780a758-b58b-41e1-9222-fac81f94974b": {
+            "type": "social",
+            "disabled": true,
+            "settings": {
+              "url": "https:\/\/www.facebook.com\/counterculturecoffee\/"
+            }
+          },
+          "c623b2d5-dd95-412a-b7b1-2477fac161f7": {
+            "type": "social",
+            "disabled": true,
+            "settings": {
+              "url": "https:\/\/twitter.com\/counter_culture"
+            }
+          },
+          "b64e9c40-29ac-4827-ad6f-ddcaa34541ac": {
+            "type": "social",
+            "disabled": true,
+            "settings": {
+              "url": "https:\/\/www.youtube.com\/c\/counterculturecoffee\/featured"
+            }
+          }
+        },
+        "block_order": [
+          "fd0c16d5-7d43-4887-9d09-a592f0f01870",
+          "e780a758-b58b-41e1-9222-fac81f94974b",
+          "c623b2d5-dd95-412a-b7b1-2477fac161f7",
+          "b64e9c40-29ac-4827-ad6f-ddcaa34541ac"
+        ],
+        "settings": {
+          "title": "<p>COUNTERCULTURE<\/p>",
+          "footer_menu": "footer-new",
+          "privacy_menu": "",
+          "newsletter_title": "",
+          "newsletter_text": ""
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "blocks": {
+          "f0dd61a3-d0d7-48fb-9dad-e5e232a6b404": {
+            "type": "heading",
+            "settings": {
+              "heading": "Emails you won’t unsubscribe from"
+            }
+          },
+          "4f67f657-076f-4886-83e2-9e6f8297268e": {
+            "type": "paragraph",
+            "settings": {
+              "text": "<p>Get updates from Ethan and exclusive discounts including <strong>20%<\/strong> off your first purchase.<\/p>"
+            }
+          },
+          "852f6036-38e6-4b3e-9fa9-bce62b7d9c93": {
+            "type": "email_form",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "f0dd61a3-d0d7-48fb-9dad-e5e232a6b404",
+          "4f67f657-076f-4886-83e2-9e6f8297268e",
+          "852f6036-38e6-4b3e-9fa9-bce62b7d9c93"
+        ],
+        "settings": {
+          "full_width": true
+        }
+      },
+      "ajax-cart": {
+        "type": "ajax-cart",
+        "blocks": {
+          "8b7aa669-8d69-4511-b027-fd2c7c3f6f1c": {
+            "type": "empty_button",
+            "disabled": true,
+            "settings": {
+              "text": "",
+              "url": ""
+            }
+          },
+          "71433292-4298-4c1a-926d-6afb1326a298": {
+            "type": "empty_button",
+            "settings": {
+              "text": "Shop now",
+              "url": "shopify:\/\/collections"
+            }
+          },
+          "deccad2d-0aba-441a-8940-e0230720f475": {
+            "type": "recommendation",
+            "settings": {
+              "product": "orange-pineapple",
+              "text": "Others also bought"
+            }
+          },
+          "1a4f0d53-d944-4c2d-bb84-35c9a8f5578d": {
+            "type": "recommendation",
+            "settings": {
+              "product": "daily-detox",
+              "text": "Others also bought"
+            }
+          },
+          "6749ce91-56e1-4e07-9f9a-edf87846be8e": {
+            "type": "recommendation",
+            "settings": {
+              "product": "buchiro-2",
+              "text": "Don't Forget"
+            }
+          },
+          "cbcb1623-1bcb-4f6e-95f2-5cc5dac08ef1": {
+            "type": "recommendation",
+            "settings": {
+              "product": "12-oz-hologram",
+              "text": "Don't Forget"
+            }
+          },
+          "b2c6a5e2-4739-4e1f-be13-1be871700be2": {
+            "type": "recommendation",
+            "settings": {
+              "product": "nuevo-amanecer-3",
+              "text": "Don't Forget"
+            }
+          },
+          "86f13c0f-3d36-4d48-8ad9-212e9f842e6c": {
+            "type": "recommendation",
+            "settings": {
+              "product": "12-oz-gradient",
+              "text": "Don't Forget"
+            }
+          }
+        },
+        "block_order": [
+          "8b7aa669-8d69-4511-b027-fd2c7c3f6f1c",
+          "71433292-4298-4c1a-926d-6afb1326a298",
+          "deccad2d-0aba-441a-8940-e0230720f475",
+          "1a4f0d53-d944-4c2d-bb84-35c9a8f5578d",
+          "6749ce91-56e1-4e07-9f9a-edf87846be8e",
+          "cbcb1623-1bcb-4f6e-95f2-5cc5dac08ef1",
+          "b2c6a5e2-4739-4e1f-be13-1be871700be2",
+          "86f13c0f-3d36-4d48-8ad9-212e9f842e6c"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

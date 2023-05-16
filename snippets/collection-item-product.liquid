@@ -1,0 +1,43 @@
+<!-- snippets/collection-item-product [aa] -->
+
+{%- comment %}
+  class="lg:h-[26rem]"
+{% endcomment -%}
+
+<li class="product-card relative px-10 py-20 beige-gradient">
+
+  <span class="absolute w-60 h-60 lg:w-96 lg:h-96 top-8 -translate-x-1/4 left-1/4 z-0">
+    {% render 'shape',
+        shape: "sunburst"
+        fill: product.metafields.main.background_color %}
+  </span>
+
+  <a href="{{ product.url }}" class="flex flex-col justify-between h-full relative z-[1] lg:w-10/12 mx-auto">
+
+    {%- if product.metafields.main.product_card_badge == 'new' -%}
+      {% render 'product-card-badge', product: product %}
+    {%- endif -%}
+
+
+    {% capture image_classes %}h-80 lg:h-[26rem] max-w-full w-auto object-contain {% endcapture %}
+
+    {% render 'responsive-image'
+       src: product.featured_image.src,
+       alt: product.featured_image.alt,
+       class: image_classes
+    %}
+
+    <div class="flex flex-col items-center mt-2.5">
+      {% render 'origin-locale', product: product %}
+
+      <h3 class="text-sm md:text-lg xl:text-2xl font-couch text-center">{{ product.title }}</h3>
+
+      {% render 'tasting-notes', product: product %}
+
+      <button type="button"
+              name="button"
+              class="btn btn-secondary">Shop Now</button>
+    </div>
+  </a>
+
+</li>

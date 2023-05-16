@@ -1,0 +1,23 @@
+@layer components {
+    .dropdown-wrapper {
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            --img-size: rem(20);
+
+            content: "";
+
+            background-image: var(--img-chevron);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            position: absolute;
+            height: var(--img-size); width: var(--img-size);
+            top: calc(50% - (var(--img-size) / 2));
+            right: 16px;
+            pointer-events: none;
+        }
+    }
+}

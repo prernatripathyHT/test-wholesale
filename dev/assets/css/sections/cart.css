@@ -1,0 +1,27 @@
+@layer utilities {
+    .img-gradient {
+        background: linear-gradient(to right, 
+            theme('colors.blue') 0, 
+            theme('colors.blue') 50%, 
+            transparent 50%, 
+            transparent 100%);
+    }
+}
+
+.section-cart {
+    & .slide-cart--item {
+        grid-template-columns: rem(75) 1fr;
+
+        @screen xs {
+            grid-template-columns: rem(165) 1fr;
+        }
+
+        @screen md {
+            grid-template-columns: rem(250) 1fr;
+        }
+
+        @screen lg {
+            grid-template-columns: rem(400) 1fr;
+        }
+    }
+}

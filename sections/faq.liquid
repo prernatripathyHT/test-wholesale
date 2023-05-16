@@ -1,0 +1,112 @@
+<!-- sections/faq -->
+
+<section class="py-20 px-6">
+  {% if section.settings.header != blank %}
+    <h3 class="animate animate-fadeInUp font-gopher font-semibold mb-8 text-center {{ section.settings.header_size }}"
+        style="{% if section.settings.text_color != blank %}color: {{ section.settings.text_color }};{% endif %}">
+      {{ section.settings.header }}
+    </h3>
+  {% endif %}
+
+  <dl class="max-w-3xl mx-auto animate animate-fadeIn js-expandable-group">
+    {%- for block in section.blocks -%}
+      {% unless block.settings.product_ref != blank and block.settings.product_ref.handle != product.handle %}
+        {%
+          render 'expandable-faq',
+          question: block.settings.question,
+          answer: block.settings.answer,
+          label: block.settings.label,
+          id: block.id,
+          forloop: forloop,
+          active: forloop.first,
+          theme_style: "blue"
+        %}
+      {% endunless %}
+    {%- endfor -%}
+  </dl>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text settings"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header Text",
+      "default": "Header"
+    },
+    {
+      "type": "select",
+      "id": "header_size",
+      "label": "Header Size",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Expandable FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "FAQ Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "FAQ Answer"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "FAQ Accessibility Label"
+        },
+        {
+          "type": "product",
+          "id": "product_ref",
+          "label": "Exclusive Product Reference",
+          "info": "FAQ will only appear on this product page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

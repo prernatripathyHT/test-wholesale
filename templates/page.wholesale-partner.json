@@ -1,0 +1,433 @@
+{
+  "sections": {
+    "668bf27b-1478-4233-ad8d-59e02c821fe7": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/MO4A5917-Edit.jpg",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Already a wholesale partner?<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "",
+        "button_style": "btn btn-white",
+        "link_text": "Wholesale Login",
+        "link_url": "https:\/\/wholesale.counterculturecoffee.com\/my-account",
+        "link_classes": ""
+      }
+    },
+    "banner": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Partner with Us<\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>We believe in pushing potential in everything we do, including customer support that helps make your business successful. We’re looking for the best restaurants, cafes, and businesses to join us in the pursuit of coffee perfection.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "1651182467f2df73bf": {
+      "type": "button-group",
+      "blocks": {
+        "7ffbab00-10d4-44b2-bdda-f90fb56ac079": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "Inquire Now",
+            "link_url": "#crmWebToEntityForm",
+            "link_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "7ffbab00-10d4-44b2-bdda-f90fb56ac079"
+      ],
+      "settings": {
+        "section_classes": ""
+      }
+    },
+    "16511809735e4f2e66": {
+      "type": "image-plus-text",
+      "blocks": {
+        "11d0b83c-fdee-4a87-9d12-06d39affc882": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>Local customer relations representatives are available to meet the specific needs of your business. These knowledgeable professionals give support whenever and wherever they are needed, offering expert advice based on years of experience in the coffee industry. Customer relations representative can consult on equipment & coffee bar design, coordinate training & education, advise on coffee selection, and much more.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "86fdd131-81d9-474f-a11c-7bedad70019f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20220210-MO4A0058_a9fe6915-c978-41d6-a538-be30d91e2c32.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "11d0b83c-fdee-4a87-9d12-06d39affc882",
+        "86fdd131-81d9-474f-a11c-7bedad70019f"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "<p>Customer Support<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16511810575977363d": {
+      "type": "image-plus-text",
+      "blocks": {
+        "b17fd032-7cf2-41d2-a7e1-2d053778e36d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4B9B8144-2.jpg"
+          }
+        },
+        "dd0f0f9c-cafa-4812-a0f2-2820272b021a": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>Trained technicians offer equipment installation & calibration, scheduled maintenance, and same-day emergency service. We have deep relationships with some of the best coffee equipment manufacturers in the world, giving you access to new gear and resources to make this equipment work best for your business’s needs.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "b17fd032-7cf2-41d2-a7e1-2d053778e36d",
+        "dd0f0f9c-cafa-4812-a0f2-2820272b021a"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "<p>Equipment Support<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651181107c29b07d6": {
+      "type": "image-plus-text",
+      "blocks": {
+        "0a40ee0e-af6d-4a0e-bf83-e16861c336e8": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>We offer exclusive, customizable, interdisciplinary coffee education to our wholesale partners. Our team of highly skilled Educators utilizes hands-on practices and technology to facilitate state-of-the-art coffee training services. Our online learning program, Counter Intelligence Online, hosts a robust course catalog that covers topics from brewing methods to palate development. This online program filters into the Counter Intelligence Workshop series, where baristas can take conceptual coffee knowledge and apply it in workshops like Espresso 101, Milk 101, and Brewing 101. We also offer personalized training tailored to our partners’ needs.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "b7f7cc30-f9a6-4ad1-a7ae-814a7cba2ef3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4B9B0710.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "0a40ee0e-af6d-4a0e-bf83-e16861c336e8",
+        "b7f7cc30-f9a6-4ad1-a7ae-814a7cba2ef3"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "<p>Training & Education<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16511759845b525e10": {
+      "type": "form-builder",
+      "disabled": true,
+      "blocks": {
+        "0379cead-09bd-420a-bfad-eb7a232eff6b": {
+          "type": "text",
+          "settings": {
+            "header": "Contact Info",
+            "name": "contact[company]",
+            "label": "Company",
+            "placeholder": "Company",
+            "input_type": "text"
+          }
+        },
+        "579b88cd-b5f6-4892-99e0-e78342bab8f0": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[first_name]",
+            "label": "*First Name",
+            "placeholder": "*First Name",
+            "input_type": "text"
+          }
+        },
+        "0f6eaf4c-938a-416b-bca3-883a690ab57f": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[last_name]",
+            "label": "*Last Name",
+            "placeholder": "*Last Name",
+            "input_type": "text"
+          }
+        },
+        "91fe3483-ee24-425c-abb9-6fb242a36b4b": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[phone]",
+            "label": "*Phone (xxx-xxx-xxxx)",
+            "placeholder": "*Phone (xxx-xxx-xxxx)",
+            "input_type": "tel"
+          }
+        },
+        "6611497c-874c-4984-b6e4-7041e2b691fd": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[email]",
+            "label": "*Email",
+            "placeholder": "*Email",
+            "input_type": "email"
+          }
+        },
+        "bc54a674-49ec-40d2-b990-61fd7bc21ccc": {
+          "type": "text",
+          "settings": {
+            "header": "Location Info",
+            "name": "contact[city]",
+            "label": "City",
+            "placeholder": "City",
+            "input_type": "text"
+          }
+        },
+        "3c65349d-b243-4f54-b8b5-07635815a9cb": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[state]",
+            "label": "*State",
+            "placeholder": "*State",
+            "input_type": "text"
+          }
+        },
+        "1fa9b4ed-e086-4327-91d4-86bbbc1af084": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[zip]",
+            "label": "*Zip Code",
+            "placeholder": "*Zip Code",
+            "input_type": "text"
+          }
+        },
+        "d97f0dde-5cde-4d58-ad0d-7060873b3230": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[country]",
+            "label": "*Country",
+            "placeholder": "*Country",
+            "input_type": "text"
+          }
+        },
+        "b97b1fd3-7e65-4f1a-a16a-df9d2e6c620f": {
+          "type": "text",
+          "settings": {
+            "header": "Company Info",
+            "name": "contact[website]",
+            "label": "*Website",
+            "placeholder": "*Website",
+            "input_type": "text"
+          }
+        },
+        "30d83d8a-c63c-4214-be60-1f2682902a60": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[instagram]",
+            "label": "*Instagram Handle",
+            "placeholder": "*Instagram Handle",
+            "input_type": "text"
+          }
+        },
+        "dd036391-170b-4ddc-87a7-2c8c0458d1a5": {
+          "type": "radio",
+          "settings": {
+            "input_type": "radio",
+            "header": "Business Type",
+            "options": "Coffee Shop|||Corporate Dining|||Restaurant|||Hotel|||Distributor|||Office|||University|||Grocery|||Other",
+            "name": "contact[business_type]",
+            "label": "Business Type"
+          }
+        },
+        "71178f64-08e7-4f0c-82c9-f6fc0c72441d": {
+          "type": "radio",
+          "settings": {
+            "input_type": "radio",
+            "header": "Years in Operation",
+            "options": "Not open yet|||1-3 years|||> 3 years",
+            "name": "contact[years_in_operation]",
+            "label": "Years in Operation"
+          }
+        },
+        "55c97b4f-8896-4e12-99e8-f7707c5787f7": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[start_date]",
+            "label": "*Target Start Date or Opening Date",
+            "placeholder": "*Target Start Date or Opening Date",
+            "input_type": "text"
+          }
+        },
+        "bed20639-47be-4309-b83c-4450f75807c0": {
+          "type": "radio",
+          "settings": {
+            "input_type": "checkbox",
+            "header": "Which Products are you interested in?",
+            "options": "Tech Services & Equipment Support|||Education|||Drip Coffee|||Espresso",
+            "name": "contact[which_products]",
+            "label": "Which Products are you interested in?"
+          }
+        },
+        "456af748-9f79-41b4-997a-5803041644eb": {
+          "type": "text",
+          "settings": {
+            "header": "Tell Us More",
+            "name": "contact[about]",
+            "label": "*Please tell us about your business",
+            "placeholder": "*Please tell us about your business",
+            "input_type": "textarea"
+          }
+        },
+        "6276924d-dade-4158-a7d3-0f0fc311d2be": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[how]",
+            "label": "*How did you hear about us?",
+            "placeholder": "*How did you hear about us?",
+            "input_type": "textarea"
+          }
+        }
+      },
+      "block_order": [
+        "0379cead-09bd-420a-bfad-eb7a232eff6b",
+        "579b88cd-b5f6-4892-99e0-e78342bab8f0",
+        "0f6eaf4c-938a-416b-bca3-883a690ab57f",
+        "91fe3483-ee24-425c-abb9-6fb242a36b4b",
+        "6611497c-874c-4984-b6e4-7041e2b691fd",
+        "bc54a674-49ec-40d2-b990-61fd7bc21ccc",
+        "3c65349d-b243-4f54-b8b5-07635815a9cb",
+        "1fa9b4ed-e086-4327-91d4-86bbbc1af084",
+        "d97f0dde-5cde-4d58-ad0d-7060873b3230",
+        "b97b1fd3-7e65-4f1a-a16a-df9d2e6c620f",
+        "30d83d8a-c63c-4214-be60-1f2682902a60",
+        "dd036391-170b-4ddc-87a7-2c8c0458d1a5",
+        "71178f64-08e7-4f0c-82c9-f6fc0c72441d",
+        "55c97b4f-8896-4e12-99e8-f7707c5787f7",
+        "bed20639-47be-4309-b83c-4450f75807c0",
+        "456af748-9f79-41b4-997a-5803041644eb",
+        "6276924d-dade-4158-a7d3-0f0fc311d2be"
+      ],
+      "settings": {
+        "content": "<p>Please fill out the following form which is the first step in contacting your local wholesale sales representative. They’ll follow up with info on equipment, pricing, and support and can answer any questions you may have. <\/p>",
+        "form_title": "",
+        "sucess_message": "<p>Thanks! We've received your inquiry and will be in touch soon.<\/p>",
+        "title": "<p>Thanks you for your interest in becoming a wholesale partner!<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-2.5"
+      }
+    },
+    "ec8bfbd5-f03f-4c03-8905-81f229cc80bf": {
+      "type": "zoho-form",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "668bf27b-1478-4233-ad8d-59e02c821fe7",
+    "banner",
+    "1651182467f2df73bf",
+    "16511809735e4f2e66",
+    "16511810575977363d",
+    "1651181107c29b07d6",
+    "16511759845b525e10",
+    "ec8bfbd5-f03f-4c03-8905-81f229cc80bf"
+  ]
+}

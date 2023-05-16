@@ -1,0 +1,63 @@
+<!-- sections/number-text-columns.liquid [aa] -->
+
+<section class="flex flex-col xl:flex-row border border-camel w-full md:w-11/12 mx-auto">
+  <div class="px-12 py-10 flex items-center justify-center">
+    {%- unless section.settings.number == blank -%}
+      <h4 class="text-6xl lg:text-9xl text-center
+                font-tenso text-stroke-camel
+                animate animate-fadeInUp">{{ section.settings.number }}</h4>
+    {%- endunless -%}
+  </div>
+
+  <div class="h-full hidden xl:block">
+    {% render 'divider', divider: 'triangles' %}
+  </div>
+
+  <div class="w-full block xl:hidden">
+    {% render 'divider', divider: 'horizontal-triangles', class: "w-full h-auto md:h-6" %}
+  </div>
+
+  <div class="animate animate-fadeInUp px-12 py-10 flex flex-col justify-center">
+    {%- unless section.settings.title == blank -%}
+      <h3 class="font-couch text-2xl mb-2.5">{{ section.settings.title }}</h3>
+    {%- endunless -%}
+
+    {%- unless section.settings.content == blank -%}
+      <div class="rte tracking-wider">
+        {{ section.settings.content }}
+      </div>
+    {%- endunless -%}
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Number Text Columns",
+  "class": "py-10 px-5",
+  "settings": [
+    {
+      "type": "text",
+      "id": "number",
+      "label": "Big Number",
+      "default": "80.3"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Section Content"
+    }
+  ],
+  "presets": [
+    {
+      "category": "grid",
+      "name": "Number Text Columns"
+    }
+  ]
+}
+{% endschema %}

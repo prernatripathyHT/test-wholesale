@@ -1,0 +1,200 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Frenchpress.png",
+        "show_sunburst": true,
+        "sunburst_color": "#fdbf69",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>French Press<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>Grind coffee, pour hot water, wait, stir, press, pour, drink, and enjoy! The French Press is a brew method that allows you to get caffeinated very easily.<\/p>",
+        "testimonial_author": "SANDRA, Regional Educator, MIAMI",
+        "author_image": "shopify:\/\/shop_images\/portraitedits56.jpg"
+      }
+    },
+    "16504847174bd7270f": {
+      "type": "image-plus-text",
+      "blocks": {
+        "6288cedd-98f0-41da-896f-de34333dcb30": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Gather your supplies",
+            "description": "<p>We use 1.6–2 grams of coffee per fluid ounce of water; our recipe makes about 32 ounces (900 grams) of brewed coffee.<\/p>",
+            "list_html": "<ul>\n<li>60 grams of fresh-roasted, whole-bean coffee<\/li>\n<li>Gram scale<\/li>\n<li>Grinder (we recommend burr grinders)<\/li>\n<li>French Press<\/li>\n<li>Stirring Utensil<\/li>\n<li>Kettle<\/li>\n<li>Hot water (195–205 F)<\/li>\n<li>Timer<\/li>\n<\/ul>",
+            "button_style": "blue-underline",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "Grind Size",
+            "icon_info": "",
+            "icon_image": "shopify:\/\/shop_images\/grindsize6_supercoarse_2.jpg"
+          }
+        },
+        "f03fdb48-9a1a-4c3a-9ba2-2df7ebbdbff6": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/139509036?h=c02c0d7ed1"
+          }
+        }
+      },
+      "block_order": [
+        "6288cedd-98f0-41da-896f-de34333dcb30",
+        "f03fdb48-9a1a-4c3a-9ba2-2df7ebbdbff6"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165049562929d14393": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Serve and enjoy! 🤗 <\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "button_style": "btn btn-secondary",
+        "link_text": "",
+        "link_url": "",
+        "link_classes": ""
+      }
+    },
+    "1650495672ba353b7d": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Want to learn how to brew like a pro?<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "mb-5",
+        "button_style": "camel-underline",
+        "link_text": "Check out our classes",
+        "link_url": "shopify:\/\/pages\/classes",
+        "link_classes": ""
+      }
+    },
+    "1650576426f752cf89": {
+      "type": "icon-link-list",
+      "blocks": {
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#34beae",
+            "title": "Kalita Wave",
+            "url": "shopify:\/\/pages\/quick-easy-pour-over",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_Katilawave_edit_3b5909d6-fe11-45a8-af60-02b599654d1a.png"
+          }
+        },
+        "6615e4f1-b15e-4812-b99c-0d145030f03d": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fdbf69",
+            "title": "French Press",
+            "url": "shopify:\/\/pages\/quick-easy-french-press",
+            "icon_image": "shopify:\/\/shop_images\/Frame.png"
+          }
+        },
+        "12975029-480c-4426-99d1-d57a838c0d7a": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fbc7b2",
+            "title": "Chemex",
+            "url": "shopify:\/\/pages\/quick-easy-chemex",
+            "icon_image": "shopify:\/\/shop_images\/Frame-2.png"
+          }
+        },
+        "31387098-a5a6-4866-a474-9e6a1e519b44": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#ff5c1b",
+            "title": "Hario V60",
+            "url": "shopify:\/\/pages\/quick-easy-v60",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Live-Stroke-Individual_Hario_V60_6a8093a7-629c-4cf5-b3c2-7832668228fb.png"
+          }
+        },
+        "87edf125-aa68-4420-9046-377a206cda67": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#3a8dde",
+            "title": "Aeropress",
+            "url": "shopify:\/\/pages\/quick-easy-aeropress",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_aeropress_edit_5a44b975-35ca-47ad-a3d2-b29343251d2e.png"
+          }
+        }
+      },
+      "block_order": [
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb",
+        "6615e4f1-b15e-4812-b99c-0d145030f03d",
+        "12975029-480c-4426-99d1-d57a838c0d7a",
+        "31387098-a5a6-4866-a474-9e6a1e519b44",
+        "87edf125-aa68-4420-9046-377a206cda67"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(239, 235, 225, 1), rgba(255, 255, 255, 1) 100%)",
+        "mobile_layout": "dropdown",
+        "title": "<p>Brew Methods<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16504847174bd7270f",
+    "165049562929d14393",
+    "1650495672ba353b7d",
+    "1650576426f752cf89"
+  ]
+}

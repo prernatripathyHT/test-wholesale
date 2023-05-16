@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": false
+      }
+    },
+    "cart": {
+      "type": "cart",
+      "blocks": {
+        "d5ef3a23-324e-4e1e-85aa-c37b03058662": {
+          "type": "empty_button",
+          "settings": {
+            "text": "Shop Now",
+            "url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "d5ef3a23-324e-4e1e-85aa-c37b03058662"
+      ],
+      "settings": {
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "show_cart_note": false
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart",
+    "cart-footer"
+  ]
+}

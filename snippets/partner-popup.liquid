@@ -1,0 +1,112 @@
+<!-- snippets/partner-popup -->
+
+{% comment %}
+  Block Settings:
+    "id": "image"
+    "id": "title"
+    "id": "location"
+    "id": "partner_since"
+    "id": "fob_price"
+    "id": "price_range"
+    "id": "pounds_purchased"
+    "id": "quality_score"
+    "id": "product_list"
+    "id": "archived_products"
+{% endcomment %}
+
+{% assign bs = block.settings %}
+
+<div
+  id="partner-{{ block.settings.title | handleize }}"
+  class="fixed inset-0 z-40 hidden h-full w-full items-center justify-center bg-black/20 activated:flex"
+>
+  <div class="relative h-[90%] lg:h-[80%] w-10/12 max-w-3xl rounded-3xl bg-white px-8 py-8 lg:px-12 lg:py-12">
+    
+    <button
+      class="absolute top-5 right-5 lg:top-10 lg:right-10"
+      data-toggle="#partner-{{ block.settings.title | handleize }}"
+    >
+      <span class="sr-only">Close {{ bs.title }} popup</span>
+      {% render 'icon', icon: 'close', class: 'w-5 h-5 lg:w-7 lg:h-7' %}
+    </button>
+
+    <div>
+      <div class="mb-2.5 flex w-full items-center justify-center gap-4 pr-10 lg:pr-12">
+        <span
+          class="animate h-6 w-6 lg:h-8 lg:w-8 min-w-[1.5rem] lg:min-w-[2rem] animate-zoomIn rounded-full border border-black"
+          style="background: {{ color }};"
+          data-delay="500"
+        ></span>
+        <h2 class="animate animate-fadeInUp pt-2.5 text-center font-couch text-3xl lg:text-5xl leading-tight">{{ bs.title }}</h2>
+      </div>
+
+      <p class="animate animate-fadeInUp text-center font-tenso text-2xl lg:text-4xl">{{ bs.location }}</p>
+    </div>
+
+    <div class="mt-2.5 lg:mt-12 flex flex-col lg:flex-row items-center gap-5">
+      {% unless bs.image == blank %}
+        <div class="animate mx-auto w-3/5 lg:w-2/5 animate-fadeIn">
+          {% render 'responsive-image', src: bs.image.src, alt: bs.image.alt, class: 'w-full' %}
+        </div>
+      {% endunless %}
+
+      <dl class="lg:w-3/5 font-tenso text-lg lg:text-2xl font-light">
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5 mb-2.5 lg:mb-1">
+          <dt class="underline">Partner Since:</dt>
+          <dd class="">{{ bs.partner_since }}</dd>
+        </div>
+
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5 mb-2.5 lg:mb-1">
+          <dt class="underline">Weighted average FOB Price:</dt>
+          <dd class="">{{ bs.fob_price }}</dd>
+        </div>
+
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5 mb-2.5 lg:mb-1">
+          <dt class="underline">FOB Price Range:</dt>
+          <dd class="">{{ bs.price_range }}</dd>
+        </div>
+
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5 mb-2.5 lg:mb-1">
+          <dt class="underline">Pounds Purchased:</dt>
+          <dd class="">{{ bs.pounds_purchased }}</dd>
+        </div>
+
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5 mb-2.5 lg:mb-1">
+          <dt class="underline">Pounds Purchased:</dt>
+          <dd class="">{{ bs.pounds_purchased }}</dd>
+        </div>
+
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5 mb-2.5 lg:mb-1">
+          <dt class="underline">Quality Score:</dt>
+          <dd class="">{{ bs.quality_score }}</dd>
+        </div>
+
+        <div class="animate flex animate-fadeIn flex-wrap gap-2.5">
+          <dt class="underline">Sold As:</dt>
+          <dd>
+            <ul class="flex flex-wrap gap-2.5">
+              {% for product in bs.product_list %}
+                <li class="flex">
+                  <a
+                    href="{{ product.url }}"
+                    target="_blank"
+                    class="text-blue underline"
+                  >
+                    {{- product.title -}}
+                  </a>
+                  {% unless forloop.last %},{% endunless %}
+                </li>
+              {% endfor %}
+
+              {% if bs.archived_products != blank %}
+                <li class="text-black underline">
+                  {% unless bs.product_list == blank %}, {% endunless%}{{ bs.archived_products }}
+                </li>
+              {% endif %}
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>

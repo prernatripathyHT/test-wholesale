@@ -1,0 +1,17 @@
+<!-- snippets/product-testimomial -->
+
+{%- comment %}
+	Custom Fields Metafields
+  --------------------------------
+  - testimonial_quote
+  - testimonial_author
+{% endcomment -%}
+
+{% assign bp_fields = product.metafields.buy_panel %}
+
+{%- if bp_fields.testimonial_quote != blank -%}
+  <div class="border-b border-black bg-beige py-8 px-8">
+    <p class="text-xl font-tenso tracking-wider text-center mb-2.5">{{ bp_fields.testimonial_quote }}</p>
+    <p class="font-tenso italic tracking-wider text-center">{{ bp_fields.testimonial_author }}</p>
+  </div>
+{%- endif -%}

@@ -1,0 +1,66 @@
+<!-- snippets/custom-selling-plan-select -->
+
+{%- comment %}
+  {%
+    render 'custom-selling-plan-select',
+    trigger: option_id,
+    option_name: "delivered",
+    selected_value: "every 4 weeks",
+    option_values: variant.selling_plan_allocations,
+    product: product,
+    product_form_id: product_form_id,
+    hide_label: false
+  %}
+{% endcomment -%}
+
+<div class="relative js-custom-select-container {% unless hide_label %} my-3 max-w-full {% endunless %}">
+  <button id="{{ trigger }}-btn"
+          type="button"
+          data-trigger="select-{{ trigger }}"
+          name="trigger-select"
+          class="js-custom-select-trigger custom-select--trigger
+                 flex justify-between items-center
+                 bg-white rounded-full border border-black
+                 {% if hide_label %} py-1 {% else %} py-3 {% endif %} px-4">
+    <div class="{% if hide_label %} mr-5 {% else %} mr-12 {% endif %} flex">
+      {% unless hide_label %}
+        <span class="opacity-60 text-black mr-3">{{ option_name }}</span>
+      {% endunless %}
+      <span class="js-select-trigger-text
+                   text-black text-left text-ellipsis whitespace-nowrap overflow-hidden block
+                   {% if hide_label %} w-auto {% else %} w-40 {% endif %}">
+        {{ selected_value }}
+      </span>
+    </div>
+    <div>
+      {% render 'icon', icon: 'expand' %}
+    </div>
+  </button>
+
+  <ul class="js-custom-select-options custom-select--options
+             absolute hidden z-10 w-full
+             flex flex-col items-start justify-center
+             bg-white rounded-2xl list-none my-3 border border-black rounded-2xl"
+      role="region"
+      data-trigger="select-{{ trigger }}"
+      aria-labelledby="{{ trigger }}-btn">
+
+    {%- for value in option_values -%}
+      {% assign delivery_name = value.selling_plan.name | remove: "Delivery" | strip | downcase %}
+
+      <li class="w-full">
+        <button type="button"
+                name="{{ trigger }}"
+                data-target="{{ trigger }}"
+                data-option="{{ option_name }}"
+                data-value="{{ value.selling_plan.id }}"
+                class="js-option-select custom-select--option
+                       py-3 px-4 w-full text-lg text-left leading-none
+                       {% if selected_value == delivery_name %} active {% endif %}">
+          {{ delivery_name }}
+        </button>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+</div>

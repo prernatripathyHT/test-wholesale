@@ -1,0 +1,36 @@
+<!-- snippets/desktop-icon-menu -->
+
+<ul class="flex items-center justify-end w-1/5 text-white">
+
+  <li class="py-4 mx-3 relative">
+    <a id="menu-link--account"
+      href="/account"
+      class="font-semibold text-white text-center uppercase tracking-widest font-freight-sans leading-none"
+    >
+      {% if customer %}
+        Account
+      {% else %}
+        Login
+      {% endif %}
+    </a>
+  </li>
+
+  <li class="mx-3 relative">
+    <a href="/search" class="py-4">
+      <span class="sr-only">Search</span>
+      {% render 'icon', icon: 'search', class: 'w-8 h-8' %}
+    </a>
+  </li>
+
+  <li class="ml-3 relative">
+    <a href="/cart" class="py-4">
+      <span class="cart_count absolute -right-1 -bottom-1 flex
+                   w-5 h-5 rounded-full pb-1
+                   bg-ethiopia text-white text-sm font-freight-sans
+                   items-center justify-center"></span>
+      <span class="sr-only">Cart</span>
+      {% render 'icon', icon: 'cart', class: 'w-8 h-8' %}
+    </a>
+  </li>
+
+</ul>

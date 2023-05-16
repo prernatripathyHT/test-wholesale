@@ -1,0 +1,326 @@
+<!-- sections/featured-product -->
+
+<div style="background: {{section.settings.background}};">
+
+  {%- if section.settings.title != blank -%}
+    <div class="px-5 lg:px-12 pt-6 pb-4 border border-black">
+      {%
+        render 'ct-heading',
+        title: section.settings.title,
+        tag: section.settings.tag,
+        text_size_mobile: section.settings.text_size_mobile,
+        text_size_desktop: section.settings.text_size_desktop,
+        text_color: section.settings.text_color,
+        font: section.settings.font,
+        alignment: section.settings.alignment,
+        weight: section.settings.weight,
+        class: section.settings.title_classes
+      %}
+    </div>
+  {%- endif -%}
+
+  {% if section.settings.d_layout == 'image_first' %}
+    <section class="relative grid xl:grid-cols-2">
+      {% render 'product-image-slider', product: section.settings.product %}
+      {% render 'product-feature-panel', product: section.settings.product %}
+    </section>
+  {% else %}
+    <section class="relative xl:grid-cols-2 hidden lg:grid">
+      {% render 'product-feature-panel', product: section.settings.product %}
+      {% render 'product-image-slider', product: section.settings.product %}
+    </section>
+    <section class="relative grid xl:grid-cols-2 lg:hidden">
+      {% render 'product-image-slider', product: section.settings.product %}
+      {% render 'product-feature-panel', product: section.settings.product %}
+    </section>
+  {% endif %}
+
+</div>
+
+
+{% schema %}
+{
+  "name": "Featured Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product Picker"
+    },
+    {
+      "type": "select",
+      "id": "d_layout",
+      "label": "Desktop: Layout",
+      "info": "Image always first on mobile",
+      "default": "image_first",
+      "options": [
+        {
+          "label": "Image First",
+          "value": "image_first"
+        },
+        {
+          "label": "Text First",
+          "value": "text_first"
+        }
+      ]
+    },
+    {
+      "type": "color_background",
+      "id": "background",
+      "label": "Section Background",
+      "default": "linear-gradient(#ffffff, #000000)"
+    },
+    {
+      "type": "header",
+      "content": "Product Panel Settings"
+    },
+    {
+      "type": "text",
+      "id": "number",
+      "label": "Big Number",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "featured_date",
+      "label": "Featured Dates"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_text",
+      "label": "Testimonial Text"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_author",
+      "label": "Testimonial Author"
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "Testimonial Author Image"
+    },
+    {
+      "type": "header",
+      "content": "Title Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Product Panel"
+    }
+  ]
+}
+{% endschema %}

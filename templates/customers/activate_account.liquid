@@ -1,0 +1,42 @@
+<div id="template" class="px-5 max-w-3xl mx-auto py-12 lg:py-20">
+  
+  <div class="mb-12">
+    <h2 class="text-center font-couch text-3xl mb-2.5">Activate Account</h2>
+    <p class="text-lg text-center">Create your password to activate your account</p>
+  </div>
+
+  {% form 'activate_customer_password' %}
+    {{ form.errors | default_errors }}
+
+    <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6 animate animate-fadeIn"
+         data-delay="200">
+      
+      {% render 'floating-label',
+          id: 'customer_password',
+          input_type: 'password',
+          input_name: 'customer[password]',
+          placeholder: 'C0unt3rCultur3_Rul3z',
+          label: 'Password' %}
+
+      {% render 'floating-label',
+          id: 'customer_password_confirmation',
+          input_type: 'password'
+          input_name: 'customer[password_confirmation]',
+          placeholder: 'C0unt3rCultur3_Rul3z',
+          label: 'Password Confirmation' %}
+    </div>
+
+    <div class="flex items-center justify-center gap-2.5 mt-8">
+      <input type="submit"
+              value="Activate" 
+              name="login"
+              class="btn btn-secondary btn-big w-full md:w-1/3"
+              data-delay="400" />
+      
+
+      <span class="text-sm text-italic">or</span>
+
+      <input type="submit" class="cancel" name="decline" id="customer_decline" value="Decline Invitation" />
+    </div>
+  {% endform %}
+</div>

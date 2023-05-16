@@ -1,0 +1,218 @@
+<!-- sections/index--icon-banner [aa] -->
+
+{% comment %}lg:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 lg:grid-cols-5 lg:grid-cols-6{% endcomment %}
+
+<section class="py-8 px-0 md:px-12 
+                {% if section.settings.show_border == true %} border-t border-b border-black {% endif %}
+                {% if section.settings.mobile_layout == 'slider' %} js-marquee-wrapper overflow-hidden {% endif %}" 
+        style="background: {{ section.settings.bg_color }};"> 
+        
+  <ul class="lg:grid lg:grid-cols-{{ section.blocks | size }}
+             gap-6 md:gap-12 w-full mx-auto
+             flex
+             {% if section.settings.mobile_layout == 'slider' %} js-marquee w-auto {% else %} flex-wrap justify-center px-5 {% endif %}" >
+
+    {%- for block in section.blocks -%}
+
+      {% capture item_class %}
+        {%- if block.settings.text != blank and section.settings.icon_layout == 'flex-row' -%}
+          grid grid-cols-3 items-center gap-6
+        {% else %}
+          flex {{ section.settings.icon_layout }} gap-8 text-center
+        {%- endif -%}
+      {% endcapture %}
+
+      <li class="{% if section.settings.mobile_layout == 'slider' %} min-w-[15rem] w-60 lg:w-full {% else %} w-fit {% endif %} lg:min-w-0 lg:w-full {{ item_class }} items-center animate animate-fadeIn" data-delay="{{ forloop.index | times: 150 }}">
+        {%- if block.settings.image != blank -%}
+          
+          {% capture img_wrapper_class %}
+            rounded-full relative
+            {% if block.settings.text == blank %}
+              w-16 lg:w-full h-24 lg:h-28 
+            {% else %}
+              h-16 lg:h-20 w-16 lg:w-full col-span-1
+            {% endif %}            
+          {% endcapture %}
+
+          <div class="{{ img_wrapper_class }}" style="background: {{ section.settings.icon_bg_color }};">
+            {% 
+              render 'responsive-image', 
+              src: block.settings.image,
+              alt: block.settings.image.alt,
+              class: 'w-full h-full absolute top-0 left-0'   
+            %}
+          </div>
+        {%- endif -%}
+
+        {%- if block.settings.text != blank -%}
+          <div class="flex flex-col justify-center col-span-2">
+            <p class="{{ section.settings.text_color }} {{ section.settings.font }} {{ section.settings.text_classes }}">{{ block.settings.text }}</p>
+            {%- if block.settings.paragraph != blank -%}
+              <p class="{{ section.settings.text_color }} text-xl font-tenso">{{ block.settings.paragraph }}</p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+
+    {% if section.settings.mobile_layout == 'slider' %}
+      {%- for block in section.blocks -%}
+        <li class="min-w-[15rem] w-60 lg:w-full grid grid-cols-3 items-center gap-6 animate animate-fadeIn lg:hidden" data-delay="{{ forloop.index | times: 150 }}">
+          {%- if block.settings.image != blank -%}
+            <div class="rounded-full w-16 lg:w-20 h-16 lg:h-20 relative col-span-1" 
+                 style="background: {{ section.settings.icon_bg_color }};">
+              {% 
+                render 'responsive-image', 
+                src: block.settings.image,
+                alt: block.settings.image.alt,
+                class: "w-16 lg:w-20 h-16 lg:h-20 absolute top-0 left-0"   
+              %}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+            <div class="flex flex-col justify-center col-span-2">
+              <p class="{{ section.settings.text_color }} {{ section.settings.font }} {{ section.settings.text_classes }}">{{ block.settings.text }}</p>
+
+              {%- if block.settings.paragraph != blank -%}
+                <p class="{{ section.settings.text_color }} text-sm font-tenso">{{ block.settings.paragraph }}</p>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    {% endif %}
+
+  </ul>
+</section>
+
+{% schema %}
+  {
+    "name": "Icon Banner",
+    "settings": [
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#B76887"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show Border",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "icon_bg_color",
+        "label": "Icon Background Color",
+        "default": "transparent"
+      },
+      {
+        "type": "select",
+        "id": "mobile_layout",
+        "label": "Mobile + Tablet Layout",
+        "default": "grid",
+        "options": [
+          {
+            "label": "Grid Rows",
+            "value": "grid"
+          }, {
+            "label": "Slider",
+            "value": "slider"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "font",
+        "label": "Icon Text Font Family",
+        "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+        "default": "font-freight-sans",
+        "options": [
+          {
+            "label": "Freight Sans",
+            "value": "font-freight-sans"
+          }, 
+          {
+            "label": "Couch",
+            "value": "font-couch"
+          }, 
+          {
+            "label": "Tenso",
+            "value": "font-tenso"
+          },
+          {
+            "label": "Gopher",
+            "value": "font-gopher"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "icon_layout",
+        "label": "Icon Layout",
+        "default": "flex-row",
+        "options": [
+          {
+            "label": "Row",
+            "value": "flex-row"
+          }, {
+            "label": "Column",
+            "value": "flex-col"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "text-black",
+        "options": [
+          {
+            "label": "Black",
+            "value": "text-black"
+          }, {
+            "label": "Blue",
+            "value": "text-blue"
+          }, {
+            "label": "White",
+            "value": "text-white"
+          }, {
+            "label": "Camel",
+            "value": "text-camel"
+          }
+        ]
+      }, {
+        "type": "text",
+        "id": "text_classes",
+        "label": "Additional CSS Classes to add to text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "icon",
+        "name": "Icon + Text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Icon image"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Icon Text"
+          }, {
+            "type": "text",
+            "id": "paragraph",
+            "label": "Icon Paragraph"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Icon Banner"
+      }
+    ]
+  }
+{% endschema %}

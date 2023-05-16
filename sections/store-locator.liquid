@@ -1,0 +1,26 @@
+<!-- sections/store-locator.liquid [ja] -->
+
+
+<div id="stockist-widget-wrapper" class="mt-5 md:mt-0">    
+    <div data-stockist-widget-tag="u12039">
+        <p  class="text-3xl text-center tracking-wider font-medium py-20 animate animate-fadeIn"
+            data-delay="400">
+            Loading store locator...
+        </p>
+    </div>
+</div>
+
+{%- comment -%} Stockist widget script {%- endcomment -%}
+<script>
+    (function(s,t,o,c,k){c=s.createElement(t);c.src=o;c.async=1;
+    k=s.getElementsByTagName(t)[0];k.parentNode.insertBefore(c,k);
+    })(document,'script','//stockist.co/embed/v1/widget.min.js');
+</script>
+
+
+{% schema %}
+{
+    "name": "Store Locator (Stockist)",
+    "class": "section-store-locator"
+}
+{% endschema %}

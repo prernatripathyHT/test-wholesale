@@ -1,0 +1,52 @@
+<!-- snippets/cart-footer [aa] -->
+{% assign original_price = 0 %}
+
+{%- for item in cart.items -%}
+  {% assign product = item.product %}
+  {% assign variant = item.variant %}
+
+  {% assign type = product.type %}
+  {% assign price = item.final_price %}
+
+  {%- comment %}If the variant is on sale{% endcomment -%}
+  {%- if price < variant.compare_at_price and variant.compare_at_price != 0 -%}
+    {% assign compare_at_price = variant.compare_at_price %}
+  {%- elsif item.original_price > price -%}
+    {% assign compare_at_price = item.original_price %}
+  {%- endif -%}
+
+  {% assign is_subscription = false %}
+
+  {%- if item.selling_plan_allocation != blank -%}
+    {% assign is_subscription = true %}
+
+    {% assign compare_at_price = variant.price %}
+  {%- endif -%}
+
+  {%- if compare_at_price > price -%}
+    {% assign price_to_add = compare_at_price | times: item.quantity %}
+    {% assign original_price = original_price | plus: price_to_add %}
+  {%- else -%}
+    {% assign price_to_add = price | times: item.quantity %}
+    {% assign original_price = original_price | plus: price_to_add %}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="js-slide-cart--footer px-4 pt-4 pb-6 border-t border-black bg-beige cart-page:bg-transparent relative
+            cart-page:flex cart-page:flex-col cart-page:md:items-end cart-page:px-0">
+  <div class="hidden cart-page:flex justify-center mb-3">
+    <span class="font-semibold text-blue text-xl uppercase mr-3">Subtotal</span>
+    <span class="font-tenso text-2xl">{{ cart.total_price | money }}</span>
+  </div>
+
+  <p class="font-tenso text-sm text-black text-center mb-2 cart-page:mb-4">shipping & taxes calculated at checkout</p>
+
+  <button type="button"
+          name="checkout"
+          class="js-process-checkout btn btn-secondary w-full cart-page:w-auto">
+    <span>Checkout</span>
+    <span class="sr-only cart-page:hidden">Cart Total</span>
+    <span class="cart-page:hidden"> - {{ cart.total_price | money }}</span>
+  </button>
+
+</div>

@@ -1,0 +1,278 @@
+{
+  "sections": {
+    "16509957948bad1e61": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Training Centers<\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Training centers are a community hub for coffee education. They are a homebase for our regional teams. They are a place for our wholesale partners to train and where all coffee curious people can join us to learn about and celebrate the world of coffee.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "location-card-grid": {
+      "type": "location-card-grid",
+      "blocks": {
+        "1dd2ce3e-12c7-4147-bc47-b37f0d1980f1": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/CCC_HQ_Training_Center.jpg",
+            "title": "Durham",
+            "description": "<p><strong>Roastery & Headquarters<\/strong><\/p><p>812 Mallard Ave<\/p><p>Durham, NC 27701<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "Events and Classes",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-durham-12162055591",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "c39c9853-1cd6-4361-b4c3-9176ad51f667": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/MO4A4313.jpg",
+            "title": "Asheville",
+            "description": "<p>Center for Craft - Floor 2<\/p><p>67 Broadway St<\/p><p>Asheville, NC 28801<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "Events and classes",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-asheville-12162058612",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "33a0bf3c-4798-4bcc-a28d-79f972ef0af9": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/CCC_CHS_2c_espresso.jpg",
+            "title": "Charleston",
+            "description": "<p>85½, Spring St<\/p><p>Charleston, SC 29403<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "",
+            "link_one_url": "shopify:\/\/collections\/all",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "913e04c5-0dc9-46a1-8d61-7402c253e88b": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/CCC_LA_Outdoor_Indoor.jpg",
+            "title": "LA",
+            "description": "<p>1601 Griffith Park Blvd<br\/>Los Angeles, CA 90026<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-la-12162076738",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "ff96152e-b15f-4d36-a537-17fbf281412c": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4B9B5619.jpg",
+            "title": "Miami",
+            "description": "<p>7450 N Miami Ave<br\/>Miami, FL 33150<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-miami-12811162756",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "29724215-d2cb-49ca-9b2b-5c9807033e87": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4B9B8606.jpg",
+            "title": "Dallas",
+            "description": "<p>3333 Commerce St<br\/>Dallas, TX 75226<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-dallas-16946465655",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "d66de56f-bf87-4c4f-98ac-d52def482d02": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/IMG_1761.jpg",
+            "title": "Chicago",
+            "description": "<p>177 North Ada, Unit 106<br\/>Chicago, IL 60607<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-chicago-12162075731",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "39e708ac-64fe-4114-81f2-07902e78f084": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Boston3.jpg",
+            "title": "Boston",
+            "description": "<p>374 Somerville Ave<br\/>Somerville, MA 02143<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-boston-12162071703",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "4f9c3d1f-4837-4b46-865f-e3780c2c6ff0": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/ccny_high_04.jpg",
+            "title": "New York City",
+            "description": "<p>376 Broome St<br\/>New York, NY 10013<\/p><p>*<em>Our New York Training Center is not handicap accessible.<\/em><\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-nyc-12162080766",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "9c174405-639e-49eb-a915-fad9f05a6d08": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4B9B0562.jpg",
+            "title": "Seattle",
+            "description": "<p>313 1st Ave S<br\/>Seattle, WA 98104<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-seattle-12162105941",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "adb3a149-0765-475b-953c-4f806c19145a": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4B9B9221-2.jpg",
+            "title": "Washington, DC",
+            "description": "<p>1781 Florida Ave NW, Suite F<br\/>Washington, DC 20009<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "EVENTS AND CLASSES",
+            "link_one_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-dc-12162023367",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        },
+        "f7aee7fd-e3db-467b-8465-3a07487d8f69": {
+          "type": "card",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/CCC_BayArea_brewbar_1_-2.jpg",
+            "title": "Emeryville",
+            "description": "<p>1329 64th St, Emeryville, CA 94608<\/p>",
+            "button_one_style": "btn btn-secondary",
+            "link_one_text": "",
+            "link_one_url": "shopify:\/\/collections\/all",
+            "link_one_classes": "",
+            "button_two_style": "btn btn-secondary",
+            "link_two_text": "",
+            "link_two_url": "shopify:\/\/collections\/all",
+            "link_two_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "1dd2ce3e-12c7-4147-bc47-b37f0d1980f1",
+        "c39c9853-1cd6-4361-b4c3-9176ad51f667",
+        "33a0bf3c-4798-4bcc-a28d-79f972ef0af9",
+        "913e04c5-0dc9-46a1-8d61-7402c253e88b",
+        "ff96152e-b15f-4d36-a537-17fbf281412c",
+        "29724215-d2cb-49ca-9b2b-5c9807033e87",
+        "d66de56f-bf87-4c4f-98ac-d52def482d02",
+        "39e708ac-64fe-4114-81f2-07902e78f084",
+        "4f9c3d1f-4837-4b46-865f-e3780c2c6ff0",
+        "9c174405-639e-49eb-a915-fad9f05a6d08",
+        "adb3a149-0765-475b-953c-4f806c19145a",
+        "f7aee7fd-e3db-467b-8465-3a07487d8f69"
+      ],
+      "settings": {
+        "title": "<p>Locations<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651001388e586b874": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-camel",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/20211215-MO4A9537.jpg",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Far away from a training center?<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "",
+        "button_style": "btn btn-white",
+        "link_text": "check out our online classes",
+        "link_url": "https:\/\/www.eventbrite.com\/cc\/coffee-at-home-58189",
+        "link_classes": "uppercase tracking-wider font-freight-sans mt-4"
+      }
+    }
+  },
+  "order": [
+    "16509957948bad1e61",
+    "location-card-grid",
+    "1651001388e586b874"
+  ]
+}

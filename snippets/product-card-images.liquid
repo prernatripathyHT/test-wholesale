@@ -1,0 +1,63 @@
+<!-- snippets/product-card-images -->
+
+{%- comment %}
+  Variables:
+  - product: [Product Object]
+{% endcomment -%}
+
+{% if show_hover_image and product.images[1] != blank %}
+  {% assign render_hover_image = true %}
+{%- else -%}
+  {% assign render_hover_image = false %}
+{% endif %}
+
+<div class="min-h-[50vw] h-[50vw] xl:min-h-[33.33vw] xl:h-[33.33vw]
+            w-full relative
+            product-card--img-container
+            bg-bluebell border-b border-black"
+     {% render 'background-color', product: product %}>
+
+  {% assign is_coffee_product = false %}
+  {%- if product.tags contains 'coffee' or product.tags contains 'archive' -%}
+    {% assign is_coffee_product = true %}
+  {%- endif -%}
+
+  {% assign normalized_alt = product.featured_image.alt | downcase %}
+  {% assign is_bag_image = false %}
+  {% if normalized_alt contains bag or product.featured_image.src contains 'bag' %}
+    {% assign is_bag_image = true %}
+  {% endif %}
+
+  {%- if is_bag_image and is_coffee_product -%}
+    {% capture classes %}
+      object-contain product-coffee-image
+      absolute top-4 xl:top-10 left-1/2 -translate-x-1/2
+      w-4/5 h-4/5
+      {% if render_hover_image %} product-card--primary-img {% endif %}
+    {% endcapture %}
+  {%- else -%}
+    {% capture classes %}
+      object-cover
+      absolute top-0 left-1/2 -translate-x-1/2
+      w-full h-full
+      {% if render_hover_image %} product-card--primary-img {% endif %}
+    {% endcapture %}
+  {%- endif -%}
+
+
+  {% render 'responsive-image'
+     src: product.featured_image.src,
+     alt: product.featured_image.alt,
+     class: classes
+  %}
+
+  {%- if render_hover_image -%}
+    {% render 'responsive-image'
+       src: product.images[1].src,
+       alt: product.images[1].alt,
+       class: "object-contain absolute top-4 xl:top-10 left-1/2 -translate-x-1/2 w-4/5 h-4/5 hidden product-card--secondary-img"
+    %}
+  {%- endif -%}
+
+  {% render 'product-attribute-list', product: product %}
+</div>

@@ -1,0 +1,20 @@
+@layer components {
+
+  .article-prose {
+    & h2,
+    & h2 span,
+    & h1 {
+      @apply font-semibold text-black font-couch text-xl lg:text-2xl animate-fadeInUp;
+    }
+    
+    & h3,
+    & h1 ~ h2 {
+      @apply font-gopher font-semibold text-xl lg:text-2xl animate-fadeInUp;
+    }
+    
+    & h3 span,
+    & h1 ~ h2 span {
+      @apply !font-semibold;
+    }
+  }
+}

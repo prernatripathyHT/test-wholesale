@@ -1,0 +1,477 @@
+{
+  "sections": {
+    "1651768167937d2d70": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Product<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "1651787612650b1a80": {
+      "type": "page-nav",
+      "blocks": {
+        "fe2409d1-eaa0-4036-bdfa-85478ec37dbe": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Purchasing",
+            "url": "#purchasing"
+          }
+        },
+        "9e231e2f-d72e-4e3e-a161-1e7f5e643a0c": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Enveritas",
+            "url": "#enveritas"
+          }
+        },
+        "d230597a-c368-41f5-a35b-07df5e7bcdb6": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Value Stream",
+            "url": "#value-stream"
+          }
+        }
+      },
+      "block_order": [
+        "fe2409d1-eaa0-4036-bdfa-85478ec37dbe",
+        "9e231e2f-d72e-4e3e-a161-1e7f5e643a0c",
+        "d230597a-c368-41f5-a35b-07df5e7bcdb6"
+      ],
+      "settings": {
+      }
+    },
+    "1651768743c2ebca48": {
+      "type": "richtext",
+      "blocks": {
+        "6e97d5b0-a5f3-41e7-9b94-21fdaf849a6f": {
+          "type": "text_content",
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu",
+            "classes": "mb-0"
+          }
+        }
+      },
+      "block_order": [
+        "6e97d5b0-a5f3-41e7-9b94-21fdaf849a6f"
+      ],
+      "settings": {
+        "classes": ""
+      }
+    },
+    "165176869450d54ad4": {
+      "type": "icon-list-columns",
+      "blocks": {
+        "4e06bc38-73dd-41e2-95c2-3151e94d65c3": {
+          "type": "columns",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector.png",
+            "title": "What We’re Most Proud Of",
+            "list": "Maintaining the quality of our coffee, education, and customer support during     unprecedented and challenging times.\nFunding 11 Seeds Projects in coffee-producing countries and providing famers     with sustainability verification and resources through our partnership with Enveritas."
+          }
+        },
+        "75cacd7f-236b-44d8-a375-93f0972b2e6e": {
+          "type": "columns",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_1.png",
+            "title": "Priority for Improvement",
+            "list": "Helping suppliers address their sustainability issues through   third-party verifications. \nIncreasing awareness of and demand for coffees from more     sustainable sources. \nCompleting AST Licensure in each region, which will bring the Specialty Coffee Association’s Coffee Skills Program to our customers and provide our     educators with a globally-recognized training certificate."
+          }
+        }
+      },
+      "block_order": [
+        "4e06bc38-73dd-41e2-95c2-3151e94d65c3",
+        "75cacd7f-236b-44d8-a375-93f0972b2e6e"
+      ],
+      "settings": {
+      }
+    },
+    "1651768172ccaad8cb": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Purchasing<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "16517685549a47a409": {
+      "type": "richtext",
+      "blocks": {
+        "e596a18e-e77d-4b2f-8763-e5915d934704": {
+          "type": "text_content",
+          "settings": {
+            "content": "In addition to paying premium prices, we forward contract virtually all of our purchases—99.7% during this period. That means we enter into a contract to buy the coffee before it leaves its country of origin, in many cases before the coffee is harvested. Sharing our purchase intentions with suppliers ahead of time allows everyone to better plan for costs.\nMany roasters buy from different vendors annually depending on quality. Counter Culture takes a different approach. We build long-term relationships with producers and producer groups, providing them with the stability and risk mitigation needed to invest in their operations and the quality of their product. During this purchasing period, we purchased 71% of our coffee from suppliers we’ve worked with for over 5 years.",
+            "classes": "mb-0"
+          }
+        }
+      },
+      "block_order": [
+        "e596a18e-e77d-4b2f-8763-e5915d934704"
+      ],
+      "settings": {
+        "classes": ""
+      }
+    },
+    "1651768551eafacd62": {
+      "type": "image-plus-text",
+      "blocks": {
+        "3db54100-171f-4864-87bc-80792d84f6d0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cherry_sorting_1.png"
+          }
+        },
+        "184667b2-4e5a-4f7e-aee1-4bca91acd322": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Our Principles",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo <\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "Watch the video",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "uppercase flex items-center mr-auto",
+            "btn_icon_name": "eyeballs",
+            "btn_icon_class": "ml-2",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "3db54100-171f-4864-87bc-80792d84f6d0",
+        "184667b2-4e5a-4f7e-aee1-4bca91acd322"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651773727f064d3f8": {
+      "type": "pricing-breakdown",
+      "blocks": {
+        "1174c766-fcf8-4238-ab64-0c983303fc48": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Item 1",
+            "color": "#eb4d33"
+          }
+        },
+        "a3d5f859-c643-4444-a536-28f27c086a48": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Item 2",
+            "color": "#752a45"
+          }
+        },
+        "c1327efc-a532-458c-8115-b0b3fca507e5": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Organic: $1.90",
+            "color": "#752a45"
+          }
+        },
+        "2fe6ebc0-1c44-4dee-b37f-cd44d99acbf9": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Item 4",
+            "color": "#008075"
+          }
+        },
+        "5d110115-e79b-46c3-90ab-402625add55e": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Item 5",
+            "color": "#001a98"
+          }
+        },
+        "b14bac16-eed5-49ae-a61b-3bf631abb57e": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Item 6",
+            "color": "#001a98"
+          }
+        },
+        "20eda02f-9c34-4343-94b5-05cc4b53e8cb": {
+          "type": "breakdown_item",
+          "settings": {
+            "title": "Item 7",
+            "color": "#001a98"
+          }
+        },
+        "8e67f338-e1a8-43d0-9df7-06adc8bc7003": {
+          "type": "key_item",
+          "settings": {
+            "title": "Average C Market Price per lb",
+            "color": "#eb4d33"
+          }
+        },
+        "1f01174d-28ce-40db-8430-12c2226ffdba": {
+          "type": "key_item",
+          "settings": {
+            "title": "Min Fair Trade Certified",
+            "color": "#752a45"
+          }
+        },
+        "23075d8b-0f88-42bd-b81d-cb9572ad3272": {
+          "type": "key_item",
+          "settings": {
+            "title": "Transparent Trade’s Speciatly Coffee Transaction Guide",
+            "color": "#008075"
+          }
+        },
+        "af0e1ecf-e154-41fb-9832-e269bdf20158": {
+          "type": "key_item",
+          "settings": {
+            "title": "Counter Culture Coffee",
+            "color": "#001a98"
+          }
+        }
+      },
+      "block_order": [
+        "1174c766-fcf8-4238-ab64-0c983303fc48",
+        "a3d5f859-c643-4444-a536-28f27c086a48",
+        "c1327efc-a532-458c-8115-b0b3fca507e5",
+        "2fe6ebc0-1c44-4dee-b37f-cd44d99acbf9",
+        "5d110115-e79b-46c3-90ab-402625add55e",
+        "b14bac16-eed5-49ae-a61b-3bf631abb57e",
+        "20eda02f-9c34-4343-94b5-05cc4b53e8cb",
+        "8e67f338-e1a8-43d0-9df7-06adc8bc7003",
+        "1f01174d-28ce-40db-8430-12c2226ffdba",
+        "23075d8b-0f88-42bd-b81d-cb9572ad3272",
+        "af0e1ecf-e154-41fb-9832-e269bdf20158"
+      ],
+      "settings": {
+        "panel_1_heading": "Our Prices",
+        "panel_1_content": "During the 2019–2020 harvest period Counter Culture bought 3,278,501 pounds of green coffee. We paid: \n+  $3.12 per pound weighted average FOB* price\n+  $3.00 per pound weighted average FOB for coffees we used in blends\n+  $3.60 ​​per pound weighted average FOB for the highest-quality   coffees—coffees we sold as Single–Origin, Limited Release, or  Exclusive products",
+        "panel_2_heading": "2020 fob* Prices per lb",
+        "start_val": "$0",
+        "end_val": "$4"
+      }
+    },
+    "16517681869d931922": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Quality<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "16517892769358497e": {
+      "type": "number-text-columns",
+      "settings": {
+        "number": "86",
+        "title": "Our Score",
+        "content": "<p>Quality stems from exemplary practices at every point in a supply stream. The coffee industry consensus  is that \"specialty coffees\" are those which score 80 points or higher on a 100-point scale and contain minimum defects. Our quality assessment team scored the coffees we purchased a weighted average of 86 points. <\/p>"
+      }
+    },
+    "1651768191abdf05f6": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Value Stream<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "1651770286e77677dd": {
+      "type": "richtext",
+      "blocks": {
+        "c2c91e8e-ca22-46da-819e-f502ff0c7265": {
+          "type": "text_content",
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu",
+            "classes": ""
+          }
+        },
+        "9ae810ea-c2ec-47f9-bb9c-cfae79fed929": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Frame_9b6ae874-26ae-4b8a-af85-f6d5ed9c5be0.png",
+            "classes": "mb-4"
+          }
+        }
+      },
+      "block_order": [
+        "c2c91e8e-ca22-46da-819e-f502ff0c7265",
+        "9ae810ea-c2ec-47f9-bb9c-cfae79fed929"
+      ],
+      "settings": {
+        "classes": "bg-beige"
+      }
+    },
+    "1651768195d323eabc": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Impact Assessment<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "16517684276422eef4": {
+      "type": "image-plus-text",
+      "blocks": {
+        "433cd6fc-cecf-4461-a1db-0ca121c9e9db": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Picking_Coffee_Colombia2_1.png"
+          }
+        },
+        "40c92557-6378-49c6-8f10-b5741e78cb69": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Enveritas",
+            "description": "<p>We strive to source coffee in a way that enables sustainable production. We’ve partnered with Enveritas to help us understand how our partners and our sourcing model are performing in relation to that ever-evolving goal.<br\/> <br\/>Enveritas' verification measures farm-level performance across dozens of sustainability indicators. This information helps us work closer with organizations to both celebrate the successes and support the improvements farmers seek. <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "433cd6fc-cecf-4461-a1db-0ca121c9e9db",
+        "40c92557-6378-49c6-8f10-b5741e78cb69"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651768376baeea8e5": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Want to learn more?<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "",
+        "button_style": "camel-underline",
+        "link_text": "Check out our most recent Transparency report",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": "block text-center uppercase mt-4"
+      }
+    }
+  },
+  "order": [
+    "1651768167937d2d70",
+    "1651787612650b1a80",
+    "1651768743c2ebca48",
+    "165176869450d54ad4",
+    "1651768172ccaad8cb",
+    "16517685549a47a409",
+    "1651768551eafacd62",
+    "1651773727f064d3f8",
+    "16517681869d931922",
+    "16517892769358497e",
+    "1651768191abdf05f6",
+    "1651770286e77677dd",
+    "1651768195d323eabc",
+    "16517684276422eef4",
+    "1651768376baeea8e5"
+  ]
+}

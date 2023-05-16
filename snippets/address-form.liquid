@@ -1,0 +1,35 @@
+<!-- snippets/address-form -->
+
+{%- if address != blank -%}
+  {% form 'customer_address', address %}
+
+    <div class="flex items-center flex-col md:flex-row mb-5 pb-5 border-b border-black">
+      <h1 class="font-couch text-xl mb-2.5 md:mb-0">Edit Address</h1>
+
+      <button type="reset"
+              data-target="#EditAddress_{{ address.id }}"
+              class="js-cancel-address-form btn-transparent btn-with-icon flex items-center md:ml-10 transition-all hover:text-blue text-lg">
+        <span class="mr-2">or cancel</span>
+        {% render 'icon', icon: 'arrow-right' %}
+      </button>
+    </div>
+
+    {% render 'address-form-content', address: address, form: form %}
+
+  {% endform %}
+{%- else -%}
+  {% form 'customer_address', customer.new_address %}
+    <div class="flex items-center flex-col md:flex-row mb-8">
+      <h1 class="font-couch text-xl mb-2.5 md:mb-0">New Address</h1>
+
+      <button type="reset"
+              data-target="#AddAddress"
+              class="btn-transparent btn-with-icon flex items-center md:ml-10 transition-all hover:text-blue text-lg">
+        <span class="mr-2">or cancel</span>
+        {% render 'icon', icon: 'arrow-right' %}
+      </button>
+    </div>
+
+    {% render 'address-form-content', address: address, form: form %}
+  {% endform %}
+{%- endif -%}

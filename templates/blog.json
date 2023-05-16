@@ -1,0 +1,116 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "title": "<p>The Extract: <br\/>Counter Culture Coffee's Blog<\/p>",
+        "text_size_mobile": "text-5xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "text-stroke-outline",
+        "filter_menu": "blog-filter-menu"
+      }
+    },
+    "primary-blog-grid": {
+      "type": "blog-grid",
+      "settings": {
+        "tag_filter": "",
+        "feature_position": 1,
+        "grid_limit": 17,
+        "show_featured_article": true,
+        "paginate_after_limit": true,
+        "grid_offset": 0,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16506667028887e4e8": {
+      "type": "blog-slider",
+      "disabled": true,
+      "settings": {
+        "tag_filter": "resources",
+        "background": "#EFEBE1",
+        "grid_limit": 8,
+        "title": "<p>Resources<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165066602028e258bb": {
+      "type": "blog-grid",
+      "disabled": true,
+      "settings": {
+        "tag_filter": "",
+        "feature_position": 0,
+        "grid_limit": 4,
+        "show_featured_article": true,
+        "paginate_after_limit": false,
+        "grid_offset": 5,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16510038579f2ae179": {
+      "type": "newsletter",
+      "blocks": {
+        "1651003857cfcd6f67-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want the latest news delivered to  your inbox?"
+          }
+        },
+        "1651003857cfcd6f67-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "1651003857cfcd6f67-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>By entering your email, you are agreeing to our terms and conditions and fully understand our privacy policy.<br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1651003857cfcd6f67-0",
+        "1651003857cfcd6f67-2",
+        "1651003857cfcd6f67-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "background_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "primary-blog-grid",
+    "16506667028887e4e8",
+    "165066602028e258bb",
+    "16510038579f2ae179"
+  ]
+}

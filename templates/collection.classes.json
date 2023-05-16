@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "1649280450c0012439": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design.png",
+        "show_sunburst": true,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Our Classes<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-8",
+        "content": "<p>At Counter Culture Coffee, we are lifelong students of coffee. The more we learn, the more we are driven to share our discoveries with customers, supply chain partners, and industry peers.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "main": {
+      "type": "collection-grid",
+      "settings": {
+        "alt_collection": "",
+        "title": "",
+        "show_hover_image": false,
+        "show_atc": true,
+        "show_filters": true,
+        "feature_image_index": 6,
+        "grid_limit": 12
+      }
+    }
+  },
+  "order": [
+    "1649280450c0012439",
+    "main"
+  ]
+}

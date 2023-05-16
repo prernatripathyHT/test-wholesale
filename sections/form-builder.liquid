@@ -1,0 +1,430 @@
+<!-- sections/form-builder -->
+
+<section id="{{ page.handle }}--form-builder">
+  <div class="relative grid {% if section.settings.image != blank %} xl:grid-cols-2{% endif %}">
+    {% if section.settings.image != blank %}
+      <div class="h-full product--image-container">
+        <div class="w-full product--image-slide flex items-center justify-start relative">
+          {%
+            render 'responsive-image',
+            src: section.settings.image.src,
+            alt: section.settings.image.alt,
+            class: "h-full w-full object-cover"
+          %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="flex flex-col">
+
+      {% unless section.settings.title == blank and section.settings.content == blank %}
+        <div class="px-5 py-12 lg:px-12 lg:py-20 border-b border-black">
+          {%- unless section.settings.title == blank -%}
+            {%
+              render 'ct-heading',
+              title: section.settings.title,
+              tag: section.settings.tag,
+              text_size_mobile: section.settings.text_size_mobile,
+              text_size_desktop: section.settings.text_size_desktop,
+              text_color: section.settings.text_color,
+              font: section.settings.font,
+              alignment: section.settings.alignment,
+              weight: section.settings.weight,
+              class: section.settings.title_classes
+            %}
+          {%- endunless -%}
+          {%- unless section.settings.content == blank -%}
+            <div class="rte text-lg">{{ section.settings.content }}</div>
+          {%- endunless -%}
+        </div>
+
+      {% endunless %}
+
+      {% render 'form-builder' %}
+    </div>
+  </div>
+
+
+</section>
+
+{% schema %}
+{
+  "name": "Form Builder",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form Title"
+    },
+    {
+      "type": "richtext",
+      "id": "sucess_message",
+      "label": "Success Message",
+      "default": "<p>Thanks! We've received your inquiry and will be in touch soon.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "radio",
+      "name": "Radio Group",
+      "settings": [
+        {
+          "type": "select",
+          "id": "input_type",
+          "label": "Input Type",
+          "default": "radio",
+          "options": [
+            {
+              "label": "Radio",
+              "value": "radio"
+            },
+            {
+              "label": "Checkbox",
+              "value": "checkbox"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Input Header"
+        },
+        {
+          "type": "text",
+          "id": "options",
+          "label": "Radio Options",
+          "default": "Option 1|||Option 2",
+          "info": "Each option MUST separated by '|||' "
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Input Name"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Input Label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "name": "Select Options",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Input Header"
+        },
+        {
+          "type": "text",
+          "id": "options",
+          "label": "Select Options",
+          "default": "Option 1|||Option 2",
+          "info": "Each option MUST separated by '|||' "
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Input Name"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Input Label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text Input",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Input Header"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Input Name"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Input Label"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Input Placeholder"
+        },
+        {
+          "type": "select",
+          "id": "input_type",
+          "label": "Input Type",
+          "default": "text",
+          "options": [
+            {
+              "label": "Text",
+              "value": "text"
+            },
+            {
+              "label": "Textarea",
+              "value": "textarea"
+            },
+            {
+              "label": "Email",
+              "value": "email"
+            },
+            {
+              "label": "Password",
+              "value": "password"
+            },
+            {
+              "label": "Phone",
+              "value": "tel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Form Builder"
+    }
+  ]
+}
+{% endschema %}

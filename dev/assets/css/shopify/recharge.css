@@ -1,0 +1,67 @@
+.account--section div#rc_login {
+  margin: 3rem 0;
+  text-align: left;
+}
+
+#recharge-te {
+  counter-reset: primary-ordered;
+  @apply pb-20;
+}
+
+#recharge-te .popup > div {
+  height: 75%;
+  width: 90%;
+  overflow: scroll;
+}
+
+body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_subscription_container.rc_subscription_card_element_wrapper {
+  @apply relative p-0;
+
+  & .rc_subscription_info_container,  & .rc_subscription_next_charge_date {
+    @apply px-5 py-12 lg:px-8 py-8;
+  }
+
+  & .rc_photo_container img {
+    max-height: 12.5rem;
+    max-width: 12.5rem;
+    min-width: 12.5rem;
+  }
+
+  @screen lg {
+    background: linear-gradient(to right,
+        theme('colors.blue') 0,
+        theme('colors.blue') 16rem,
+        transparent 16rem,
+        transparent 100%);
+  }
+}
+
+
+
+@screen lg {
+  body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_subscription_container.rc_subscription_card_element_wrapper:before {
+    content: "0"counter(primary-ordered);
+    counter-increment: primary-ordered;
+    font-size: rem(120);
+    font-family: theme('fontFamily.tenso');
+    font-weight: normal;
+    line-height: .75;
+    @apply pl-8 py-8;
+    @apply text-stroke-white;
+    min-width: 125px;
+    max-width: 125px;
+  }
+
+  #recharge-te .popup > div {
+    height: auto;
+    width: auto;
+    overflow: inherit;
+  }
+}
+
+
+/* We Suggest... */
+body#recharge-novum #recharge-te .subscription--card-image img {
+  max-height: none; max-width: none;
+  @apply h-60 w-60 mx-auto;
+}

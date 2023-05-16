@@ -1,0 +1,11 @@
+@layer components {
+  .cart--coffee-fill {
+    transform: scaleY(0);
+    transition: transform .4s linear;
+    transform-origin: bottom;
+  }
+
+  .cart--coffee-fill.active {
+    transform: scaleY(1);
+  }
+}

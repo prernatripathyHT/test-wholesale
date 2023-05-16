@@ -1,0 +1,407 @@
+{
+  "sections": {
+    "16509957948bad1e61": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Careers<\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Join our team of passionate, dynamic, diverse, coffee-driven people!<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "165108476492da8499": {
+      "type": "image-plus-text",
+      "disabled": true,
+      "blocks": {
+        "6b7b34d2-6048-4f05-8928-a671eadec59b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Miami_crop_25_1_1.png"
+          }
+        },
+        "de963932-ea03-4b02-8dee-1798084d3e4b": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>Join our team of passionate, dynamic, diverse, coffee-driven people!<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "6b7b34d2-6048-4f05-8928-a671eadec59b",
+        "de963932-ea03-4b02-8dee-1798084d3e4b"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16510868988aefbe9a": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Benefits<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "1651090290618b1c5e": {
+      "type": "content-columns",
+      "blocks": {
+        "68d9e964-a1c0-435d-97b9-a1619885d5aa": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/MO4A1463-Edit-Edit-2.jpg",
+            "title": "<p><strong>PAID TIME OFF AND <br\/>PARENTAL LEAVE<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "733f7762-332a-4e66-b982-260f3edb6a85": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4B9B9520-2.jpg",
+            "title": "<p><strong>COMPREHENSIVE AND AFFORDABLE HEALTH CARE<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "c11b46ec-b2d1-4b4d-835a-a8458a1bbb98": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/MO4A5515-Edit3-Edit.jpg",
+            "title": "<p><strong>PAID COMMUNITY <br\/>VOULENTEER TIME<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "031ce0b8-a14f-4f77-92bb-d68c672c9aa9": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/IcedBeach_1365-2.jpg",
+            "title": "<p><strong>$1200 ANNUALLY IN EMPLOYEE SUSTAINAIBILITY FUNDS<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "5993d8ee-b47e-4414-aed3-7a1414e22c25": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Counter_Culture-10-3.jpg",
+            "title": "<p><strong>FREE COFFEE AND MERCHANDISE DISCOUNTS<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "c3d32f8b-2901-4893-9c7c-aee7d9c2bd13": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4B9B9907-5.jpg",
+            "title": "<p><strong>LEARNING AND PROFESSIONAL DEVELOPMENT<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "ef3087ef-ab12-4c90-a5de-b76fc090e87c": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/MO4A5917-Edit.jpg",
+            "title": "<p><strong>401K MATCHING AND <br\/>PROFIT SHARING<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "937dd37f-7a42-4cf1-aa0d-9bf47c85012b": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/MO4A.jpg",
+            "title": "<p><strong>FREE FINANCIAL PLANNING SERVICES<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        },
+        "ee647b15-0590-4c7f-8987-2ee5566d621f": {
+          "type": "grid_item",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/dad_6826-2.jpg",
+            "title": "<p><strong>WELLNESS PROGRAMS <br\/>AND INCENTIVES<\/strong><\/p>",
+            "title_class": "",
+            "desc": "",
+            "desc_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "68d9e964-a1c0-435d-97b9-a1619885d5aa",
+        "733f7762-332a-4e66-b982-260f3edb6a85",
+        "c11b46ec-b2d1-4b4d-835a-a8458a1bbb98",
+        "031ce0b8-a14f-4f77-92bb-d68c672c9aa9",
+        "5993d8ee-b47e-4414-aed3-7a1414e22c25",
+        "c3d32f8b-2901-4893-9c7c-aee7d9c2bd13",
+        "ef3087ef-ab12-4c90-a5de-b76fc090e87c",
+        "937dd37f-7a42-4cf1-aa0d-9bf47c85012b",
+        "ee647b15-0590-4c7f-8987-2ee5566d621f"
+      ],
+      "settings": {
+      }
+    },
+    "47d41213-c80f-431d-8066-5e42da8e9eea": {
+      "type": "image-plus-text",
+      "blocks": {
+        "b8354cc2-4def-4246-b4cb-1c2ec684e1db": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "How to Apply",
+            "font": "font-gopher",
+            "description": "",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "0d948cf0-47ed-4684-97e0-86541f055955": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p><strong>If you find a position that matches your skill set<\/strong>, please fill out an online application. <\/p><p>Once you submit your application, you will receive a confirmation email. We will carefully review your application and respond to applicants that best match the qualifications for the open positions.<\/p><p><strong>EEO Notice Counter Culture Coffee<\/strong> is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or protected veteran status and will not be discriminated against on the basis of disability.<\/p><p><strong>General Notices Counter Culture Coffee is a Drug and Alcohol Free Workplace. <\/strong>Employment Eligibility Federal Law requires all employers to verify the identity and employment eligibility of all persons hired to work in the United States. This is completed through the Federal Form I-9 and E-Verify.<\/p><p><strong>ADA Reasonable Accommodations<\/strong><\/p><p>In accordance with the Americans with Disabilities Act (ADA),Counter Culture Coffee will provide reasonable accommodations as needed on a case-by-case basis for qualified applicants. If you are unable to use or access our application website as a result of your disability, you may request a reasonable accommodation by emailing <a href=\"mailto:hr@counterculturecoffe.com\" target=\"_blank\">hr@counterculturecoffe.com<\/a> with your contact information and the nature of your accessibility issue. <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "b8354cc2-4def-4246-b4cb-1c2ec684e1db",
+        "0d948cf0-47ed-4684-97e0-86541f055955"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "#ffffff",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "ad4335e4-450e-4ad9-8d15-dc898482d7f0": {
+      "type": "faq",
+      "blocks": {
+        "b5647dd5-33d1-4e83-878d-85b4fb6f264e": {
+          "type": "faq",
+          "settings": {
+            "question": "Finance",
+            "answer": "<p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1546536\" title=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1546536\">Financial Analyst | WFH<\/a><\/p><p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1512508\" title=\"Staff Accountant\">Staff Accountant <\/a> | Durham, NC<\/p>",
+            "label": "",
+            "product_ref": ""
+          }
+        },
+        "7804c058-d017-4088-bd85-a972388480d4": {
+          "type": "faq",
+          "settings": {
+            "question": "Production",
+            "answer": "<p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1457479\" title=\"Inventory Control and Production Team Member\">Inventory Control and Production Team Member<\/a> | Durham, NC<\/p>",
+            "label": "Inventory Control and Production Team Member",
+            "product_ref": ""
+          }
+        },
+        "de3279c7-ddda-4cdd-8eca-7cae5e6e5279": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "question": "Customer Experience",
+            "answer": "<p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1503197\" title=\"Wholesale Customer Experience Associate\">Wholesale Customer Experience Associate<\/a> | Durham, NC<\/p>",
+            "label": "",
+            "product_ref": ""
+          }
+        },
+        "4cca767a-9153-408e-a760-88abbb1c99b1": {
+          "type": "faq",
+          "settings": {
+            "question": "Roasting",
+            "answer": "<p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1560921\" title=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1560921\"><strong>Apprentice Roaster \/ Quality Analyst | Bay Area, CA<\/strong><\/a><\/p><p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1505049\" title=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1505049\"><strong>Roasting Team Member<\/strong><\/a> | Durham, NC<\/p>",
+            "label": "Roasting Team Member",
+            "product_ref": ""
+          }
+        },
+        "f757164d-2007-45b1-b44a-3935fe23de9a": {
+          "type": "faq",
+          "settings": {
+            "question": "Wholesale",
+            "answer": "<p><a href=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1499702\" title=\"https:\/\/recruiting.paylocity.com\/Recruiting\/Jobs\/Details\/1499702\">Regional Technical Services<\/a> | Washington, DC<\/p>",
+            "label": "Regional Technical Services",
+            "product_ref": ""
+          }
+        }
+      },
+      "block_order": [
+        "b5647dd5-33d1-4e83-878d-85b4fb6f264e",
+        "7804c058-d017-4088-bd85-a972388480d4",
+        "de3279c7-ddda-4cdd-8eca-7cae5e6e5279",
+        "4cca767a-9153-408e-a760-88abbb1c99b1",
+        "f757164d-2007-45b1-b44a-3935fe23de9a"
+      ],
+      "settings": {
+        "text_color": "",
+        "header": "Current Job Openings",
+        "header_size": "text-4xl"
+      }
+    },
+    "1651085220e185010a": {
+      "type": "testimonials",
+      "blocks": {
+        "0f08c27f-f407-4c98-9a13-e0a5f84bbf1e": {
+          "type": "testimonial",
+          "settings": {
+            "background_color": "#f69b73",
+            "content": "I love working at Counter Culture because we've got the best people AND the best coffee!",
+            "author": "Ryan Ludwig, Educator | New York, NY",
+            "content_size": "text-2xl",
+            "author_size": "text-xl"
+          }
+        },
+        "5c3b9c87-c950-4ed6-869e-4a43b39ee76a": {
+          "type": "testimonial",
+          "settings": {
+            "background_color": "#fdbf69",
+            "content": "Counter Culture is simply the best. I love how everything we do comes back to quality, sustainability, and education!",
+            "author": "Addison Lentz, Creative Associate | Durham, NC",
+            "content_size": "text-2xl",
+            "author_size": "text-xl"
+          }
+        },
+        "a26761b2-8032-4ba9-9be7-217c590d7794": {
+          "type": "testimonial",
+          "disabled": true,
+          "settings": {
+            "background_color": "#fdbf69",
+            "content": "I love working at Counter Culture because I get to work with  Amanda everyday.",
+            "author": "Christy Duggan, Marketing Manager | Durham, NC",
+            "content_size": "text-2xl",
+            "author_size": "text-xl"
+          }
+        }
+      },
+      "block_order": [
+        "0f08c27f-f407-4c98-9a13-e0a5f84bbf1e",
+        "5c3b9c87-c950-4ed6-869e-4a43b39ee76a",
+        "a26761b2-8032-4ba9-9be7-217c590d7794"
+      ],
+      "settings": {
+      }
+    },
+    "1651086987dcbc66a8": {
+      "type": "page-banner",
+      "disabled": true,
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Open Positions<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "job-positions": {
+      "type": "job-positions",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "16509957948bad1e61",
+    "165108476492da8499",
+    "16510868988aefbe9a",
+    "1651090290618b1c5e",
+    "47d41213-c80f-431d-8066-5e42da8e9eea",
+    "ad4335e4-450e-4ad9-8d15-dc898482d7f0",
+    "1651085220e185010a",
+    "1651086987dcbc66a8",
+    "job-positions"
+  ]
+}

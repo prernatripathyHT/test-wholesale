@@ -1,0 +1,130 @@
+.section-store-locator #stockist-widget-wrapper #stockist-widget {
+    --panel-width: 100%;
+
+
+
+    @screen lg {
+        --panel-width: 50%;
+    }
+
+    /* Search bar */
+    & .stockist-search-form {
+        margin-bottom: theme('spacing.6');
+        padding-inline: theme('spacing.5');
+
+        & .stockist-query-entry button {
+            border-radius: 0;
+            height: 50px;
+
+            @apply btn btn-secondary;
+        }
+
+        @screen lg {
+            padding: 0;
+
+            & .stockist-query-entry {
+                display: flex;
+                flex-direction: column;
+                gap: theme('spacing.5');
+
+                & button {
+                    font-weight: 600;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+
+                    height: auto; width: rem(180);
+                    margin: 0;
+                    padding: theme('spacing.3');
+
+                    & .stockist-icon-search { display: none; }
+
+                    &::after {
+                        content: "Find";
+                    }
+                }
+            }
+        }
+
+        & .stockist-search-field {
+            border: rem(1) solid theme('colors.black');
+            height: auto;
+            padding-block: theme('spacing.3');
+            padding-inline: theme('spacing.4');
+
+            &, &::placeholder {
+                color: theme('colors.black');
+            }
+        }
+    }
+
+    /* Search & results */
+    & .stockist-side-panel {
+        border-inline: rem(1) solid theme('colors.black');
+        width: var(--panel-width);
+        padding: theme('spacing.5');
+
+        @screen lg {
+            padding-block: theme('spacing.10');
+            padding-inline: theme('spacing.18');
+        }
+
+        /* Results list */
+        & .stockist-result-list ul {
+            display: flex;
+            flex-direction: column;
+            gap: theme('spacing.5');
+            margin: 0;
+
+            @screen lg {
+              gap: theme('spacing.10');
+            }
+        }
+
+        /* Individual result */
+        & .stockist-result {
+            border: rem(1) solid theme('colors.black');
+            padding-top: 0;
+            padding-bottom: theme('spacing.5');
+
+            &.stockist-selected {
+                border: rem(5) solid theme('colors.yellow') !important;
+            }
+
+            & .stockist-result-distance { display: none; }
+
+            & .stockist-result-name {
+                background-color: theme('colors.black');
+                border-bottom: rem(1) solid theme('colors.black');
+                color: theme('colors.white');
+                font-size: theme('fontSize.lg');
+                
+                @apply font-gopher px-5 py-2.5 mb-2.5 font-semibold;
+
+                @screen lg {
+                    font-size: theme('fontSize.xl');
+                }
+            }
+
+            & .stockist-result-address {
+                @apply px-5;
+            }
+
+            & > div {
+                padding-inline: theme('spacing.8');
+
+                font-family: theme('fontFamily.tenso');
+                font-size: theme('fontSize.lg');
+                letter-spacing: 0.08em;
+
+                @screen lg {
+                    padding-inline: theme('spacing.10');
+                }
+            }
+        }
+    }
+
+    /* Map */
+    & .stockist-map {
+        right: var(--panel-width);
+    }
+}

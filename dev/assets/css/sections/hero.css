@@ -1,0 +1,31 @@
+@layer components {
+  .hero--no-img {
+    min-height: 40rem;
+  }
+
+  .text-decorate-squiggles em, .hover-squiggle {
+    font-style: normal;
+    position: relative;
+    display: inline-block;
+  }
+
+  .text-decorate-squiggles em:after, .hover-squiggle:after {
+    content: "";
+    background-image: var(--img-squiggle-static);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: rem(20);
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+
+  .font-varies p {
+    @apply font-freight-sans text-2xl lg:text-4xl;
+  }
+
+  .font-varies em {
+    @apply font-couch text-lg lg:text-2xl;
+  }
+}

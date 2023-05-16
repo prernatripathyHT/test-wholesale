@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": true,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border-b border-black",
+        "use_squiggles": false,
+        "title": "<p>Gift Subscriptions<\/p>",
+        "text_size_mobile": "text-5xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Send coffee as a gift. Choose between 3,  6, or 12 month options.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "gift-subscription": {
+      "type": "gift-subscription",
+      "blocks": {
+        "41240172-23a1-498e-b498-b5db5c9e4415": {
+          "type": "gift_product",
+          "settings": {
+            "product": "gift-subscription-3-month"
+          }
+        },
+        "812c6f7a-419f-4e4e-bb28-71a5bf6faed6": {
+          "type": "gift_product",
+          "settings": {
+            "product": "6-month-gift-subscription"
+          }
+        },
+        "a89db355-abb1-41c4-9356-ebfe119f0995": {
+          "type": "gift_product",
+          "settings": {
+            "product": "12-month-gift-subscription"
+          }
+        }
+      },
+      "block_order": [
+        "41240172-23a1-498e-b498-b5db5c9e4415",
+        "812c6f7a-419f-4e4e-bb28-71a5bf6faed6",
+        "a89db355-abb1-41c4-9356-ebfe119f0995"
+      ],
+      "settings": {
+        "duration_header": "How long should the subscription last?",
+        "coffee_header": "Which coffee do you want to send?",
+        "quantity_header": "How much coffee should we send?"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "gift-subscription"
+  ]
+}

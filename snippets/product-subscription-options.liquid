@@ -1,0 +1,72 @@
+<!-- snippets/product-subscription-options [aa] -->
+{%- comment %}
+	Alternate wrapper for ReCharge Widget. Uses default Shopify selling_plan options
+{% endcomment -%}
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+{%- if current_variant.selling_plan_allocations != blank -%}
+  {%- unless current_variant.requires_selling_plan -%}
+  
+    {% liquid 
+       assign current_price = current_variant.price
+       assign subscription_price = current_variant.selling_plan_allocations[0].price
+       assign subscription_savings = current_price | minus: subscription_price
+    %}
+    
+    <div class="flex mb-2 w-full py-3 {{ class }}">
+      <div class="custom-checkbox mx-2 w-full">
+        <div class="checkbox-wrapper">
+          <input id="delivery--subscribe" type="radio" name="delivery_option" value="subscribe" checked />
+        </div>
+        
+        <label for="delivery--subscribe">subscribe + save <span data-subscription-savings>{{ subscription_savings | money_without_trailing_zeros }}</span></label>
+        {% comment %} <label for="delivery--subscribe">subscribe + save 10%</label> {% endcomment %}
+        
+      </div>
+
+      <div class="custom-checkbox mx-2 w-full">
+        <div class="checkbox-wrapper">
+          <input id="delivery--one-time" type="radio" name="delivery_option" value="one-time" />
+        </div>
+        <label for="delivery--one-time">one-time purchase</label>
+      </div>
+    </div>
+  {%- endunless -%}
+
+  <div class="w-full js-selling-plan-group relative z-10 mb-5 lg:w-1/2 mr-auto animate animate-fadeInUp">
+
+    {% capture option_id %}selling-plan-{{ product.id }}{% endcapture %}
+
+    <label for="{{ option_id }}" class="sr-only">{{ option.name }}</label>
+    <select id="{{ option_id }}"
+            class="hidden"
+            name="selling_plan"
+            data-name="selling_plan"
+            data-form="{{ product_form_id }}"
+          >
+      {% for allocation in current_variant.selling_plan_allocations %}
+        {% assign delivery_name = allocation.selling_plan.name | remove: "Delivery every" | strip %}
+
+        <option value="{{ allocation.selling_plan.id | escape }}" {% if delivery_name == '2 Weeks' %}selected="selected"{% endif %}>
+          {{ delivery_name }}
+        </option>
+      {%- endfor -%}
+    </select>
+
+    {% assign selling_plan_options_size = current_variant.selling_plan_allocations | size %}
+
+    {%- unless selling_plan_options_size == 1 -%}
+      {%
+        render 'custom-selling-plan-select',
+        trigger: option_id,
+        option_name: "delivered",
+        selected_value: "every 2 weeks",
+        option_values: current_variant.selling_plan_allocations,
+        product: product,
+        product_form_id: product_form_id
+      %}
+    {%- endunless -%}
+  </div>
+
+{%- endif -%}

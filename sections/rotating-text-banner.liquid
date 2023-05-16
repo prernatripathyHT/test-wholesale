@@ -1,0 +1,93 @@
+<!-- sections/rotating-text-banner [aa] -->
+
+{%- comment %}
+	leading-loose
+{% endcomment -%}
+
+{% capture slick_settings %}
+  {
+    "dots": false,
+    "arrows": false,
+    "infinite": true,
+    "adaptiveHeight": true,
+    "speed": 500,
+    "autoplay": true,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "useAutoplayToggleButton": false,
+    "vertical": true
+  }
+{% endcapture %}
+
+<section class="bg-white py-12 px-5 lg:px-0 relative"
+         {%- if section.settings.background_color != blank -%}
+           style="background: {{ section.settings.background_color }};"
+         {%- endif -%}>
+
+  <div class="flex flex-col gap-2 items-center w-full lg:w-10/12 mx-auto">
+    <div class="flex flex-col lg:flex-row items-center">
+      <div class="flex items-start text-center font-regular text-black text-2xl lg:text-3xl animate-fadeInUp animate-animated">
+        <div class="flex flex-col lg:flex-row">
+          <span class="w-full font-freight-sans font-medium">{{ section.settings.title }}</span>
+
+          <ul class="js-slick w-auto max-w-full md:max-w-md"
+                data-slick='{{ slick_settings | strip }}'>
+            {%- for block in section.blocks -%}
+              {%- unless block.settings.text == blank -%}
+                <li class="font-couch text-lg lg:text-2xl px-2.5 text-left">{{ block.settings.text }}</li>
+              {%- endunless -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Rotating Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Theming Settings"
+    },
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rotating_text",
+      "name": "Rotating Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Rotating Text Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Rotating Banner"
+    }
+  ]
+}
+{% endschema %}

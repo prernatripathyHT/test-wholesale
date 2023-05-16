@@ -1,0 +1,12 @@
+<!-- snippets/mega-menu-list [aa] -->
+
+<div class="mx-10 px-20 py-6 border-l border-blue flex flex-col justify-center">
+  {%- for sublink in block.settings.menu_list.links -%}
+    <li class="{% unless forloop.last %} mb-8 {% endunless %}">
+      <a href="{{ sublink.url }}"
+         class="hover:text-blue transition-colors">
+        <span class="text-left text-3xl block">{{ sublink.title }}</span>
+      </a>
+    </li>
+  {%- endfor -%}
+</div>

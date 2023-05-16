@@ -1,0 +1,417 @@
+{
+  "sections": {
+    "1652126468fa7c61d6": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_6.png",
+        "show_sunburst": true,
+        "sunburst_color": "#6dc3b5",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Always Striving for Sustainable<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-white",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Environmental, social, and fiscal sustainability are at the heart of everything we do. From supply chain partnerships to manufacturing practices, we use transparency as a way to make Counter Culture’s business model sustainable for all parties involved. In an industry that unfortunately harbors widespread inequity, we’re committed to make coffee a force for good by acting responsibly and working collaboratively.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "2de36d7c-2c3c-48e4-b58c-31457d13ef9e": {
+      "type": "banner-slider",
+      "blocks": {
+        "e59d30ba-7045-4a77-ba85-cc06e740640d": {
+          "type": "banner",
+          "settings": {
+            "image_right": "shopify:\/\/shop_images\/image-2.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "rgba(0,0,0,0)",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>We Build Long-Term Relationships. <\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h2",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>In 2021, 71% of our coffee came from producers we worked with for five or more years. As part of these relationships, we give detailed feedback on coffee, encourage experimentation, and welcome collaboration and context from the producers. We believe sustaining relationships is fundamental to coffee quality and helps us work toward a more equitable coffee industry.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "ecdee5f6-15e9-443b-a243-bfbeb45ef56b": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-1_51fe5ce6-8249-46ed-8843-5a17cf16b87c.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "rgba(0,0,0,0)",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>We Pay Premium Prices.<\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h2",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>Because we believe everyone deserves to make a living wage, we pay above the “market price” for all our coffees. We contract as much coffee as possible before its delivery through a purchasing model known as forward-contracting. This provides us and our partners the stability and transparency to plan operational and quality investments.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "4d1d4d54-0128-4e44-97dc-fbfe85088ad4": {
+          "type": "banner",
+          "settings": {
+            "image_right": "shopify:\/\/shop_images\/flowr.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>We are Transparent.<\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>Every year since 2009, we publish a Transparency Report, filled with data on our products, our supply chains, and our impact on the planet. We believe there is a connection between making these metrics visible and the overall well-being of our partners at every step of the process.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "e59d30ba-7045-4a77-ba85-cc06e740640d",
+        "ecdee5f6-15e9-443b-a243-bfbeb45ef56b",
+        "4d1d4d54-0128-4e44-97dc-fbfe85088ad4"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "title": "<p>Sustainable Purchasing<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "3b473bc3-1667-465a-bc2c-e72476005c79": {
+      "type": "banner-slider",
+      "blocks": {
+        "54bc982b-4ce5-49e1-9769-be5c39109a7f": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-1_a6a765ca-096a-4f1f-8adc-73ef89bc1603.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "rgba(0,0,0,0)",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>Seeds Fund<\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>Our Seeds program supports sustainability projects proposed by our producer partners around the globe. Throughout the year, we set aside one penny from every pound of coffee sold into this fund, and during the holiday season, we dedicate one full dollar for each pound of our Iridescent holiday blend. Annually, these contributions add up to over $50,000 in dedicated funding for Seeds. Producers have used these grants to build apiaries, provide literacy training to farmers, bolster food security through crop diversification, and much more.<\/p>",
+            "button_text": "Read about projects we've funded",
+            "button_url": "\/blogs\/seeds-program"
+          }
+        },
+        "99de68fb-81ff-4b8e-be68-2c0bbfc288a6": {
+          "type": "banner",
+          "settings": {
+            "image_right": "shopify:\/\/shop_images\/greenfund.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>Pushing Potential, CSA, and Green Funds.<\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>All Counter Culture employees enjoy access to three accounts to make their personal lives more sustainable. Our Pushing Potential fund offers employees $500 for continued personal growth; we’ve seen this fund used on conference attendance fees, gym memberships, piano lessons, and more. The CSA fund allows $200 for use on locally-produced produce, meats, or dairy, allowing our staff to support sustainable agriculture at home. We offer $500 in our discretionary Green fund, which allows individuals to buy goods or services that help make their home life more environmentally sustainable. <\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "54bc982b-4ce5-49e1-9769-be5c39109a7f",
+        "99de68fb-81ff-4b8e-be68-2c0bbfc288a6"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "title": "<p>Funding Sustainability<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "f53e0fae-dde6-4f3e-8027-dfc0d834411a": {
+      "type": "banner-slider",
+      "blocks": {
+        "ac02a536-e89e-4ce3-a881-db283665709a": {
+          "type": "banner",
+          "settings": {
+            "image_right": "shopify:\/\/shop_images\/image_231b6f20-2a0a-4fa5-b1f6-0c550c763fb9.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "rgba(0,0,0,0)",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>Measuring, Improving, and Offsetting. <\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>We measure our carbon footprint every year since 2010 and offset our impact by working with Trees, Water & People (TWP) to implement clean cookstoves in rural Honduran households. The installation of TWP’s cookstoves creates jobs in rural communities and reduces both indoor and outdoor pollution, adding healthy years to many lives.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "ac02a536-e89e-4ce3-a881-db283665709a"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "title": "<p>Carbon Footprint<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "9eda701f-89bb-425e-a286-7adef0c9f84e": {
+      "type": "banner-slider",
+      "blocks": {
+        "79c9e57a-21a2-40fb-969e-2b2010621285": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flowr.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>World Coffee Research. <\/strong><\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h2",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>We support World Coffee Research, an organization working globally to increase the climate resistance of the coffee plant and the profitability of the people who grow it. Beyond annual contributions to fund their organization, we’ve served as advisors and opened our labs to help execute important projects, bolstering their important work to strengthen the coffee sector.<\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "79c9e57a-21a2-40fb-969e-2b2010621285"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "title": "<p>Fueling The Future Of Coffee <\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "19c7d7e9-08ce-4a9a-8430-7cd3916bd2d0": {
+      "type": "banner-slider",
+      "blocks": {
+        "07a6dc71-cdd1-4fbf-b3d4-4d24792b0348": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BCorp.png",
+            "image_classes": "",
+            "show_gradient": false,
+            "bg_color": "",
+            "wrapper_classes": "",
+            "use_squiggles": false,
+            "title": "<p><strong>B Corp.<\/strong> <\/p>",
+            "text_size_mobile": "text-2xl",
+            "text_size_desktop": "lg:text-2xl",
+            "tag": "h3",
+            "font": "font-gopher",
+            "weight": "font-semibold",
+            "alignment": "text-left",
+            "text_color": "text-black",
+            "title_classes": "",
+            "content": "<p>After 25 years in business, more than a decade of Transparency Reports, and an extensive application process, we became a certified B Corp in 2020. B Lab, like us, believes that business can be used as a force for good, and their B Corp certification requires high performance standards when assessing a company’s impact. <\/p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "07a6dc71-cdd1-4fbf-b3d4-4d24792b0348"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "title": "<p>Staying Accountable<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "374ec46c-8f0f-48c2-aa99-a5101f7f7a43": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border-t border-b border-black",
+        "use_squiggles": false,
+        "title": "<p>Our Partners in Sustainability<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "ddf33bd3-2d80-4dd7-a75a-4dcc6357eb06": {
+      "type": "index--icon-banner",
+      "blocks": {
+        "8e7182a0-2a61-494b-bee5-9b580b8538ac": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_84.png",
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "3c64a374-6a5f-4123-8b21-e4490d3c10f9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_86.png",
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "26c51215-8053-4fb9-bba0-c612b203f8ff": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_88.png",
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "fd5b363f-e49b-4679-84b0-919df12680b5": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/climatesmart.png",
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "a266471f-5a11-4a71-8ff6-030839e552b5": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/transparent_trade.png",
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "3c5c9427-b134-4d7e-a8c8-85546f8d42ce": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_7.png",
+            "text": "",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "8e7182a0-2a61-494b-bee5-9b580b8538ac",
+        "3c64a374-6a5f-4123-8b21-e4490d3c10f9",
+        "26c51215-8053-4fb9-bba0-c612b203f8ff",
+        "fd5b363f-e49b-4679-84b0-919df12680b5",
+        "a266471f-5a11-4a71-8ff6-030839e552b5",
+        "3c5c9427-b134-4d7e-a8c8-85546f8d42ce"
+      ],
+      "settings": {
+        "bg_color": "",
+        "show_border": false,
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "mobile_layout": "grid",
+        "font": "font-freight-sans",
+        "icon_layout": "flex-row",
+        "text_color": "text-black",
+        "text_classes": ""
+      }
+    }
+  },
+  "order": [
+    "1652126468fa7c61d6",
+    "2de36d7c-2c3c-48e4-b58c-31457d13ef9e",
+    "3b473bc3-1667-465a-bc2c-e72476005c79",
+    "f53e0fae-dde6-4f3e-8027-dfc0d834411a",
+    "9eda701f-89bb-425e-a286-7adef0c9f84e",
+    "19c7d7e9-08ce-4a9a-8430-7cd3916bd2d0",
+    "374ec46c-8f0f-48c2-aa99-a5101f7f7a43",
+    "ddf33bd3-2d80-4dd7-a75a-4dcc6357eb06"
+  ]
+}

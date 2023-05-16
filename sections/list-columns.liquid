@@ -1,0 +1,98 @@
+<!-- sections/list-columns.liquid [ja] -->
+
+
+<section>
+    <ol>
+        {% for block in section.blocks %}
+    
+            {% assign mod = forloop.index | modulo: 2 %}
+
+            {% capture item_class %}
+                {% unless forloop.first %}
+                    border-t-0
+                {% endunless %}
+                
+                {% if mod != 0 %}
+                    bg-[#ECE8DF]
+                {% endif %}
+            {% endcapture %}
+
+            {% capture marker_border_class %}
+                border-b md:border-b-0 border-black 
+                
+                {% if mod == 0 %}
+                    md:order-last border-l
+                {% else %}
+                    md:border-r
+                {% endif %}
+            {% endcapture %}
+
+            <li class="border border-black {{ item_class }} animate animate-fadeIn">    
+                <div class="grid md:grid-flow-col border-b border-black">
+                    <p class="text-7xl md:text-9xl text-stroke-camel font-tenso h-full px-[11%] py-5 md:px-10 md:py-14 flex items-center {{ marker_border_class }}">
+                        {% unless forloop.index >= 10 %}0{% endunless %}{{ forloop.index }}
+                    </p>
+
+                    <h2 class="text-lg md:text-2xl font-couch h-full px-[11%] py-5 md:px-16 md:py-14 flex items-center">
+                        {{ block.settings.title }}
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-2">
+                    <div class="px-[11%] py-5 sm:py-14 flex items-center prose max-w-none border-b md:border-b-0 md:border-r border-black">
+                        {{ block.settings.first_content }}
+                    </div>
+
+                    <div class="px-[11%] py-5 sm:py-14 flex items-center prose max-w-none">
+                        {{ block.settings.last_content }}
+                    </div>
+                </div>
+            </li>
+            
+        {% endfor %}
+    </ol>
+</section>
+
+
+{% schema %}
+{
+    "name": "List Columns",
+    "class": "section-list-columns",
+    "blocks": [
+        {
+            "name": "List Item",
+            "type": "list_item",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "title",
+                    "label": "Heading"
+                },
+                {
+                    "type": "header",
+                    "content": "First Column"
+                },
+                {
+                    "type": "html",
+                    "id": "first_content",
+                    "label": "Content"
+                },
+                {
+                    "type": "header",
+                    "content": "Last Column"
+                },
+                {
+                    "type": "html",
+                    "id": "last_content",
+                    "label": "Content"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "grid",
+            "name": "List Columns"
+        }
+    ]
+}
+{% endschema %}

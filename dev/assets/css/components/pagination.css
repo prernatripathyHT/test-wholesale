@@ -1,0 +1,18 @@
+@layer components {
+  /* Pagination */
+  .pagination .page, .pagination .next, .pagination .prev {
+    @apply mx-2 p-3 h-8 w-8 flex items-center justify-center transition-all;
+  }
+
+  .pagination .page:not(.current):hover {
+    @apply text-blue;
+  }
+
+  .pagination .next a, .pagination .prev a {
+    @apply text-black;
+  }
+
+  .pagination .page.current {
+    @apply bg-black text-white p-3 h-8 w-8 rounded-full flex items-center justify-center;
+  }
+}

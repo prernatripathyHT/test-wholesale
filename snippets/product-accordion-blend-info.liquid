@@ -1,0 +1,49 @@
+{%- comment %}
+	Custom Fields Accordion. Contains fields from admin groups:
+    - blend-info
+
+    blend_roast_info
+{% endcomment -%}
+
+{% assign cf = product.metafields.custom_fields %}
+
+{%- if cf.blend_roast_info != blank -%}
+  <!-- snippets/product-accordion-blend-info [aa] -->
+  <div class="px-5 lg:px-12 py-5 relative z-10">
+    <p class="italic font-tenso">Select your coffee's roast date to see the blend components.</p>
+
+    {% assign blend_components = cf.blend_roast_info | reverse %}
+    {% assign latest_blend = blend_components | first %}
+    {% assign roast_dates = blend_components | map: "roast_date" %}
+
+    <div class="my-5 text-center flex flex-col md:flex-row items-center justify-start gap-5 ">
+
+      <!-- Custom Select -->
+      <div class="animate animate-fadeInUp relative z-10">
+        {%
+          render 'custom-select-option-list',
+          trigger: "blend-components",
+          label: "roast date",
+          selected_value: latest_blend["roast_date"],
+          options: roast_dates
+        %}
+      </div>
+
+      <div class=" animate animate-fadeInUp">
+        <button type="button" name="button" class="btn btn-secondary js-search-blends">Search</button>
+      </div>
+    </div>
+
+    {%- for item in blend_components -%}
+      <div class="hidden flex flex-col items-center justify-center gap-5 js-blend-container"
+           data-date='{{ item["roast_date"] }}'>
+
+        {% for blend in item["blend_component"] %}
+          <div class="border border-black rounded-full text-black px-5 py-2.5 w-full text-center">
+            {{ blend["blend_component"] }}
+          </div>
+        {% endfor %}
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

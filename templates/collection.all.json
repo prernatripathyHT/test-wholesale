@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ruby_orange_2746412b-1dde-4c0d-8b41-a1d359dc7189.png",
+        "background_color": "",
+        "pre_header": "New Flavor",
+        "subheader": "",
+        "text_color": "",
+        "content_width": "w-full",
+        "justify_content_lg": "lg:justify-center",
+        "justify_content_md": "md:justify-center",
+        "justify_content_sm": "justify-center",
+        "align_items_lg": "lg:items-start",
+        "align_items_md": "md:items-start",
+        "align_items_sm": "items-start",
+        "text_align_lg": "lg:text-left",
+        "text_align_md": "md:text-left",
+        "text_align_sm": "text-left"
+      }
+    },
+    "16448846984cc105fe": {
+      "type": "index--icon-grid",
+      "blocks": {
+        "9472f01c-ce18-416f-8590-8464f6fde02c": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/savings_color.png",
+            "text": "Recurring Savings"
+          }
+        },
+        "584e9a43-2549-4ea6-ac25-95b4672a79fd": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shipping_color.png",
+            "text": "Free, Fast, Automated Shipping"
+          }
+        },
+        "0dc2c6bf-2a3d-4948-ad1c-eccef5ffd5a0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/edit_color.png",
+            "text": "Pause, Change or Cancel Anytime"
+          }
+        },
+        "fed531d4-4799-408e-858e-90ced98395fc": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fees_color.png",
+            "text": "No additional fees"
+          }
+        }
+      },
+      "block_order": [
+        "9472f01c-ce18-416f-8590-8464f6fde02c",
+        "584e9a43-2549-4ea6-ac25-95b4672a79fd",
+        "0dc2c6bf-2a3d-4948-ad1c-eccef5ffd5a0",
+        "fed531d4-4799-408e-858e-90ced98395fc"
+      ],
+      "settings": {
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "16448846984cc105fe"
+  ]
+}

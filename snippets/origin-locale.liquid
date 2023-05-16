@@ -1,0 +1,7 @@
+<!-- snippets/origin-locale -->
+
+{% assign origin = product.metafields.main.origin %}
+
+{%- if origin != blank -%}
+  <p class="mb-3 lg:mb-4 uppercase text-xs md:text-sm lg:text-base tracking-wider font-freight-sans {{ class }}">{{ origin }}</p>
+{%- endif -%}

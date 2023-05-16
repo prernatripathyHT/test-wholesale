@@ -1,0 +1,196 @@
+{
+  "sections": {
+    "165039091246226f73": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Classes<\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>A core value at Counter Culture, education is at the heart of our business. Whether collaborating with coffee producers to exchange ideas about agronomy or teaching baristas how to pour gorgeous latte art, we’re committed to sharing knowledge in the pursuit of coffee perfection. <\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "165101356234c4328d": {
+      "type": "image-plus-text",
+      "blocks": {
+        "e8e5f5dc-7e02-415b-b39b-4b1587554967": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MO4A1114-Edit_39ca4031-cd2b-46c3-a5c6-13d138a41227.jpg"
+          }
+        },
+        "cf4b34ec-83c7-4916-ae5a-a0d5ca0903cd": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>Whether you're joining us on Friday morning for a Tasting at Ten, logging on from your kitchen to participate in a virtual brewing class, or learning professional barista skills for your cafe, our team will leave you more knowledgeable and inspired to make delicious coffee.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Check out our classes and events",
+            "link_url": "https:\/\/www.eventbrite.com\/o\/counter-culture-coffee-33771079275",
+            "link_classes": "uppercase tracking-wide font-freight-sans",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "e8e5f5dc-7e02-415b-b39b-4b1587554967",
+        "cf4b34ec-83c7-4916-ae5a-a0d5ca0903cd"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "<p>Coffee Classes for Everyone<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651013569dce7384c": {
+      "type": "image-plus-text",
+      "blocks": {
+        "f798ec6c-7b62-422a-a6d2-ad49f62a3b94": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>Every Friday morning at 10 a.m., we open our Training Centers to coffee lovers who want to learn more about Counter Culture Coffee’s high-quality, sustainably sourced menu.<\/p><p>A longstanding tradition at Counter Culture Coffee, our team shares the story behind our favorite coffees as we commune over beautifully brewed cups. Whether tasting a classic blend or sipping our freshest micro-lot, we hope to connect you with the effort of those who brought this coffee from the seed to your cup.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Find a tasting at ten near you",
+            "link_url": "https:\/\/www.eventbrite.com\/cc\/tasting-at-ten-1500259",
+            "link_classes": "uppercase tracking-wide font-freight-sans",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "9102f57c-07b1-4cdc-a804-6cb191caa645": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tasting.png"
+          }
+        }
+      },
+      "block_order": [
+        "f798ec6c-7b62-422a-a6d2-ad49f62a3b94",
+        "9102f57c-07b1-4cdc-a804-6cb191caa645"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "<p>Tasting at Ten<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "aea9c9cf-7c63-4bc2-b917-e167cf55ff7b": {
+      "type": "image-plus-text",
+      "blocks": {
+        "56c4cbe4-683b-4d50-8eae-1aa93ffa3bba": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog_Image_Option_201.png"
+          }
+        },
+        "3f1b6b20-a111-4c65-9b8c-9ed51d3b9854": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>We offer exclusive educational programming to our wholesale partners. Our team of highly skilled Educators utilizes hands-on practice and technology to facilitate state-of-the-art coffee training services. Wholesale partners may access customizable, interdisciplinary coffee education through in-person and virtual curricula. Existing partners can contact their local teams to schedule training.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Get information about wholesale",
+            "link_url": "https:\/\/counter-culture-coffee-retail.myshopify.com\/pages\/partner-with-us",
+            "link_classes": "uppercase tracking-wide font-freight-sans",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "56c4cbe4-683b-4d50-8eae-1aa93ffa3bba",
+        "3f1b6b20-a111-4c65-9b8c-9ed51d3b9854"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "<p>Wholesale Training<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16510141010ef8fd72": {
+      "type": "cta-banner",
+      "disabled": true,
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Subscribe now to unlock SE classes<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "mb-5",
+        "button_style": "camel-underline",
+        "link_text": "Check out our Classes",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": "text-lg uppercase"
+      }
+    }
+  },
+  "order": [
+    "165039091246226f73",
+    "165101356234c4328d",
+    "1651013569dce7384c",
+    "aea9c9cf-7c63-4bc2-b917-e167cf55ff7b",
+    "16510141010ef8fd72"
+  ]
+}

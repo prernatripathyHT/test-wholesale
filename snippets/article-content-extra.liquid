@@ -1,0 +1,57 @@
+<!-- snippets/article-content-extra -->
+
+
+<!-- article author -->
+{% assign cf = article.metafields.custom_fields %}
+
+{%- unless cf.author_name == blank -%}
+  <div class="flex gap-5 items-center my-8">
+    {%- unless cf.author_image == blank -%}
+      {%
+        render 'responsive-image-cf'
+        src: cf.author_image,
+        alt: cf.author_name,
+        class: 'rounded-full h-20 w-20 md:w-28 md:h-28 object-cover'
+      %}
+    {%- endunless -%}
+
+    <p>by <span class="uppercase">{{ cf.author_name }}</span></p>
+  </div>
+{%- endunless -%}
+
+
+<!-- article tag list -->
+<ul class="list-none flex gap-5 my-5">
+  {%- for tag in article.tags -%}
+    <li class="underline font-semibold">
+      <a href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag | capitalize }}</a>
+    </li>
+
+    {%- unless forloop.last -%}
+      <span class="bg-black w-px h-full block"></span>
+    {%- endunless -%}
+  {%- endfor -%}
+</ul>
+
+<!-- article social share links -->
+
+<div class="flex items-center gap-5 mt-5">
+  <span class="uppercase font-medium">Share: </span>
+
+  <ul class="flex gap-5 items-center">
+    <li>
+      <a href="https://www.facebook.com/sharer.php?u={{ canonical_url }}">
+        <span class="sr-only">Share on Facebook</span>
+        {% render 'icon' icon: 'facebook' %}
+      </a>
+    </li>
+
+    <li>
+      <a href="https://twitter.com/share?url={{ canonical_url }}&text={{ article.title }}&via={{ shop.url }}">
+        <span class="sr-only">Share on Twitter</span>
+        {% render 'icon' icon: 'twitter' %}
+      </a>
+    </li>
+
+  </ul>
+</div>

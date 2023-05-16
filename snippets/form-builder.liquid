@@ -1,0 +1,89 @@
+<!-- snippets/form-builder -->
+
+<div class="px-5 py-12 lg:px-12 lg:py-20">
+  {%- unless section.settings.form_title == blank -%}
+    <h3 class="text-xl font-couch mb-5">{{ section.settings.form_title }}</h3>
+  {%- endunless -%}
+
+  {% form 'contact' %}
+      {%- if form.errors -%}
+        <div class="mb-2.5">
+          {{ form.errors | default_errors }}
+        </div>
+      {%- endif -%}
+
+    {%- if form.posted_successfully? -%}
+      <div class="rte mb-2.5 text-xl animate animate-fadeInUp"
+           data-delay="400">
+         {{ section.settings.sucess_message }}
+      </div>
+    {%- else -%}
+        <div class="flex flex-col gap-5 animate animate-fadeInUp"
+             data-delay="400">
+
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'radio' -%}
+
+                  {%- comment %}
+                    input_type
+                    header
+                    options
+                    name
+                    label
+                  {% endcomment -%}
+
+                  {% assign split_options = block.settings.options | split: "|||" %}
+                    {% render 'custom-radio-group'
+                       input_type: block.settings.input_type,
+                       name: block.settings.name,
+                       header: block.settings.header,
+                       options: split_options,
+                       label: block.settings.label %}
+
+                {%- when 'select' -%}
+                  SELECT GROUP
+                {%- else -%}
+                {%- when 'text' -%}
+                  {%- comment %}
+                    header
+                    name
+                    label
+                    placeholder
+                    input_type
+                  {% endcomment -%}
+
+                  {% assign id = block.settings.header | handleize | append: '--' | append: block.settings.name %}
+
+                  {%- unless block.settings.header == blank -%}
+                    <p class="uppercase text-sm tracking-wider animate animate-fadeInUp">{{ block.settings.header }}</p>
+                  {%- endunless -%}
+
+                  {% render 'floating-label',
+                      id: id,
+                      input_name: block.settings.name,
+                      input_val: '',
+                      input_type: block.settings.input_type,
+                      input_class: 'border-black',
+                      placeholder: block.settings.placeholder,
+                      label: block.settings.label,
+                      label_class: 'text-black' %}
+
+              {%- endcase -%}
+            {%- endfor -%}
+
+        <span class="text-sm block">* Required</span>
+
+        <div class="flex justify-end w-full">
+          <span class="animate animate-fadeInUp md:animate-slideInRight">
+            <button type="submit"
+                    name="send"
+                    class="btn btn-secondary w-full md:w-auto">
+              Submit
+            </button>
+          </span>
+        </div>
+    {%- endif -%}
+
+  {%- endform -%}
+</div>

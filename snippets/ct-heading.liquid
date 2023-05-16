@@ -1,0 +1,25 @@
+<!-- snippets/ct-heading -->
+{%- comment %}
+	Customize Theme Heading
+  -----------------------
+
+  Variables
+  - title: [Richtext] Title
+  - tag: [Enum]: h1, h2, h3, h4, h5, h6
+  - text_size_mobile: [Enum] text-6xl, text-5xl, text-4xl, text-3xl, text-2xl, text-xl, text-lg
+  - text_size_desktop: [Enum] lg:text-6xl, lg:text-5xl, lg:text-4xl, lg:text-3xl, lg:text-2xl, lg:text-xl, lg:text-lg
+  - text_color: [Enum] text-black, text-blue, text-camel
+  - font: [Enum] font-freight-sans, font-couch, font-tenso
+  - alignment: [Enum] text-left, text-center, text-right
+  - weight: [Enum] font-light, font-regular, font-semibold, font-bold, font-black
+  - class: extra classes
+{% endcomment -%}
+
+
+{%- if title != blank -%}
+  <{{ tag }} class="{{ alignment }} {{ weight }} {{ text_color }} {{ font }}
+              {{ text_size_mobile }} {{ text_size_desktop }} {{ class }}
+              animate animate-fadeInUp">
+    {{ title }}
+  </{{ tag }}>
+{%- endif -%}

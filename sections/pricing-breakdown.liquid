@@ -1,0 +1,135 @@
+<!-- sections/pricing-breakdown [ja] -->
+
+
+{% assign breakdown_blocks = section.blocks | where: 'type', 'breakdown_item' %}
+{% assign key_blocks = section.blocks | where: 'type', 'key_item' %}
+
+<section class="grid lg:grid-cols-2">
+    <div class="border border-black px-[11%] py-20 flex flex-col justify-center">
+        <h3 class="font-couch text-2 mb-9">{{ section.settings.panel_1_heading }}</h3>
+
+        <div class="font-tenso tracking-wider">
+            {{ section.settings.panel_1_content | newline_to_br }}
+        </div>
+    </div>
+
+    <div class="border border-black px-7 py-14 flex flex-col items-center">
+        {% unless section.settings.panel_2_heading == blank %}
+            <h3 class="text-2xl uppercase">{{ section.settings.panel_2_heading }}</h3>
+        {% endunless %}
+
+        <div class="flex flex-col sm:flex-row gap-2 mt-36 mb-28">
+            <p class="font-tenso text-6xl text-stroke-camel">{{ section.settings.start_val }}</p>
+
+            <ul class="flex flex-col sm:flex-row gap-6 px-10 relative h-fit">
+                <div class="absolute h-full sm:h-px w-px sm:w-full bg-black top-0 sm:top-1/2 left-1/2 sm:left-0 -translate-x-1/2 sm:translate-x-0 sm:-translate-y-1/2"></div>
+                {% for block in breakdown_blocks %}
+                    
+                    <li class="w-12 sm:w-6 h-6 sm:h-12 relative hover:tooltip"
+                        style="background-color: {{ block.settings.color }};"
+                        data-tooltip="{{ block.settings.title }}">
+                        <span class="sr-only">{{ block.settings.title }}</span>
+                    </li>
+
+                {% endfor %}
+            </ul>
+
+            <p class="font-tenso text-6xl text-stroke-camel">{{ section.settings.end_val }}</p>
+        </div>
+
+        <ul class="flex flex-col gap-6">
+            {% for block in key_blocks %}
+
+                <li class="flex items-center gap-4">
+                    <div class="w-6 h-6 flex-shrink-0" style="background-color: {{ block.settings.color }};"></div>
+
+                    <p class="text-lg">{{ block.settings.title }}</p>
+                </li>
+                
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Pricing Breakdown",
+    "class": "section-pricing-breakdown",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Panel 1"
+        },
+        {
+            "type": "text",
+            "id": "panel_1_heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "panel_1_content",
+            "label": "Content"
+        },
+        {
+            "type": "header",
+            "content": "Panel 2"
+        },
+        {
+            "type": "text",
+            "id": "panel_2_heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "start_val",
+            "label": "Starting Value"
+        },
+        {
+            "type": "text",
+            "id": "end_val",
+            "label": "Ending Value"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Breakdown Item",
+            "type": "breakdown_item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Label"
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Color"
+                }
+            ]
+        },
+        {
+            "name": "Key Item",
+            "type": "key_item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Label"
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Color"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "grid",
+            "name": "Pricing Breakdown"
+        }
+    ]
+}
+{% endschema %}

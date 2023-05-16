@@ -1,0 +1,97 @@
+<!-- sections/newsletter [aa] -->
+
+<div class="relative w-full px-5 py-12">
+  <div class="px-5 py-12 md:px-12 w-full lg:w-10/12 border border-black rounded-[3rem] md:rounded-full flex flex-col inset-0 items-center justify-center mx-auto text-center"
+       style="background-color: {{ section.settings.background_color }};">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <h3 class="h3 text-3xl font-black font-couch mb-5" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h3>
+        {%- when 'paragraph' -%}
+          <div class="rte text-lg" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+        {%- when 'email_form' -%}
+        <div class="mb-5 w-full">
+          {% render 'newsletter-form',
+              input_class: 'text-black border-black bg-transparent rounded-r-none rounded-l-full',
+              label_class: "text-black",
+              btn_class: "btn-secondary w-1/2 md:w-1/4 rounded-r-full rounded-l-none",
+              container_class: "flex" %}
+        </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "Full width"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#EA7360"
+    },
+    {
+      "type": "paragraph",
+      "content": "Paragraph content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Subscribe to our emails",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
+          "label": "Paragraph"
+        }
+      ]
+    },
+    {
+      "type": "email_form",
+      "name": "Email form",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "email_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

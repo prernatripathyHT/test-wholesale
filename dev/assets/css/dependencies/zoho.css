@@ -1,0 +1,26 @@
+#crmWebToEntityForm * {
+  @apply !font-tenso;
+}
+
+#crmWebToEntityForm .zcwf_title {
+  @apply !font-gopher text-2xl mt-12;
+}
+
+#crmWebToEntityForm form .zcwf_row {  
+  @apply flex flex-col gap-1.5 col-span-1 w-full;
+}
+
+#crmWebToEntityForm .zcwf_button {
+  max-width: 100%;
+  @apply btn btn-secondary !bg-black hover:!bg-white;
+}
+
+#crmWebToEntityForm form .zcwf_row .zcwf_col_lab {
+  @apply !w-full;
+}
+
+#crmWebToEntityForm .zcwf_row input[type=text],
+#crmWebToEntityForm .zcwf_row select,
+#crmWebToEntityForm .zcwf_row textarea {
+  @apply !border !border-solid !border-black !rounded-none !px-2.5 !py-2.5 !w-full;
+}

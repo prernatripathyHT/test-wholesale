@@ -1,0 +1,44 @@
+<!-- snippets/custom-select -->
+<div class="relative js-custom-select-container my-3 max-w-full">
+  <button id="{{ trigger }}-btn"
+          type="button"
+          data-trigger="select-{{ trigger }}"
+          name="trigger-select"
+          class="js-custom-select-trigger custom-select--trigger
+                 flex justify-between items-center
+                 bg-white rounded-full border border-black
+                 p-4">
+    <div class="mr-12 flex">
+      <span class="opacity-50 text-black mr-3 lowercase">{{ option.name }}</span>
+      <span class="js-select-trigger-text
+                   text-black text-left text-ellipsis whitespace-nowrap overflow-hidden block">{{ option.selected_value }}</span>
+    </div>
+    <div>
+      {% render 'icon', icon: 'expand' %}
+    </div>
+  </button>
+
+  <ul class="js-custom-select-options custom-select--options
+             absolute hidden z-10 w-full
+             flex flex-col items-start justify-center
+             bg-white rounded-2xl list-none my-3 border border-black rounded-2xl"
+      role="region"
+      data-trigger="select-{{ trigger }}"
+      aria-labelledby="{{ trigger }}-btn">
+    {%- for value in option.values -%}
+      <li class="w-full">
+        <button type="button"
+                name="{{ trigger }}"
+                data-target="{{ trigger }}"
+                data-option="{{ option.name }}"
+                data-value="{{ value }}"
+                class="js-option-select custom-select--option
+                       py-3 px-4 w-full text-lg text-left leading-none
+                       {% if option.selected_value == value %} active {% endif %}">
+          {{ value }}
+        </button>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+</div>

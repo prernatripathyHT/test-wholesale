@@ -1,0 +1,146 @@
+@layer components {
+  .btn {
+    @apply py-3 px-5 font-semibold rounded-full text-center w-max relative text-base uppercase tracking-wider font-freight-sans;
+
+    display: inline-block;
+    outline-color: theme('colors.black');
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 0px theme('colors.blue');
+    border: 2px solid transparent;
+    transition: all .15s linear;
+  }
+
+  @screen lg {
+    .btn {
+      @apply py-3 px-10 text-base;
+    }
+  }
+
+  .btn-big {
+    @apply text-lg px-16;
+  }
+
+  .btn-small {
+    @apply text-sm px-4 py-1.5;
+  }
+
+  .btn:hover {
+    @apply border-blue;
+  }
+
+  /* Blue BG + White Text */
+  .btn-primary {
+    @apply bg-blue text-white;
+  }
+
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:focus-within, .btn-primary:focus-visible {
+    @apply bg-white border-blue text-blue;
+    box-shadow: -4px 4px theme('colors.blue');
+    transform: translate(4px, -4px);
+  }
+
+  .btn-primary:active {
+    @apply bg-white border-blue text-blue;
+    box-shadow: -2px 2px theme('colors.blue');
+    transform: translate(2px, -2px);
+  }
+
+  /* Black BG + White Text */
+  .btn-secondary {
+    @apply bg-black text-white;
+  }
+
+  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:focus-within, .btn-secondary:focus-visible {
+    @apply bg-white border-black text-black;
+    box-shadow: -4px 4px theme('colors.black');
+    transform: translate(4px, -4px);
+  }
+
+  .btn-secondary:active {
+    @apply bg-white border-black text-black;
+    box-shadow: -2px 2px theme('colors.black');
+    transform: translate(2px, -2px);
+  }
+
+  /* Bluebell BG + White Text */
+  .btn-tertiary {
+    @apply bg-bluebell text-white;
+  }
+
+  .btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:focus-within, .btn-tertiary:focus-visible {
+    @apply bg-white border-bluebell text-bluebell;
+    box-shadow: -4px 4px theme('colors.bluebell');
+    transform: translate(4px, -4px);
+  }
+
+  .btn-tertiary:active {
+    @apply bg-white border-bluebell text-bluebell;
+    box-shadow: -2px 2px theme('colors.bluebell');
+    transform: translate(2px, -2px);
+  }
+
+  /* White Background. No Border. Black Text */
+  .btn-white {
+    @apply bg-white text-black;
+  }
+
+  .btn-white:hover, .btn-white:focus, .btn-white:focus-within, .btn-white:focus-visible {
+    @apply bg-white border-black text-black;
+    box-shadow: -4px 4px theme('colors.black');
+    transform: translate(4px, -4px);
+  }
+
+  .btn-white:active {
+    @apply bg-white border-black text-black;
+    box-shadow: -2px 2px theme('colors.black');
+    transform: translate(2px, -2px);
+  }
+
+  /* transparent BG + blue borders + blue text */
+  .btn-outline {
+    @apply bg-transparent border border-blue text-blue;
+  }
+
+  .btn-outline:hover, .btn-outline:focus, .btn-outline:focus-within, .btn-outline:focus-visible {
+    @apply bg-transparent border-blue text-blue;
+    box-shadow: -4px 4px theme('colors.blue');
+    transform: translate(4px, -4px);
+  }
+
+  .btn-outline:active {
+    @apply bg-white border-blue text-blue;
+    box-shadow: -2px 2px theme('colors.blue');
+    transform: translate(2px, -2px);
+  }
+
+  .btn-transparent {
+    @apply bg-transparent border-0;
+  }
+
+  .btn-link {
+    @apply bg-transparent text-blue hover:text-blue hover:underline;
+  }
+
+  .btn-with-icon svg {
+    @apply transition-all duration-300;
+  }
+
+  .btn-with-icon:hover svg {
+    transform: translateX(.5rem);
+  }
+
+  .btn-disabled, .btn[disabled] {
+    @apply cursor-default;
+    box-shadow: 0px 0px theme('colors.white');
+    transform: translate(0px, -0px);
+  }
+
+  p a {
+    @apply text-blue hover:text-blue hover:underline;
+  }
+
+  a.uppercase {
+    @apply font-freight-sans;
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Mask_Group_470x_73db3f79-e628-4886-8ea8-37aed065433c.png",
+        "show_sunburst": true,
+        "sunburst_color": "#eba9a0",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Our Subscriptions<\/p>",
+        "text_size_mobile": "text-5xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "<p>Fresh-Roasted Coffee. On Repeat. Never run out of coffee again. A coffee subscription is the easiest way to enjoy fresh, delicious coffee delivered to your door.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "1650405477abf91a55": {
+      "type": "index--icon-banner",
+      "blocks": {
+        "9d087892-8499-4b66-8cc1-c1cfcf675025": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-icon_75ca38c9-42fd-45a1-af39-3af0c0d55d18.png",
+            "text": "Free Shipping on orders $30 and up",
+            "paragraph": ""
+          }
+        },
+        "4cbc3200-5363-4491-adf7-ea005515d2b0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/save-10_-icon.png",
+            "text": "Save $2 on every 12 oz",
+            "paragraph": ""
+          }
+        },
+        "3e8946eb-de4b-41ff-9f95-90796a5449b0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/exclusive_icon_f948e713-76da-466e-ba0d-ccd1df0d23ae.png",
+            "text": "Exclusive  Access",
+            "paragraph": ""
+          }
+        },
+        "d3ee3dbb-e466-4e83-953d-401c52561e97": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flexible-icon.png",
+            "text": "Flexible Deliveries",
+            "paragraph": ""
+          }
+        },
+        "e5be7f3e-ec03-4335-beb6-9b9ba1f508fe": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cancel-icon_ac89fed2-2216-434c-8c64-332d6ff7d6b1.png",
+            "text": "Cancel  Anytime",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "9d087892-8499-4b66-8cc1-c1cfcf675025",
+        "4cbc3200-5363-4491-adf7-ea005515d2b0",
+        "3e8946eb-de4b-41ff-9f95-90796a5449b0",
+        "d3ee3dbb-e466-4e83-953d-401c52561e97",
+        "e5be7f3e-ec03-4335-beb6-9b9ba1f508fe"
+      ],
+      "settings": {
+        "bg_color": "#B76887",
+        "show_border": true,
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "mobile_layout": "slider",
+        "font": "font-freight-sans",
+        "icon_layout": "flex-row",
+        "text_color": "text-white",
+        "text_classes": "font-tenso text-2xl"
+      }
+    },
+    "1651788362d99743af": {
+      "type": "collection-grid",
+      "settings": {
+        "alt_collection": "subscriptions",
+        "title": "",
+        "show_hover_image": false,
+        "show_atc": false,
+        "show_filters": false,
+        "feature_image_index": 9,
+        "grid_limit": 12
+      }
+    },
+    "1650406049108c61e4": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/6-28_photos-1484-Edit-2.jpg",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Not sure which coffee is right for you?<\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "mb-5 text-stroke-outline",
+        "button_style": "btn btn-secondary",
+        "link_text": "Take our quiz",
+        "link_url": "shopify:\/\/pages\/counter-culture-quiz",
+        "link_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1650405477abf91a55",
+    "1651788362d99743af",
+    "1650406049108c61e4"
+  ]
+}

@@ -1,0 +1,47 @@
+<!-- snippets/product-accordion [aa] -->
+
+{%- comment %}
+	Custom Fields Accordion. Contains fields from admin groups:
+    - Harvest
+    - Partnership
+    - Story
+    - Pricing
+    - Blend Info
+{% endcomment -%}
+
+{% assign admin_field_groups = "Harvest, Partnership, Story, Pricing, Blend Info" | split: ", " %}
+
+<dl class="animate animate-fadeIn js-expandable-group">
+  {%- for group in admin_field_groups -%}
+    {% assign group_content = '' %}
+    {% assign group_id = group | handleize %}
+
+    {%- case group -%}
+      {%- when 'Harvest' -%}
+        {% capture group_content %}{% render 'product-accordion-harvest', product: product %}{% endcapture %}
+      {%- when 'Partnership' -%}
+        {% capture group_content %}{% render 'product-accordion-partnership', product: product %}{% endcapture %}
+      {%- when 'Story' -%}
+        {% capture group_content %}{% render 'product-accordion-story', product: product %}{% endcapture %}
+      {%- when 'Pricing' -%}
+        {% capture group_content %}{% render 'product-accordion-pricing', product: product %}{% endcapture %}
+      {%- when 'Blend Info' -%}
+        {% capture group_content %}{% render 'product-accordion-blend-info', product: product %}{% endcapture %}
+    {%- endcase -%}
+
+    {% assign group_content = group_content | strip %}
+
+    {%- unless group_content == "" -%}
+      {%
+        render 'expandable-faq',
+        question: group,
+        answer: group_content,
+        label: group,
+        id: group_id,
+        forloop: forloop,
+        active: false,
+        theme_style: "black"
+      %}
+    {%- endunless -%}
+  {%- endfor -%}
+</dl>

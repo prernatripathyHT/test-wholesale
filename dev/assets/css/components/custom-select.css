@@ -1,0 +1,36 @@
+@layer components  {
+
+  .custom-select--options {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .custom-select--trigger svg {
+    @apply transition-all;
+  }
+
+  .custom-select--trigger.active svg {
+    transform: rotate(180deg);
+  }
+
+  .custom-select--option.active {
+    @apply bg-yellow border-t border-b border-black;
+  }
+
+  .custom-select--options li:first-of-type {
+    @apply rounded-t-2xl;
+  }
+
+  .custom-select--options li:last-of-type {
+    @apply rounded-b-2xl;
+  }
+
+  .custom-select--options li:first-of-type .custom-select--option.active {
+    @apply rounded-t-2xl border-t-0;
+  }
+
+  .custom-select--options li:last-of-type .custom-select--option.active {
+    @apply rounded-b-2xl border-b-0;
+  }
+
+}

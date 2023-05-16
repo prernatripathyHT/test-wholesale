@@ -1,0 +1,265 @@
+{
+  "sections": {
+    "main": {
+      "type": "hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/perennial_2023-13.jpg",
+        "background_color": "#FF5C1B",
+        "video_url": "",
+        "video_placement": "lg:justify-start",
+        "pre_header": "Our Current Limited-Release",
+        "subheader": "",
+        "title": "<p>Perennial<\/p>",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "text-stroke-outline mb-5",
+        "button_style": "btn btn-secondary",
+        "link_text": "Shop now",
+        "link_url": "shopify:\/\/collections\/coffee",
+        "link_classes": "",
+        "content_width": "w-1\/2",
+        "justify_content_lg": "lg:justify-center",
+        "justify_content_md": "md:justify-center",
+        "justify_content_sm": "justify-center",
+        "align_items_lg": "lg:items-center",
+        "align_items_md": "md:items-center",
+        "align_items_sm": "items-center",
+        "text_align_lg": "lg:text-center",
+        "text_align_md": "md:text-center",
+        "text_align_sm": "text-center"
+      }
+    },
+    "1651268179b4854e2c": {
+      "type": "image-text-slider",
+      "blocks": {
+        "4ce7c65c-bc96-4f59-8a62-6f1e00a32622": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot-2023-05-11-at-12.25.00-PM.jpg",
+            "items_alignment": "items-center",
+            "number": "",
+            "title": "Nueva Llusta | Cranavi, Bolivia",
+            "font": "font-gopher",
+            "description": "<p>This coffee is a combination of small, single-farmer lots and coffee produced specifically for Counter Culture at the CENAPROC cooperative's central mill. The result is a vibrant and creamy coffee with notes of black cherry and hazelnut. <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/collections\/coffee",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "6297bcf3-5149-47e7-b1e8-cd1e10e04a43": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "items_alignment": "items-center",
+            "number": "",
+            "title": "Brew School",
+            "font": "font-gopher",
+            "description": "<p>Preparing and enjoying a great cup of coffee is a pleasure, and few things as simple as brewing coffee provide such rich rewards. Brewing coffee is a lot like cooking with fresh produce: Start with the best, freshest ingredients, take care to do it well, and you will create something astonishingly delicious.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Start Brewing",
+            "link_url": "shopify:\/\/pages\/brewing-guides",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "4ce7c65c-bc96-4f59-8a62-6f1e00a32622",
+        "6297bcf3-5149-47e7-b1e8-cd1e10e04a43"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "color_overlay": "",
+        "title": "<p>May Featured Coffee<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1644620818e34163c4": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-black",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "<p>We get it. Things happen. Our team is here to help. <\/p>",
+        "title": "<p>Need a Tech? <\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "button_style": "btn btn-secondary",
+        "link_text": "866-JAVA-FIX",
+        "link_url": "shopify:\/\/pages\/counter-culture-quiz",
+        "link_classes": "Href=tel: 866-528-2349"
+      }
+    },
+    "4290ab56-655f-4576-8bf4-b807070531cc": {
+      "type": "image-text-slider",
+      "blocks": {
+        "1184f0e8-66b5-4c1b-a456-54bbb6752bc2": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8_07bdc2c2-bee9-4c8f-8ca7-b7ead17cdd40.png",
+            "items_alignment": "items-center",
+            "number": "",
+            "title": "Have an idea for a sustainability project?",
+            "font": "font-gopher",
+            "description": "<p>Bloom grants are awarded to wholesale partners for social, fiscal, and environmental initiatives. Applications are due July 31. <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "Apply Now!",
+            "link_url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScM4N9nDWAiqHzk31BZtbD1L7wJ5Wew9X7eV1mKklx2Q8YKXA\/viewform",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "1184f0e8-66b5-4c1b-a456-54bbb6752bc2"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "color_overlay": "",
+        "title": "<p>Apply for a Bloom Grant<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "54770e40-b722-49af-8eb0-a5d394b2f05b": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-black",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "<p>Is y our latte art a little rusty? Do you have a bunch of new staff? Let our best-in-class educators help you level up.<\/p>",
+        "title": "<p>Want to take a workshop or class?<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "button_style": "btn btn-secondary",
+        "link_text": "Sign up!",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": ""
+      }
+    },
+    "1644619715b5f70dab": {
+      "type": "index--icon-banner",
+      "disabled": true,
+      "blocks": {
+        "fbe71319-7120-4136-9e11-2f4b21cf57cd": {
+          "type": "icon",
+          "settings": {
+            "text": "Coffee is harvested twice a year in Colombia  |  All coffee was natural-sundried until the early 19th century  |  Angelo Moriondo patented the first espresso machine in 1884  |  Chlorogenic Acids make up most of the chemicals in a cup of coffee",
+            "paragraph": ""
+          }
+        },
+        "f4aebaca-9812-4443-882a-1260e820c8d6": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "Drip coffee is more than 98% water",
+            "paragraph": ""
+          }
+        },
+        "36a9dc6b-3ae6-4338-b709-4fa0f431c250": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "Katie Carguilo, our West Coast Coffee Manager, won the US Barista Championship in 2012",
+            "paragraph": ""
+          }
+        },
+        "fb54789a-1ce6-41c7-9be8-850a385475bd": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "043c8f70-8c94-4bd5-a88e-4ea64fa6cc36": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "paragraph": ""
+          }
+        },
+        "a91bc4d7-3b4a-435b-aa6b-df5893f14422": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "fbe71319-7120-4136-9e11-2f4b21cf57cd",
+        "f4aebaca-9812-4443-882a-1260e820c8d6",
+        "36a9dc6b-3ae6-4338-b709-4fa0f431c250",
+        "fb54789a-1ce6-41c7-9be8-850a385475bd",
+        "043c8f70-8c94-4bd5-a88e-4ea64fa6cc36",
+        "a91bc4d7-3b4a-435b-aa6b-df5893f14422"
+      ],
+      "settings": {
+        "bg_color": "radial-gradient(rgba(236, 232, 223, 1), rgba(196, 196, 196, 0) 99.97%, rgba(196, 196, 196, 0) 99.98%)",
+        "show_border": true,
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "mobile_layout": "slider",
+        "font": "font-freight-sans",
+        "icon_layout": "flex-row",
+        "text_color": "text-black",
+        "text_classes": "text-2xl"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651268179b4854e2c",
+    "1644620818e34163c4",
+    "4290ab56-655f-4576-8bf4-b807070531cc",
+    "54770e40-b722-49af-8eb0-a5d394b2f05b",
+    "1644619715b5f70dab"
+  ]
+}

@@ -1,0 +1,5 @@
+@layer components {
+  .rc-container-wrapper.rc_container_wrapper {
+    display: none!important;
+  }
+}

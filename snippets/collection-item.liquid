@@ -1,0 +1,44 @@
+<!-- snippets/collection-item [aa] -->
+
+{%- comment %}
+	variables:
+    - block: block object from customize theme
+{% endcomment -%}
+
+{% capture slick_settings %}
+  {
+    "dots": false,
+    "arrows": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "nextArrow": "#{{ block.id }} .js-next",
+    "prevArrow": "#{{ block.id }} .js-prev"
+  }
+{% endcapture %}
+
+{% assign bs = block.settings %}
+{% assign collection = bs.collection %}
+
+<li id="{{ block.id }}" class="relative featured--collection block animate animate-fadeIn max-w-full">
+
+  <div class="border border-black px-5 md:px-8 lg:px-5 py-5">
+    {%- unless block.settings.title == blank -%}
+      <p class="text-xl lg:text-2xl font-couch text-center mb-2.5">{{ block.settings.title }}</p>
+    {%- endunless -%}
+    {%- unless block.settings.text == blank -%}
+      <p class="text-lg xl:text-2xl text-center">{{ block.settings.text }}</p>
+    {%- endunless -%}
+  </div>
+
+  {% render 'slick-arrows' %}
+
+  <ul class="js-slick max-w-full border-l border-r border-black"
+      data-slick='{{ slick_settings | strip }}'>
+    {%- for product in collection.products limit: 4 -%}
+      {% render 'collection-item-product', product: product %}
+    {%- endfor -%}
+  </ul>
+
+</li>

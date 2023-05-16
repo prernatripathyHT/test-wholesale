@@ -1,0 +1,24 @@
+{% assign customer_is_subscriber = false %}
+
+{% if customer.tags contains 'Active Subscriber' or customer.tags contains 'Inactive Subscriber' %}
+  {% assign customer_is_subscriber = true %}
+{% endif %}
+
+{% if customer_is_subscriber %}
+  <script type="text/javascript">
+    let loggedIntoReCharge = sessionStorage.getItem('loggedIntoReCharge');
+    if (!loggedIntoReCharge) {
+      sessionStorage.setItem('loggedIntoReCharge', true);
+      location.href = '/tools/recurring/login';
+    }
+  </script>
+{% endif %}
+
+<section>
+  {% render 'account-header' %}
+  {% render 'account-navigation' %}
+
+  <div class="js-account-nav-target">
+    {% section 'account-account' %}
+  </div>
+</section>

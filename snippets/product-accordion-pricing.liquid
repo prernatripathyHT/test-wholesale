@@ -1,0 +1,115 @@
+{%- comment %}
+	Custom Fields Accordion. Contains fields from admin groups:
+    - Pricing
+
+    pricing_specific_coffee
+    pricing_specific_coffee_text
+    pricing_max_scale
+    pricing_fair_trade
+    pricing_average_c_market
+{% endcomment -%}
+
+{% assign cf = product.metafields.custom_fields %}
+
+{%- if cf.pricing_specific_coffee != blank
+    or cf.pricing_fair_trade != blank
+    or cf.pricing_average_c_market != blank -%}
+  <!-- snippets/product-accordion-pricing [aa] -->
+  {% assign max_price = cf.pricing_max_scale | default: 500 %}
+
+  <div class="px-5 lg:px-12 py-5">
+    <p class="font-tenso font-medium mb-3 tracking-wider">We believe in paying more.</p>
+    <p class="font-tenso tracking-wider">Since 2009, we have published an annual  transparency report to serve as a blueprint for our green coffee purchasing practices and a response to chronically low prices in the coffee industry. We believe paying more for green coffee is an important investment in the long-term viability of our  coffee-growing partners’ businesses and our supply.</p>
+  </div>
+
+  <!-- Price Chart -->
+  <div class="px-5 lg:px-12 py-5">
+    <div class="flex justify-between">
+      <span class="font-tenso font-medium">$0</span>
+      <span class="font-tenso font-medium">{{ max_price | money_without_trailing_zeros }}</span>
+    </div>
+
+    <div class="relative py-6">
+      <div class="h-[2px] w-full absolute top-1/2 -translate-y-1/2 left-0 bg-black"></div>
+
+      {%- if cf.pricing_specific_coffee != blank -%}
+        {% assign dot_percentage = cf.pricing_specific_coffee | times: 10000 | divided_by: max_price %}
+        <div class="bg-yellow w-4 h-4 rounded-full border border-black absolute top-1/2 -translate-y-1/2"
+             style="left: {{ dot_percentage }}%;"></div>
+      {%- endif -%}
+
+      {%- if cf.pricing_fair_trade != blank-%}
+
+        {% assign dot_percentage = cf.pricing_fair_trade | times: 10000 | divided_by: max_price %}
+        <div class="bg-blue w-4 h-4 rounded-full border border-black absolute top-1/2 -translate-y-1/2"
+             style="left: {{ dot_percentage }}%;"></div>
+      {%- endif -%}
+
+      {%- comment %}
+      {%- if cf.pricing_transparent_trade != blank-%}
+        {% assign dot_percentage = cf.pricing_transparent_trade | times: 10000 | divided_by: max_price %}
+        <div class=" w-4 h-4 rounded-full border border-black absolute top-1/2 -translate-y-1/2"
+             style="left: {{ dot_percentage }}%;"></div>
+      {%- endif -%}
+      {% endcomment -%}
+      
+      {%- if cf.pricing_average_c_market != blank -%}
+        {% assign dot_percentage = cf.pricing_average_c_market | times: 10000 | divided_by: max_price %}
+        <div class="bg-bluebell w-4 h-4 rounded-full border border-black absolute top-1/2 -translate-y-1/2"
+             style="left: {{ dot_percentage }}%;"></div>
+      {%- endif -%}
+    </div>
+
+    <!-- Legend -->
+    <div class="relative">
+      {%- if cf.pricing_specific_coffee != blank -%}
+        
+        {% if cf.pricing_specific_coffee_text != blank %}
+          {% assign coffee_price_text = cf.pricing_specific_coffee_text %}
+          {% else %}
+          {% assign coffee_price_text = " - Our price for " | append: product.title %}
+        {% endif %}
+        
+        <div class="flex items-center mb-2 font-tenso tracking-wider">
+          <div class="bg-yellow min-w-[1rem] w-4 h-4 rounded-full border border-black mr-6"></div>
+          <p>
+            <span class="font-medium">${{ cf.pricing_specific_coffee }}/lb </span>
+            <span>{{ coffee_price_text }}</span>
+          </p>
+        </div>
+      {%- endif -%}
+
+      {%- if cf.pricing_fair_trade != blank-%}
+        <div class="flex items-center mb-2 font-tenso tracking-wider">
+          <div class="bg-blue min-w-[1rem] w-4 h-4 rounded-full border border-black mr-6"></div>
+          <p class="w-fit">
+            <span class="font-medium">${{ cf.pricing_fair_trade }}/lb </span>
+            <span> - Fair Trade Certified Minimum</span>
+          </p>
+        </div>
+      {%- endif -%}
+
+      {%- comment %}
+        {%- if cf.pricing_transparent_trade != blank-%}
+          <div class="flex items-center mb-2 font-tenso tracking-wider">
+            <div class="bg-bluebell min-w-[1rem] w-4 h-4 rounded-full border border-black mr-6"></div>
+            <p>
+              <span class="font-medium">${{ cf.pricing_transparent_trade }}/lb </span>
+              <span> - Transparent Trade's Specialty Coffee Guide's Median</span>
+            </p>
+          </div>
+        {%- endif -%}
+      {% endcomment -%}
+
+      {%- if cf.pricing_average_c_market != blank -%}
+        <div class="flex items-center font-tenso tracking-wider">
+          <div class="bg-bluebell min-w-[1rem] w-4 h-4 rounded-full border border-black mr-6"></div>
+          <p>
+            <span class="font-medium">${{ cf.pricing_average_c_market }}/lb </span>
+            <span> - Average C Market Price</span>
+          </p>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}

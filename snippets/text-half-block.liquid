@@ -1,0 +1,98 @@
+<!-- snippets/text-half-block -->
+
+{%- comment %}
+	Customize Theme Text Block
+  --------------------------
+  - block: [Block] object with settings:
+
+  number
+  title
+  title_image
+  description
+  list_html
+  button settings
+  icon_text
+  icon_info
+  icon_image
+{% endcomment -%}
+
+<!-- order-1, order-2 -->
+<div  id="{{ block.settings.title | strip_html | handleize }}"
+      class="flex flex-col justify-center {{ block.settings.items_alignment }}
+            px-5 lg:px-12 py-12
+            h-full
+            border border-black
+            relative
+            order-{{mobile_order}} md:order-none ">
+
+  {% if block.settings.number != blank %}
+    <p class="text-8xl lg:text-9xl text-left
+              font-tenso text-stroke-camel
+              animate animate-fadeInUp">{{ block.settings.number }}</p>
+  {% endif %}
+
+  {% if block.settings.title != blank %}
+    <div class="flex items-center mb-5">
+      {%- if block.settings.title_image != blank -%}
+        {%
+          render 'responsive-image',
+          src: block.settings.title_image.src,
+          alt: block.settings.title_image.alt,
+          class: "w-12 h-12 rounded-full object-cover mr-6",
+          crop: true
+        %}
+      {%- endif -%}
+
+      <h2 class="{{ block.settings.font }} font-semibold text-2xl lg:text-3xl animate animate-fadeInUp
+                {% if block.settings.items_alignment == 'items-center' %} text-center {% endif %}">
+        {{ block.settings.title }}
+      </h2>
+    </div>
+  {% endif %}
+
+  {% if block.settings.description != blank %}
+    <div class="rte lg:w-10/12 animate animate-fadeInUp text-xl
+                {% if block.settings.items_alignment == 'items-center' %} text-center {% endif %}">
+      {{ block.settings.description }}
+    </div>
+  {% endif %}
+
+  {% if block.settings.list_html != blank %}
+    <div class="rte lg:w-10/12 animate animate-fadeInUp text-lg">
+      {{ block.settings.list_html }}
+    </div>
+  {% endif %}
+
+  {%- if block.settings.link_text != blank -%}
+    <div class="flex animate animate-fadeInUp">
+      {%
+        render 'ct-button',
+        link_text: block.settings.link_text,
+        link_url: block.settings.link_url,
+        button_style: block.settings.button_style,
+        class: block.settings.link_classes,
+        icon: block.settings.btn_icon_name,
+        icon_class: block.settings.btn_icon_class
+      %}
+    </div>
+  {%- endif -%}
+
+  <div class="lg:absolute lg:bottom-12 lg:right-12 animate animate-fadeIn">
+    <!-- icon_info -->
+    {%- if block.settings.icon_text != blank -%}
+      <p class="text-black tracking-wide uppercase text-lg text-left mb-2.5">{{ block.settings.icon_text }}</p>
+    {%- endif -%}
+
+    {%- if block.settings.icon_image != blank -%}
+      <div class="h-32 w-32 xl:h-40 xl:w-40 px-4 py-4 flex justify-center items-center border border-black">
+          {%
+            render 'responsive-image',
+            src: block.settings.icon_image,
+            alt: block.settings.icon_image.alt,
+            class: "w-full h-full mx-auto"
+          %}
+      </div>
+    {%- endif -%}
+  </div>
+
+</div>

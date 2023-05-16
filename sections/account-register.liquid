@@ -1,0 +1,69 @@
+<!-- sections/account-register [ja] -->
+
+<section class="w-full md:w-4/5 xl:w-2/3 mx-auto px-4 py-20">
+    <div class="flex items-center mb-8 animate animate-fadeInUp">
+        <h1 class="font-couch text-xl xs:text-2xl sm:text-4xl">Register</h1>
+
+        <button class="btn-transparent btn-with-icon flex items-center ml-10 transition-all hover:text-blue text-base xs:text-lg sm:text-2xl"
+                data-section-nav="account-login"
+                data-section-nav--href="/account/login"
+                data-section-nav--wrapper="#template-account"
+                data-replace-history="true">
+            <span class="mr-2">or login</span>
+            {% render 'icon', icon: 'arrow-right' %}
+        </button>
+    </div>
+
+    {% form 'create_customer' %}
+        {%- if form.errors -%}
+            <div class="mb-2.5 text-lg">
+                {{ form.errors | default_errors }}
+            </div>
+
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelector('#register-email').focus()
+                })
+            </script>
+        {%- endif -%}
+
+        <div    class="grid md:grid-cols-2 gap-4 md:gap-6 my-5 animate animate-fadeInUp"
+                data-delay="200">
+            {% render 'floating-label',
+                id: 'register-name',
+                input_name: 'customer[first_name]',
+                placeholder: 'Cool',
+                label: 'First Name' %}
+
+            {% render 'floating-label',
+                id: 'register-last-name',
+                input_name: 'customer[last_name]',
+                placeholder: 'Person',
+                label: 'Last Name' %}
+
+            {% render 'floating-label',
+                id: 'register-email',
+                input_name: 'customer[email]',
+                input_val: form.email,
+                placeholder: 'you@example.com',
+                label: 'Email' %}
+
+            {% render 'floating-label',
+                id: 'register-password',
+                input_type: 'password',
+                input_name: 'customer[password]',
+                placeholder: 'C0unt3rCultur3_Rul3z',
+                label: 'Password' %}
+        </div>
+
+        <div class="flex justify-end">
+            <button type="submit"
+                    name="Create"
+                    class="btn btn-secondary btn-big w-full md:w-auto"
+                    data-delay="400">
+                Create Account
+            </button>
+        </div>
+    {% endform %}
+
+  </section>

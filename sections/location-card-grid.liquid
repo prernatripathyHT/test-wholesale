@@ -1,0 +1,458 @@
+<!-- sections/location-card-grid.liquid [ja] -->
+
+
+<section>
+    {%- unless section.settings.title == blank -%}
+        <div class="px-5 md:px-12 py-4 md:py-8 border-t border-l border-r border-black">
+            {% render 'ct-heading',
+                title: section.settings.title,
+                tag: section.settings.tag,
+                text_size_mobile: section.settings.text_size_mobile,
+                text_size_desktop: section.settings.text_size_desktop,
+                text_color: section.settings.text_color,
+                font: section.settings.font,
+                alignment: section.settings.alignment,
+                weight: section.settings.weight,
+                class: section.settings.title_classes %}
+        </div>
+    {%- endunless -%}
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black bg-black gap-px">
+        {%- for block in section.blocks -%}
+
+            {% assign card = block.settings %}
+
+            <li class="bg-white">
+                {% unless card.img == blank %}
+                    {% render 'responsive-image',
+                        src: card.img.src,
+                        alt: card.img.alt,
+                        class: 'aspect-square object-cover' %}
+                {% endunless %}
+
+                <div class="py-9 px-5 xs:px-[12%] sm:pb-18 border-t border-black">
+                    {% unless card.title_image == blank and card.title == blank %}
+                        <div class="flex items-center mb-3 animate animate-fadeInUp">
+                            {% unless card.title_image == blank %}
+                                {% render 'responsive-image',
+                                    src: card.title_image.src,
+                                    alt: card.title_image.alt,
+                                    class: "w-12 h-12 rounded-full object-cover mr-6",
+                                    crop: true %}
+                            {% endunless %}
+
+                            {% unless card.title == blank %}
+                                <h3 class="font-gopher font-bold text-2xl">
+                                    {{ card.title }}
+                                </h3>
+                            {% endunless %}
+                        </div>
+                    {% endunless %}
+
+                    {% unless card.description == blank %}
+                        <div class="mb-8 text-xl animate animate-fadeInUp">
+                            {{ card.description | newline_to_br }}
+                        </div>
+                    {% endunless %}
+
+                    <div class="flex w-full">
+                        {% assign btn_class = 'btn btn-secondary flex-1 text-center text-lg font-semibold tracking-wider uppercase p-3.5' %}
+
+                        {%- unless card.link_one_text == blank -%}
+                            {% render 'ct-button',
+                                link_text: card.link_one_text,
+                                link_url: card.link_one_url,
+                                class: btn_class %}
+                        {%- endunless -%}
+
+                        {%- unless card.link_two_text == blank -%}
+                            {% render 'ct-button',
+                                link_text: card.link_two_text,
+                                link_url: card.link_two_url,
+                                class: btn_class %}
+                        {%- endunless -%}
+                    </div>
+                </div>
+            </li>
+
+        {%- endfor -%}
+    </ul>
+</section>
+
+
+{% schema %}
+{
+    "name": "Locations",
+    "class": "section-location-card-grid",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "header",
+            "content": "Text Settings"
+        },
+        {
+            "type": "richtext",
+            "id": "title",
+            "label": "Section Title"
+        },
+        {
+            "type": "select",
+            "id": "text_size_mobile",
+            "label": "Text Size: Mobile",
+            "default": "text-6xl",
+            "options": [
+                {
+                "label": "6XL",
+                "value": "text-6xl"
+                },
+                {
+                "label": "5XL",
+                "value": "text-5xl"
+                },
+                {
+                "label": "4XL",
+                "value": "text-4xl"
+                },
+                {
+                "label": "3XL",
+                "value": "text-3xl"
+                },
+                {
+                "label": "2XL",
+                "value": "text-2xl"
+                },
+                {
+                "label": "XL",
+                "value": "text-xl"
+                },
+                {
+                "label": "LG",
+                "value": "text-lg"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "text_size_desktop",
+            "label": "Text Size: Desktop",
+            "default": "lg:text-6xl",
+            "options": [
+                {
+                "label": "6XL",
+                "value": "lg:text-6xl"
+                },
+                {
+                "label": "5XL",
+                "value": "lg:text-5xl"
+                },
+                {
+                "label": "4XL",
+                "value": "lg:text-4xl"
+                },
+                {
+                "label": "3XL",
+                "value": "lg:text-3xl"
+                },
+                {
+                "label": "2XL",
+                "value": "lg:text-2xl"
+                },
+                {
+                "label": "XL",
+                "value": "lg:text-xl"
+                },
+                {
+                "label": "LG",
+                "value": "lg:text-lg"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "tag",
+            "label": "Heading Tag",
+            "default": "h1",
+            "options": [
+                {
+                "label": "H1",
+                "value": "h1"
+                },
+                {
+                "label": "H2",
+                "value": "h2"
+                },
+                {
+                "label": "H3",
+                "value": "h3"
+                },
+                {
+                "label": "H4",
+                "value": "h4"
+                },
+                {
+                "label": "H5",
+                "value": "h5"
+                },
+                {
+                "label": "H6",
+                "value": "h6"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "font",
+            "label": "Title Font Family",
+            "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+            "default": "font-freight-sans",
+            "options": [
+                {
+                    "label": "Freight Sans",
+                    "value": "font-freight-sans"
+                },
+                {
+                    "label": "Couch",
+                    "value": "font-couch"
+                },
+                {
+                    "label": "Tenso",
+                    "value": "font-tenso"
+                },
+                {
+                    "label": "Gopher",
+                    "value": "font-gopher"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "weight",
+            "label": "Title Font Weight",
+            "info": "Font Weight Selector",
+            "default": "font-regular",
+            "options": [
+                {
+                "label": "Light",
+                "value": "font-light"
+                },
+                {
+                "label": "Regular",
+                "value": "font-regular"
+                },
+                {
+                "label": "Semibold",
+                "value": "font-semibold"
+                },
+                {
+                "label": "Bold",
+                "value": "font-bold"
+                },
+                {
+                "label": "Black",
+                "value": "font-black"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "alignment",
+            "label": "Title Text Alignment",
+            "default": "text-center",
+            "options": [
+                {
+                "label": "Left",
+                "value": "text-left"
+                },
+                {
+                "label": "Center",
+                "value": "text-center"
+                },
+                {
+                "label": "Right",
+                "value": "text-right"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "text_color",
+            "label": "Title Text Color",
+            "default": "text-black",
+            "options": [
+                {
+                "label": "Black",
+                "value": "text-black"
+                },
+                {
+                "label": "Blue",
+                "value": "text-blue"
+                },
+                {
+                "label": "White",
+                "value": "text-white"
+                },
+                {
+                "label": "Camel",
+                "value": "text-camel"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "id": "title_classes",
+            "label": "Additional Classes for the Title"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Card",
+            "type": "card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Image"
+                },
+                {
+                    "type": "header",
+                    "content": "Content Settings"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Block Title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "title_image",
+                    "label": "Block Title Image",
+                    "info": "Appears to the left of the block title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "Block Main Content",
+                    "info": "Richtext Description"
+                },
+                {
+                    "type": "header",
+                    "content": "1st Button Settings"
+                },
+                {
+                    "type": "select",
+                    "id": "button_one_style",
+                    "label": "Button Style",
+                    "default": "btn btn-secondary",
+                    "options": [
+                        {
+                            "label": "Button Primary",
+                            "value": "btn btn-primary"
+                        },
+                        {
+                            "label": "Button Secondary",
+                            "value": "btn btn-secondary"
+                        },
+                        {
+                            "label": "Button Tertiary",
+                            "value": "btn btn-tertiary"
+                        },
+                        {
+                            "label": "Button White",
+                            "value": "btn btn-white"
+                        },
+                        {
+                            "label": "Button Outline",
+                            "value": "btn btn-outline"
+                        },
+                        {
+                            "label": "Camel Underline",
+                            "value": "camel-underline"
+                        },
+                        {
+                            "label": "Blue Underline",
+                            "value": "blue-underline"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "link_one_text",
+                    "label": "Link Text",
+                    "default": "Click me!"
+                },
+                {
+                    "type": "url",
+                    "id": "link_one_url",
+                    "label": "Link URL",
+                    "default": "/collections/all"
+                },
+                {
+                    "type": "text",
+                    "id": "link_one_classes",
+                    "label": "Additional Classes for the Button/Link"
+                },
+                {
+                    "type": "header",
+                    "content": "2nd Button Settings"
+                },
+                {
+                    "type": "select",
+                    "id": "button_two_style",
+                    "label": "Button Style",
+                    "default": "btn btn-secondary",
+                    "options": [
+                        {
+                            "label": "Button Primary",
+                            "value": "btn btn-primary"
+                        },
+                        {
+                            "label": "Button Secondary",
+                            "value": "btn btn-secondary"
+                        },
+                        {
+                            "label": "Button Tertiary",
+                            "value": "btn btn-tertiary"
+                        },
+                        {
+                            "label": "Button White",
+                            "value": "btn btn-white"
+                        },
+                        {
+                            "label": "Button Outline",
+                            "value": "btn btn-outline"
+                        },
+                        {
+                            "label": "Camel Underline",
+                            "value": "camel-underline"
+                        },
+                        {
+                            "label": "Blue Underline",
+                            "value": "blue-underline"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "link_two_text",
+                    "label": "Link Text",
+                    "default": "Click me!"
+                },
+                {
+                    "type": "url",
+                    "id": "link_two_url",
+                    "label": "Link URL",
+                    "default": "/collections/all"
+                },
+                {
+                    "type": "text",
+                    "id": "link_two_classes",
+                    "label": "Additional Classes for the Button/Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

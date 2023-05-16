@@ -1,0 +1,113 @@
+<!-- sections/gift-subscription [aa] -->
+
+{% assign initial_block = section.blocks | first %}
+{% assign active_product = all_products[initial_block.settings.product] %}
+
+<section class="js-gift-selector">
+
+  <div class="my-12">
+    {%- unless section.settings.duration_header == blank -%}
+      <h2 class="font-couch text-xl lg:text-2xl text-center animate animate-fadeInUp px-5">{{ section.settings.duration_header }}</h2>
+    {%- endunless -%}
+
+    <fieldset class="px-5 py-5">
+      <ul class="flex flex-wrap gap-2 justify-center item-center list-none my-3 animate animate-fadeInUp">
+        {%- for block in section.blocks -%}
+          <li class="custom-radio-swatch">
+            <input id="{{ block.id }}"
+                   type="radio"
+                   name="gift_duration"
+                   value="{{ block.settings.product }}"
+                   data-option="{{ block.settings.product }}"
+                   data-value="{{ block.settings.product }}"
+                   {% if forloop.first %} checked {% endif %}>
+
+            <label for="{{ block.id }}" class="">
+              {{ block.settings.product.title | remove: ' Gift Subscription' | append: 's' }}
+            </label>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </fieldset>
+  </div>
+
+  <div class="my-12">
+    {%- unless section.settings.coffee_header == blank -%}
+      <h2 class="font-couch text-xl lg:text-2xl text-center animate animate-fadeInUp px-5">{{ section.settings.coffee_header }}</h2>
+    {%- endunless -%}
+
+    <fieldset class="px-5 py-5">
+      <ul class="flex flex-wrap gap-5 justify-center item-center list-none my-3 animate animate-fadeInUp">
+        {%- for variant in active_product.variants -%}
+          <li class="custom-radio-swatch custom-radio-with-image">
+            <input id="{{ variant.sku }}"
+                   type="radio"
+                   name="variant_sku"
+                   value="{{ variant.sku }}"
+                   data-option="{{ variant.sku }}"
+                   data-value="{{ variant.sku }}"
+                   {% if forloop.first %} checked {% endif %}>
+
+            <label for="{{ variant.sku }}" class="flex flex-col items-center">
+
+              {%- if variant.image != blank -%}
+                {% render 'responsive-image',
+                    src: variant.image.src,
+                    alt: variant.image.alt,
+                    class: "w-32 mx-auto"  %}
+              {%- endif -%}
+
+              {{ variant.title }}
+            </label>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </fieldset>
+  </div>
+</section>
+
+<section class="js-gift-buy-panel hidden relative z-[2] grid xl:grid-cols-2 border-t border-black">
+  {% render 'product-single-image' %}
+  {% render 'product-gift-panel' %}
+</section>
+
+
+{% schema %}
+{
+  "name": "Gift Subscription",
+  "settings": [
+    {
+      "type": "text",
+      "id": "duration_header",
+      "label": "Gift Duration Header",
+      "default": "How often should we send coffee?"
+    },
+    {
+      "type": "text",
+      "id": "coffee_header",
+      "label": "Coffee Picker Header",
+      "default": "Which coffee do you want to send?"
+    },
+    {
+      "type": "text",
+      "id": "quantity_header",
+      "label": "Quantity Select Header",
+      "default": "How much coffee should we send?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gift_product",
+      "name": "Gift Subscription Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Gift Subscription Product Select",
+          "info": "Select one of 3, 6, 12 month Gift Subscription Products"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

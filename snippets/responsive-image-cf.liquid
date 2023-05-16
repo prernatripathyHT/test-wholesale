@@ -1,0 +1,42 @@
+<!-- snippets/responsive-image [aa] -->
+
+{% comment %}
+Variables
+- src
+- alt
+- class
+- extra_attrs
+- lazy = t/f
+
+  {% 
+    render 'responsive-image-cf'
+    src: image,
+    alt: alt_text,
+    class: ''
+  %}
+{% endcomment %}
+
+{% assign widths = '180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048' | split: ', ' %}
+{% assign src_set = '' %}
+
+{% assign src = src | replace: ".png", "_1x1.png" | replace: ".jpg", "_1x1.jpg" | replace: ".jpeg", "_1x1.jpeg" %}
+
+{% capture src_set %}
+  {%- for width in widths -%}
+    {% assign replaced_width = '_' | append: width | append: 'x.' %}
+    {%- assign img_url = src | replace: '_1x1.', replaced_width -%}
+    {{ src_set }}
+    {{ img_url | append: " " | append: width | append: "w ," }}
+  {%- endfor -%}
+{% endcapture %}
+
+<img class="{{ class }}"
+     src="{{ src | img_url: '1x1', crop: 'center' }}"
+     srcset="{{ src_set }}"
+     data-widths="{{ widths }}"
+     data-sizes="auto"
+     alt="{{ alt | escape }}"
+     {% if lazy != false %}
+       loading="lazy"
+     {% endif %}
+     {{extra_attrs}} >

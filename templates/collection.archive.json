@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "1649280450c0012439": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": true,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Coffee Archive<\/p>",
+        "text_size_mobile": "text-5xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline absolute top-28 right-0 w-4\/5 lg:relative lg:w-full lg:right-auto lg:top-auto",
+        "content": "<p>Why does our single-origin menu change throughout the year? Because coffee, like any crop, is seasonal! Coffee grows in the tropics and is sourced from the Northern and Southern Hemisphere. With different seasons on each side of the Equator, some country’s harvest coffee while other nations are see the first signs of fruit on their coffee plants. We strive to offer coffee at its freshest, which results in changes to our menu dependent on the time of year.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "1651517671498b4694": {
+      "type": "button-group",
+      "blocks": {
+        "1c38994f-eff7-4c66-9646-3838769ae2ce": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "LEARN MORE ABOUT Coffee Seasonality",
+            "link_url": "shopify:\/\/blogs\/counter-culture-coffee\/coffee-basics-seasonality-when-are-particular-coffees-in-season",
+            "link_classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "1c38994f-eff7-4c66-9646-3838769ae2ce"
+      ],
+      "settings": {
+        "section_classes": ""
+      }
+    },
+    "165100519236c5b271": {
+      "type": "predictive-search",
+      "disabled": true,
+      "settings": {
+        "show_products": true,
+        "show_articles": false,
+        "show_pages": false,
+        "additional_classes": ""
+      }
+    },
+    "main": {
+      "type": "collection-grid",
+      "settings": {
+        "alt_collection": "",
+        "title": "",
+        "show_hover_image": false,
+        "show_atc": true,
+        "show_filters": true,
+        "feature_image_index": 6,
+        "grid_limit": 12
+      }
+    }
+  },
+  "order": [
+    "1649280450c0012439",
+    "1651517671498b4694",
+    "165100519236c5b271",
+    "main"
+  ]
+}

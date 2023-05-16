@@ -1,0 +1,179 @@
+<!-- sections/footer -->
+{% assign s = section.settings %}
+{% assign social_blocks = section.blocks | where: 'type', 'social' %}
+
+{% assign footer_linklist = s.footer_menu %}
+{% assign policy_linklist = s.privacy_menu %}
+
+<footer class="bg-blue text-white px-6 xl:px-20 py-8 relative">
+  <!-- COUNTERCULTURE -->
+  {%- if s.logo_image != blank -%}
+    <div class="flex justify-center mb-10">
+      {%
+        render 'responsive-image',
+        src: s.logo_image.src,
+        alt: s.logo_image.alt,
+        class: "w-40 md:w-48 xl:w-60 mx-auto"
+      %}
+    </div>
+  {%- else -%}
+    <h3 class="text-center uppercase mb-10">{{ s.title }}</h3>
+  {%- endif -%}
+
+  {%- if s.badge_image != blank -%}
+    <div class="absolute -top-8 right-5 md:right-10">
+      {%
+        render 'responsive-image',
+        src: s.badge_image.src,
+        alt: s.badge_image.alt,
+        class: "w-20 md:w-32 xl:-w40 mx-auto animate-rotate"
+      %}
+    </div>
+  {%- endif -%}
+
+  {%- if s.bcorp_image != blank -%}
+    <div class="absolute bottom-20 md:bottom-10 right-5 md:right-10">
+      {%
+        render 'responsive-image',
+        src: s.bcorp_image.src,
+        alt: s.bcorp_image.alt,
+        class: "w-10 md:w-12 mx-auto"
+      %}
+    </div>
+  {%- endif -%}
+
+  <div class="grid footer--grid gap-10 xl:gap-24">
+    <div class="">
+      <!-- newsletter -->
+
+      {% render 'newsletter-form',
+          title: s.newsletter_title,
+          text: s.newsletter_text,
+          klaviyo_id: 'RLXxg8',
+          input_class: 'text-white border-white bg-transparent rounded-r-none rounded-l-full xl:rounded-r-full',
+          label_class: "text-white",
+          btn_class: "btn-tertiary w-1/2 md:w-1/4 xl:w-auto rounded-r-full rounded-l-none xl:rounded-l-full",
+          container_class: "flex xl:flex-col xl:gap-4" %}
+
+      <!-- Social Blocks -->
+      <ul class="flex items-center justify-center xl:justify-start list-none gap-4 mt-5">
+        {%- for block in social_blocks -%}
+          {%- if block.settings.url != blank -%}
+            <li class="animate animate-fadeIn">
+              <a href="{{ block.settings.url }}">
+                {%
+                  render 'responsive-image',
+                  src: block.settings.image.src,
+                  alt: block.settings.image.alt,
+                  class: "w-10",
+                %}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <!-- xl:grid-cols-2 xl:grid-cols-3 xl:grid-cols-4 xl:grid-cols-5 xl:grid-cols-6 -->
+
+    {% assign links_size = footer_linklist.links | size %}
+    <div class="footer--main-links mx-auto w-full
+                grid grid-cols-3 md:grid-cols-{{links_size}}
+                gap-5 xl:gap-8 py-12">
+
+      {%- for link in footer_linklist.links -%}
+        {% render 'footer-menu', link: link, first: forloop.first, last: forloop.last %}
+      {%- endfor -%}
+
+    </div>
+  </div>
+
+  <ul class="mt-8 w-full xl:w-1/2 mx-auto list-none flex justify-center">
+    {%- for link in policy_linklist.links -%}
+      <li class="text-sm text-white px-2 md:px-4 text-center {% unless forloop.last %} border-r border-white {% endunless %}">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+</footer>
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Footer Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Central Logo Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_image",
+      "label": "Right side: Badge Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bcorp_image",
+      "label": "B Corp: Badge Image"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "header",
+      "content": "Link Lists"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Navigation Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "privacy_menu",
+      "label": "Footer Privacy Menu"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter Settings"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Title",
+      "default": "we're spilling the beans..."
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Newsletter Text Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social",
+      "name": "Social Links",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,31 @@
+<!-- snippets/product-icons -->
+
+{%- comment %}
+	Custom Fields Metafields
+  --------------------------------
+  - buy_panel_icons
+{% endcomment -%}
+
+{% assign bp_icons = product.metafields.custom_fields.buy_panel_icons %}
+
+{%- if bp_icons != blank -%}
+  <div class="border-b border-black py-5 px-5 md:py-8 md:px-8 flex gap-5 md:gap-10">
+    {%- for icon in bp_icons -%}
+      <div class="flex gap-3 md:gap-5 items-center flex-col md:flex-row w-1/3">
+        {% if icon["icon_image"] != blank %}
+          {%
+            render 'responsive-image-cf',
+            src: icon["icon_image"],
+            alt: icon["icon_text"],
+            class: "w-8 md:w-10"
+          %}
+        {% endif %}
+
+
+        {% if icon["icon_text"] != blank %}
+          <p class="font-semibold text-base md:text-lg tracking-wider text-center md:text-left">{{ icon["icon_text"] }}</p>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

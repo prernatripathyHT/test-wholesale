@@ -1,0 +1,287 @@
+<!-- snippets/account-order -->
+{%- comment %}
+	Variables:
+  - order: [Order Object]
+{% endcomment -%}
+
+<div class="account--main">
+  <div class="py-12 flex flex-col items-center">
+    <h1 class="text-3xl font-couch text-center mb-5">Order {{ order.name }}</h1>
+
+    <div class="mb-5 text-center md:text-left">
+      {%- assign order_date = order.created_at | date: format: "basic" -%}
+      <p>Ordered on: {{ order_date }}</p>
+
+      {%- if order.cancelled -%}
+        {%- assign cancelled_at = order.cancelled_at | date: format: "basic" -%}
+        <p>Order cancelled on {{ cancelled_at }}</p>
+        <p>{{ order.cancel_reason_label }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="px-5 lg:px-0 w-full lg:w-10/12 mx-auto pb-12">
+    <div>
+
+      <p class="font-couch my-2.5 text-xl">Order Info</p>
+
+      <table role="table" class="order-details w-full border border-black">
+        <caption class="sr-only">Order {{ order.name }}</caption>
+        <thead role="rowgroup" class="border-b border-black block p-2 bg-yellow">
+          <tr role="row"  class="grid grid-cols-5 gap-2 text-left uppercase tracking-wider font-freight-sans text-xs md:text-base">
+            <th id="ColumnProduct" scope="col" role="columnheader" class="col-span-3 md:col-span-2 font-medium">Product</th>
+            <th id="ColumnDelivery" scope="col" role="columnheader" class="text-center hidden md:block font-medium">Delivery</th>
+            <th id="ColumnQuantity" scope="col" role="columnheader" class="text-center font-medium">Quantity</th>
+            <th id="ColumnTotal" scope="col" role="columnheader" class="text-center font-medium">Total</th>
+          </tr>
+        </thead>
+        <tbody role="rowgroup">
+          {%- for line_item in order.line_items -%}
+            <tr role="row" class="grid grid-cols-5 gap-2 text-left border-b border-black text-xs md:text-base">
+              <td
+                id="Row{{ line_item.key }}"
+                headers="ColumnProduct"
+                role="rowheader"
+                scope="row"
+                data-label="Product"
+                class="col-span-3 md:col-span-2 flex items-center border-r border-black p-2"
+              >
+                <div>
+                  <div class="mb-1">
+                    {%- if line_item.url != blank -%}
+                      <a href="{{ line_item.url }}" class="text-sm md:text-base font-medium">{{ line_item.product.title }}</a>
+                    {%- else -%}
+                      <p class="text-sm font-medium">{{ line_item.product.title }}</p>
+                    {%- endif -%}
+                  </div>
+
+                  <div>
+                    {% unless line_item.product.has_only_default_variant %}
+                      {% assign variant_titles = line_item.variant.title | split: " / " %}
+                      {%- for title in variant_titles -%}
+                        <p class="text-xs md:text-base mb-0">{{ title | strip }}</p>
+                      {%- endfor -%}
+                    {% endunless %}
+                  </div>
+
+                  {%- if line_item.line_level_discount_allocations != blank -%}
+                    <ul role="list" aria-label="Discount">
+                      {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                        <li>
+                          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money -}})
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+
+                  {%- assign property_size = line_item.properties | size -%}
+
+                  {%- unless line_item.selling_plan_allocation == nil -%}
+                    <div class="properties md:hidden">
+                      <div class="text-xs md:text-base mb-1 flex items-center justify-start">
+                        {% assign selling_plan_name = line_item.selling_plan_allocation.selling_plan.name | downcase %}
+                        {% assign frequency = selling_plan_name | remove: 'delivery every' %}
+                        <span>Subscription</span>
+                        <span class="mx-1.5">{% render 'icon', icon: 'subscribe' %}</span>
+                        <span>{{ frequency }}</span>
+                      </div>
+                    </div>
+                  {%- endunless -%}
+                </div>
+              </td>
+
+              <td
+                headers="Row{{ line_item.key }} ColumnDelivery"
+                role="cell"
+                class="hidden md:flex p-2 border-r border-black items-center justify-center"
+                data-label="Delivery"
+              >
+                {%- assign property_size = line_item.properties | size -%}
+
+                {%- unless line_item.selling_plan_allocation == nil -%}
+                  <div class="properties">
+                    <div class="text-xs md:text-base mb-1 flex items-center justify-center">
+                      {% assign selling_plan_name = line_item.selling_plan_allocation.selling_plan.name | downcase %}
+                      {% assign frequency = selling_plan_name | remove: 'delivery every' %}
+                      <span>Subscription</span>
+                      <span class="mx-1.5">{% render 'icon', icon: 'subscribe' %}</span>
+                      <span>{{ frequency }}</span>
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="text-sm mb-1 flex items-center text-center">One-Time Purchase</div>
+                {%- endunless -%}
+              </td>
+              <td
+                headers="Row{{ line_item.key }} ColumnQuantity"
+                role="cell"
+                data-label="Quantity"
+                class="text-xs md:text-base text-center p-2 border-r border-black flex items-center justify-center"
+              >
+                {{ line_item.quantity }}
+              </td>
+              <td
+                headers="Row{{ line_item.key }} ColumnTotal"
+                role="cell"
+                data-label="Total"
+                class="text-center text-xs md:text-base p-2 flex items-center justify-center"
+              >
+                {%- if line_item.original_line_price != line_item.final_line_price -%}
+                  <dl>
+                    <dt>
+                      <span class="sr-only">Original Price</span>
+                    </dt>
+                    <dd class="regular-price">
+                      <s>{{ line_item.original_line_price | money }}</s>
+                    </dd>
+                    <dt>
+                      <span class="sr-only">Discounted Price</span>
+                    </dt>
+                    <dd>
+                      <span>{{ line_item.final_line_price | money }}</span>
+                    </dd>
+                  </dl>
+                {%- else -%}
+                  {{ line_item.original_line_price | money }}
+                {%- endif -%}
+              </td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+        <tfoot role="rowgroup" class="block">
+          <tr role="row" class="grid grid-cols-5 gap-2 p-2 border-b border-black">
+            <td id="RowSubtotal" role="rowheader" scope="row" colspan="4" class="col-span-4 text-right uppercase  tracking-wider">
+              Subtotal
+            </td>
+            <td headers="RowSubtotal" role="cell" data-label="Subtotal" class="col-span-1 text-center text-base font-medium">{{ order.line_items_subtotal_price | money }}</td>
+          </tr>
+          {%- if order.cart_level_discount_applications != blank -%}
+            <tr role="row" class="grid grid-cols-5 gap-2 p-2 border-b border-black">
+              {%- for discount_application in order.cart_level_discount_applications -%}
+                <td id="RowDiscount" role="rowheader" scope="row" colspan="4" class="col-span-4 text-right text-right uppercase  tracking-wider">
+                  Discount
+                  <span class="cart-discount">
+                    {{- discount_application.title -}}
+                  </span>
+                </td>
+                <td headers="RowDiscount" role="cell" data-label="Discount">
+                  <div class="flex justify-center gap-2 font-medium">
+                    <span>-{{ discount_application.total_allocated_amount | money }}</span>
+                    <span class="cart-discount">
+                      {{- discount_application.title -}}
+                    </span>
+                  </div>
+                </td>
+              {%- endfor -%}
+            </tr>
+          {%- endif -%}
+          {%- for shipping_method in order.shipping_methods -%}
+            <tr role="row" class="grid grid-cols-5 gap-2 p-2 border-b border-black">
+              <td id="RowShipping" role="rowheader" scope="row" colspan="4" class="col-span-4 text-right uppercase tracking-wider font-freight-sans">Shipping ({{ shipping_method.title }})</td>
+              <td headers="RowShipping" role="cell" data-label="Shipping ({{ shipping_method.title }})" class="col-span-1 text-center text-base font-medium">{{ shipping_method.price | money }}</td>
+            </tr>
+          {%- endfor -%}
+          {%- for tax_line in order.tax_lines -%}
+            <tr role="row" class="grid grid-cols-5 gap-2 p-2 border-b border-black">
+              <td id="RowTax" role="rowheader" scope="row" colspan="4" class="col-span-4 text-right uppercase tracking-wider font-freight-sans">Tax ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)</td>
+              <td headers="RowTax" role="cell" data-label="Tax ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)" class="col-span-1 text-center text-base font-medium">{{ tax_line.price | money }}</td>
+            </tr>
+          {%- endfor -%}
+          {%- if order.total_duties -%}
+            <tr role="row" class="grid grid-cols-5 gap-2 p-2 border-b border-black">
+              <td id="RowDuties" role="rowheader" scope="row" colspan="4" class="col-span-4 text-right uppercase tracking-wider font-freight-sans">Total Duties</td>
+              <td headers="RowDuties" role="cell" data-label="Total Duties" class="col-span-1 text-center text-base font-medium">{{ order.total_duties | money }}</td>
+            </tr>
+          {%- endif -%}
+          <tr role="row" class="grid grid-cols-5 gap-2 p-2 border-b border-black">
+            <td id="RowTotal" role="rowheader" scope="row" colspan="4" class="col-span-4 text-right uppercase tracking-wider font-freight-sans">Total</td>
+            <td headers="RowTotal" role="cell" colspan="1" data-label="Total" class="col-span-1 text-xl font-bold text-center">{{ order.total_price | money }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    {% capture tracking_info %}{% endcapture %}
+    <div class="my-12">
+      <h3 class="text-xl font-couch mb-2.5">Shipping Info</h3>
+      <table class="w-full border border-black">
+
+        <thead role="rowgroup" class="border-b border-black block p-2 bg-yellow">
+          <tr role="row"  class="grid grid-cols-3 gap-2 text-left uppercase tracking-wider font-freight-sans text-xs md:text-base">
+            <th id="ColumnCarrier" scope="col" role="columnheader" class="font-medium">Carrier</th>
+            <th id="ColumnTrackingNumber" scope="col" role="columnheader" class="text-center hidden md:block font-medium">Tracking Number</th>
+            <th id="ColumnTrackingLink" scope="col" role="columnheader" class="text-center font-medium">Tracking Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for line_item in order.line_items -%}
+            {%- if line_item.fulfillment -%}
+              {%- unless tracking_info contains line_item.fulfillment.tracking_number -%}
+                {% capture tracking_info %}{{ tracking_info }}
+                  <tr role="row" class="grid grid-cols-3 gap-2 text-left text-xs md:text-base">
+                    <td
+                      id="Row{{ line_item.key }}"
+                      headers="ColumnCarrier"
+                      role="rowheader"
+                      scope="row"
+                      data-label="Product"
+                      class="flex items-center border-r border-black p-2"
+                    >
+                      {{ line_item.fulfillment.tracking_company }}
+                    </td>
+
+                    <td
+                      id="Row{{ line_item.key }}"
+                      headers="ColumnTrackingNumber"
+                      role="rowheader"
+                      scope="row"
+                      data-label="Product"
+                      class="flex items-center justify-center text-center border-r border-black p-2"
+                    >
+                      {{ line_item.fulfillment.tracking_number }}
+                    </td>
+                    <td
+                      id="Row{{ line_item.key }}"
+                      headers="ColumnTrackingLink"
+                      role="rowheader"
+                      scope="row"
+                      data-label="Product"
+                      class="flex items-center text-center justify-center p-2"
+                    >
+                      {{ line_item.fulfillment.tracking_link }}
+                    </td>
+                  </tr>
+                {% endcapture %}
+              {%- endunless -%}
+            {% endif %}
+          {% endfor %}
+
+          {{ tracking_info }}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-8 w-10/12 my-12">
+      <div>
+        <h2 class="text-xl font-couch mb-2.5">Billing Address</h2>
+        {{ order.billing_address | format_address }}
+      </div>
+
+      <div>
+        <h2 class="text-xl font-couch mb-2.5">Shipping Address</h2>
+        {{ order.shipping_address | format_address }}
+      </div>
+
+      <div class="">
+        <h2 class="text-xl font-couch mb-2.5">Payment Status</h2>
+        {{ order.financial_status_label }}
+      </div>
+
+      <div>
+        <h2 class="text-xl font-couch mb-2.5">Fulfillment Status</h2>
+        {{ order.fulfillment_status_label }}
+      </div>
+
+    </div>
+  </div>
+</div>

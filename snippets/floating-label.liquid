@@ -1,0 +1,72 @@
+<!-- snippets/floating-label.liquid [ja] -->
+
+{%- comment -%} Usage Example
+
+    {% render 'floating-label',
+        id: '',
+        input_type: 'text',
+        input_name: 'email',
+        input_val: form.email,
+        placeholder: 'jake@example.com',
+        input_class: '',
+        label: 'Email',
+        label_class: '' %}
+
+{%- endcomment -%}
+
+{% capture input_classes %}
+    peer
+    placeholder:opacity-0
+    border border-black
+    px-6 pt-6 pb-4
+    w-full
+{% endcapture %}
+
+{% capture label_classes %}
+    absolute
+    top-2 left-6
+    transition-all
+    text-xs
+    peer-placeholder-shown:text-base
+    pointer-events-none
+{% endcapture %}
+
+<div class="relative w-full">
+    {% if input_type == 'textarea' %}
+        <textarea   id="{{ id }}"
+                    rows="9"
+                    name="{{ input_name }}"
+                    placeholder="{{ placeholder }}"
+                    class="
+                        {{ input_classes }}
+                        resize-none
+                        {{ input_class }}"></textarea>
+
+        <label  for="{{ id }}"
+                class="
+                    {{ label_classes }}
+                    peer-placeholder-shown:top-6
+                    {{ label_class }}">
+            {{ label }}
+        </label>
+    {% else %}
+        <input  id="{{ id }}"
+                type="{{ input_type | default: 'text' }}"
+                name="{{ input_name }}"
+                value="{{ input_val }}"
+                placeholder="{{ placeholder }}"
+                class="
+                    {{ input_classes }}
+                    {{ input_class }}">
+
+        <label  for="{{ id }}"
+                class="
+                    {{ label_classes }}
+                    peer-placeholder-shown:top-1/2
+                    translate-y-0
+                    peer-placeholder-shown:-translate-y-1/2
+                    {{ label_class }}">
+            {{ label }}
+        </label>
+    {% endif %}
+</div>

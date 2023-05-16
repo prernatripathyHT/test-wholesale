@@ -1,0 +1,79 @@
+#BambooHR {
+    padding-block: theme('spacing.12');
+    padding-inline: 10%;
+
+    & .BambooHR-ATS-board h2,
+    & #BambooHR-Footer {
+        display: none;
+    }
+
+    & .BambooHR-ATS-Department-List {
+        display: flex;
+        flex-direction: column;
+        gap: theme('spacing.10');
+        padding: 0;
+    }
+
+    & .BambooHR-ATS-Department-Header {
+        font-family: theme('fontFamily.couch');
+        font-size: theme('fontSize.lg');
+        margin-bottom: theme('spacing.5');
+
+        @screen sm {
+            font-size: theme('fontSize.2xl');
+            margin-left: theme('spacing[3.5]');
+        }
+    }
+
+    & .BambooHR-ATS-Jobs-List {
+        display: flex;
+        flex-direction: column;
+        gap: theme('spacing.6');
+
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    & .BambooHR-ATS-Jobs-Item {
+        position: relative;
+
+        & > * {
+            color: theme('colors.blue');
+            font-weight: theme('fontWeight.medium');
+            letter-spacing: theme('letterSpacing.wider');
+        }
+
+        & > a {
+            font-size: theme('fontSize.sm');
+
+            display: block;
+            border: rem(1) solid theme('colors.blue');
+
+            padding-block: theme('spacing.[2.5]');
+            padding-inline: theme('spacing.7');
+
+            transition: background-color theme('transitionDuration.DEFAULT') theme('transitionTimingFunction.DEFAULT');
+
+            &:focus-visible, &:hover {
+                background-color: theme('colors.yellow');
+            }
+
+            @screen sm {
+                font-size: theme('fontSize.lg');
+            }
+        }
+
+        & > .BambooHR-ATS-Location {
+            font-size: theme('fontSize.xs');
+            padding: 0;
+
+            @screen md {
+                position: absolute;
+                top: 50%; right: theme('spacing.[7]');
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+        }
+    }
+}

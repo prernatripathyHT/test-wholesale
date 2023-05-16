@@ -1,0 +1,42 @@
+@layer components {
+
+  .faq--expandable-toggle-black.active {
+    @apply bg-yellow;
+  }
+
+  .menu--expandable-toggle.active {
+    @apply bg-yellow text-blue;
+  }
+
+  .menu--expandable-toggle .icon-chevron {
+    @apply transition-all;
+  }
+
+  .menu--expandable-toggle.active .icon-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq--expandable-group-toggle {
+    @apply transition-all;
+  }
+
+  .faq--expandable-group-toggle svg {
+    @apply transition-all;
+  }
+
+  .faq--expandable-group-toggle.active {
+    padding-bottom: rem(28);
+  }
+
+  .faq--expandable-group-toggle.active svg {
+    transform: rotate(180deg);
+  }
+
+  .shopify-section--faq-group:first-of-type {
+    @apply pt-12;
+  }
+
+  .shopify-section--faq-group:last-of-type {
+    @apply pb-12;
+  }
+}

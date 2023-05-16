@@ -1,0 +1,166 @@
+{
+  "sections": {
+    "16509957948bad1e61": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "title": "<p>Diversity, Equity & Inclusion<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "16510101657f56bdcb": {
+      "type": "image-plus-text",
+      "blocks": {
+        "19276edf-82b3-4a6a-b6f6-6d1e622c970c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder.gif"
+          }
+        },
+        "045221d7-46db-4368-b44d-83326f117829": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "description": "<p>We seek to co-create a culture where every individual can thrive as their unique and whole self.  This work begins with acknowledging each person’s vital part in the coffee process from seed to cup. It involves continuous education and dialogue to generate shared understanding and practice of the concepts of diversity, equity, and inclusion, both in what they mean to us as individuals and to our collective organization as part of the broader specialty coffee context. <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "19276edf-82b3-4a6a-b6f6-6d1e622c970c",
+        "045221d7-46db-4368-b44d-83326f117829"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651090404e4cf937a": {
+      "type": "content-columns",
+      "blocks": {
+        "1ea26360-3775-45bf-a393-8d4ffe8695c3": {
+          "type": "grid_item",
+          "settings": {
+            "title": "<p>Diversity<\/p>",
+            "title_class": "font-couch text-black text-3xl mb-4 w-full",
+            "desc": "<p>Acknowledging, accepting, and embracing the expanse of our human experience. Our differences manifest physically, mentally, culturally, and all these differences can, and must, enrich our lives, our environments, our communities, and our organizations.<\/p>",
+            "desc_class": ""
+          }
+        },
+        "6e16fb46-64a2-4a4c-8dbe-e7a7f61a21c4": {
+          "type": "grid_item",
+          "settings": {
+            "title": "<p>Equity<\/p>",
+            "title_class": "font-couch text-black text-3xl mb-4 w-full",
+            "desc": "<p>Acknowledging, accepting, and embracing the expanse of our human experience. Our differences manifest physically, mentally, culturally, and all these differences can, and must, enrich our lives, our environments, our communities, and our organizations.<\/p>",
+            "desc_class": ""
+          }
+        },
+        "f914ef22-a26a-4ddc-b064-d9ba6282cf0a": {
+          "type": "grid_item",
+          "settings": {
+            "title": "<p>Inclusion<\/p>",
+            "title_class": "font-couch text-black text-3xl mb-4 w-full",
+            "desc": "<p>Acknowledging, accepting, and embracing the expanse of our human experience. Our differences manifest physically, mentally, culturally, and all these differences can, and must, enrich our lives, our environments, our communities, and our organizations.<\/p>",
+            "desc_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "1ea26360-3775-45bf-a393-8d4ffe8695c3",
+        "6e16fb46-64a2-4a4c-8dbe-e7a7f61a21c4",
+        "f914ef22-a26a-4ddc-b064-d9ba6282cf0a"
+      ],
+      "settings": {
+      }
+    },
+    "1651012362ca5f2ddb": {
+      "type": "list-columns",
+      "blocks": {
+        "03b0b5c4-76f3-4951-8755-834c9118fe18": {
+          "type": "list_item",
+          "settings": {
+            "title": "Generating a Collective Shared Vision of Engagement and Accountability to Support our Partners and Teams",
+            "first_content": "Create mutual understanding and a culture that focuses on maintaining, nourishing, nurturing, fostering our relationships with each other and our relationships to our resources. While creating physical and emotional safety and accessibility within our work environments.",
+            "last_content": "<ul>\n<li>Multiple avenues for safe and effective employee feedback<\/li>\n<li>Voluntary cross-departmental groups to educate and support shared understanding of CCC's role in generating inclusive spaces<\/li>\n<li>Policy updates and education to support psychology safe spaces which encourage mutual respect<\/li>\n<li>Creation of the DEI Council to support this work within the organizational context<\/li>\n<\/ul>"
+          }
+        },
+        "183591a3-9135-4ba3-b87d-ab2a5e1a5220": {
+          "type": "list_item",
+          "settings": {
+            "title": "Generating a Collective Shared Vision of Engagement and Accountability to Support our Partners and Teams",
+            "first_content": "<ul>\n<li>Multiple avenues for safe and effective employee feedback<\/li>\n<li>Voluntary cross-departmental groups to educate and support shared understanding of CCC's role in generating inclusive spaces<\/li>\n<li>Policy updates and education to support psychology safe spaces which encourage mutual respect<\/li>\n<li>Creation of the DEI Council to support this work within the organizational context<\/li>\n<\/ul>",
+            "last_content": "Create mutual understanding and a culture that focuses on maintaining, nourishing, nurturing, fostering our relationships with each other and our relationships to our resources. While creating physical and emotional safety and accessibility within our work environments."
+          }
+        },
+        "0514ed1e-7014-4e58-8f02-7e4ac4225ab1": {
+          "type": "list_item",
+          "settings": {
+            "title": "Generating a Collective Shared Vision of Engagement and Accountability to Support our Partners and Teams",
+            "first_content": "Create mutual understanding and a culture that focuses on maintaining, nourishing, nurturing, fostering our relationships with each other and our relationships to our resources. While creating physical and emotional safety and accessibility within our work environments.",
+            "last_content": "<ul>\n<li>Multiple avenues for safe and effective employee feedback<\/li>\n<li>Voluntary cross-departmental groups to educate and support shared understanding of CCC's role in generating inclusive spaces<\/li>\n<li>Policy updates and education to support psychology safe spaces which encourage mutual respect<\/li>\n<li>Creation of the DEI Council to support this work within the organizational context<\/li>\n<\/ul>"
+          }
+        },
+        "1063f1a0-6298-4bf6-b5d7-0fb8ee56e893": {
+          "type": "list_item",
+          "settings": {
+            "title": "Generating a Collective Shared Vision of Engagement and Accountability to Support our Partners and Teams",
+            "first_content": "<ul>\n<li>Multiple avenues for safe and effective employee feedback<\/li>\n<li>Voluntary cross-departmental groups to educate and support shared understanding of CCC's role in generating inclusive spaces<\/li>\n<li>Policy updates and education to support psychology safe spaces which encourage mutual respect<\/li>\n<li>Creation of the DEI Council to support this work within the organizational context<\/li>\n<\/ul>",
+            "last_content": "Create mutual understanding and a culture that focuses on maintaining, nourishing, nurturing, fostering our relationships with each other and our relationships to our resources. While creating physical and emotional safety and accessibility within our work environments."
+          }
+        },
+        "9adf4a40-00f9-4e84-94cb-a5e3376da2cf": {
+          "type": "list_item",
+          "settings": {
+            "title": "Generating a Collective Shared Vision of Engagement and Accountability to Support our Partners and Teams",
+            "first_content": "Create mutual understanding and a culture that focuses on maintaining, nourishing, nurturing, fostering our relationships with each other and our relationships to our resources. While creating physical and emotional safety and accessibility within our work environments.",
+            "last_content": "<ul>\n<li>Multiple avenues for safe and effective employee feedback<\/li>\n<li>Voluntary cross-departmental groups to educate and support shared understanding of CCC's role in generating inclusive spaces<\/li>\n<li>Policy updates and education to support psychology safe spaces which encourage mutual respect<\/li>\n<li>Creation of the DEI Council to support this work within the organizational context<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "03b0b5c4-76f3-4951-8755-834c9118fe18",
+        "183591a3-9135-4ba3-b87d-ab2a5e1a5220",
+        "0514ed1e-7014-4e58-8f02-7e4ac4225ab1",
+        "1063f1a0-6298-4bf6-b5d7-0fb8ee56e893",
+        "9adf4a40-00f9-4e84-94cb-a5e3376da2cf"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "16509957948bad1e61",
+    "16510101657f56bdcb",
+    "1651090404e4cf937a",
+    "1651012362ca5f2ddb"
+  ]
+}

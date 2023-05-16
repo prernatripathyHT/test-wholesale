@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/404_BG.jpg",
+        "s_image": "shopify:\/\/shop_images\/404_BG_Mobile.jpg",
+        "title": "<p>Oh no, we lost our beans!<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "button_style": "btn btn-secondary",
+        "link_text": "Let's refill",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,847 @@
+{
+  "sections": {
+    "16516945787bf6f0ab": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>People<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "16517901428e634464": {
+      "type": "page-nav",
+      "blocks": {
+        "83014c58-5e34-40f2-ad18-77a23aed1268": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Demographics",
+            "url": "#demographics"
+          }
+        },
+        "642a48f5-3184-4ed4-9ecd-e7476ab11693": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Our People",
+            "url": "#our-people"
+          }
+        },
+        "3c8da652-8f3b-4948-86db-3f421f2e0382": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Our Board",
+            "url": "#our-board"
+          }
+        },
+        "b07c8539-f00c-4dc9-8db7-eee0314fd727": {
+          "type": "nav_link",
+          "settings": {
+            "title": "Benefit Stories",
+            "url": "#sustainable-living"
+          }
+        },
+        "1e55c4b4-8ebc-4d9f-812a-4a7016ef5f45": {
+          "type": "nav_link",
+          "settings": {
+            "title": "DEI",
+            "url": "#diversity-equity-inclusion"
+          }
+        }
+      },
+      "block_order": [
+        "83014c58-5e34-40f2-ad18-77a23aed1268",
+        "642a48f5-3184-4ed4-9ecd-e7476ab11693",
+        "3c8da652-8f3b-4948-86db-3f421f2e0382",
+        "b07c8539-f00c-4dc9-8db7-eee0314fd727",
+        "1e55c4b4-8ebc-4d9f-812a-4a7016ef5f45"
+      ],
+      "settings": {
+      }
+    },
+    "16516945810440cfd0": {
+      "type": "richtext",
+      "blocks": {
+        "bbd278a5-b259-4a1f-ae84-d6972edb5f9f": {
+          "type": "text_content",
+          "settings": {
+            "content": "Our people are amazing, awesome and exemplary. We encourage our team to be their true selves, and we are a better team because of that. We are doers, thinkers, and coffee drinkers (mostly). We are all coffee-driven people who strive to create the best possible product.",
+            "classes": "mb-0"
+          }
+        }
+      },
+      "block_order": [
+        "bbd278a5-b259-4a1f-ae84-d6972edb5f9f"
+      ],
+      "settings": {
+        "classes": ""
+      }
+    },
+    "16517019426af1983e": {
+      "type": "icon-list-columns",
+      "blocks": {
+        "bec87fdc-5109-4be6-aa75-e5e52b6f321e": {
+          "type": "columns",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector.png",
+            "title": "What We’re Most Proud Of",
+            "list": "Advancing our diversity, equity, and inclusion efforts through new     policies, partnerships, and cultural and structural initiatives."
+          }
+        },
+        "757fa13f-3561-4190-81b2-52cf8f3fa99b": {
+          "type": "columns",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector_1.png",
+            "title": "Priority for Improvement",
+            "list": "Continuously improving our employee experience.\nProactively gathering employee feedback. \nReflecting on our culture via more thorough reporting."
+          }
+        }
+      },
+      "block_order": [
+        "bec87fdc-5109-4be6-aa75-e5e52b6f321e",
+        "757fa13f-3561-4190-81b2-52cf8f3fa99b"
+      ],
+      "settings": {
+      }
+    },
+    "1651695208c128e8af": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Demographics<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "demographics": {
+      "type": "demographics",
+      "blocks": {
+        "eca94a1c-c000-478e-8f31-59a491e723fa": {
+          "type": "gender",
+          "settings": {
+            "title": "Nonbinary",
+            "data": 2,
+            "color": "#c4c4c4"
+          }
+        },
+        "124ea540-a48c-440e-bfa8-8f8f0df9dd86": {
+          "type": "gender",
+          "settings": {
+            "title": "Male",
+            "data": 41,
+            "color": "#eae86e"
+          }
+        },
+        "49088235-cb7b-4a8c-9a15-678fa10c9d9d": {
+          "type": "gender",
+          "settings": {
+            "title": "Female",
+            "data": 57,
+            "color": "#4fa0d7"
+          }
+        },
+        "17f0b5cc-1f87-4e5e-8cea-e813d8149013": {
+          "type": "race",
+          "settings": {
+            "title": "A",
+            "data": 62,
+            "color": "#008075"
+          }
+        },
+        "5566e455-8c01-42c4-a614-38f615c9da56": {
+          "type": "race",
+          "settings": {
+            "title": "B",
+            "data": 18,
+            "color": "#a6a5db"
+          }
+        },
+        "936f7b95-0da2-47ee-97eb-4ea79802208b": {
+          "type": "race",
+          "settings": {
+            "title": "C",
+            "data": 8,
+            "color": "#eae86e"
+          }
+        },
+        "4d63ce4f-1b07-415b-a9df-20f387805be5": {
+          "type": "race",
+          "settings": {
+            "title": "D",
+            "data": 7,
+            "color": "#eba9a0"
+          }
+        },
+        "c3d232a2-2605-4741-aa14-c85fa6a47834": {
+          "type": "race",
+          "settings": {
+            "title": "E",
+            "data": 5,
+            "color": "#eb4d33"
+          }
+        },
+        "5b236865-c114-4d7f-b3d3-b647f7b07cd4": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "10",
+            "color": "#4fa0d7"
+          }
+        },
+        "d04a95ad-bd7b-4f07-ba3a-19423f49f897": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "4",
+            "color": "#eae86e"
+          }
+        },
+        "2a261b54-739f-4062-bdb8-a4c6831fad09": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "4",
+            "color": "#eba9a0"
+          }
+        },
+        "1dc455c6-d853-421a-909b-17c3ffc12175": {
+          "type": "job_function",
+          "settings": {
+            "function": "Production",
+            "quantity": "30",
+            "color": "#ece8df"
+          }
+        },
+        "02be9ed6-8999-4c71-b855-807d798134a1": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "4",
+            "color": "#eb4d33"
+          }
+        },
+        "6e3390f3-84ac-44d3-902b-1293d42ff590": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "2",
+            "color": "#752a45"
+          }
+        },
+        "cb363e6a-e220-4155-a0ea-858a2ef507ba": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "21",
+            "color": "#008075"
+          }
+        },
+        "b25ace0b-3c75-4156-b81e-9f74035b6067": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "20",
+            "color": "#a68e67"
+          }
+        },
+        "f2ce6924-267e-4670-ad04-81d32c45b789": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "4",
+            "color": "#b3d3b9"
+          }
+        },
+        "ae655a18-081f-44c9-9a51-147f0c927ae2": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "4",
+            "color": "#a6a5db"
+          }
+        },
+        "3500448b-6469-45be-822d-e2d1b6c748c4": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "10",
+            "color": "#fc9a7c"
+          }
+        },
+        "61083b76-599d-429b-9bd1-df021006b9a3": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "1",
+            "color": "#66b3ac"
+          }
+        },
+        "e612e5cf-e580-4387-ac42-6b03b7f95f3a": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "2",
+            "color": "#95c6e7"
+          }
+        },
+        "4e71fbf4-a413-480f-bc91-1a30498e3c85": {
+          "type": "job_function",
+          "settings": {
+            "function": "",
+            "quantity": "7",
+            "color": "#001a98"
+          }
+        }
+      },
+      "block_order": [
+        "eca94a1c-c000-478e-8f31-59a491e723fa",
+        "124ea540-a48c-440e-bfa8-8f8f0df9dd86",
+        "49088235-cb7b-4a8c-9a15-678fa10c9d9d",
+        "17f0b5cc-1f87-4e5e-8cea-e813d8149013",
+        "5566e455-8c01-42c4-a614-38f615c9da56",
+        "936f7b95-0da2-47ee-97eb-4ea79802208b",
+        "4d63ce4f-1b07-415b-a9df-20f387805be5",
+        "c3d232a2-2605-4741-aa14-c85fa6a47834",
+        "5b236865-c114-4d7f-b3d3-b647f7b07cd4",
+        "d04a95ad-bd7b-4f07-ba3a-19423f49f897",
+        "2a261b54-739f-4062-bdb8-a4c6831fad09",
+        "1dc455c6-d853-421a-909b-17c3ffc12175",
+        "02be9ed6-8999-4c71-b855-807d798134a1",
+        "6e3390f3-84ac-44d3-902b-1293d42ff590",
+        "cb363e6a-e220-4155-a0ea-858a2ef507ba",
+        "b25ace0b-3c75-4156-b81e-9f74035b6067",
+        "f2ce6924-267e-4670-ad04-81d32c45b789",
+        "ae655a18-081f-44c9-9a51-147f0c927ae2",
+        "3500448b-6469-45be-822d-e2d1b6c748c4",
+        "61083b76-599d-429b-9bd1-df021006b9a3",
+        "e612e5cf-e580-4387-ac42-6b03b7f95f3a",
+        "4e71fbf4-a413-480f-bc91-1a30498e3c85"
+      ],
+      "settings": {
+      }
+    },
+    "1651695624f675be49": {
+      "type": "page-banner",
+      "disabled": true,
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Our People<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "1651762103373c28a9": {
+      "type": "people-grid",
+      "disabled": true,
+      "blocks": {
+        "267308ac-505c-4e67-8def-64bdcae93d31": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_369da83d-4ac7-4a8b-b971-f4559860ed10.png",
+            "title": "Diego Castro",
+            "job_title": "Regional Manager",
+            "pronouns": "he\/him\/his",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "ee140e8b-c789-4a0a-8c20-3c26ccd312a9": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_1_85dddaff-187b-4d2f-acc7-25db09bf92b4.png",
+            "title": "Travis Beckit",
+            "job_title": "Coffee Educator",
+            "pronouns": "she\/her\/hers",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "8422e027-be01-4042-8709-d1cdfa79e285": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_2_79dbd6fa-30e0-4c74-a54c-4b4c2bcee51e.png",
+            "title": "Katie Carguilo",
+            "job_title": "Sales & Account Manager",
+            "pronouns": "she\/her\/hers",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "b9078b1a-a573-438d-931b-c9aea294e452": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_3.png",
+            "title": "Darnell Wallker",
+            "job_title": "Regional Manager",
+            "pronouns": "he\/him\/his",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "472e30f1-a433-448f-9ed7-a93c7e68a896": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_4.png",
+            "title": "Daniel Shirley",
+            "job_title": "Coffee Educator",
+            "pronouns": "she\/her\/hers",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "a06b792f-35e5-4e6d-a167-740783e231e4": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_5.png",
+            "title": "Lenora Lyrkes",
+            "job_title": "Sales & Account Manager",
+            "pronouns": "she\/her\/hers",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        }
+      },
+      "block_order": [
+        "267308ac-505c-4e67-8def-64bdcae93d31",
+        "ee140e8b-c789-4a0a-8c20-3c26ccd312a9",
+        "8422e027-be01-4042-8709-d1cdfa79e285",
+        "b9078b1a-a573-438d-931b-c9aea294e452",
+        "472e30f1-a433-448f-9ed7-a93c7e68a896",
+        "a06b792f-35e5-4e6d-a167-740783e231e4"
+      ],
+      "settings": {
+        "bg_color": "#efebe1"
+      }
+    },
+    "1651695519de1beb6e": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Want to join our team?<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "",
+        "button_style": "camel-underline",
+        "link_text": "Check out our job listings",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": "uppercase mt-4 text-center"
+      }
+    },
+    "1651695703d5aa0dc1": {
+      "type": "page-banner",
+      "disabled": true,
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Our Board<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "1651764353d9fcc9ba": {
+      "type": "people-grid",
+      "disabled": true,
+      "blocks": {
+        "965f2768-261e-4011-9e5a-d07489ade08f": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_369da83d-4ac7-4a8b-b971-f4559860ed10.png",
+            "title": "Diego Castro",
+            "job_title": "Regional Manager",
+            "pronouns": "he\/him\/his",
+            "drinking": "big-trouble",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "e00a06cf-d577-498e-99a4-75786ddbb962": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_1_85dddaff-187b-4d2f-acc7-25db09bf92b4.png",
+            "title": "Travis Beckit",
+            "job_title": "Coffee Educator",
+            "pronouns": "she\/her\/hers",
+            "drinking": "apollo",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        },
+        "c34c15b9-a43e-49b8-86a3-c2decc525480": {
+          "type": "person",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_Group_2_79dbd6fa-30e0-4c74-a54c-4b4c2bcee51e.png",
+            "title": "Katie Carguilo",
+            "job_title": "Sales & Account Manager",
+            "pronouns": "she\/her\/hers",
+            "drinking": "buchiro-2",
+            "link_icon": "shopify:\/\/shop_images\/Group_283.png",
+            "link_url": "",
+            "link_label": "Listen to her playlist"
+          }
+        }
+      },
+      "block_order": [
+        "965f2768-261e-4011-9e5a-d07489ade08f",
+        "e00a06cf-d577-498e-99a4-75786ddbb962",
+        "c34c15b9-a43e-49b8-86a3-c2decc525480"
+      ],
+      "settings": {
+        "bg_color": "#efebe1"
+      }
+    },
+    "1651695745c0d37b1e": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Sustainable Living<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "1651789421dca061d1": {
+      "type": "number-text-columns",
+      "settings": {
+        "number": "$32,700.39",
+        "title": "Green Fund",
+        "content": "<p>Employee reimbursement up to $500 to support sustainability initiatives outside of the workplace.<\/p>"
+      }
+    },
+    "1651789467e6710a8b": {
+      "type": "image-text-slider",
+      "blocks": {
+        "f9ea3e37-e378-404a-ada6-b3b4aad89643": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder.gif",
+            "items_alignment": "items-start",
+            "number": "",
+            "title": "Name",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "f9ea3e37-e378-404a-ada6-b3b4aad89643"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165178955303bb847c": {
+      "type": "number-text-columns",
+      "settings": {
+        "number": "$46,208.18",
+        "title": "Pushing Potential Fund",
+        "content": "<p>Employee reimbursement up to $500 for personal or professional learning activities.<\/p>"
+      }
+    },
+    "1651789551c8f4b749": {
+      "type": "image-text-slider",
+      "blocks": {
+        "f90d345d-9336-4583-983d-1d3a13656b85": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder.gif",
+            "items_alignment": "items-start",
+            "number": "",
+            "title": "Name",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "f90d345d-9336-4583-983d-1d3a13656b85"
+      ],
+      "settings": {
+        "reverse_order": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165178956573a5fd52": {
+      "type": "number-text-columns",
+      "settings": {
+        "number": "$6,015.08",
+        "title": "CSA Fund",
+        "content": "<p>Employee reimbursement up to $200 for local food purchased through Community Supported Agriculture programs or other food providers with sustainability initiatives. <\/p>"
+      }
+    },
+    "1651789686949dd29f": {
+      "type": "image-text-slider",
+      "blocks": {
+        "cdb95947-3df0-440c-89ee-58f09109ee28": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder.gif",
+            "items_alignment": "items-start",
+            "number": "",
+            "title": "Name",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "cdb95947-3df0-440c-89ee-58f09109ee28"
+      ],
+      "settings": {
+        "reverse_order": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1651695809e57e37be": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Diversity, Equity & Inclusion<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "165169595314f4f220": {
+      "type": "image-plus-text",
+      "blocks": {
+        "a8a2a34f-a9eb-4046-9848-d1653ffb6efa": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "description": "<p>We seek to co-create a culture where every individual can thrive as their unique and whole self.  This work begins with acknowledging each person’s vital part in the coffee process from seed to cup. It involves continuous education and dialogue to generate shared understanding and practice of the concepts of diversity, equity, and inclusion, both in what they mean to us as individuals and to our collective organization as part of the broader specialty coffee context. <\/p>",
+            "list_html": "",
+            "button_style": "blue-underline",
+            "link_text": "Read More",
+            "link_url": "shopify:\/\/collections\/all",
+            "link_classes": "uppercase flex items-center mr-auto",
+            "btn_icon_name": "eyeballs",
+            "btn_icon_class": "ml-2",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "7a7b878f-69bb-4b22-b2dd-94938936d90a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/placeholder.gif"
+          }
+        }
+      },
+      "block_order": [
+        "a8a2a34f-a9eb-4046-9848-d1653ffb6efa",
+        "7a7b878f-69bb-4b22-b2dd-94938936d90a"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165169585596400e83": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Want to learn more? <\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "",
+        "button_style": "camel-underline",
+        "link_text": "Check out our most recent Transparency report",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": "mt-4 uppercase text-center"
+      }
+    }
+  },
+  "order": [
+    "16516945787bf6f0ab",
+    "16517901428e634464",
+    "16516945810440cfd0",
+    "16517019426af1983e",
+    "1651695208c128e8af",
+    "demographics",
+    "1651695624f675be49",
+    "1651762103373c28a9",
+    "1651695519de1beb6e",
+    "1651695703d5aa0dc1",
+    "1651764353d9fcc9ba",
+    "1651695745c0d37b1e",
+    "1651789421dca061d1",
+    "1651789467e6710a8b",
+    "165178955303bb847c",
+    "1651789551c8f4b749",
+    "165178956573a5fd52",
+    "1651789686949dd29f",
+    "1651695809e57e37be",
+    "165169595314f4f220",
+    "165169585596400e83"
+  ]
+}

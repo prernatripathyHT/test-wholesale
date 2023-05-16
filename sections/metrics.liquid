@@ -1,0 +1,70 @@
+<!-- sections/metrics.liquid [ja] -->
+
+
+<section class="grid grid-cols-2">
+    {% for block in section.blocks %}
+
+        {% capture col_span %}
+            col-span-full
+            {% if block.settings.full_width %}
+                sm:col-span-full
+            {% else %}
+                sm:col-auto
+            {% endif %}
+        {% endcapture %}
+
+        <div class="border border-black p-8 {{ col_span }}">
+            <p class="mx-auto relative sm:w-fit sm:px-12 py-9 animate animate-fadeIn" data-delay="{{ forloop.index | times: 200 }}">
+                <span class="uppercase lg:text-lg font-medium absolute left-0 top-0">
+                    {{ block.settings.top_label }}
+                </span>
+
+                <span class="block mb-3 font-tenso text-4xl lg:text-8xl text-stroke-camel text-center">
+                    {{ block.settings.number }}
+                </span>
+
+                <span class="uppercase lg:text-lg font-medium absolute bottom-0 right-0">
+                    {{ block.settings.bottom_label }}
+                </span>
+            </p>
+        </div>
+        
+    {% endfor %}
+</section>
+
+
+{% schema %}
+{
+    "name": "Metrics",
+    "class": "section-metrics",
+    "blocks": [
+        {
+            "name": "Metric",
+            "type": "metric",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "top_label",
+                    "label": "Top Label"
+                },
+                {
+                    "type": "text",
+                    "id": "number",
+                    "label": "Number"
+                },
+                {
+                    "type": "text",
+                    "id": "bottom_label",
+                    "label": "Bottom Label"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "full_width",
+                    "label": "Full Width?",
+                    "default": false
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

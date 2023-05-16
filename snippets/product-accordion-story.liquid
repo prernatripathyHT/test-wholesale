@@ -1,0 +1,43 @@
+{%- comment %}
+	Custom Fields Accordion. Contains fields from admin groups:
+    - story
+    story_image_slider [ Repeater Image Field ]
+    story_description [ HTMl RT ]
+{% endcomment -%}
+
+{% assign cf = product.metafields.custom_fields %}
+
+{%- if cf.story_image_slider != blank
+    or cf.story_description != blank -%}
+  <!-- snippets/product-accordion-story [aa] -->
+  <div class="">
+    {%- if cf.story_image_slider != blank -%}
+      {% capture slick_settings %}
+        {
+          "dots": true,
+          "arrows": false,
+          "infinite": false,
+          "speed": 300,
+          "slidesToShow": 1,
+          "slidesToScroll": 1
+        }
+      {% endcapture %}
+
+      <ul class="max-w-full js-slick" data-slick='{{ slick_settings | strip }}'>
+        {% for item in cf.story_image_slider %}
+          <li class="w-full">
+            {%
+              render 'responsive-image-cf',
+              src: item["story_image_slider"],
+              class: "w-full h-full object-cover"
+            %}
+          </li>
+        {% endfor %}
+     </ul>
+    {%- endif -%}
+
+    {%- if cf.story_description != blank -%}
+      <div class="rte py-5 px-5 lg:px-12 font-tenso !font-light tracking-wide">{{ cf.story_description }}</div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

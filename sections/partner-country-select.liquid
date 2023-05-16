@@ -1,0 +1,297 @@
+<!-- sections/partner-country-select.liquid -->
+
+{% assign ss = section.settings %}
+
+{% assign countries = 'Bolivia, Burundi, Colombia, Democratic Republic of Congo, Ecuador, El Salvador, Ethiopia, Guatemala, Honduras, Kenya, Mexico, Nicaragua, Panama, Papua New Guinea, Peru, Rwanda, Uganda, Yemen'
+  | split: ', '
+%}
+{% assign color_codes = '#99E0C8, #DCB8D2, #E99247, #D3E098, #F1B47D, #6394CA, #F58C6F, #E37356, #6DC3B5, #E8A0AD, #8C396D, #F0C3D0, #AF87BA, #F5E980, #B1B458, #B1AED3, #B27C9D, #B295BE'
+  | split: ', '
+%}
+
+{% unless ss.paragraph == blank %}
+  <div class="prose mx-auto mb-0 hidden max-w-none py-8 px-12 text-center font-tenso text-2xl lg:block lg:w-10/12">
+    {{ ss.paragraph }}
+  </div>
+{% endunless %}
+
+<div
+  class="relative flex flex-col items-start gap-5 border-t border-black py-8 px-0 z-10 lg:flex-row lg:gap-20 lg:py-16 lg:px-20"
+  style="background: radial-gradient(rgb(236, 232, 223) 25%, rgba(255,255,255,1) 75%);"
+>
+  <div class="flex w-full items-center gap-2.5 px-5 lg:px-0 lg:w-4/12 max-w-md">
+    {% unless ss.partner_image == blank %}
+      <div class="w-full">
+        {% render 'responsive-image', src: ss.partner_image.src, alt: ss.partner_image.alt, class: 'w-full relative' %}
+      </div>
+    {% endunless %}
+
+    {% unless ss.partner_title == blank %}
+      <div class="max-w-[14rem] px-3 text-center font-caveat text-lg lg:absolute lg:bottom-12 lg:left-1/3 lg:text-2xl 2xl:left-[33rem]">
+        <div class="rotate-6">
+          {% render 'icon', icon: 'swoop-arrow-left', class: 'w-12 h-fit lg:w-auto' %}
+        </div>
+        {{ ss.partner_title }}
+      </div>
+    {% endunless %}
+  </div>
+
+  {% unless ss.paragraph == blank %}
+      <div class="prose mx-auto mb-0 lg:hidden max-w-none pb-10 px-5 text-center font-tenso text-lg border-b border-black">
+        {{ ss.paragraph }}
+      </div>
+    {% endunless %}
+
+  <div class="flex w-full lg:w-8/12 flex-col items-end justify-start px-5 lg:px-0">
+    {% unless ss.map_image == blank %}
+      {% render 'responsive-image',
+        src: ss.map_image.src,
+        alt: ss.map_image.alt,
+        class: 'hidden lg:block w-10/12 relative'
+      %}
+    {% endunless %}
+
+    <div class="w-full mx-auto lg:ml-[45%] lg:mr-auto lg:-mt-5 lg:w-1/2">
+      <p class="mb-2.5 flex items-center justify-center gap-2.5 text-center font-tenso text-2xl font-semibold">
+        {% render 'icon', icon: 'eyeballs-no-arrow' %}
+        Search by:
+      </p>
+
+      {% unless section.blocks.size == 0 %}
+        <div class="relative z-10 flex w-full items-center justify-center">
+          <button
+            class="group flex items-center gap-2.5 rounded-full border border-black py-3 pl-8 pr-20"
+            data-toggle="#country-dropdown"
+          >
+            {% render 'icon', icon: 'chevron', class: 'transition-all group-activated group-activated:rotate-180' %}
+            <span class="text-lg ">Country</span>
+          </button>
+
+          <div
+            id="country-dropdown"
+            class="absolute top-[calc(100%_+_1.25rem)] left-1/2 hidden w-80 -translate-x-1/2 rounded-2xl bg-white py-5 z-30 activated:block"
+          >
+            <ul class="max-h-72 overflow-scroll">
+              {% for country in countries %}
+                {%- assign color = color_codes[forloop.index0] -%}
+
+                <li class="group w-full">
+                  <button
+                    class="flex w-full items-center gap-2.5 px-10 py-2.5 font-tenso text-lg transition-colors hover:bg-[#E9E7E1] group-hover:bg-[#E9E7E1] group-focus-within:bg-[#E9E7E1]"
+                  >
+                    <span
+                      class="h-4 w-4 min-w-[1rem] rounded-full border border-black"
+                      style="background: {{ color }};"
+                    ></span>
+
+                    <span class="text-left">{{ country }}</span>
+                  </button>
+
+                  <ul>
+                    {%- for block in section.blocks -%}
+                      {% if block.settings.country == country %}
+                        <li class="group-hover hidden animate-fadeIn group-hover:block group-focus-within:block">
+                          <button
+                            data-toggle="#partner-{{ block.settings.title | handleize }}"
+                            class="flex w-full items-center gap-2.5 py-2.5 pl-14 pr-10 font-tenso text-lg transition-colors hover:bg-yellow"
+                          >
+                            <span
+                              class="h-4 w-4 min-w-[1rem] rounded-full border border-black"
+                              style="background: {{ color }};"
+                            ></span>
+
+                            <span class="text-left">{{- block.settings.title -}}</span>
+                          </button>
+                        </li>
+
+                        {% capture partner_popups %}
+                          {{ partner_popups }}
+                          {% render 'partner-popup', block: block, color: color %}
+                        {% endcapture %}
+                      {% endif %}
+                    {%- endfor -%}
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endunless %}
+    </div>
+  </div>
+</div>
+
+{{ partner_popups }}
+
+{% schema %}
+{
+  "name": "Partner Select",
+  "settings": [
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Section Paragraph"
+    },
+    {
+      "type": "image_picker",
+      "id": "partner_image",
+      "label": "Featured Partner Image"
+    },
+    {
+      "type": "text",
+      "id": "partner_title",
+      "label": "Featured Partner Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Country Map Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "partner_option",
+      "name": "Partner Option",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Partner Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Partner Name"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Partner Location"
+        },
+        {
+          "type": "text",
+          "id": "partner_since",
+          "label": "Partner Since"
+        },
+        {
+          "type": "text",
+          "id": "fob_price",
+          "label": "Average FOB Price"
+        },
+        {
+          "type": "text",
+          "id": "price_range",
+          "label": "FOB Price Range"
+        },
+        {
+          "type": "text",
+          "id": "pounds_purchased",
+          "label": "Pounds Purchased"
+        },
+        {
+          "type": "text",
+          "id": "quality_score",
+          "label": "Quality Score"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Product List",
+          "info": "Sold As"
+        },
+        {
+          "type": "text",
+          "id": "archived_products",
+          "label": "Archived Product List",
+          "info": "Sold As"
+        },
+        {
+          "type": "select",
+          "id": "country",
+          "label": "Country Association",
+          "options": [
+            {
+              "value": "Bolivia",
+              "label": "Bolivia"
+            },
+            {
+              "value": "Burundi",
+              "label": "Burundi"
+            },
+            {
+              "value": "Colombia",
+              "label": "Colombia"
+            },
+            {
+              "value": "Democratic Republic of Congo",
+              "label": "Democratic Republic of Congo"
+            },
+            {
+              "value": "Ecuador",
+              "label": "Ecuador"
+            },
+            {
+              "value": "El Salvador",
+              "label": "El Salvador"
+            },
+            {
+              "value": "Ethiopia",
+              "label": "Ethiopia"
+            },
+            {
+              "value": "Guatemala",
+              "label": "Guatemala"
+            },
+            {
+              "value": "Honduras",
+              "label": "Honduras"
+            },
+            {
+              "value": "Kenya",
+              "label": "Kenya"
+            },
+            {
+              "value": "Mexico",
+              "label": "Mexico"
+            },
+            {
+              "value": "Nicaragua",
+              "label": "Nicaragua"
+            },
+            {
+              "value": "Panama",
+              "label": "Panama"
+            },
+            {
+              "value": "Papua New Guinea",
+              "label": "Papua New Guinea"
+            },
+            {
+              "value": "Peru",
+              "label": "Peru"
+            },
+            {
+              "value": "Rwanda",
+              "label": "Rwanda"
+            },
+            {
+              "value": "Uganda",
+              "label": "Uganda"
+            },
+            {
+              "value": "Yemen",
+              "label": "Yemen"
+            }
+          ],
+          "default": "Bolivia"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Partner Select"
+    }
+  ]
+}
+{% endschema %}

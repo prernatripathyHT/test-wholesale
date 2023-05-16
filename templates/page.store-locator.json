@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "1650322719a3fb9daf": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Counter Culture Coffee in the Wild<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "store-locator": {
+      "type": "store-locator",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "1650322719a3fb9daf",
+    "store-locator"
+  ]
+}

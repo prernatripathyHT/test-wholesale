@@ -1,0 +1,102 @@
+<!-- sections/text-banner-with-links [aa] -->
+
+<section class="bg-blue py-14 px-5 lg:px-16">
+  <div class="grid md:grid-cols-2 gap-10 items-center w-full lg:w-7/12 mx-auto">
+    {%- if section.settings.title != blank -%}
+      <h2 class="text-5xl lg:{{ section.settings.text_size }} text-left md:text-left font-black text-white
+                 animate animate-fadeInLeft
+                 leading-none">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="animate animate-fadeInRight grid gap-10">
+      {%- for block in section.blocks -%}
+        {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+          <a href="{{ block.settings.link_url }}" class="font-bold text-3xl text-white flex items-center">
+            {%- if block.settings.image != blank -%}
+              {%
+                render 'responsive-image',
+                src: block.settings.image.src,
+                alt: block.settings.image.alt
+                class: "h-10 w-10 object-cover mr-6"
+              %}
+            {%- endif -%}
+
+            <span>{{ block.settings.link_text }}</span>
+          </a>
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "CTA Banner with Links",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text Size",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-5xl"
+        },
+        {
+          "label": "MD",
+          "value": "text-4xl"
+        },
+        {
+          "label": "SM",
+          "value": "text-3xl"
+        },
+        {
+          "label": "XS",
+          "value": "text-2xl"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_with_icon",
+      "name": "Link with Icon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "hello@ethans.com"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Link Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "CTA Banner with Links"
+    }
+  ]
+}
+{% endschema %}

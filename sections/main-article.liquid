@@ -1,0 +1,25 @@
+<!-- sections/main-article -->
+
+<section class="border border-black md:px-5 md:py-5 lg:py-12 relative flex justify-between items-center">
+  <div class="mx-auto w-full lg:w-3/4 px-5 py-5 md:px-0 md:py-0">
+
+    {%- if article.metafields.custom_fields.project_farmproducer != blank -%}
+      <p class="uppercase font-tenso tracking-wider md:text-center mb-2.5">{{ article.metafields.custom_fields.project_farmproducer }}</p>
+    {%- else -%}
+      <p class="uppercase font-tenso tracking-wider md:text-center mb-2.5">{{ article.tags | first }}</p>
+    {%- endif -%}
+
+    <h1 class="font-normal text-black font-couch text-4xl lg:text-5xl text-stroke-outline md:text-center animate-fadeInUp animate">{{ article.title }}</h1>
+  </div>
+
+  {%- if article.metafields.custom_fields.project_year != blank -%}
+    <div class="md:absolute top-full lg:top-0 md:right-0 w-32 lg:w-48 border-l md:border border-black bg-white p-5 lg:p-8 z-10">
+      <p class="text-6xl lg:text-8xl text-center
+                font-tenso text-stroke-camel text-overflow-break
+                animate animate-fadeIn">{{ article.metafields.custom_fields.project_year }}</p>
+    </div>
+  {%- endif -%}
+</section>
+
+{% render 'article-content',
+    article: article %}

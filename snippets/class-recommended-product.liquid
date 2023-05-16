@@ -1,0 +1,36 @@
+<!-- snippets/class-recommended-product -->
+
+{% assign rec_handle = product.metafields.class.recommended_coffee %}
+{% assign rec_product = all_products[rec_handle] %}
+
+{%- unless rec_product == blank -%}
+  <div class="">
+    <div class="px-5 py-5 border border-black">
+      <h3 class="font-couch text-xl lg:text-2xl text-center">Coffee for Class</h3>
+    </div>
+    <div class="border-r border-l border-b border-black
+               items-center grid md:grid-cols-3 gap-4
+               px-5 lg:px-12 py-5 beige-gradient">
+      {% render 'responsive-image',
+          src: rec_product.featured_image,
+          alt: rec_product.title,
+          class: "w-full md:col-span-1 w-60 md:w-full mx-auto" %}
+
+      <div class="md:col-span-2">
+        {% render 'origin-locale', product: rec_product %}
+
+        <div class="flex justify-between items-start">
+          <h3 class="text-sm md:text-lg xl:text-2xl font-couch">{{ rec_product.title }}</h3>
+
+          {% render 'product-price', variant: rec_product.selected_or_first_available_variant %}
+        </div>
+
+        {% render 'tasting-notes', product: rec_product %}
+
+        <p class="font-tenso my-4">While its not necessary, we highly recoomend you purchase this coffee so you can taste along.</p>
+
+        {% render 'product-card-form' product: rec_product %}
+      </div>
+    </div>
+  </div>
+{%- endunless -%}

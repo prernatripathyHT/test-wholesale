@@ -1,0 +1,22 @@
+<!-- snippets/product-feature-panel [aa] -->
+
+<div class="product--buy-panel relative flex flex-col justify-center">
+
+  {% render 'big-number', number: section.settings.number %}
+
+  {% render 'origin-locale', product: product, class: "animate-fadeInUp animate" %}
+
+  <div class="flex justify-between items-start animate-fadeInUp animate">
+    <h1 class="font-couch text-3xl mb-2">{{ product.title }}</h1>
+  </div>
+
+  {% render 'tasting-notes', product: product, class: "animate-fadeInUp animate" %}
+
+  {% render 'roast-level', product: product, class: "animate-fadeInUp animate" %}
+
+  {% if section.settings.featured_date != blank %}
+    <p class="my-5 text-base font-tenso animate animate-fadeInUp">{{ section.settings.featured_date }}</p>
+  {% endif %}
+
+  {% render 'featured-product-testimonial', product: product %}
+</div>

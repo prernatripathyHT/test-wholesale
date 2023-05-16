@@ -1,0 +1,22 @@
+<!-- snippets/flavor-wheel-popover -->
+
+{% assign flavor_wheel_image = images['flavor-wheel.png'] %}
+
+<div class="hidden group-hover:block group-focus:block fixed z-40
+            max-h-[95vh] overflow-scroll
+            w-[95vw] lg:w-[60vw] mb-2 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2
+            bg-white border border-black text-black px-5 py-5 text-sm text-center">
+
+  <h3 class="font-couch text-xl text-center mb-5">Tasting Notes</h3>
+
+  <p class="text-center">Much like wine or beer, coffee can have many different inherent flavors based on where or when it’s grown, how it’s processed, how it’s roasted, the kind of variety, and even how it’s brewed. Roasted arabica coffee is one of the most chemically complex beverages out there and has thousands of unique chemical compounds that result in many different flavors! So when we’re tasting notes of “strawberry” in a coffee, we’re tasting either the same, or very similar, compounds that are in actual strawberries.</p>
+
+  <h3 class="font-couch text-xl text-center my-5">Flavor Wheel</h3>
+
+  <div class="flex justify-center">
+    {% render 'responsive-image',
+        src: flavor_wheel_image,
+        alt: "Coffee Flavor Wheel",
+        class: "mx-auto w-3/4" %}
+  </div>
+</div>

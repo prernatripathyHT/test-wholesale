@@ -1,0 +1,34 @@
+<!-- snippets/dropdown.liquid [ja] -->
+
+{%- comment -%} Usage Example:
+
+    {% render 'dropdown', 
+        label: 'Some Label',
+        options: option_list %}
+
+{%- endcomment -%}
+
+<div class="dropdown-wrapper">
+    <select id="request-type" 
+            name="contact[request_type]"
+            aria-label="{{ label }}"
+            class="
+                dropdown 
+                px-4 
+                py-5 
+                border 
+                border-blue 
+                text-blu
+                e w-full 
+                appearance-none">
+        <option selected disabled class="font-medium text-blue">{{ label }}</option>
+
+        {% for option in options %}
+            
+            <option value="{{ option | handleize }}" class="font-medium text-blue">
+                {{ option | strip }}
+            </option>
+
+        {% endfor %}
+    </select>
+</div>

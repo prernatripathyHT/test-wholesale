@@ -1,0 +1,5 @@
+@layer components {
+  .roast-level--graph {
+    background: linear-gradient(270deg, #A99167 0%, #000F9F 0.01%, rgba(196, 196, 196, 0) 100%);
+  }
+}

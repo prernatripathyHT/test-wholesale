@@ -1,0 +1,68 @@
+{%- comment %}
+	Custom Fields Accordion. Contains fields from admin groups:
+    - Harvest
+
+    harvest_process [String]
+    harvest_icon [Path to Image]
+    harvest_image_slider [Repeater Field]
+    harvest_description [HTML RT]
+{% endcomment -%}
+
+{% assign cf = product.metafields.custom_fields %}
+
+{%- if cf.harvest_process != blank
+    or cf.harvest_image_slider != blank
+    or cf.harvest_description != blank -%}
+  <!-- snippets/product-accordion-harvest [aa] -->
+  <div class="">
+    <div class="flex items-center justify-center py-4 px-5 lg:px-12">
+      {%- if cf.harvest_icon != blank -%}
+        <div class="w-16 h-16 rounded-full mr-4 flex items-center justify-center" {% render 'background-color', product: product %}>
+          {%
+            render 'responsive-image-cf',
+            src: cf.harvest_icon,
+            alt: cf.harvest_process,
+            class: "w-4/5 h-4/5 object-cover rounded-full"
+          %}
+        </div>
+      {%- endif -%}
+      {%- if cf.harvest_process != blank -%}
+        <div class="flex flex-col justify-center">
+          {%- comment %}
+            <p class="uppercase mb-0 tracking-wider">Process</p>
+          {% endcomment -%}
+          
+          <p class="my-0 font-tenso">{{ cf.harvest_process }}</p>
+        </div>
+      {% endif %}
+    </div>
+    {%- if cf.harvest_image_slider != blank -%}
+      {% capture slick_settings %}
+        {
+          "dots": true,
+          "arrows": false,
+          "infinite": false,
+          "speed": 300,
+          "slidesToShow": 1,
+          "slidesToScroll": 1
+        }
+      {% endcapture %}
+
+      <ul class="max-w-full js-slick" data-slick='{{ slick_settings | strip }}'>
+        {% for item in cf.harvest_image_slider %}
+          <li class="w-full">
+            {%
+              render 'responsive-image-cf',
+              src: item["harvest_image_slider"],
+              class: "w-full h-full object-cover"
+            %}
+          </li>
+        {% endfor %}
+     </ul>
+    {%- endif -%}
+
+    {%- if cf.harvest_description != blank -%}
+      <div class="rte py-5 px-5 lg:px-12 font-tenso tracking-wide">{{ cf.harvest_description }}</div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+      }
+    },
+    "1650408245bb947b7a": {
+      "type": "featured-product",
+      "settings": {
+        "product": "nuevo-amanecer-3",
+        "d_layout": "image_first",
+        "background": "radial-gradient(rgba(236, 232, 223, 1) 1%, rgba(255, 255, 255, 1) 80%)",
+        "number": "01",
+        "featured_date": "",
+        "testimonial_text": "",
+        "testimonial_author": "",
+        "title": "<p>Current Picks<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "leading-none"
+      }
+    },
+    "16504085402edf6745": {
+      "type": "featured-product",
+      "settings": {
+        "product": "baroida",
+        "d_layout": "text_first",
+        "background": "radial-gradient(rgba(236, 232, 223, 1) 1%, rgba(255, 255, 255, 1) 80%)",
+        "number": "02",
+        "featured_date": "",
+        "testimonial_text": "",
+        "testimonial_author": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16509889011f6f9a00": {
+      "type": "icon-link-list",
+      "blocks": {
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#34beae",
+            "title": "Kalita Wave",
+            "url": "shopify:\/\/pages\/quick-easy-pour-over",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_Katilawave_edit_3b5909d6-fe11-45a8-af60-02b599654d1a.png"
+          }
+        },
+        "12975029-480c-4426-99d1-d57a838c0d7a": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fdbf69",
+            "title": "French Press",
+            "url": "shopify:\/\/pages\/quick-easy-french-press",
+            "icon_image": "shopify:\/\/shop_images\/Frame.png"
+          }
+        },
+        "31387098-a5a6-4866-a474-9e6a1e519b44": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fbc7b2",
+            "title": "Chemex",
+            "url": "shopify:\/\/blogs\/counter-culture-coffee\/coffee-basics-brewing-methods",
+            "icon_image": "shopify:\/\/shop_images\/Frame-2.png"
+          }
+        },
+        "6615e4f1-b15e-4812-b99c-0d145030f03d": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#ff5c1b",
+            "title": "Hario V60",
+            "url": "shopify:\/\/pages\/quick-easy-v60",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Live-Stroke-Individual_Hario_V60_6a8093a7-629c-4cf5-b3c2-7832668228fb.png"
+          }
+        },
+        "87edf125-aa68-4420-9046-377a206cda67": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#3a8dde",
+            "title": "Aeropress",
+            "url": "shopify:\/\/pages\/quick-easy-aeropress",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_aeropress_edit_5a44b975-35ca-47ad-a3d2-b29343251d2e.png"
+          }
+        }
+      },
+      "block_order": [
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb",
+        "12975029-480c-4426-99d1-d57a838c0d7a",
+        "31387098-a5a6-4866-a474-9e6a1e519b44",
+        "6615e4f1-b15e-4812-b99c-0d145030f03d",
+        "87edf125-aa68-4420-9046-377a206cda67"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(239, 235, 225, 1) 16%, rgba(255, 255, 255, 1) 100%)",
+        "mobile_layout": "slider",
+        "title": "<p>Brew Guides<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1650408245bb947b7a",
+    "16504085402edf6745",
+    "16509889011f6f9a00"
+  ]
+}

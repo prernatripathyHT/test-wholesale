@@ -1,0 +1,678 @@
+<!-- sections/banner-slider [aa] -->
+
+{% assign section_id = section.settings.title | strip_html | handleize %}
+
+{% capture slick_settings %}
+  {
+    "dots": true,
+    "arrows": false,
+    "adaptiveHeight": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "appendDots": "#{{ section_id }}.js-page-banner-slider .js-slick-dots",
+    "responsive": [
+      {
+        "breakpoint": 1023,
+        "settings": {
+          "dots": false,
+          "arrows": true,
+          "adaptiveHeight": false,
+          "nextArrow": "#{{ section_id }}.js-page-banner-slider .js-next",
+          "prevArrow": "#{{ section_id }}.js-page-banner-slider .js-prev"
+        }
+      }
+    ]
+  }
+{% endcapture %}
+
+<section
+  id="{{ section.settings.title | strip_html | handleize }}"
+  class="js-page-banner-slider relative border-b border-black"
+>
+  <div class="relative">
+    {%- if section.settings.title != blank -%}
+      <div class="border border-black px-5 pt-5 pb-3 lg:px-12">
+        {% render 'ct-heading',
+          title: section.settings.title,
+          tag: section.settings.tag,
+          text_size_mobile: section.settings.text_size_mobile,
+          text_size_desktop: section.settings.text_size_desktop,
+          text_color: section.settings.text_color,
+          font: section.settings.font,
+          alignment: section.settings.alignment,
+          weight: section.settings.weight,
+          class: section.settings.title_classes
+        %}
+      </div>
+    {%- endif -%}
+
+    {% if section.blocks.size > 1 %}
+      {% render 'slick-arrows',
+        class: 'hidden lg:block absolute top-1/2 -translate-y-1/2',
+        left_class: 'left-10',
+        right_class: 'right-10'
+      %}
+    {% endif %}
+  </div>
+
+  <ul
+    {% if section.blocks.size > 1 %}
+      class="js-slick mx-auto w-full"
+      data-slick="{{ slick_settings | strip | escape }}"
+    {% endif %}
+  >
+    {% for block in section.blocks %}
+      {% assign background_color = '' %}
+
+      {%- if block.settings.show_gradient -%}
+        {% assign rgb = block.settings.bg_color | color_to_rgb %}
+        {% capture background_color %}radial-gradient({{ rgb }} 25%, rgba(255,255,255,1) 75%){% endcapture %}
+      {%- else -%}
+        {% capture background_color %}
+          {{ block.settings.bg_color }}{% endcapture %}
+      {%- endif -%}
+
+      <li>
+        <div
+          class="flex flex-col lg:flex-row gap-8 xl:gap-16 items-center px-8 py-10 xl:px-24 xl:py-14 relative {{ block.settings.wrapper_classes }}"
+          style="background: {{ background_color }};"
+        >
+          <!-- image -->
+          {%- if block.settings.image != blank -%}
+            <div class="relative mx-auto w-full lg:w-80 {{ block.settings.image_classes }}">
+              {% render 'responsive-image',
+                src: block.settings.image.src,
+                alt: block.settings.image.alt,
+                class: 'w-full relative'
+              %}
+            </div>
+          {%- elsif block.settings.image_right != blank -%}
+            <div class="relative mx-auto w-full lg:w-80 {{ block.settings.image_classes }} lg:hidden">
+              {% render 'responsive-image',
+                src: block.settings.image_right.src,
+                alt: block.settings.image_right.alt,
+                class: 'w-full relative'
+              %}
+            </div>
+          {%- endif -%}
+
+          <!-- text content -->
+          <div class="mx-auto w-full max-w-full lg:w-10/12 lg:py-2">
+            {%- if block.settings.use_squiggles -%}
+              {% assign classes = block.settings.title_classes | append: ' text-decorate-squiggles' %}
+            {%- else -%}
+              {% assign classes = block.settings.title_classes %}
+            {%- endif -%}
+
+            {% render 'ct-heading',
+              title: block.settings.title,
+              tag: block.settings.tag,
+              text_size_mobile: block.settings.text_size_mobile,
+              text_size_desktop: block.settings.text_size_desktop,
+              text_color: block.settings.text_color,
+              font: block.settings.font,
+              alignment: block.settings.alignment,
+              weight: block.settings.weight,
+              class: classes
+            %}
+
+            {% unless block.settings.content == blank %}
+              <div class="font-tenso text-xl leading-relaxed animate animate-fadeInUp mt-2.5 rte {{ block.settings.alignment }} ">
+                {{ block.settings.content }}
+              </div>
+            {% endunless %}
+
+            {% unless block.settings.button_url == blank and block.settings.button_text == blank %}
+              <div class="animate mt-2.5 animate-fadeInUp">
+                <a
+                  href="{{ block.settings.button_url }}"
+                  class="btn btn-secondary"
+                >
+                  {{ block.settings.button_text }}
+                </a>
+              </div>
+            {% endunless %}
+          </div>
+
+          <!-- image -->
+          {%- if block.settings.image_right != blank -%}
+            <div class="relative mx-auto w-60 lg:w-80 {{ block.settings.image_classes }} hidden lg:block">
+              {% render 'responsive-image',
+                src: block.settings.image_right.src,
+                alt: block.settings.image_right.alt,
+                class: 'w-full relative'
+              %}
+            </div>
+          {%- endif -%}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if section.blocks.size > 1 %}
+    <div class="js-slick-dots pb-10 lg:pb-0 lg:hidden"></div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Banner Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_order",
+      "label": "Reverse Order?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-2xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-3xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h3",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-tenso",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-left",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner Slide",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Theming Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner Image (Left)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_right",
+          "label": "Banner Image (Right)"
+        },
+        {
+          "type": "text",
+          "id": "image_classes",
+          "label": "Additional classes for the images"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_gradient",
+          "label": "Use background gradient",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "info": "If 'Use background gradient' is checked above, this field will create a gradient from white to the selected color."
+        },
+        {
+          "type": "text",
+          "id": "wrapper_classes",
+          "label": "Additional classes for the banner"
+        },
+        {
+          "type": "header",
+          "content": "Text Settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_squiggles",
+          "label": "Show Squiggles for text decoration",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Section Title"
+        },
+        {
+          "type": "select",
+          "id": "text_size_mobile",
+          "label": "Text Size: Mobile",
+          "default": "text-2xl",
+          "options": [
+            {
+              "label": "6XL",
+              "value": "text-6xl"
+            },
+            {
+              "label": "5XL",
+              "value": "text-5xl"
+            },
+            {
+              "label": "4XL",
+              "value": "text-4xl"
+            },
+            {
+              "label": "3XL",
+              "value": "text-3xl"
+            },
+            {
+              "label": "2XL",
+              "value": "text-2xl"
+            },
+            {
+              "label": "XL",
+              "value": "text-xl"
+            },
+            {
+              "label": "LG",
+              "value": "text-lg"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_size_desktop",
+          "label": "Text Size: Desktop",
+          "default": "lg:text-3xl",
+          "options": [
+            {
+              "label": "6XL",
+              "value": "lg:text-6xl"
+            },
+            {
+              "label": "5XL",
+              "value": "lg:text-5xl"
+            },
+            {
+              "label": "4XL",
+              "value": "lg:text-4xl"
+            },
+            {
+              "label": "3XL",
+              "value": "lg:text-3xl"
+            },
+            {
+              "label": "2XL",
+              "value": "lg:text-2xl"
+            },
+            {
+              "label": "XL",
+              "value": "lg:text-xl"
+            },
+            {
+              "label": "LG",
+              "value": "lg:text-lg"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "tag",
+          "label": "Heading Tag",
+          "default": "h3",
+          "options": [
+            {
+              "label": "H1",
+              "value": "h1"
+            },
+            {
+              "label": "H2",
+              "value": "h2"
+            },
+            {
+              "label": "H3",
+              "value": "h3"
+            },
+            {
+              "label": "H4",
+              "value": "h4"
+            },
+            {
+              "label": "H5",
+              "value": "h5"
+            },
+            {
+              "label": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "Title Font Family",
+          "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+          "default": "font-freight-sans",
+          "options": [
+            {
+              "label": "Freight Sans",
+              "value": "font-freight-sans"
+            },
+            {
+              "label": "Couch",
+              "value": "font-couch"
+            },
+            {
+              "label": "Tenso",
+              "value": "font-tenso"
+            },
+            {
+              "label": "Gopher",
+              "value": "font-gopher"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "weight",
+          "label": "Title Font Weight",
+          "info": "Font Weight Selector",
+          "default": "font-regular",
+          "options": [
+            {
+              "label": "Light",
+              "value": "font-light"
+            },
+            {
+              "label": "Regular",
+              "value": "font-regular"
+            },
+            {
+              "label": "Semibold",
+              "value": "font-semibold"
+            },
+            {
+              "label": "Bold",
+              "value": "font-bold"
+            },
+            {
+              "label": "Black",
+              "value": "font-black"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Title Text Alignment",
+          "default": "text-center",
+          "options": [
+            {
+              "label": "Left",
+              "value": "text-left"
+            },
+            {
+              "label": "Center",
+              "value": "text-center"
+            },
+            {
+              "label": "Right",
+              "value": "text-right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "label": "Title Text Color",
+          "default": "text-black",
+          "options": [
+            {
+              "label": "Black",
+              "value": "text-black"
+            },
+            {
+              "label": "Blue",
+              "value": "text-blue"
+            },
+            {
+              "label": "White",
+              "value": "text-white"
+            },
+            {
+              "label": "Camel",
+              "value": "text-camel"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title_classes",
+          "label": "Additional Classes for the Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Section Paragraph Content"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Slider"
+    }
+  ]
+}
+{% endschema %}

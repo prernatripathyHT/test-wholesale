@@ -1,0 +1,167 @@
+{
+  "sections": {
+    "16509957948bad1e61": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Become an Affiliate<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "165108122446d9651c": {
+      "type": "image-plus-text",
+      "blocks": {
+        "ee0c0225-fba5-4599-b05e-9a014a1657c4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4B9B5881_crop-2_1.png"
+          }
+        },
+        "958153a8-9af1-41c3-9c2f-c7166c021ea6": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "description": "<p>Welcome to Counter Culture Coffee's affiliate program! You, can brew with your eyes closed, have an impeccable palate and a fine appreciation for various processing techniques, and enjoy sharing your coffee knowledge within your communities!<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "ee0c0225-fba5-4599-b05e-9a014a1657c4",
+        "958153a8-9af1-41c3-9c2f-c7166c021ea6"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16510813104079c8cf": {
+      "type": "richtext",
+      "blocks": {
+        "c49c43be-c1dc-4078-b2a7-0cf2b61ca9ee": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>How it Works<\/p>",
+            "text_size_mobile": "text-xl",
+            "text_size_desktop": "lg:text-3xl",
+            "tag": "h3",
+            "font": "font-couch",
+            "weight": "font-regular",
+            "alignment": "text-center",
+            "text_color": "text-black",
+            "classes": ""
+          }
+        },
+        "4962af76-beb4-4563-b48c-cdc4deed983e": {
+          "type": "text_content",
+          "settings": {
+            "content": "Earn up to 5% on each sale  you help us acquire",
+            "classes": ""
+          }
+        },
+        "4e1d82a9-49b4-499c-9daf-0c4d0b3dbd0f": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "<p>Who Our Affiliates Are<\/p>",
+            "text_size_mobile": "text-xl",
+            "text_size_desktop": "lg:text-3xl",
+            "tag": "h3",
+            "font": "font-couch",
+            "weight": "font-regular",
+            "alignment": "text-center",
+            "text_color": "text-black",
+            "classes": ""
+          }
+        },
+        "c466fb84-c86b-464c-8251-47da3735a688": {
+          "type": "text_content",
+          "disabled": true,
+          "settings": {
+            "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea",
+            "classes": ""
+          }
+        },
+        "686393e9-858e-4865-8dd3-af3c5f724a7d": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>Our Perks<\/p>",
+            "text_size_mobile": "text-xl",
+            "text_size_desktop": "lg:text-3xl",
+            "tag": "h3",
+            "font": "font-couch",
+            "weight": "font-regular",
+            "alignment": "text-center",
+            "text_color": "text-black",
+            "classes": ""
+          }
+        },
+        "d7b6d446-59f1-4df4-8658-f8debf376fbb": {
+          "type": "text_content",
+          "settings": {
+            "content": "Access to delicious coffee and coffee products and exclusive Counter Culture Coffee content",
+            "classes": ""
+          }
+        },
+        "22e6d14f-e657-466e-b7af-3c4b6edd1160": {
+          "type": "button",
+          "settings": {
+            "button_style": "btn btn-secondary",
+            "link_text": "Apply here",
+            "link_url": "shopify:\/\/collections\/all",
+            "classes": ""
+          }
+        }
+      },
+      "block_order": [
+        "c49c43be-c1dc-4078-b2a7-0cf2b61ca9ee",
+        "4962af76-beb4-4563-b48c-cdc4deed983e",
+        "4e1d82a9-49b4-499c-9daf-0c4d0b3dbd0f",
+        "c466fb84-c86b-464c-8251-47da3735a688",
+        "686393e9-858e-4865-8dd3-af3c5f724a7d",
+        "d7b6d446-59f1-4df4-8658-f8debf376fbb",
+        "22e6d14f-e657-466e-b7af-3c4b6edd1160"
+      ],
+      "settings": {
+        "classes": ""
+      }
+    }
+  },
+  "order": [
+    "16509957948bad1e61",
+    "165108122446d9651c",
+    "16510813104079c8cf"
+  ]
+}

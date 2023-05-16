@@ -1,0 +1,84 @@
+@layer base {
+  :root {
+    font-family: 'tenso', 'sans-serif';
+    font-weight: 300;
+
+    @screen 3xl {
+      font-size: calc(16/1536 * 85vw);
+    }
+  }
+
+  h1, .h1 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h2, .h2 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  h3, .h3 {
+    @apply text-2xl lg:text-2xl;
+  }
+
+  h4, .h4 {
+    @apply text-lg;
+  }
+
+  h5, .h5 {
+    @apply text-2xl;
+  }
+
+  body {
+    color: theme('colors.black');
+  }
+
+  .rte h2, .rte h3, .rte h4 {
+    @apply mt-8 mb-3 font-couch;
+  }
+
+  .rte h5, .rte h6 {
+    @apply mt-4 mb-2 font-semibold;
+  }
+
+  .rte p, .rte span, .rte a {
+    @apply mb-4;
+  }
+
+  .rte a {
+    @apply transition-all underline text-black;
+  }
+
+  .rte a:hover {
+    @apply text-blue;
+  }
+
+  .rte ul {
+    list-style-type: disc;
+  }
+
+  .rte ol {
+    list-style-type: auto;
+  }
+
+  .rte ul, .rte ol {
+    @apply my-4 pl-8;
+  }
+
+  .rte img {
+    @apply w-full max-h-screen my-8;
+  }
+
+  .text-stroke-camel {
+    color: theme('colors.camel');
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: theme('colors.camel');
+  }
+
+  .text-stroke-black {
+    color: theme('colors.black');
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: theme('colors.black');
+  }
+}

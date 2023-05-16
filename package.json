@@ -1,0 +1,26 @@
+{
+  "name": "counter-culture-retail",
+  "version": "1.0.0",
+  "description": "Counter Culture Shopify Theme",
+  "main": "index.js",
+  "scripts": {
+    "login": "shopify login -s counter-culture-coffee-retail",
+    "serve": "shopify theme serve",
+    "pull": "shopify theme pull -d -n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/on-Sight-Strategy/ccc-retail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/on-Sight-Strategy/ccc-retail/issues"
+  },
+  "homepage": "https://github.com/on-Sight-Strategy/ccc-retail#readme",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.0.3",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1"
+  }
+}

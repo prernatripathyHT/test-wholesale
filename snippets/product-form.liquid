@@ -1,0 +1,97 @@
+<!-- snippets/product-card-form -->
+
+{% assign product_form_id = "product-card--" | append: product.id %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+{% assign is_archive = false %}
+{%- if product.tags contains 'archive' -%}
+  {% assign is_archive = true %}
+{%- endif -%}
+
+{%
+  form 'product',
+  product,
+  id: product_form_id,
+  class: 'js-product-form',
+  data-type: 'add-to-cart-form'
+%}
+
+  <input type="hidden" name="id" value="{{ current_variant.id }}">
+
+  {%- comment %}
+    <input type="hidden" name="properties[expire_after_specific_number_of_charges]" value="3">
+  {% endcomment -%}
+
+  {% render 'origin-locale', product: product, class: "animate-fadeInUp animate" %}
+
+  <div class="flex flex-col md:flex-row gap-2 justify-between items-start animate-fadeInUp animate">
+    <h1 class="font-couch text-3xl mb-2 flex items-center gap-2">
+      {{ product.title }}
+
+      {% render 'product-pronunciation', product: product %}
+    </h1>
+
+    {%- unless is_archive -%}
+      {% render 'product-price', variant: current_variant %}
+    {%- endunless -%}
+  </div>
+
+  {% render 'tasting-notes',
+      product: product,
+      class: "animate-fadeInUp animate",
+      show_label: true %}
+
+  {% render 'roast-level',
+     product: product,
+     show_label: true,
+     class: "animate-fadeInUp animate" %}
+
+  {%- unless is_archive -%}
+
+    {% render 'product-variant-select', product: product, product_form_id: product_form_id, class: "animate-fadeInUp animate" %}
+
+    {% render 'product-subscription-options',
+        product: product,
+        product_form_id: product_form_id,
+        class: "animate-fadeInUp animate" %}
+
+
+    <div class="flex justify-start w-full animate animate-fadeInUp">
+
+      {%
+        render 'quantity-box',
+        input_class: "",
+        name: "quantity",
+        quantity: 1,
+        title: product.title,
+        min: 1
+      %}
+
+      <button type="submit"
+              name="submit"
+              class="js-product-form-atc
+                     btn btn-secondary ml-6"
+              {% unless current_variant.available %}disabled{% endunless %}>
+        {% if current_variant.available %}
+          Add to Cart
+        {%- else -%}
+          Sold Out
+        {% endif %}
+      </button>
+    </div>
+  {%- endunless -%}
+
+  <div class="rte text-base my-12 font-tenso tracking-wider animate animate-fadeInUp">{{ product.description }}</div>
+
+  {%- if is_archive -%}
+    {% render 'notify-me-form', product: product %}
+  {%- else  -%}
+    <div class="hidden js-notify-form">
+      {% render 'notify-me-form', product: product %}
+    </div>
+  {%- endif -%}
+
+  <script type="application/json" class="js-product-script">
+    {{ product | json }}
+  </script>
+{% endform %}

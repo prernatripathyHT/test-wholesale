@@ -1,0 +1,75 @@
+<!-- sections/announcement-bar.liquid -->
+
+{% assign section_class = '' %}
+{% assign list_class = '' %}
+{% if section.settings.enable_marquee %}
+  {% assign section_class = 'js-marquee-wrapper' %}
+  {% assign list_class = 'js-marquee' %}
+{% endif %}
+
+<header class="overflow-hidden relative bg-repeat-x border border-black js-announcement {{ section_class }}" style="background-color: {{ section.settings.background_color }};">
+  <ul class="flex justify-center w-auto m-auto px-8 py-2 {{ list_class }}">
+    {% if section.settings.enable_marquee %}
+      {% for i in (1..100) %}
+        <li class="flex-shrink-0 mr-10" data-delay="200">
+          <p class="text-sm font-normal font-tenso tracking-wider" style="color: {{ section.settings.text_color }};">{{ section.settings.title }}</p>
+        </li>
+      {% endfor %}
+    {% else %}
+      <li class="flex-shrink-0" data-delay="200">
+        <p class="text-sm font-normal font-tenso  tracking-wider" style="color: {{ section.settings.text_color }};">{{ section.settings.title }}</p>
+      </li>
+    {% endif %}
+  </ul>
+  <button type="button"
+          name="button"
+          class="btn-transparent absolute p-2 right-5 top-1/2 -translate-y-1/2 text-white js-close-announcement">
+    <span class="sr-only">Close Announcement Bar</span>
+    {% render 'icon', icon: 'close', class: "w-3" %}
+  </button>
+</header>
+
+<script type="text/javascript">
+  if (sessionStorage.getItem('announcementClosed')) {
+    document.querySelector('.js-announcement').classList.add("hidden")
+  }
+</script>
+
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "class": "section-announcement-bar js-announcement relative z-50",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_announcement",
+      "label": "Display Announcement Bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_marquee",
+      "label": "Enable Marquee",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Message"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,65 @@
+<!-- snippets/video-half-block -->
+
+{%- comment %}
+	Customize Theme Video Block
+  Uses Vimeo Videos + Vimeo SDK.
+  --------------------------
+  - block: [Block] object with settings:
+
+  aspect_ratio [Enum] 16:9, 4:3
+  iframe_video [Link to Vimeo Video]
+  html5_video [Video File]16:9
+  image [Image] placeholder image / button overlay
+{% endcomment -%}
+
+{%- comment %}
+AA: removed HTML5 video option for now:
+  {
+    "type": "text",
+    "id": "html5_video",
+    "label": "HTML5 MP4/OGV File URL"
+  }
+
+  {% elsif block.settings.html5_video != blank %}
+    <video class="video-{{ id }}" onclick="this.paused?this.play():this.pause()" data-video-element data-html5-video {% if block.settings.controls %} controls {% endif %}>
+      <source src="{{ block.settings.html5_video }}">
+    </video>
+{% endcomment -%}
+
+<div class="h-full relative border border-black order-{{ mobile_order }} md:order-none">
+  <div class="video-player-container ratio-{{ block.settings.aspect_ratio }}">
+    {%- if block.settings.image != blank -%}
+      <button type="button"
+            name="button"
+            class="js-toggle-video btn-transparent h-full w-full absolute top-0 left-0 z-1"
+            data-video-id="{{ block.settings.iframe_video.id }}">
+        {%
+          render 'responsive-image',
+          src: block.settings.image.src,
+          alt: block.settings.image.alt,
+          class: "video-player-placeholder object-cover"
+        %}
+
+        <span class="sr-only">Toggle Hidden Video Content</span>
+
+        <span class="text-yellow absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+          {% render 'icon', icon: 'play', class: "w-16 h-16" %}
+        </span>
+
+      </button>
+    {%- endif -%}
+
+    {% if block.settings.iframe_video != blank %}
+      <div class="{% if block.settings.image != blank %}js-video-wrapper {% endif %}"
+           data-video-id="{{ block.settings.iframe_video.id }}">
+        <iframe src="{{ block.settings.iframe_video }}"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          class="js-video"
+          allowfullscreen=""></iframe>
+      </div>
+    {% endif %}
+  </div>
+</div>

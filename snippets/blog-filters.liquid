@@ -1,0 +1,52 @@
+<!-- snippets/blog-filters -->
+
+<div class="js-filter-section px-3 flex items-center justify-between sticky top-[4.875rem] bg-white z-20 w-full border-t border-b border-black"
+     data-filter-url="/tagged/"
+     data-section="sections=blog-grid">
+  <ul class="js-filter-container flex">
+    <li class="py-3 mr-3">
+      <button type="button"
+        name="button"
+        data-target="filters"
+        class="btn-transparent filter--trigger-btn uppercase text-sm js-trigger-filter-container">
+        <span class="sr-only">Toggle Blog Filter Options</span>
+        <span class="mr-2">Filter By</span>
+
+        {% render 'icon', icon: 'plus', class: "w-2" %}
+        {% render 'icon', icon: 'minus', class: "w-2 hidden" %}
+      </button>
+
+      {% render 'blog-filter-options', blog: blog %}
+    </li>
+
+    {%- comment %}
+      <li class="py-3">
+        <button type="button"
+          name="button"
+          data-target="sort"
+          class="btn-transparent filter--trigger-btn uppercase text-sm js-trigger-filter-container">
+          <span class="sr-only">Toggle Collection Sort Options</span>
+          <span class="mr-2">Sort By</span>
+
+          {% render 'icon', icon: 'plus', class: "w-2" %}
+          {% render 'icon', icon: 'minus', class: "w-2 hidden" %}
+        </button>
+
+        {% render 'collection-sort-options', collection: collection %}
+      </li>
+    {% endcomment -%}
+
+  </ul>
+
+  <div class="flex flex-col-reverse items-end lg:flex-row py-2">
+    <ul class="js-active-filter-container flex flex-wrap justify-end max-w-xl"></ul>
+
+    <div class="relative mx-3 flex lg:items-center hidden js-active-filter-title animate animate-fadeInRight animate-faster">
+      <span class="text-base font-couch">Filters</span>
+      <span class="filter-count js-active-filter-count
+                   w-5 h-5 rounded-full pb-1 ml-2
+                   bg-black text-white text-sm font-bold
+                   flex items-center justify-center">0</span>
+    </div>
+  </div>
+</div>

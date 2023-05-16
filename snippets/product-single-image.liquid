@@ -1,0 +1,32 @@
+<!-- snippets/product-single-image [aa] -->
+
+{% assign selected_variant = product.selected_variant %}
+{% assign selected_product_handle = selected_variant.metafields.custom_fields.linked_product %}
+
+{%- if selected_product_handle != blank -%}
+  {% assign product = all_products[selected_product_handle] %}
+{%- endif -%}
+
+<div class="h-full relative border border-black" {% render 'background-color', product: product %}>
+  {% render 'product-card-badge', product: product %}
+  {% render 'product-attribute-list', product: product %}
+
+  <div class="w-full product--featured-image flex items-center justify-start relative">
+    {%- if selected_variant != blank and selected_variant.image != blank -%}
+      {%
+        render 'responsive-image',
+        src: selected_variant.image.src,
+        alt: selected_variant.image.alt,
+        class: "h-full w-9/12 mx-auto object-contain"
+      %}
+    {%- else -%}
+      {%
+        render 'responsive-image',
+        src: product.featured_image.src,
+        alt: product.featured_image.alt,
+        class: "h-full w-full object-cover"
+      %}
+    {%- endif -%}
+
+  </div>
+</div>

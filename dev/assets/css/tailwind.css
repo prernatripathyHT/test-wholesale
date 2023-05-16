@@ -1,0 +1,63 @@
+/*
+  ⚠️ WARNING
+  ---------
+  Do not remove or edit this file unless you know what you're doing
+*/
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './base/forms.css';
+@import './base/global.css';
+@import './base/typography.css';
+@import './images.css';
+
+@import './components/article-card.css';
+@import './components/button.css';
+@import './components/cart.css';
+@import './components/collection-filter.css';
+@import './components/custom-list.css';
+@import './components/custom-select.css';
+@import './components/dropdown.css';
+@import './components/faq.css';
+@import './components/footer.css';
+@import './components/hamburger.css';
+@import './components/link.css';
+@import './components/mega-menu.css';
+@import './components/navigation.css';
+@import './components/pagination.css';
+@import './components/product-card.css';
+@import './components/product-form.css';
+@import './components/product.css';
+@import './components/roast-level.css';
+@import './components/slide-cart.css';
+@import './components/video-embed.css';
+
+@import './dependencies/bamboo-hr.css';
+@import './dependencies/slick.css';
+@import './dependencies/quiz-kit.css';
+@import './dependencies/klaviyo.css';
+@import './dependencies/zoho.css';
+
+@import './sections/account.css';
+@import './sections/article.css';
+@import './sections/cart.css';
+@import './sections/checkout.css';
+@import './sections/contact.css';
+@import './sections/header.css';
+@import './sections/hero.css';
+@import './sections/page-banner.css';
+@import './sections/policy.css';
+@import './sections/store-locator.css';
+
+@import './shopify/placeholder-images.css';
+@import './shopify/recharge.css';
+
+@import './utilities/animation.css';
+@import './utilities/grid.css';
+@import './utilities/text-stroke.css';
+@import './utilities/tooltip.css';
+
+
+/* Add global variables here */

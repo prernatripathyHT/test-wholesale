@@ -1,0 +1,26 @@
+<!-- snippets/notify-me-form -->
+
+<div class="flex flex-col gap-4">
+  <p class="font-couch text-base js-bis-text">Want us to email you when it's back on the menu?</p>
+
+  <p class="hidden text-sm text-ethiopia js-bis-error">We couldn't add your email, please double check your email and try again.</p>
+
+  <div class="js-bis-form flex flex-col gap-4">
+    {% render 'floating-label',
+        id: 'notify-me',
+        input_type: 'email',
+        input_name: 'email',
+        input_val: form.email,
+        placeholder: 'me@example.com',
+        input_class: 'js-bis-input',
+        label: 'Email',
+        label_class: 'js-bis-label' %}
+
+      <button type="button"
+              name="button"
+              data-product-id="{{ product.id }}"
+              data-variant-id="{{ product.variants[0].id }}"
+              data-product-title="{{ product.title }}"
+              class="btn btn-secondary js-bis-submit">Notify Me</button>
+  </div>
+</div>

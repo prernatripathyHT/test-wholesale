@@ -1,0 +1,175 @@
+{
+  "sections": {
+    "banner": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border border-black",
+        "use_squiggles": false,
+        "title": "<p>Corporate Gift + Event Program<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "text-stroke-outline",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "fd5a6f10-bdc5-4059-8ee0-2970eacefd95": {
+      "type": "image-plus-text",
+      "blocks": {
+        "52291397-8403-4d18-a234-a768ba3a2111": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/corp_gift.webp"
+          }
+        },
+        "fce30679-0b08-40ce-8503-a060150afb93": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "",
+            "font": "font-gopher",
+            "description": "<p>If so, we’ve got you covered with lots of coffee options! Our individually packed <a href=\"https:\/\/counterculturecoffee.com\/collections\/coffee\/products\/big-trouble-single-serve\" title=\"https:\/\/counterculturecoffee.com\/collections\/coffee\/products\/big-trouble-single-serve\"><span style=\"text-decoration:underline\">Single Serve<\/span><\/a> is great for those who don’t have a coffee grinder and want to make quick, delicious cup of coffee with ease. Our classic <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/single-origin\"><span style=\"text-decoration:underline\">12 oz bags<\/span><\/a> make a great option for those who love to prepare freshly ground coffee at home. You can also check out our <a href=\"https:\/\/counterculturecoffee.com\/shop\/category\/coffee\/year-round\"><span style=\"text-decoration:underline\">5 lb bags <\/span><\/a>for a bulk option. <\/p><p>If you’re looking to place an order of 20 or more coffee items, please fill out this form or contact us at <a href=\"mailto:gifts@counterculturecoffee.com\"><span style=\"text-decoration:underline\">gifts@counterculturecoffee.com<\/span><\/a> for assistance with suggestions and special discount offers.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "52291397-8403-4d18-a234-a768ba3a2111",
+        "fce30679-0b08-40ce-8503-a060150afb93"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "<p>Do you need to place a large one-time order?<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-gopher",
+        "weight": "font-semibold",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16511759845b525e10": {
+      "type": "form-builder",
+      "blocks": {
+        "dd036391-170b-4ddc-87a7-2c8c0458d1a5": {
+          "type": "radio",
+          "settings": {
+            "input_type": "radio",
+            "header": "Number of Gifts",
+            "options": "< 25|||25-50|||51-100|||101-200|||201-500|||> 500",
+            "name": "contact[number_of_gifts]",
+            "label": "Number of Gifts"
+          }
+        },
+        "71178f64-08e7-4f0c-82c9-f6fc0c72441d": {
+          "type": "radio",
+          "settings": {
+            "input_type": "radio",
+            "header": "Coffee Type",
+            "options": "Single-Serve|||12 oz Whole Bean|||5 lb Bulk",
+            "name": "contact[coffee_type]",
+            "label": "Coffee Type"
+          }
+        },
+        "579b88cd-b5f6-4892-99e0-e78342bab8f0": {
+          "type": "text",
+          "settings": {
+            "header": "Contact Info",
+            "name": "contact[name]",
+            "label": "*Contact Name (first and last)",
+            "placeholder": "*Contact Name (first and last)",
+            "input_type": "text"
+          }
+        },
+        "0379cead-09bd-420a-bfad-eb7a232eff6b": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[company]",
+            "label": "Company",
+            "placeholder": "Company",
+            "input_type": "text"
+          }
+        },
+        "91fe3483-ee24-425c-abb9-6fb242a36b4b": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[phone]",
+            "label": "*Phone (xxx-xxx-xxxx)",
+            "placeholder": "*Phone (xxx-xxx-xxxx)",
+            "input_type": "tel"
+          }
+        },
+        "6611497c-874c-4984-b6e4-7041e2b691fd": {
+          "type": "text",
+          "settings": {
+            "header": "",
+            "name": "contact[email]",
+            "label": "*Email",
+            "placeholder": "*Email",
+            "input_type": "email"
+          }
+        },
+        "456af748-9f79-41b4-997a-5803041644eb": {
+          "type": "text",
+          "settings": {
+            "header": "Tell Us More",
+            "name": "contact[more_info]",
+            "label": "Any additional info is helpful!",
+            "placeholder": "Any additional info is helpful!",
+            "input_type": "textarea"
+          }
+        }
+      },
+      "block_order": [
+        "dd036391-170b-4ddc-87a7-2c8c0458d1a5",
+        "71178f64-08e7-4f0c-82c9-f6fc0c72441d",
+        "579b88cd-b5f6-4892-99e0-e78342bab8f0",
+        "0379cead-09bd-420a-bfad-eb7a232eff6b",
+        "91fe3483-ee24-425c-abb9-6fb242a36b4b",
+        "6611497c-874c-4984-b6e4-7041e2b691fd",
+        "456af748-9f79-41b4-997a-5803041644eb"
+      ],
+      "settings": {
+        "content": "",
+        "form_title": "Large Order Inquiry Form",
+        "sucess_message": "<p>Thanks! We've received your inquiry and will be in touch soon.<\/p>",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h1",
+        "font": "font-gopher",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-2.5"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "fd5a6f10-bdc5-4059-8ee0-2970eacefd95",
+    "16511759845b525e10"
+  ]
+}

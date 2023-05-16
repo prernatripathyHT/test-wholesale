@@ -1,0 +1,38 @@
+<section>
+
+  <div class="py-5 px-5 border border-black">
+    <h1 class="font-couch text-3xl text-center">All Collections</h1>
+  </div>
+
+  <ul class="grid grid-cols-2 xl:grid-cols-3">
+    {%- for collection in collections -%}
+      {%- unless collection.handle == 'coffee-archive' -%}
+        <li class="relative border border-black">
+          <a href="{{ collection.url }}" class="flex flex-col justify-between h-full">
+            {%- if collection.featured_image != blank -%}
+              <div class="min-h-[10rem] h-40 md:min-h-[20rem] md:h-90 xl:min-h-[24rem] xl:h-96
+                          w-full relative
+                          product-card--img-container
+                          bg-bluebell
+                          border-b border-black">
+
+                {% capture classes %}object-contain absolute top-4 xl:top-10 left-1/2 -translate-x-1/2 w-4/5 h-4/5 animate animate-fadeIn {% if render_hover_image %} product-card--primary-img {% endif %}{% endcapture %}
+
+                {% render 'responsive-image'
+                   src: collection.featured_image.src,
+                   alt: collection.featured_image.alt,
+                   class: classes
+                %}
+
+              </div>
+            {%- endif -%}
+
+            <div class="bg-white w-full h-full flex flex-col justify-between px-4 xl:px-12 py-4 xl:py-6 animate animate-fadeInUp">
+              <p class="font-couch text-2xl">{{ collection.title }}</p>
+            </div>
+          </a>
+        </li>
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</section>

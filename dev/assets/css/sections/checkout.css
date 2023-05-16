@@ -1,0 +1,336 @@
+#checkout-override {
+    font-family: theme('fontFamily.freight-sans');
+
+    /* Content Header */
+    & .content__header {
+        padding-top: theme('spacing.6');
+        margin-bottom: theme('spacing.9');
+    }
+
+    /* Breadcrumbs */
+    & .breadcrumb__item {
+        &.breadcrumb__item--current .breadcrumb__text {
+            &::before {
+                --img-size: rem(45);
+                --img-position: calc(50% - var(--img-size) / 2);
+
+                content: "";
+                background-image: var(--img-starburst);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                position: absolute;
+                top: var(--img-position); left: var(--img-position);
+                height: var(--img-size); width: var(--img-size);
+                z-index: -1;
+            }
+        }
+
+        & .breadcrumb__text,
+        & .breadcrumb__link {
+            text-decoration: underline;
+            text-transform: uppercase;
+            position: relative;
+        }
+    }
+
+    & .main, & .main__header {
+        padding: 0;
+    }
+
+    /* Section Title */
+    & .section__title {
+        font-family: theme('fontFamily.couch');
+        font-size: theme('fontSize.xl');
+
+        @screen md {
+            font-size: theme('fontSize.2xl');
+        }
+    }
+
+    /* Section Subtitle */
+    & .section__text {
+        font-family: theme('fontFamily.tenso');
+        font-size: theme('fontSize.base');
+        font-weight: theme('fontWeight.light');
+        letter-spacing: theme('letterSpacing.wider');
+        margin-top: theme('spacing.5');
+        margin-bottom: theme('spacing.6');
+    }
+
+    /* Inputs */
+    & .field__input {
+        border-radius: 0;
+        border-color: theme('colors.black');
+    }
+
+    & .fieldset .field__input {
+        border-color: theme('colors.blue');
+    }
+
+    & .sidebar .field__input {
+        font-size: theme('fontSize.xs');
+        padding-block: rem(15);
+        padding-inline: rem(25);
+
+        &::placeholder {
+            color: theme('colors.black');
+        }
+    }
+
+    & .content-box__emphasis,
+    & .product__price,
+    & .total-line__price {
+        font-family: theme('fontFamily.tenso');
+
+        & * {
+            font-weight: normal;
+        }
+    }
+
+    & .radio-wrapper .content-box__emphasis {
+        font-size: theme('fontSize.base');
+        font-weight: theme('fontWeight.light');
+        letter-spacing: theme('letterSpacing.wider');
+    }
+
+    & .payment-method-wrapper {
+        & .radio__label__primary {
+            font-family: theme('fontFamily.couch');
+            font-size: theme('fontSize.lg');
+
+            @screen 2xl {
+                font-size: theme('fontSize.base') !important;
+            }
+        }
+
+        & .payment-icon {
+            @screen 2xl {
+                font-size: theme('fontSize.xs') !important;
+            }
+        }
+    }
+
+    & .btn {
+        background-color: theme('colors.blue');
+    }
+
+    & .order-summary-toggle--show .order-summary-toggle__text--show,
+    & .order-summary-toggle--hide .order-summary-toggle__text--hide {
+        @apply flex items-center gap-2.5;
+    }
+
+    & .sidebar {
+        padding: 0;
+
+        &::after { content: none; }
+
+        & .order-summary {
+            background: radial-gradient(2500% 50% at 55% 50%, theme('colors.beige') 0%, transparent 100%);
+            border: rem(1) solid theme('colors.black');
+            padding-block: theme('spacing.7');
+            padding-inline: theme('spacing.4');
+
+            &:not(.order-summary--is-collapsed) {
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
+        }
+
+        & .order-summary__sections {
+            height: auto;
+
+            & .product__description__name {
+                font-family: theme('fontFamily.couch');
+            }
+
+            & .product__description__selling_plan, & .product__description__variant {
+              color: theme('colors.black');
+              font-size: 0.85rem;
+              font-weight: 500;
+            }
+
+            & .total-line__name {
+                text-transform: uppercase;
+            }
+
+            & .payment-due__price {
+                font-weight: bold;
+            }
+        }
+
+        & .field__input-btn-wrapper {
+            @media (min-width: 1000px) {
+                display: block;
+            }
+
+            & .field__input {
+                background: transparent;
+                border-radius: 100px;
+            }
+
+            & .field__input-btn {
+                padding-block: theme('spacing.3');
+
+                @media (min-width: 1000px) {
+                    margin: 0;
+                    margin-top: theme('spacing.4');
+                }
+            }
+        }
+    }
+
+    /* Content Box */
+    & .content-box {
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        & .content-box__row {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    /* Review Blocks */
+    & .review-block {
+        border: 0;
+
+        &, & .review-block__inner {
+            flex-direction: column;
+        }
+
+        & .review-block__label {
+            color: theme('colors.black');
+            flex: auto;
+            font-size: theme('fontSize.lg');
+            font-weight: theme('fontWeight.medium');
+            letter-spacing: theme('letterSpacing.wider');
+            line-height: theme('lineHeight.tight');
+            margin-bottom: theme('spacing.4');
+            text-transform: uppercase;
+        }
+
+        & .review-block__content {
+            font-family: theme('fontFamily.tenso');
+            font-size: theme('fontSize.base');
+            font-weight: theme('fontWeight.light');
+        }
+
+        & .review-block__link {
+            color: theme('colors.blue');
+            font-size: theme('fontSize.xs');
+            font-weight: theme('fontWeight.medium');
+            letter-spacing: theme('letterSpacing.wider');
+            margin-top: theme('spacing.4');
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
+
+    /* Radio Button Wrapper */
+    & .radio-wrapper {
+        border: rem(1) solid theme('colors.black');
+
+        padding-block: theme('spacing.5');
+        padding-inline: theme('spacing.6');
+
+        display: flex;
+        align-items: center;
+
+        &.readio__label {
+            display: flex;
+            align-items: center;
+        }
+
+        & .radio__label__primary {
+            font-size: theme('fontSize.lg');
+            text-transform: uppercase;
+
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+
+
+            & .small-text {
+                font-size: theme('fontSize.xs');
+                color: theme('colors.blue');
+            }
+        }
+
+        & .payment-method-wrapper .radio__label__primary {
+            text-transform: none;
+        }
+
+        & .radio__label__accessory {
+            margin-left: auto;
+            white-space: normal;
+
+            & * {
+                font-family: theme('fontFamily.tenso');
+                font-size: theme('fontSize.xl');
+                font-weight: 400;
+            }
+        }
+    }
+
+    /* Continue Button */
+    #continue_button {
+        width: 100%;
+
+        @screen md {
+            width: max-content;
+        }
+    }
+
+    /* Previous Link */
+    & .step__footer__previous-link {
+        font-size: theme('fontSize.base');
+        font-weight: theme('fontWeight.medium');
+        letter-spacing: theme('letterSpacing.wider');
+        text-decoration: underline;
+        text-transform: uppercase;
+
+        & .previous-link__icon { display: none; }
+    }
+
+    /* Checkbox / Radio Buttons */
+    & .input-checkbox,
+    & .input-radio {
+        border-color: theme('colors.white');
+        border-radius: theme('borderRadius.full');
+        border-width: rem(4);
+        box-shadow: 0 0 0 rem(1) theme('colors.blue');
+        transition: background-color theme('transitionDuration.DEFAULT') theme('transitionTimingFunction.DEFAULT');
+
+        &:checked {
+            background-color: theme('colors.yellow');
+        }
+
+        &::after { content: none; }
+    }
+
+    & .checkbox__label {
+        font-size: theme('fontSize.xs');
+        letter-spacing: theme('letterSpacing.wider');
+    }
+
+    & .radio__label {
+        display: flex;
+        flex-wrap: wrap;
+
+        font-size: theme('fontSize.xs');
+        letter-spacing: theme('letterSpacing.wider');
+    }
+}
+
+
+@screen lg {
+    /* Content Wrapper */
+    #checkout-override .wrap {
+        display: block;
+    }
+}

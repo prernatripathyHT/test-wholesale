@@ -1,0 +1,498 @@
+<!-- sections/image-text-slider [aa] -->
+
+{%- comment %}
+	half and half stackable image / text content slider
+{% endcomment -%}
+
+{% capture slick_settings %}
+  {
+    "dots": false,
+    "arrows": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "nextArrow": ".js-image-grid-slider .js-next",
+    "prevArrow": ".js-image-grid-slider .js-prev"
+  }
+{% endcapture %}
+
+<section class="relative js-image-grid-slider">
+
+  {%- if section.settings.color_overlay -%}
+    <div class="absolute top-0 bottom-0 left-0 right-0 opacity-30"
+         style="background-color: {{ section.settings.color_overlay }};"></div>
+  {%- endif -%}
+
+  <div class="relative">
+    {%- if section.settings.title != blank -%}
+      <div class="border border-black px-10 pt-5 pb-3 lg:px-12">
+        {% render 'ct-heading',
+          title: section.settings.title,
+          tag: section.settings.tag,
+          text_size_mobile: section.settings.text_size_mobile,
+          text_size_desktop: section.settings.text_size_desktop,
+          text_color: section.settings.text_color,
+          font: section.settings.font,
+          alignment: section.settings.alignment,
+          weight: section.settings.weight,
+          class: section.settings.title_classes
+        %}
+      </div>
+    {%- endif -%}
+
+    {% if section.blocks.size > 1 %}
+      {% render 'slick-arrows',
+        class: 'block absolute top-1/2 -translate-y-1/2',
+        left_class: 'left-2.5 lg:left-10',
+        right_class: 'right-2.5 lg:right-10'
+      %}
+    {% endif %}
+  </div>
+
+  <div class="relative">
+    <ul class="js-slick w-full mx-auto"
+        data-slick='{{ slick_settings | strip }}'
+        data-sync-heights="true">
+
+      {%- for block in section.blocks -%}
+        <li class="js-slide-inner">
+          <div class="grid md:grid-cols-2 h-full">
+            {% if section.settings.reverse_order == true %}
+              {% render 'text-half-block', block: block, mobile_order: 1 %}
+              {% render 'image-half-block', block: block, mobile_order: 0 %}
+            {% else %}
+              {% render 'image-half-block', block: block, mobile_order: 0 %}
+              {% render 'text-half-block', block: block, mobile_order: 1 %}
+            {% endif %}
+          </div>
+        </li>
+
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image Text Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_order",
+      "label": "Reverse Order?",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "color_overlay",
+      "label": "Section Color Overlay"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-2xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-3xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h2",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-couch",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text Content",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Block Image"
+        },
+        {
+          "type": "select",
+          "id": "items_alignment",
+          "label": "Block Content Alignment",
+          "default": "items-start",
+          "options": [
+            {
+              "label": "Left",
+              "value": "items-start"
+            },
+            {
+              "label": "Center",
+              "value": "items-center"
+            },
+            {
+              "label": "Right",
+              "value": "items-end"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Content Settings"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Big Number"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Block Title"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "Title Font Family",
+          "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso, Gopher",
+          "default": "font-gopher",
+          "options": [
+            {
+              "label": "Freight Sans",
+              "value": "font-freight-sans"
+            },
+            {
+              "label": "Couch",
+              "value": "font-couch"
+            },
+            {
+              "label": "Tenso",
+              "value": "font-tenso"
+            },
+            {
+              "label": "Gopher",
+              "value": "font-gopher"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "title_image",
+          "label": "Block Title Image",
+          "info": "Appears to the left of the block title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Block Main Content",
+          "info": "Richtext Description"
+        },
+        {
+          "type": "html",
+          "id": "list_html",
+          "label": "Additional Block HTML (<ul>, <li>, etc...)"
+        },
+        {
+          "type": "header",
+          "content": "Button Settings"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button Style",
+          "default": "btn btn-secondary",
+          "options": [
+            {
+              "label": "Button Primary",
+              "value": "btn btn-primary"
+            },
+            {
+              "label": "Button Secondary",
+              "value": "btn btn-secondary"
+            },
+            {
+              "label": "Button Tertiary",
+              "value": "btn btn-tertiary"
+            },
+            {
+              "label": "Button White",
+              "value": "btn btn-white"
+            },
+            {
+              "label": "Button Outline",
+              "value": "btn btn-outline"
+            },
+            {
+              "label": "Camel Underline",
+              "value": "camel-underline"
+            },
+            {
+              "label": "Blue Underline",
+              "value": "blue-underline"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "link_classes",
+          "label": "Additional Classes for the Button/Link"
+        },
+        {
+            "type": "text",
+            "id": "btn_icon_name",
+            "label": "Icon Name",
+            "info": "*Optional Icon appends to the Button/Link"
+        },
+        {
+            "type": "text",
+            "id": "btn_icon_class",
+            "label": "Additional Classes for the Icon",
+            "info": "*Optional"
+        },
+        {
+          "type": "header",
+          "content": "Icon Settings"
+        },
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "Icon Text"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_info",
+          "label": "Icon Popover Info"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text Slider"
+    }
+  ]
+}
+{% endschema %}

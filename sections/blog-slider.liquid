@@ -1,0 +1,333 @@
+<!-- sections/blog-slider -->
+
+{% capture slick_settings %}
+  {
+    "dots": false,
+    "arrows": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "nextArrow": "#shopify-section-{{ section.id }} .js-next",
+    "prevArrow": "#shopify-section-{{ section.id }} .js-prev",
+    "responsive": [
+      {
+        "breakpoint": 767,
+        "settings": {
+          "slidesToShow": 2
+        }
+      },
+      {
+        "breakpoint": 1023,
+        "settings": {
+          "slidesToShow": 4
+        }
+      }
+    ]
+  }
+{% endcapture %}
+
+
+{% assign default_tag = section.settings.tag_filter | strip | downcase %}
+
+<section class="border border-black" style="background: {{ section.settings.background }};">
+  {%- if section.settings.title != blank -%}
+    <div class="py-5 px-5 border-b border-black">
+      {%
+        render 'ct-heading',
+        title: section.settings.title,
+        tag: section.settings.tag,
+        text_size_mobile: section.settings.text_size_mobile,
+        text_size_desktop: section.settings.text_size_desktop,
+        text_color: section.settings.text_color,
+        font: section.settings.font,
+        alignment: section.settings.alignment,
+        weight: section.settings.weight,
+        class: section.settings.title_classes
+      %}
+    </div>
+  {%- endif -%}
+
+  <div class="grid grid-cols-6 md:grid-cols-12 js-article-slider-container">
+    <button type="button"
+            class="js-prev p-2 flex items-center justify-center h-full border-r border-black relative z-10">
+      <span class="sr-only">Previous Article</span>
+      {% render 'icon', icon: 'arrow-left', class: "w-8 h-8" %}
+    </button>
+
+    <ul class="w-full max-w-full col-span-4 md:col-span-10 mx-auto list-none js-slick"
+        data-sync-heights="true"
+        data-slick='{{ slick_settings | strip }}'>
+      {% for article in blog.articles %}
+
+        {%- if article_count == section.settings.grid_limit -%}
+          {% break %}
+        {%- endif -%}
+
+        {%- if default_tag == blank or article.tags contains default_tag -%}
+          {% render 'article-card',
+             article: article,
+             grid_span: 1 %}
+
+          {% assign article_count = article_count | plus: 1 %}
+        {%- endif -%}
+      {% endfor %}
+    </ul>
+
+    <button type="button"
+            class="js-next p-2 flex items-center justify-center h-full border-l border-black  relative z-10">
+      <span class="sr-only">Next Article</span>
+      {% render 'icon', icon: 'arrow-right', class: "w-8 h-8" %}
+    </button>
+
+  </div>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Blog Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag_filter",
+      "label": "Filter Blog on Tag"
+    },
+    {
+      "type": "color_background",
+      "id": "background",
+      "label": "Section Background",
+      "default": "radial-gradient(#ffffff, #efebe1)"
+    },
+    {
+      "id": "grid_limit",
+      "type": "number",
+      "label": "Slider Limit",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Text"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Slider"
+    }
+  ]
+}
+{% endschema %}

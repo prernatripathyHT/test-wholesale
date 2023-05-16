@@ -1,0 +1,16 @@
+<!-- snippets/mega-menu-link [aa] -->
+
+<li class="mx-10 min-w-48 image-hover--card">
+  <a href="{{ block.settings.url }}"
+     class="flex flex-col justify-center hover:text-blue transition-colors">
+     {%- if block.settings.image != blank -%}
+      {% render 'responsive-image'
+         src: block.settings.image,
+         alt: block.settings.image.alt,
+         class: "h-48 w-auto mb-6"
+      %}
+     {%- endif -%}
+
+    <span class="text-center text-3xl block">{{ block.settings.title }}</span>
+  </a>
+</li>

@@ -1,0 +1,50 @@
+<!-- snippets/responsive-image [aa] -->
+
+{% comment %}
+Variables
+- src
+- alt
+- classes
+- extra_attrs
+- lazy = t/f
+- crop t/f
+{% endcomment %}
+
+{% assign widths = '180, 360, 470, 600, 770, 970, 1060, 1280, 1512, 1728, 2048' | split: ', ' %}
+{% assign src_set = '' %}
+
+{% capture src_set %}
+  {%- for width in widths -%}
+    {%- if crop == true -%}
+      {% assign replaced_width = '_' | append: width | append: 'x' | append: width | append: '_crop_center.' %}
+    {%- else -%}
+      {% assign replaced_width = '_' | append: width | append: 'x.' %}
+    {%- endif -%}
+
+    {% if src contains '1x' %}
+      {%- assign img_url = src | replace: '_1x1.', replaced_width -%}
+    {% else %}
+      {%- assign img_url = src | img_url: '1x1' | replace: '_1x1.', replaced_width -%}
+    {% endif %}
+
+    {{ src_set }}
+    {{ img_url | append: " " | append: width | append: "w ," }}
+  {%- endfor -%}
+{% endcapture %}
+
+{%- if lazy != false -%}
+  <img class="{{ class }} lazyload"
+       data-srcset="{{ src_set }}"
+       data-widths="{{ widths }}"
+       data-sizes="auto"
+       alt="{{ alt | escape }}"
+       {{extra_attrs}} >
+{%- else -%}
+  <img class="{{ class }}"
+       src="{{ src | img_url: '1x1', crop: 'center' }}"
+       srcset="{{ src_set }}"
+       data-widths="{{ widths }}"
+       data-sizes="auto"
+       alt="{{ alt | escape }}"
+       {{extra_attrs}} >
+{%- endif -%}

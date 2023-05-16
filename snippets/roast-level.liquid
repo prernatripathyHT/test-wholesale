@@ -1,0 +1,41 @@
+<!-- snippets/roast-level -->
+
+{%- comment %}
+  Variables:
+  - show_label [Boolean] used to Show "Roast Level" and popover information
+  - product [Product Object]
+  - class [String] additional classes for the container
+{% endcomment -%}
+
+{% assign roast_level = product.metafields.main.roast_level %}
+
+{% assign roast_levels = "light roast, x, medium light roast, x, medium roast, x, medium dark roast, x, dark roast, x" | split: ", " %}
+
+{%- if roast_level != blank -%}
+  <div class="mt-4 mb-6 {{ class }}">
+    <div class="flex items-center gap-2">
+      {%- if show_label -%}
+        <p class="uppercase text-sm font-semibold tracking-wider font-freight-sans">Roast Level</p>
+
+        <button type="button"
+                class="btn-transparent cursor-pointer relative group">
+          {% render 'icon' icon: 'question' %}
+
+          <div class="hidden group-hover:block group-focus:block absolute z-10 min-w-[12rem] mb-2 bottom-full left-1/2 -translate-x-1/2 bg-black text-white p-2 text-sm text-center">
+            Roast levels based on the Agtron Scale
+          </div>
+        </button>
+
+        <p class="italic font-tenso text-base tracking-wider">{{ roast_level }}</p>
+      {%- else -%}
+
+        <p class="uppercase text-sm tracking-wider">{{ roast_level }}</p>
+      {%- endif -%}
+    </div>
+    <div class="overflow-hidden roast-level--graph grid grid-cols-10 border border-black h-3 md:h-5 mt-3">
+      {%- for level in roast_levels -%}
+        <span class="h-full {% unless forloop.last %} border-r border-black {% endunless %} {% if roast_level == level %} animate animate-slideInLeft bg-yellow {% endif %}" data-delay="500"></span>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}

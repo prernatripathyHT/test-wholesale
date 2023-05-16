@@ -1,0 +1,5 @@
+@layer utilities {
+    .col-span-end {
+        grid-column: -2 / -1;
+    }
+}

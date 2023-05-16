@@ -1,0 +1,7 @@
+.shopify-challenge__container {
+  @apply px-5 py-12;
+}
+
+.shopify-challenge__container input[type=submit].shopify-challenge__button {
+  @apply btn btn-primary mt-5 mx-auto block;
+}

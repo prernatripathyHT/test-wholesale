@@ -1,0 +1,50 @@
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 10s linear infinite;
+}
+
+
+@layer components {
+
+  a.blue-underline {
+    @apply underline text-blue;
+  }
+
+  a.camel-underline {
+    @apply underline text-camel;
+  }
+
+  a.icon-link:hover svg, a.icon-link:focus-within svg {
+    animation: rotate 6s linear infinite forwards;
+  }
+
+  .account--nav-link {
+    position: relative;
+  }
+
+  .account--nav-link.active:before,
+  .nav--wrapper li a.active:before {
+    --img-size: calc(45rem / 16);
+    --img-position: calc(50% - var(--img-size) / 2);
+
+    content: "";
+    background-image: var(--img-starburst);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    top: var(--img-position); left: var(--img-position);
+    height: var(--img-size); width: var(--img-size);
+    z-index: -1;
+  }
+
+}

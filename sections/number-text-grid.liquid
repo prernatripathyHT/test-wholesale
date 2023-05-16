@@ -1,0 +1,328 @@
+<!-- sections/number-text-grid [aa] -->
+
+{% capture slick_settings %}
+  {
+    "dots": true,
+    "infinite": true,
+    "speed": 300,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst": true,
+    "responsive": [
+      {
+        "breakpoint": 767,
+        "settings": "unslick"
+      }
+    ]
+  }
+{% endcapture %}
+
+<section class="md:py-6 md:px-6 relative">
+  <div class="px-6 py-12 border border-black"
+       style="background: {{section.settings.background}};">
+    {%- if section.settings.title != blank -%}
+      {%
+        render 'ct-heading',
+        title: section.settings.title,
+        tag: section.settings.tag,
+        text_size_mobile: section.settings.text_size_mobile,
+        text_size_desktop: section.settings.text_size_desktop,
+        text_color: section.settings.text_color,
+        font: section.settings.font,
+        alignment: section.settings.alignment,
+        weight: section.settings.weight,
+        class: section.settings.title_classes
+      %}
+    {%- endif -%}
+
+    <ul class="md:grid md:grid-cols-2 md:gap-8 lg:gap-12 w-full lg:w-10/12 mx-auto js-slick" data-slick='{{ slick_settings | strip }}'>
+      {%- for block in section.blocks -%}
+        {% assign number = "0" | append: forloop.index %}
+        {% assign delay = 300 | times: forloop.index %}
+
+        <li class="flex items-center animate animate-fadeInUp" data-mobile-delay="0" data-delay="{{ delay }}">
+          <div class="flex items-center">
+            <p class="text-8xl lg:text-9xl text-left
+                      font-tenso text-stroke-white
+                      animate animate-fadeInUp animate-slow"
+               data-mobile-delay="200"
+               data-delay="{{ delay | plus: 200 }}">
+             {{ number }}
+           </p>
+           {%- if block.settings.title != blank -%}
+             <p class="text-black text-xl uppercase font-medium tracking-wider block md:hidden ml-5">{{ block.settings.title }}</p>
+           {%- endif -%}
+          </div>
+
+          <div class="md:ml-5">
+            {%- if block.settings.title != blank -%}
+              <p class="text-black text-xl uppercase font-medium tracking-wider hidden md:block">{{ block.settings.title }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.text != blank -%}
+              <p class="text-black">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </div>
+        </li>
+
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Number Text Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "color_background",
+      "id": "background",
+      "label": "Section Background",
+      "default": "linear-gradient(#ffffff, #000000)"
+    },
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "text_size_mobile",
+      "label": "Text Size: Mobile",
+      "default": "text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_size_desktop",
+      "label": "Text Size: Desktop",
+      "default": "lg:text-6xl",
+      "options": [
+        {
+          "label": "6XL",
+          "value": "lg:text-6xl"
+        },
+        {
+          "label": "5XL",
+          "value": "lg:text-5xl"
+        },
+        {
+          "label": "4XL",
+          "value": "lg:text-4xl"
+        },
+        {
+          "label": "3XL",
+          "value": "lg:text-3xl"
+        },
+        {
+          "label": "2XL",
+          "value": "lg:text-2xl"
+        },
+        {
+          "label": "XL",
+          "value": "lg:text-xl"
+        },
+        {
+          "label": "LG",
+          "value": "lg:text-lg"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading Tag",
+      "default": "h1",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Title Font Family",
+      "info": "Font selector between theme fonts: Freight Sans, Couch, Tenso",
+      "default": "font-freight-sans",
+      "options": [
+        {
+          "label": "Freight Sans",
+          "value": "font-freight-sans"
+        },
+        {
+          "label": "Couch",
+          "value": "font-couch"
+        },
+        {
+          "label": "Tenso",
+          "value": "font-tenso"
+        },
+        {
+          "label": "Gopher",
+          "value": "font-gopher"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Title Font Weight",
+      "info": "Font Weight Selector",
+      "default": "font-regular",
+      "options": [
+        {
+          "label": "Light",
+          "value": "font-light"
+        },
+        {
+          "label": "Regular",
+          "value": "font-regular"
+        },
+        {
+          "label": "Semibold",
+          "value": "font-semibold"
+        },
+        {
+          "label": "Bold",
+          "value": "font-bold"
+        },
+        {
+          "label": "Black",
+          "value": "font-black"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Title Text Alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "text-left"
+        },
+        {
+          "label": "Center",
+          "value": "text-center"
+        },
+        {
+          "label": "Right",
+          "value": "text-right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Title Text Color",
+      "default": "text-black",
+      "options": [
+        {
+          "label": "Black",
+          "value": "text-black"
+        },
+        {
+          "label": "Blue",
+          "value": "text-blue"
+        },
+        {
+          "label": "White",
+          "value": "text-white"
+        },
+        {
+          "label": "Camel",
+          "value": "text-camel"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title_classes",
+      "label": "Additional Classes for the Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Number + Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Block Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Block Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Number Text Grid"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,13 @@
+<!-- snippets/product-pronunciation.liquid -->
+
+{%- unless product.metafields.custom_fields.pronunciation == blank -%}
+  <button type="button" name="button" class="js-play-pronunciation">
+    <span class="sr-only">Play Pronunciation</span>
+    {% render 'icon', icon: 'sound' %}
+
+    <audio class="js-product-pronunciation">
+      <source src="{{ product.metafields.custom_fields.pronunciation }}" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+  </button>
+{%- endunless -%}

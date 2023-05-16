@@ -1,0 +1,10 @@
+
+.contact-us--grid {
+  grid-template-columns: 1fr;
+}
+
+@media screen(xl) {
+  .contact-us--grid {
+    grid-template-columns: 45rem 1fr;
+  }
+}

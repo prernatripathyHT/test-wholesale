@@ -1,0 +1,152 @@
+<!-- sections/header.liquid -->
+{%- comment %}
+	Desktop Menu built w/ navigation -> All links are in the menus.
+{% endcomment -%}
+
+<header class="relative js-main-nav transition-colors hidden xl:block bg-blue border border-black">
+  <nav class="flex justify-between py-2 px-4 lg:px-6 gap-5" aria-label="main menu">
+    <div class="flex items-center justify-start w-1/5">
+      
+    </div>
+
+    {% render 'desktop-menu', linklist: section.settings.header_left_links, justify: "justify-end" %}
+    {% render 'nav-logo', header_icon: section.settings.header_icon %}
+    {% render 'desktop-menu', linklist: section.settings.header_right_links, justify: "justify-start" %}
+
+    {% render 'desktop-icon-menu' %}
+  </nav>
+</header>
+
+{%- comment %}
+	Mobile Menu completely built w/ navigation + multi level linklist
+{% endcomment -%}
+<header class="relative js-main-nav transition-colors bg-blue border border-black block xl:hidden">
+  <nav class="flex justify-between py-2 px-5 lg:px-4" aria-label="mobile menu">
+    <ul class="list-none flex items-center w-1/3">
+
+      <li class="flex items-center">
+        <a id="mobile--menu-link--main"
+          href="#menu"
+          class="list-none text-blue uppercase font-bold js-mobile-mega-link"
+          data-link="mobile--main"
+        >
+          <span class="sr-only">Toggle Main Mobile Menu</span>
+          {% render 'icon',
+            icon: 'menu',
+            class: 'nav--icon-link text-white' %}
+          {% render 'icon',
+            icon: 'close',
+            class: 'nav--icon-link text-white hidden' %}
+        </a>
+
+        {% render 'mobile-mega-menu', links: section.settings.mobile_menu_links.links, level: 1 %}
+      </li>
+    </ul>
+
+    {% render 'nav-logo', header_icon: section.settings.header_icon %}
+
+    <ul class="flex justify-end items-center w-1/3">
+      
+      {% comment %} 
+      <li class="flex items-center mx-2.5">
+        <a href="/account" class="flex items-center tracking-widest leading-none text-white uppercase font-semibold">
+          {% if customer %}
+            Account
+          {% else %}
+            Login
+          {% endif %}
+        </a>
+      </li> {% endcomment %}
+
+      <li class="flex items-center  mx-2.5">
+        <a href="/cart"
+           class="list-none font-bold hover:fill-blue hover:stroke-blue {% if link.active %} text-blue draw {% endif %}"
+        >
+          <span class="sr-only">Cart</span>
+          {% render 'icon',
+            icon: 'cart',
+            class: 'nav--icon-link text-white' %}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "sticky top-0 bg-white z-40",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "header_left_links",
+      "label": "Left Side Links"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_icon",
+      "label": "Header Icon",
+      "info": "Overrides the default SVG logo"
+    },
+    {
+      "type": "link_list",
+      "id": "header_right_links",
+      "label": "Right Side Links"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_menu_links",
+      "label": "Mobile Menu Links"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mega_menu_link",
+      "name": "Mega Menu Link",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Link Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Link Image"
+        },
+        {
+          "type": "text",
+          "id": "association",
+          "label": "Link Parent",
+          "default": "Shop",
+          "info": "Associated parent link. Should be one of 'Shop' or 'About'"
+        }
+      ]
+    },
+    {
+      "type": "mega_menu_list",
+      "name": "Mega Menu List",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu_list",
+          "label": "Nagigation Link List"
+        },
+        {
+          "type": "text",
+          "id": "association",
+          "label": "Link Parent",
+          "default": "Shop",
+          "info": "Associated parent link. Should be one of 'Shop' or 'About'"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,54 @@
+<!-- snippets/account-navigation -->
+
+{% assign links = 'account, subscriptions, orders, logout' | split: ', ' %}
+
+{%- comment %}
+  {%- if link.active -%}
+    <span class="w-12 h-12 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 z-0">
+      {% render 'shape',
+         shape: 'starburst'
+         fill: "#E8E66E",
+         class: "w-full h-full" %}
+    </span>
+  {%- endif -%}
+{% endcomment -%}
+
+{% assign customer_is_subscriber = false %}
+
+{% if customer.tags contains 'Active Subscriber' or customer.tags contains 'Inactive Subscriber' %}
+  {% assign customer_is_subscriber = true %}
+{% endif %}
+
+<ul class="flex justify-center flex-wrap gap-4 md:gap-8 py-5 px-5 border-b border-r border-l border-black">
+  {%- for link_handle in links -%}
+    {%- if link_handle == 'subscriptions' and customer_is_subscriber -%}
+      <li class="uppercase tracking-wider font-freight-sans relative font-semibold">
+        <a href="/tools/recurring/login"
+           class="relative z-[1] account--nav-link">
+          {{ link_handle }}
+        </a>
+      </li>
+    {%- elsif link_handle == 'subscriptions' -%}
+      {% continue %}
+    {%- elsif link_handle == 'logout' -%}
+      <li class="uppercase tracking-wider font-freight-sans relative font-semibold">
+        <a href="/account/logout"
+           class="relative z-[1] account--nav-link">
+          {{ link_handle }}
+        </a>
+      </li>
+    {%- else -%}
+      <li class="uppercase tracking-wider font-freight-sans relative font-semibold">
+        <a href="/account"
+           class="relative z-[1] account--nav-link {% if forloop.first %} active {% endif %}"
+           data-section-nav="account-{{ link_handle }}"
+           data-section-nav--href="/account"
+           data-section-nav--wrapper=".js-account-nav-target">
+          {{ link_handle }}
+        </a>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+
+
+</ul>

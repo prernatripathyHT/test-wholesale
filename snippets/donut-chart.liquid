@@ -1,0 +1,54 @@
+<!-- snippets/donut-chart [ja] -->
+
+{%- comment -%} Params:
+
+    - data
+    - data_type
+
+{%- endcomment -%}
+
+<figure class="relative w-fit mx-auto" {% if data_type == 'race' %}style="transform: rotateX(180deg);"{% endif %}>
+    {% for block in data %}
+
+        {% assign acc_perc = 0 %}
+        {% assign block_index = forloop.index0 %}
+        {% for i in (0..block_index) %}
+
+            {% if i == block_index %}
+                {% continue %}
+            {% endif %}
+
+            {% assign acc_perc = acc_perc | plus: data[i].settings.data %}
+
+        {% endfor %}
+
+        {%- comment -%} Calculate stroke-dashoffset value {%- endcomment -%}
+        {% assign step_one = block.settings.data | divided_by: 100.00 %}
+        {% assign step_two = 1 | minus: step_one %}
+        {% assign dashoffset_result = -471 | times: step_two %}
+
+        <div {% unless forloop.first %}class="absolute left-0 top-0"{% endunless %}>
+            <svg    width="340" height="190" viewbox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" 
+                    class="overflow-hidden animate animate-fadeIn max-w-full"
+                    style="transform: rotate(calc(({{ acc_perc }} / 100) * 180deg)); transform-origin: 50% 90%;"
+                    data-delay="{{ forloop.index0 | times: 200 }}">
+                <path   d="M320 170c0-82.843-67.157-150-150-150S20 87.157 20 170" 
+                        stroke="{{ block.settings.color }}" 
+                        stroke-width="40" 
+                        stroke-dashoffset="{{ dashoffset_result }}" 
+                        stroke-dasharray="471" 
+                        fill="none" 
+                        fill-rule="evenodd" 
+                        stroke-linecap="butt" />
+            </svg>
+            <p class="sr-only">{{ block.settings.title }}: {{ block.settings.data }}%</p>
+        </div>
+
+    {% endfor %}
+
+    <p  class="text-xl uppercase tracking-wider font-freight-sans absolute top-1/2 left-1/2 -translate-x-1/2 animate animate-fadeIn" 
+        {% if data_type == 'race' %}style="transform: rotateX(180deg) translateX(-50%);"{% endif %}
+        data-delay="{{ data.size | times: 200 | plus: 200 }}">
+        {{ data_type }}
+    </p>
+</figure>

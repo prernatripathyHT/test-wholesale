@@ -1,0 +1,12 @@
+<!-- snippets/big-number -->
+{%- comment %}
+	variables
+  - number
+{% endcomment -%}
+
+{%- if number != blank -%}
+  <p class="text-8xl lg:text-9xl text-right lg:text-center
+            font-tenso text-stroke-camel
+            lg:absolute lg:top-8 lg:right-8
+            animate animate-fadeInUp">{{ number }}</p>
+{%- endif -%}

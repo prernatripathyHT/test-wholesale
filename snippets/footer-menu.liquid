@@ -1,0 +1,19 @@
+<!-- snippets/footer-menu -->
+{%- comment %}
+	Navigation link from Customize Theme.
+  Variables:
+   - link [Link Object]
+   - first: forloop.first
+   - last: forloop.last
+{% endcomment -%}
+
+
+<ul class="list-none {% unless first or last %} row-span-2 md:row-span-1 {% endunless %}">
+  <h4 class="font-bold text-sm lg:text-lg mb-2.5 uppercase font-freight-sans">{{ link.title }}</h4>
+
+  {%- for sublink in link.links -%}
+    <li class="mb-1 text-sm lg:text-lg">
+      <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+    </li>
+  {%- endfor -%}
+</ul>

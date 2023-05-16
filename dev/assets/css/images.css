@@ -1,0 +1,11 @@
+img {
+  @apply w-full object-contain;
+}
+
+img.lazyload, img.lazyloading {
+  @apply opacity-0 transition-all;
+}
+
+img.lazyloaded {
+  @apply opacity-100;
+}

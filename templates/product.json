@@ -1,0 +1,174 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+      }
+    },
+    "1649265340e9bfb731": {
+      "type": "cta-banner",
+      "disabled": true,
+      "settings": {
+        "section_style": "background_image",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "background_image": "shopify:\/\/shop_images\/Puente_series_hero4.jpg",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Get a rotating selection of exclusive <br\/>single-origin coffees + Free shipping<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "mb-4",
+        "button_style": "btn btn-white",
+        "link_text": "Subscribe Today",
+        "link_url": "shopify:\/\/collections\/all",
+        "link_classes": "uppercase tracking-wider font-freight-sans"
+      }
+    },
+    "1646779723dbed25a1": {
+      "type": "index--icon-banner",
+      "blocks": {
+        "12d0780f-3795-4eb3-9f9b-0193e63ea43c": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Branch_Resized_59926de3-b330-4f2c-9896-e36feb17ad9b.png",
+            "text": "Sustainably-Sourced",
+            "paragraph": ""
+          }
+        },
+        "3b5f5f85-bcfb-4abf-a78d-7c415ff35ca7": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Spoon_Resized_c0aefb3a-fd58-41ea-b20c-e5f2b3a257ce.png",
+            "text": "Quality-Focused",
+            "paragraph": ""
+          }
+        },
+        "fc692f00-5209-4b47-92a8-6973647841e7": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/B_resized_e62100ef-2d53-44cf-868a-649779c01117.png",
+            "text": "B Corp Certified",
+            "paragraph": ""
+          }
+        },
+        "5b62a1d1-9d76-4ad3-8578-b8854c6b93e9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cherries_Resized_f27ec61f-d2ac-4317-ad7d-f159474aa90b.png",
+            "text": "Transparently Traded",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "12d0780f-3795-4eb3-9f9b-0193e63ea43c",
+        "3b5f5f85-bcfb-4abf-a78d-7c415ff35ca7",
+        "fc692f00-5209-4b47-92a8-6973647841e7",
+        "5b62a1d1-9d76-4ad3-8578-b8854c6b93e9"
+      ],
+      "settings": {
+        "bg_color": "radial-gradient(rgba(236, 232, 223, 1), rgba(196, 196, 196, 0) 99.97%, rgba(196, 196, 196, 0) 99.98%)",
+        "show_border": true,
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "mobile_layout": "grid",
+        "font": "font-freight-sans",
+        "icon_layout": "flex-row",
+        "text_color": "text-black",
+        "text_classes": ""
+      }
+    },
+    "1650578154564aa45d": {
+      "type": "icon-link-list",
+      "blocks": {
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#34beae",
+            "title": "Kalita Wave",
+            "url": "shopify:\/\/pages\/quick-easy-pour-over",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_Katilawave_edit_c49307a2-9c4b-4d11-aab9-f1e5076b4676.png"
+          }
+        },
+        "12975029-480c-4426-99d1-d57a838c0d7a": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fdbf69",
+            "title": "French Press",
+            "url": "shopify:\/\/pages\/quick-easy-french-press",
+            "icon_image": "shopify:\/\/shop_images\/Frame.png"
+          }
+        },
+        "31387098-a5a6-4866-a474-9e6a1e519b44": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fbc7b2",
+            "title": "Chemex",
+            "url": "shopify:\/\/blogs\/counter-culture-coffee\/coffee-basics-brewing-methods",
+            "icon_image": "shopify:\/\/shop_images\/Frame-2.png"
+          }
+        },
+        "6615e4f1-b15e-4812-b99c-0d145030f03d": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#ff5c1b",
+            "title": "Hario V60",
+            "url": "shopify:\/\/pages\/quick-easy-v60",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Live-Stroke-Individual_Hario_V60_6a8093a7-629c-4cf5-b3c2-7832668228fb.png"
+          }
+        },
+        "87edf125-aa68-4420-9046-377a206cda67": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#3a8dde",
+            "title": "Aeropress",
+            "url": "shopify:\/\/pages\/quick-easy-aeropress",
+            "icon_image": "shopify:\/\/shop_images\/icon-aeropress_d01b8bfa-bee9-4027-9ffc-2f5381b96486.png"
+          }
+        }
+      },
+      "block_order": [
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb",
+        "12975029-480c-4426-99d1-d57a838c0d7a",
+        "31387098-a5a6-4866-a474-9e6a1e519b44",
+        "6615e4f1-b15e-4812-b99c-0d145030f03d",
+        "87edf125-aa68-4420-9046-377a206cda67"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(239, 235, 225, 1) 16%, rgba(255, 255, 255, 1) 100%)",
+        "mobile_layout": "slider",
+        "title": "<p>Brew Guides<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1647989083db4e1b68": {
+      "type": "related-products",
+      "settings": {
+        "title": "We Suggest...",
+        "show_hover_image": false,
+        "show_atc": false,
+        "grid_limit": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1649265340e9bfb731",
+    "1646779723dbed25a1",
+    "1650578154564aa45d",
+    "1647989083db4e1b68"
+  ]
+}

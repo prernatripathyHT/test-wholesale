@@ -1,0 +1,47 @@
+<!-- snippets/cart-shipping-indicator -->
+
+{% assign cart_count = cart.item_count %}
+{% assign threshold = settings.free_shipping_threshold | times: 100 %}
+{% assign free_shipping_remainder = threshold | minus: cart.items_subtotal_price %}
+{% comment %} {% assign has_subscriptions = false %} {% endcomment %}
+
+{% comment %} {%- for item in cart.items -%}
+  {%- if item.selling_plan_allocation != blank -%}
+    {% assign has_subscriptions = true %}
+  {% endif %}
+{%- endfor -%} {% endcomment %}
+
+
+{% assign shipping_percentage = 0 %}
+
+{% assign shipping_message = "Free shipping on orders $30+" %}
+
+{%- if cart_count > 0 -%}
+
+  {%- if free_shipping_remainder > 0 -%}
+    {% capture shipping_message %}You are {{ free_shipping_remainder | money }} away from free shipping!{% endcapture %}
+    {% assign shipping_percentage = cart.items_subtotal_price | times: 100 | divided_by: threshold %}
+  {%- else -%}
+    {% assign shipping_percentage = 100 %}
+    {% capture shipping_message %}Heck yeah! Shipping's on us!{% endcapture %}
+  {%- endif -%}
+
+{%- endif -%}
+
+
+
+<!-- free shipping calc -->
+<div class="mt-4 mx-auto cart-page:max-w-xs">
+  <p class="mb-2 text-black font-tenso tracking-wider text-center font-light text-sm cart-page:text-base">{{ shipping_message }}</p>
+
+  <div class="flex items-center justify-center js-shipping-indicator-container">
+    <span class="text-black font-tenso font-light text-sm mr-2">{{ 0 | money_without_trailing_zeros }}</span>
+    <div class="rounded-full border-black border w-full h-4 relative">
+      <div class="h-full bg-black rounded-full absolute left-0 top-0 js-shipping-indicator-bar transition-all"
+           data-width="{{ shipping_percentage }}%"
+           style="width: {{ shipping_percentage }}%;"></div>
+    </div>
+    <span class="text-black font-tenso font-light text-sm ml-2">{{ threshold | money_without_trailing_zeros }}</span>
+  </div>
+
+</div>

@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-grid",
+      "settings": {
+        "alt_collection": "",
+        "title": "",
+        "show_hover_image": true,
+        "show_atc": true,
+        "show_filters": true,
+        "feature_image_index": 6,
+        "grid_limit": 30
+      }
+    },
+    "1649269888b2efd794": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-black",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Still haven't found what you're looking for?<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "mb-4",
+        "button_style": "btn btn-secondary",
+        "link_text": "Take the Quiz",
+        "link_url": "shopify:\/\/pages\/counter-culture-quiz",
+        "link_classes": ""
+      }
+    },
+    "1649716670930fb995": {
+      "type": "collection-grid",
+      "disabled": true,
+      "settings": {
+        "alt_collection": "merchandise",
+        "title": "Don't forget the merch!",
+        "show_hover_image": false,
+        "show_atc": true,
+        "show_filters": false,
+        "feature_image_index": 9,
+        "grid_limit": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1649269888b2efd794",
+    "1649716670930fb995"
+  ]
+}

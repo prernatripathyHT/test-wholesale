@@ -1,0 +1,25 @@
+@layer utilities {
+  .animate {
+    animation-name: none !important;
+    @apply opacity-0;
+  }
+
+  .transition-standard {
+    transition-property: background-color, border-color, box-shadow, color;
+
+    @apply duration-300 ease-out;
+  }
+
+
+  .animate-w-full {
+    transition: width .3s ease;
+  }
+
+  .animate-w-full.animate-animated {
+    width: 100%;
+  }
+}
+
+a, button {
+  @apply transition-all;
+}

@@ -1,0 +1,146 @@
+<!-- sections/demographics [ja] -->
+
+
+{% assign gender_data = section.blocks | where: 'type', 'gender' %}
+{% assign race_data = section.blocks | where: 'type', 'race' %}
+
+{% assign job_functions = section.blocks | where: 'type', 'job_function' %}
+
+<section class="grid md:grid-cols-2">
+    <div class="border border-black p-10 md:p-20">
+        <div class="mb-12 md:mb-32">
+            <p class="font-tenso text-7xl sm:text-9xl text-stroke-camel mb-5">123</p>
+            <p class="text-xl uppercase tracking-wider font-freight-sans">Total Staff</p>
+        </div>
+        
+        {% for i in (1..2) %}
+        
+            {%- capture data_type -%}
+                {%- cycle 'gender', 'race' -%}
+            {%- endcapture -%}
+        
+            {% assign data = section.blocks | where: 'type', data_type %}
+        
+            {% render 'donut-chart', 
+                data: data, 
+                data_type: data_type %}
+            
+        {% endfor %}
+    </div>
+
+    <div class="border border-black p-10 md:py-20 md:px-[16%] overflow-hidden">
+        <p class="text-lg md:text-xl uppercase tracking-wider font-freight-sans mb-8">Staff by function</p>
+
+        <ul class="grid grid-cols-9 gap-5">
+            {% for block in job_functions %}
+
+                <li class="contents">
+                    <p class="hidden">{{ block.settings.function }}</p>
+
+                    {% for i in (1..block.settings.quantity) %}
+
+                        <div    class="w-full aspect-square rounded-full relative {% unless block.settings.function == blank %}hover:tooltip{% endunless %} animate animate-zoomIn" 
+                                style="background-color: {{ block.settings.color }};"
+                                data-tooltip="{{ block.settings.function }}: {{ block.settings.quantity }}">
+                        </div>
+                        
+                    {% endfor %}
+                </li>
+                
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Demographic Data",
+    "class": "section-demographics",
+    "blocks": [
+        {
+            "name": "Gender",
+            "type": "gender",
+            "settings": [
+                {
+                    "type": "paragraph",
+                    "content": "Gender data will be represented in a pie chart"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Label"
+                },
+                {
+                    "type": "range",
+                    "id": "data",
+                    "label": "% of Total",
+                    "unit": "%",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "default": 1,
+                    "info": "All gender data should add up to 100%"
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Color"
+                }
+            ]
+        },
+        {
+            "name": "Race",
+            "type": "race",
+            "settings": [
+                {
+                    "type": "paragraph",
+                    "content": "Race data will be represented in a pie chart"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Label"
+                },
+                {
+                    "type": "range",
+                    "id": "data",
+                    "label": "% of Total",
+                    "unit": "%",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "default": 1,
+                    "info": "All race data should add up to 100%"
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Color"
+                }
+            ]
+        },
+        {
+            "name": "Job Function",
+            "type": "job_function",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "function",
+                    "label": "Function"
+                },
+                {
+                    "type": "text",
+                    "id": "quantity",
+                    "label": "Quantity"
+                },
+                {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Color"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

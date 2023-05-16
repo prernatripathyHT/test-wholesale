@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "class-product",
+      "settings": {
+      }
+    },
+    "1647989083db4e1b68": {
+      "type": "related-products",
+      "settings": {
+        "title": "We Suggest...",
+        "show_hover_image": false,
+        "show_atc": false,
+        "grid_limit": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1647989083db4e1b68"
+  ]
+}

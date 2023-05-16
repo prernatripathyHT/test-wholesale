@@ -1,0 +1,26 @@
+<!-- snippets/desktop-submenu -->
+
+{%- comment %}
+	Variables:
+  - parent: [Object Link] passed down
+  - links: [List/Links]
+{% endcomment -%}
+
+<div role="region"
+     aria-labelledby="menu-link--{{ parent.title | handleize }}"
+     class="absolute top-full list-none border-blue border flex flex-col w-auto desktop--submenu"
+     data-link="desktop--{{ parent.title | handleize }}">
+ <ul>
+    {% for link in links %}
+      <li class="flex justify-start items-center bg-beige hover:bg-yellow transition-all
+                 {% unless forloop.last %} border-b border-blue {% endunless %}">
+        <a id="menu-link--{{ link.id }}"
+          href="{{ link.url }}"
+          class="p-4 list-none font-semibold text-blue uppercase w-max"
+        >
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

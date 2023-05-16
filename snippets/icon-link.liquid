@@ -1,0 +1,38 @@
+<!-- snippets/icon-link -->
+{%- comment %}
+	block: [Block] Object with settings
+
+  - sunburst_color [Color]
+  - title [Text]
+  - url [URL]
+  - icon_image [Image]
+{% endcomment -%}
+
+
+<li class="mb-5 lg:mb-0 px-5">
+  <a href="{{ block.settings.url }}" class="icon-link flex flex-col items-center relative text-center">
+    {%- if block.settings.icon_image != blank -%}
+      <div class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 relative mb-5 flex items-center justify-center">
+        <div class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 absolute top-0 left-0 animate animate-fadeIn">
+          {%
+            render 'shape',
+            shape: 'sunburst',
+            fill: block.settings.sunburst_color
+          %}
+        </div>
+        <div class="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 relative z-1 animate animate-fadeInUp">
+          {%
+            render 'responsive-image',
+            src: block.settings.icon_image.src,
+            alt: block.settings.icon_image.alt,
+            class: "h-full w-full object-contain"
+          %}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings.title != blank -%}
+      <span class="font-tenso tracking-wider text-lg">{{ block.settings.title }}</span>
+    {%- endif -%}
+  </a>
+</li>

@@ -1,0 +1,438 @@
+{
+  "sections": {
+    "1650642399e11e88b0": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/seed.png",
+        "image_right": "shopify:\/\/shop_images\/kalita_f0e43f22-e62b-4d2c-9b2e-048e579b0593.png",
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": true,
+        "bg_color": "#ece8df",
+        "wrapper_classes": "border-b border-black",
+        "use_squiggles": false,
+        "title": "<p>Traceable from Seed to Cup. <\/p>",
+        "text_size_mobile": "text-4xl",
+        "text_size_desktop": "lg:text-5xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-white",
+        "title_classes": "text-stroke-outline absolute top-28 right-0 w-4\/5 lg:relative lg:w-full lg:right-auto lg:top-auto",
+        "content": "<p>We believe we can make a positive impact on coffee’s future through our everyday commitments to quality, sustainability, education, and transparency.<\/p>",
+        "testimonial_author": ""
+      }
+    },
+    "metrics": {
+      "type": "metrics",
+      "disabled": true,
+      "blocks": {
+        "33878cb4-8b39-47f8-82a8-6941181a80a8": {
+          "type": "metric",
+          "settings": {
+            "top_label": "We have sold",
+            "number": "xxx,xxx,xxx lbs",
+            "bottom_label": "of coffee",
+            "full_width": true
+          }
+        },
+        "9f204d97-0295-4815-ad87-69b75a3e731a": {
+          "type": "metric",
+          "settings": {
+            "top_label": "Given away",
+            "number": "xxx,xxx lbs",
+            "bottom_label": "of coffee",
+            "full_width": false
+          }
+        },
+        "5110bdd2-8dc2-4291-87e3-27118b651c08": {
+          "type": "metric",
+          "settings": {
+            "top_label": "Taught",
+            "number": "xx,xxx hrs",
+            "bottom_label": "of classes",
+            "full_width": false
+          }
+        },
+        "f6ff595b-05b9-4f5e-aa66-0a95fa8eb2fe": {
+          "type": "metric",
+          "settings": {
+            "top_label": "Are available in",
+            "number": "xxx,xxx",
+            "bottom_label": "cafes & restaurants",
+            "full_width": false
+          }
+        },
+        "8f747a78-b044-4832-991b-c21346c5952b": {
+          "type": "metric",
+          "settings": {
+            "top_label": "Are available in",
+            "number": "xxx,xxx",
+            "bottom_label": "grocery stores",
+            "full_width": false
+          }
+        }
+      },
+      "block_order": [
+        "33878cb4-8b39-47f8-82a8-6941181a80a8",
+        "9f204d97-0295-4815-ad87-69b75a3e731a",
+        "5110bdd2-8dc2-4291-87e3-27118b651c08",
+        "f6ff595b-05b9-4f5e-aa66-0a95fa8eb2fe",
+        "8f747a78-b044-4832-991b-c21346c5952b"
+      ],
+      "settings": {
+      }
+    },
+    "0979737a-529b-42f5-9a50-9621dc688708": {
+      "type": "index--icon-banner",
+      "blocks": {
+        "2bea8b03-970f-4000-a209-5409773bab01": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_quality.png",
+            "text": "Quality",
+            "paragraph": "We set the standard for the best coffees by driving innovation at every step of the supply chain."
+          }
+        },
+        "d1510fda-06cd-4be4-a0b9-1bce0187b8ef": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_sustainability_266c6f3d-9845-4a10-b594-22aec6d48dc9.png",
+            "text": "Sustainability",
+            "paragraph": "We take action to invest in the environment and people through collaboration, communication, and transparency."
+          }
+        },
+        "58ebcc80-91f4-4924-a3d6-8f043516f5af": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_education.png",
+            "text": "Education",
+            "paragraph": "We cultivate and exchange knowledge to empower people to create extraordinary coffee experiences."
+          }
+        },
+        "97a3a49a-f116-4aee-81db-f264ce142f1f": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_quality.png",
+            "text": "Transparency",
+            "paragraph": "In an industry where inequality is the status quo, we are thoroughly transparent. We believe there is a connection between transparency and the sustainability of coffee."
+          }
+        }
+      },
+      "block_order": [
+        "2bea8b03-970f-4000-a209-5409773bab01",
+        "d1510fda-06cd-4be4-a0b9-1bce0187b8ef",
+        "58ebcc80-91f4-4924-a3d6-8f043516f5af",
+        "97a3a49a-f116-4aee-81db-f264ce142f1f"
+      ],
+      "settings": {
+        "bg_color": "radial-gradient(rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 100%, rgba(196, 196, 196, 0) 100%)",
+        "show_border": true,
+        "icon_bg_color": "rgba(0,0,0,0)",
+        "mobile_layout": "grid",
+        "font": "font-gopher",
+        "icon_layout": "flex-col",
+        "text_color": "text-black",
+        "text_classes": "uppercase text-2xl mb-4"
+      }
+    },
+    "8b75bb04-ff4b-4295-9daa-d3b6f238aed9": {
+      "type": "page-banner",
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "#4fa0d7",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border-t border-b  border-black",
+        "use_squiggles": false,
+        "title": "<p>From Co-Founder + President Brett Smith...<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "4b292d9a-539b-45d7-af89-fabe46b630d3": {
+      "type": "richtext",
+      "blocks": {
+        "8907a50f-31c5-4718-a83a-f5ed6d89b054": {
+          "type": "text_content",
+          "settings": {
+            "content": "In 1996, my business partner Fred Houk and I attended the Sustainable Coffee Congress, hosted by the Smithsonian. Over the course of three days, we shared thoughts with more than 250 other members of the coffee community about building  sustainable supply chains. The conversation resulted in agreement that a sustainable future for coffee meant that the coffee industry must address its environmental, social, and economic issues. This was my introduction to triple-bottom-line sustainability, and the foundation of my business philosophy.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "d4e6229a-2f6f-44e9-9fc2-4eda7a844995": {
+          "type": "text_content",
+          "settings": {
+            "content": "This conference helped me realize that a focus on sustainability is not charity. It’s not just about the environment. It’s the best business model for Counter Culture to embrace for long-term success. We can choose profitability and sustainability, and to view those concepts in opposition to one another is a false duality. I firmly believe that business decisions made through the lens of sustainability result in greater profitability over an extended period of time.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "267fabf7-54d7-40d0-b03e-6f2a4ff80a82": {
+          "type": "text_content",
+          "settings": {
+            "content": "To build Counter Culture through the lens of sustainability, we included these ethos in our vision statement. By clearly stating that “Counter Culture is committed to real social, environmental and fiscal sustainability,” we affirmed our commitment to these principles. We use the lens of sustainability to filter decisions about our coffee supply chains, our employee benefits, the building materials used in our facilities, and much more.. This balance of profitability and sustainability has resulted in over 25 years of consistent growth, an incredibly deep and wide supply chain, an inviting and engaging company culture, excellent customer loyalty, national brand recognition, and more than 15 years of quarterly profit sharing.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "4d099b6c-0fb3-4d01-866d-a815ffe76df7": {
+          "type": "text_content",
+          "settings": {
+            "content": "Transparency is a critical component of achieving our sustainability goals. At every turn, we aim to create mutually beneficial partnerships. Whether the focus is financial, environmental, or based on risk mitigation, a commitment to open, honest communication ensures a better outcome.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "61669902-7057-4556-94cb-fce8eac6b1e9": {
+          "type": "text_content",
+          "settings": {
+            "content": "In addition to the importance of transparency, we also realized we will never reach a finish line for sustainability. Pursuing a sustainable balance in business means that we will always push for more-environmentally-sensitive coffee, less waste, stronger relationships and better, longer-term solutions to the challenges we will face.\nThere is no finish line.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "513bc93b-4a0c-4c29-b8bd-1af8b91b47b6": {
+          "type": "text_content",
+          "settings": {
+            "content": "We will never reach a finish line in our journey toward sustainability. The pursuit of a sustainable business means we will always push for more environmentally-friendly coffee, less waste, stronger relationships, and longer-term solutions to the challenges we will face. The pursuit of sustainability helps us be a better business today and promises that we will become a better business tomorrow.",
+            "classes": "text-left text-xl mb-5"
+          }
+        },
+        "9e702559-edb4-45e9-9128-9c85ef59e274": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_79.png",
+            "classes": "w-60 lg:w-80"
+          }
+        },
+        "da713bbe-5247-497b-98c6-3fe41cf3b6e2": {
+          "type": "text_content",
+          "settings": {
+            "content": "Brett Smith",
+            "classes": "text-left text-xl"
+          }
+        },
+        "7c665501-6ea9-4922-8dfa-77c26d71c05a": {
+          "type": "text_content",
+          "settings": {
+            "content": "President",
+            "classes": "text-left text-xl"
+          }
+        }
+      },
+      "block_order": [
+        "8907a50f-31c5-4718-a83a-f5ed6d89b054",
+        "d4e6229a-2f6f-44e9-9fc2-4eda7a844995",
+        "267fabf7-54d7-40d0-b03e-6f2a4ff80a82",
+        "4d099b6c-0fb3-4d01-866d-a815ffe76df7",
+        "61669902-7057-4556-94cb-fce8eac6b1e9",
+        "513bc93b-4a0c-4c29-b8bd-1af8b91b47b6",
+        "9e702559-edb4-45e9-9128-9c85ef59e274",
+        "da713bbe-5247-497b-98c6-3fe41cf3b6e2",
+        "7c665501-6ea9-4922-8dfa-77c26d71c05a"
+      ],
+      "settings": {
+        "classes": "text-left"
+      }
+    },
+    "16506426545e1833d1": {
+      "type": "page-banner",
+      "disabled": true,
+      "settings": {
+        "show_sunburst": false,
+        "sunburst_color": "rgba(0,0,0,0)",
+        "show_gradient": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "wrapper_classes": "border-t border-b  border-black",
+        "use_squiggles": false,
+        "title": "<p>How we got here...<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-2xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "content": "",
+        "testimonial_author": ""
+      }
+    },
+    "our-history": {
+      "type": "our-history",
+      "disabled": true,
+      "blocks": {
+        "c5e75c52-1cdc-40fb-86fa-f1e75bfe28b6": {
+          "type": "event",
+          "settings": {
+            "title": "The Beginning",
+            "date": "1995",
+            "img": "shopify:\/\/shop_images\/Screen_Shot_2021-11-19_at_1.51_1.png",
+            "description": "<p>Brett Smith and Fred Houk founded Counter Culture Coffee. Brett met Fred while attending the UNC Kenan-Flagler Business School.<\/p>"
+          }
+        },
+        "295fa34f-1f51-40c0-8b0a-a6aa79271fcc": {
+          "type": "event",
+          "settings": {
+            "title": "1995",
+            "date": "1995",
+            "description": "<p>We sold our first bag of roasted coffee to Pop’s Trattoria.<\/p>"
+          }
+        },
+        "b8930337-17a8-4d4d-8e11-aab9da819692": {
+          "type": "event",
+          "settings": {
+            "title": "1997",
+            "date": "1997",
+            "img": "shopify:\/\/shop_images\/sanctuary_coffee.jpg",
+            "description": "<p>We launched a bird-friendly coffee line called Sanctuary Coffee. We were one of the first roasters to sell shade-grown coffee, introducing our Sanctuary Coffee line to the industry at the 1997 Specialty Coffee Association of America event in New Orleans.<\/p>"
+          }
+        },
+        "70351947-422e-4a67-97c3-0f8d51655ba1": {
+          "type": "event",
+          "settings": {
+            "title": "2002",
+            "date": "2002",
+            "img": "shopify:\/\/shop_images\/usda_organic.jpg",
+            "description": "<p>Our Durham facility became the first certified-organic roaster in North Carolina on the first day it was possible (based upon the National Organic Program).<\/p><p>We held our first public cupping. Such began the weekly Friday tradition that continues in each regional location. Public cuppings have become commonplace for most coffee roasters.<\/p>"
+          }
+        },
+        "4aae955f-fe08-4754-b8c7-0d54b57150db": {
+          "type": "event",
+          "settings": {
+            "title": "2003",
+            "date": "2003",
+            "img": "shopify:\/\/shop_images\/vision_statement.jpg",
+            "description": "<p>Codification of our dedication to real social, environmental, and fiscal sustainability into the Counter Culture vision statement. This document was signed by Brett Smith, Peter Guiliano, and Daryn Berlin on March 10, 2003.<\/p>"
+          }
+        },
+        "9b8d261e-7a54-4e11-a135-04eb0912e8ae": {
+          "type": "event",
+          "settings": {
+            "title": "2004",
+            "date": "2004",
+            "img": "shopify:\/\/shop_images\/counter_culture_founding.jpg",
+            "description": "<p>We took our first customer group to visit coffee farms in Nicaragua—a precursor to our Origin Field Lab, which continues as an annual event.<\/p>"
+          }
+        },
+        "6aed4347-ef92-4d1b-b1cf-b4da37121729": {
+          "type": "event",
+          "settings": {
+            "title": "2007",
+            "date": "2007",
+            "img": "shopify:\/\/shop_images\/source_coffee.jpg",
+            "description": "<p>We launched our “Source” line of coffees: a 12 oz retail bag design focused on single-origin coffees. That year, the Source line won best new product at the annual Specialty Coffee Association of America conference.<\/p>"
+          }
+        },
+        "b25787ca-eaca-4f59-a17d-14b82ec60ad9": {
+          "type": "event",
+          "settings": {
+            "title": "2008",
+            "date": "2008",
+            "img": "shopify:\/\/shop_images\/direct-trade.jpg",
+            "description": "<p>Counter Culture formalized our third-party-certified Direct Trade policy, which we continue to refine.<\/p>"
+          }
+        },
+        "fd5b91ef-ea0f-4d02-bc84-2eeaf8c81661": {
+          "type": "event",
+          "settings": {
+            "title": "2009",
+            "date": "2009",
+            "img": "shopify:\/\/shop_images\/2009_TP.png",
+            "description": "<p>Our first Transparency Report<\/p>"
+          }
+        },
+        "1a75765b-90a3-4e35-89aa-2a33d4c5f997": {
+          "type": "event",
+          "settings": {
+            "title": "2010",
+            "date": "2010",
+            "img": "shopify:\/\/shop_images\/green_plus.png",
+            "description": "<p>We created our Sustaining Environmental and Educational Development at Source (SEEDS) program—to structure and define our monetary contributions to projects that are not coffee-quality-specific, but still benefit our coffee-producing partners and their communities.<\/p><p>We obtained Green Plus sustainable business certification. In 2012, Counter Culture received Green Plus Sustainable Enterprise of the Year award.<\/p>"
+          }
+        },
+        "a9e19835-27c0-4516-b20e-37acfed91d35": {
+          "type": "event",
+          "settings": {
+            "title": "2012",
+            "date": "2012",
+            "img": "shopify:\/\/shop_images\/coalition_for_coffee_communities_founding_member.jpg",
+            "description": "<p>We became a founding member of the Coalition for Coffee Communities—an organization established to help address food security issues in coffee communities that set a precedent for pre-competitive collaboration.<\/p>"
+          }
+        },
+        "c57eb2b6-ae6f-4ed8-8abb-2aa3c0e06c01": {
+          "type": "event",
+          "settings": {
+            "title": "2015",
+            "date": "2015",
+            "img": "shopify:\/\/shop_images\/History_2015_Emeryville_464x312_79a47adc-d5fa-46da-bcef-261d5851d572.jpg",
+            "description": "<p>With 20 years of experience, we opened a new roastery and training center in the San Francisco Bay area, and began operations in April to better serve our West Coast partners.<\/p>"
+          }
+        },
+        "607a7849-2095-4a09-a9de-465ac8a56ad8": {
+          "type": "event",
+          "settings": {
+            "title": "2016",
+            "date": "2016",
+            "img": "shopify:\/\/shop_images\/History_2016_464x312_99a58437-7364-4c43-b8da-9363bca4bb66.jpg",
+            "description": "<p>In 2016 we moved our Headquarters to a new facility near downtown Durham, NC.<\/p><p><\/p><p>Became the first specialty coffee roaster to deploy color sorting technology for roasted coffee. This addition of this technology to our production process is part of our unwavering commitment to our partners to do everything we can to deliver the highest quality representation of the coffees we buy.<\/p>"
+          }
+        },
+        "a0a7e8a5-3380-4380-89b3-623df80ac6c5": {
+          "type": "event",
+          "settings": {
+            "title": "2018",
+            "date": "2018",
+            "img": "shopify:\/\/shop_images\/Eth_book_email1.jpg",
+            "description": "<p>We published our first book, A Reference Guide to Ethiopian Coffee Varieties. With over two years of research by many members of the Counter Culture team, we released this ground-breaking reference text, mapping the thousands of coffee varieties native to, and cultivated in Ethiopia, the birthplace of Arabica coffee.<\/p><p><\/p><p>We led our first series of Climate Change Adaptation Workshops. These sessions are the latest iteration of our longstanding commitment to real sustainability and creating cutting-edge coffee people. These workshops consolidate 5 years or research and development to fortify farms with proven processes in adapting to the challenges climate change presents to farmers globally.<\/p>"
+          }
+        },
+        "cc850169-0620-4620-b2dd-3a57c5a0faf6": {
+          "type": "event",
+          "settings": {
+            "title": "2020",
+            "date": "2020",
+            "img": "shopify:\/\/shop_images\/CCC_25-514x410.jpg",
+            "description": "<p>Celebrating 25 years of creating extraordinary coffee experiences. We will dedicate our Durham Training Center to our late founder, Fred Houk.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c5e75c52-1cdc-40fb-86fa-f1e75bfe28b6",
+        "295fa34f-1f51-40c0-8b0a-a6aa79271fcc",
+        "b8930337-17a8-4d4d-8e11-aab9da819692",
+        "70351947-422e-4a67-97c3-0f8d51655ba1",
+        "4aae955f-fe08-4754-b8c7-0d54b57150db",
+        "9b8d261e-7a54-4e11-a135-04eb0912e8ae",
+        "6aed4347-ef92-4d1b-b1cf-b4da37121729",
+        "b25787ca-eaca-4f59-a17d-14b82ec60ad9",
+        "fd5b91ef-ea0f-4d02-bc84-2eeaf8c81661",
+        "1a75765b-90a3-4e35-89aa-2a33d4c5f997",
+        "a9e19835-27c0-4516-b20e-37acfed91d35",
+        "c57eb2b6-ae6f-4ed8-8abb-2aa3c0e06c01",
+        "607a7849-2095-4a09-a9de-465ac8a56ad8",
+        "a0a7e8a5-3380-4380-89b3-623df80ac6c5",
+        "cc850169-0620-4620-b2dd-3a57c5a0faf6"
+      ],
+      "settings": {
+        "img": "shopify:\/\/shop_images\/usda_organic.jpg"
+      }
+    }
+  },
+  "order": [
+    "1650642399e11e88b0",
+    "metrics",
+    "0979737a-529b-42f5-9a50-9621dc688708",
+    "8b75bb04-ff4b-4295-9daa-d3b6f238aed9",
+    "4b292d9a-539b-45d7-af89-fabe46b630d3",
+    "16506426545e1833d1",
+    "our-history"
+  ]
+}

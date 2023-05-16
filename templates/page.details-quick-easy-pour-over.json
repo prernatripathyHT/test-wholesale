@@ -1,0 +1,622 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/kalita.png",
+        "show_sunburst": true,
+        "sunburst_color": "#39bdae",
+        "show_gradient": true,
+        "bg_color": "#efebe1",
+        "wrapper_classes": "",
+        "use_squiggles": false,
+        "title": "<p>Kalita Wave<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-left",
+        "text_color": "text-black",
+        "title_classes": "mb-5",
+        "content": "<p>“A consistent and easy-to-use pour-over device that works well with any coffee”<\/p>",
+        "testimonial_author": "Ryan Ludwig, Educator, NYC",
+        "author_image": "shopify:\/\/shop_images\/portraitedits81.jpg"
+      }
+    },
+    "16504847174bd7270f": {
+      "type": "image-plus-text",
+      "blocks": {
+        "6288cedd-98f0-41da-896f-de34333dcb30": {
+          "type": "text",
+          "settings": {
+            "number": "",
+            "title": "Gather your supplies",
+            "description": "<p>We use a 1:17 coffee-to-water ratio; our recipe makes one, 16 oz cup of coffee. <\/p>",
+            "list_html": "<ul>\n<li>30 grams of fresh-roasted, whole-bean coffee<\/li>\n<li>500 grams of filtered hot water (200 F)<\/li>\n<li>Kalita Wave<\/li>\n<li>Kalita filters<\/li>\n<li>Gram scale<\/li>\n<li>Grinder (we recommend burr grinders)<\/li>\n<li>Kettle<\/li>\n<li>Timer<\/li>\n<\/ul>",
+            "button_style": "blue-underline",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "Grind Size",
+            "icon_info": "",
+            "icon_image": "shopify:\/\/shop_images\/grindsize3-2.jpg"
+          }
+        },
+        "f07bef26-2879-4897-ada9-b7c8f1048fe5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4B9B6351.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "6288cedd-98f0-41da-896f-de34333dcb30",
+        "f07bef26-2879-4897-ada9-b7c8f1048fe5"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1650489183b5937c5d": {
+      "type": "image-plus-text",
+      "blocks": {
+        "2848163c-5572-40b3-8e6b-bdef38060ec2": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812435?h=d47db73586&badge=0&autopause=0&player_id=0&app_id=58479"
+          }
+        },
+        "4794faf3-0aad-48e5-a88a-13414a281012": {
+          "type": "text",
+          "settings": {
+            "number": "01",
+            "title": "Heat Water",
+            "description": "<p>Heat water to 200F. Place filter in the Kalita Wave and rinse with hot water, discarding when finished. <\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "2848163c-5572-40b3-8e6b-bdef38060ec2",
+        "4794faf3-0aad-48e5-a88a-13414a281012"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16504894443622b74b": {
+      "type": "image-plus-text",
+      "blocks": {
+        "05afcd2b-84b6-418a-b9e2-6fe4023e9b7b": {
+          "type": "text",
+          "settings": {
+            "number": "02",
+            "title": "Grind Coffee",
+            "description": "<p>Weigh 30g of coffee and grind on medium setting, slightly finer than kosher salt.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "44e37b80-5a14-45d8-8dc8-054324907242": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812446?h=1baa3e704b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "05afcd2b-84b6-418a-b9e2-6fe4023e9b7b",
+        "44e37b80-5a14-45d8-8dc8-054324907242"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16504951228ada87da": {
+      "type": "image-plus-text",
+      "blocks": {
+        "b11277de-ea84-4a3f-b5a0-056ce767c7b5": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812462?h=c4685ded6b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "c18f80c3-6ee1-4a53-969b-5098339f061c": {
+          "type": "text",
+          "settings": {
+            "number": "03",
+            "title": "Add Coffee",
+            "description": "<p>Place ground coffee in filter, and shake to level grounds.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "b11277de-ea84-4a3f-b5a0-056ce767c7b5",
+        "c18f80c3-6ee1-4a53-969b-5098339f061c"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1650495188921b91f5": {
+      "type": "image-plus-text",
+      "blocks": {
+        "c3c2be69-4d04-44f1-9b7e-b4495f488e71": {
+          "type": "text",
+          "settings": {
+            "number": "04",
+            "title": "Bloom Grounds",
+            "description": "<p>Start a timer and pour 60g of water to wet all the coffee grounds.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "10aa7901-c735-49ac-aa4e-7aa72e21c1a0": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812469?h=87c575a153&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "c3c2be69-4d04-44f1-9b7e-b4495f488e71",
+        "10aa7901-c735-49ac-aa4e-7aa72e21c1a0"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": true,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1650495235843fddac": {
+      "type": "image-plus-text",
+      "blocks": {
+        "ea6329fb-f214-4a8a-b524-b41bfe3e0c62": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812480?h=b2a39a992e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "c09ec48f-c547-4499-9f0f-9d3467b9de1c": {
+          "type": "text",
+          "settings": {
+            "number": "05",
+            "title": "Begin Brewing",
+            "description": "<p>Wait 30 seconds and then pour water in a circular motion to 200g.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "ea6329fb-f214-4a8a-b524-b41bfe3e0c62",
+        "c09ec48f-c547-4499-9f0f-9d3467b9de1c"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-6xl",
+        "text_size_desktop": "lg:text-6xl",
+        "tag": "h1",
+        "font": "font-freight-sans",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "166431335446df3593": {
+      "type": "image-plus-text",
+      "blocks": {
+        "d483b7d4-fa9e-4b4a-9e73-e8ca16696e6c": {
+          "type": "text",
+          "settings": {
+            "number": "06",
+            "title": "Pour Water",
+            "description": "<p>By 1:00 the water should have drained a centimeter, pour in a circular motion to 300g.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "7cf7a88a-b76a-4bc8-bfa8-183108166157": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812492?h=bc46fbfe1c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "d483b7d4-fa9e-4b4a-9e73-e8ca16696e6c",
+        "7cf7a88a-b76a-4bc8-bfa8-183108166157"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1664313514f4b05506": {
+      "type": "image-plus-text",
+      "blocks": {
+        "d0044c4d-03b7-43f6-8803-d063fb18eb8f": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754819823?h=d80fa66b72&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "f6208254-56cc-46e0-9c1c-32f47948f7ca": {
+          "type": "text",
+          "settings": {
+            "number": "07",
+            "title": "Repeat",
+            "description": "<p>Repeat this process every 30 seconds, or as the water drains a centimeter, pouring water in a circular pattern until reaching a total weight of 500g.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "d0044c4d-03b7-43f6-8803-d063fb18eb8f",
+        "f6208254-56cc-46e0-9c1c-32f47948f7ca"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "1664313564c6484902": {
+      "type": "image-plus-text",
+      "blocks": {
+        "4f0d38c1-73be-4fac-8627-e62c7fcac192": {
+          "type": "text",
+          "settings": {
+            "number": "08",
+            "title": "Drain",
+            "description": "<p>The coffee should finish draining by 3:30-4:00.<\/p>",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        },
+        "95d9acf5-7dc7-4323-adb7-d294b090d124": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812498?h=034e1ee747&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        }
+      },
+      "block_order": [
+        "4f0d38c1-73be-4fac-8627-e62c7fcac192",
+        "95d9acf5-7dc7-4323-adb7-d294b090d124"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "16643136179d6020a3": {
+      "type": "image-plus-text",
+      "blocks": {
+        "011c4d71-f025-4106-b3c1-fc7c812fba14": {
+          "type": "video",
+          "settings": {
+            "aspect_ratio": "16:9",
+            "iframe_video": "https:\/\/player.vimeo.com\/video\/754812508?h=db5bd5bea5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          }
+        },
+        "5527db92-9c17-46b3-918b-244a1a53d054": {
+          "type": "text",
+          "settings": {
+            "number": "09",
+            "title": "Enjoy!",
+            "description": "",
+            "list_html": "",
+            "button_style": "btn btn-secondary",
+            "link_text": "",
+            "link_url": "",
+            "link_classes": "",
+            "btn_icon_name": "",
+            "btn_icon_class": "",
+            "icon_text": "",
+            "icon_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "011c4d71-f025-4106-b3c1-fc7c812fba14",
+        "5527db92-9c17-46b3-918b-244a1a53d054"
+      ],
+      "settings": {
+        "reverse_blocks_mobile": false,
+        "color_overlay": "",
+        "title": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    },
+    "165049562929d14393": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-transparent",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Serve and enjoy! 🤗 <\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-3xl",
+        "tag": "h3",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": "",
+        "button_style": "btn btn-secondary",
+        "link_text": "",
+        "link_url": "",
+        "link_classes": ""
+      }
+    },
+    "1650495672ba353b7d": {
+      "type": "cta-banner",
+      "settings": {
+        "section_style": "pill",
+        "border_color": "border-camel",
+        "background_color": "",
+        "use_squiggles": false,
+        "number": "",
+        "content": "",
+        "title": "<p>Want to learn how to brew like a pro?<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h1",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-camel",
+        "title_classes": "mb-5",
+        "button_style": "camel-underline",
+        "link_text": "Check out our classes",
+        "link_url": "shopify:\/\/pages\/classes",
+        "link_classes": ""
+      }
+    },
+    "1650576426f752cf89": {
+      "type": "icon-link-list",
+      "blocks": {
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#34beae",
+            "title": "Kalita Wave",
+            "url": "shopify:\/\/pages\/quick-easy-pour-over",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_Katilawave_edit_3b5909d6-fe11-45a8-af60-02b599654d1a.png"
+          }
+        },
+        "6615e4f1-b15e-4812-b99c-0d145030f03d": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fdbf69",
+            "title": "French Press",
+            "url": "shopify:\/\/pages\/quick-easy-french-press",
+            "icon_image": "shopify:\/\/shop_images\/Frame.png"
+          }
+        },
+        "12975029-480c-4426-99d1-d57a838c0d7a": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#fbc7b2",
+            "title": "Chemex",
+            "url": "shopify:\/\/pages\/quick-easy-chemex",
+            "icon_image": "shopify:\/\/shop_images\/Frame-2.png"
+          }
+        },
+        "31387098-a5a6-4866-a474-9e6a1e519b44": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#ff5c1b",
+            "title": "Hario V60",
+            "url": "shopify:\/\/pages\/quick-easy-v60",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Live-Stroke-Individual_Hario_V60_6a8093a7-629c-4cf5-b3c2-7832668228fb.png"
+          }
+        },
+        "87edf125-aa68-4420-9046-377a206cda67": {
+          "type": "icon_link",
+          "settings": {
+            "sunburst_color": "#3a8dde",
+            "title": "Aeropress",
+            "url": "shopify:\/\/pages\/quick-easy-aeropress",
+            "icon_image": "shopify:\/\/shop_images\/Coffee-Icons-Outline-Individual_aeropress_edit_5a44b975-35ca-47ad-a3d2-b29343251d2e.png"
+          }
+        }
+      },
+      "block_order": [
+        "bf7da4d7-ab77-4b09-b3dc-779394796bcb",
+        "6615e4f1-b15e-4812-b99c-0d145030f03d",
+        "12975029-480c-4426-99d1-d57a838c0d7a",
+        "31387098-a5a6-4866-a474-9e6a1e519b44",
+        "87edf125-aa68-4420-9046-377a206cda67"
+      ],
+      "settings": {
+        "background": "radial-gradient(rgba(239, 235, 225, 1), rgba(255, 255, 255, 1) 100%)",
+        "mobile_layout": "dropdown",
+        "title": "<p>Brew Methods<\/p>",
+        "text_size_mobile": "text-3xl",
+        "text_size_desktop": "lg:text-4xl",
+        "tag": "h2",
+        "font": "font-couch",
+        "weight": "font-regular",
+        "alignment": "text-center",
+        "text_color": "text-black",
+        "title_classes": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16504847174bd7270f",
+    "1650489183b5937c5d",
+    "16504894443622b74b",
+    "16504951228ada87da",
+    "1650495188921b91f5",
+    "1650495235843fddac",
+    "166431335446df3593",
+    "1664313514f4b05506",
+    "1664313564c6484902",
+    "16643136179d6020a3",
+    "165049562929d14393",
+    "1650495672ba353b7d",
+    "1650576426f752cf89"
+  ]
+}
